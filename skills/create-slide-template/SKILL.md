@@ -8,6 +8,7 @@ description: Generate HTML slide presentation templates (1 slide = 1 HTML file, 
 Generate HTML files forming a complete presentation deck. Slide count is selected by the user (10 / 15 / 20 / 25). Each file is a self-contained HTML document rendered at **1280 x 720 px**. No JavaScript is used — all content is pure HTML + CSS.
 
 For DOM snippets and component patterns, see [references/patterns.md](references/patterns.md).
+For user-provided custom templates, see [references/templates/](references/templates/).
 
 ---
 
@@ -52,12 +53,36 @@ Ask the user for the target directory name.
 
 ---
 
+## Phase 1.5: Load Custom Templates (if any)
+
+Before designing, check `references/templates/` for user-provided HTML template files.
+
+1. **List** all `.html` files in `references/templates/`
+2. If files exist, **read each file** and extract:
+   - Color palette (CSS custom properties / Tailwind classes)
+   - Font pair (primary JP + accent Latin)
+   - Header/footer structure and style
+   - Decorative elements and visual motifs
+   - Layout patterns used
+3. Use the extracted design language as the **primary style reference** for the new deck
+4. If the user also selects a style/theme in Phase 1, **blend** the custom template's design with the chosen style/theme — custom template takes priority for colors, fonts, and header/footer
+
+### Cautions
+
+- **Mandatory Constraints still apply.** Even if a custom template uses `<table>`, JavaScript, or non-CDN assets, the generated output must follow all rules in the Mandatory Constraints section below. Extract only the visual design (colors, fonts, spacing, decorative style) — not non-compliant implementation details.
+- **Slide size must remain 1280x720px.** Ignore any different dimensions in custom templates.
+- **Do not copy text content.** Custom templates are style references only. All text content comes from the user's hearing answers.
+- **Maximum 5 template files.** If more than 5 files exist, read only the first 5 (sorted alphabetically) to limit context usage. Warn the user that remaining files were skipped.
+- **Supported format: HTML only.** Ignore non-HTML files (images, PDFs, etc.) in the templates directory.
+
+---
+
 ## Phase 2: Template Design
 
-Based on hearing results, determine these before generating code:
+Based on hearing results (and custom templates if loaded), determine these before generating code:
 
-1. **Color palette** (3-4 custom colors)
-2. **Font pair** (1 Japanese + 1 Latin)
+1. **Color palette** (3-4 custom colors — prefer custom template palette if available)
+2. **Font pair** (1 Japanese + 1 Latin — prefer custom template fonts if available)
 3. **Brand icon** (1 Font Awesome icon)
 
 ### Proven Palette Examples (template01-05)
