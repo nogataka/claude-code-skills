@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>集客・販売チャネル - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Sales Channel</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">集客・販売チャネル</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: N-Column Process Flow -->
+        <div class="flex-1 px-16 py-8 grid grid-cols-4 gap-4">
+            <!-- Channel 1 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col relative">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded font-accent">Ch.1</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">自社Webサイト</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">予約・問い合わせの中心チャネル。SEO対策で検索流入を獲得。</p>
+                <div class="mt-3 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-brand-accent font-bold">予約・問い合わせ</p>
+                </div>
+                <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <!-- Channel 2 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col relative">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded font-accent">Ch.2</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">比較サイト</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">レンタカー比較サイトへの掲載で新規顧客のリーチを拡大。</p>
+                <div class="mt-3 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-brand-accent font-bold">新規獲得</p>
+                </div>
+                <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <!-- Channel 3 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-warm p-5 flex flex-col relative">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-brand-warm">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-warm text-white px-2 py-0.5 rounded font-accent">Ch.3</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Google マップ</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">Googleマップ・口コミで地域の信頼性を構築。近隣顧客を獲得。</p>
+                <div class="mt-3 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-brand-warm font-bold">信頼構築</p>
+                </div>
+                <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <!-- Channel 4 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-warm p-5 flex flex-col">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-brand-warm">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-warm text-white px-2 py-0.5 rounded font-accent">Ch.4</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">SNS</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">Instagram等のSNSで車両・レジャー情報を発信。ブランド認知を向上。</p>
+                <div class="mt-3 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-brand-warm font-bold">ブランド認知</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">09</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

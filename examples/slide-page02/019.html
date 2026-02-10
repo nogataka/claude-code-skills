@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - まとめ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div style="position:absolute;top:-150px;right:-150px;width:700px;height:700px;border-radius:50%;background:rgba(0,123,255,0.04);"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Summary &amp; Next Steps</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">まとめ・Next Steps</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: 2-column -->
+        <div class="flex-1 px-16 py-5 flex gap-6 relative z-10">
+            <!-- Left: Summary -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <div class="bg-brand-accent rounded-xl p-6 text-white">
+                    <h3 class="font-bold text-base mb-4"><i class="fas fa-bullseye mr-2"></i>事業の要約</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-car text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs opacity-70">事業モデル</p>
+                                <p class="text-sm font-bold">千葉県拠点のレンタカー事業（個人事業主・副業）</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-users text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs opacity-70">ターゲット</p>
+                                <p class="text-sm font-bold">首都圏ファミリー・マイカー非保有層</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-trophy text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs opacity-70">差別化</p>
+                                <p class="text-sm font-bold">レジャー特化 × 高品質 × 柔軟運営 × AI活用</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-dark rounded-xl p-6 text-white flex-1" style="background-color: #333333;">
+                    <h3 class="font-bold text-sm mb-3"><i class="fas fa-chart-line mr-2"></i>数値サマリー</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <p class="text-xs text-gray-400">初期投資</p>
+                            <p class="text-xl font-black font-accent">700-1,000<span class="text-xs ml-1">万円</span></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">月間利益</p>
+                            <p class="text-xl font-black font-accent">2-5<span class="text-xs ml-1">万円</span></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">借入希望</p>
+                            <p class="text-xl font-black font-accent text-brand-warm">800-1,000<span class="text-xs ml-1">万円</span></p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">自己資金</p>
+                            <p class="text-xl font-black font-accent">200<span class="text-xs ml-1">万円</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Next Steps -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <h3 class="text-sm font-bold text-brand-dark"><i class="fas fa-tasks text-brand-accent mr-2"></i>Next Steps</h3>
+
+                <div class="bg-brand-light rounded-xl p-5 flex items-start space-x-4" style="border-left: 4px solid #007BFF;">
+                    <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-black font-accent text-xs">1</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-brand-dark">車両取得・開業準備</p>
+                        <p class="text-xs text-gray-500">中古車購入、レンタカー事業許可取得、保険加入</p>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light rounded-xl p-5 flex items-start space-x-4" style="border-left: 4px solid #F59E0B;">
+                    <div class="w-8 h-8 rounded-full bg-brand-warm flex items-center justify-center flex-shrink-0">
+                        <span class="text-white font-black font-accent text-xs">2</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-brand-dark">Webサイト・集客基盤構築</p>
+                        <p class="text-xs text-gray-500">予約サイト構築、Googleマップ登録、SNS開設</p>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light rounded-xl p-5 flex items-start space-x-4" style="border-left: 4px solid #10B981;">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: #10B981;">
+                        <span class="text-white font-black font-accent text-xs">3</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-brand-dark">営業開始・稼働率向上</p>
+                        <p class="text-xs text-gray-500">テスト運営、口コミ蓄積、月間稼働12日以上を目標</p>
+                    </div>
+                </div>
+
+                <!-- Funding ask -->
+                <div class="rounded-xl p-5 flex-1 flex flex-col justify-center" style="background: #FEF3C7; border: 2px solid #F59E0B;">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3"><i class="fas fa-hand-holding-usd text-brand-warm mr-2"></i>資金調達のお願い</h3>
+                    <div class="flex gap-6">
+                        <div>
+                            <p class="text-xs text-gray-500">調達額</p>
+                            <p class="text-xl font-black text-brand-accent font-accent">800-1,000万円</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">用途</p>
+                            <p class="text-sm font-bold text-brand-dark">車両購入＋運転資金</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">19</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>事業概要 - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex">
+        <!-- Left Panel (dark) -->
+        <div class="w-1/3 bg-brand-dark text-white p-10 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-brand-accent rounded-bl-full opacity-20"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-brand-warm rounded-tr-full opacity-10"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <span class="text-brand-accent font-bold uppercase text-sm tracking-widest font-accent">Section 01</span>
+                </div>
+                <h1 class="text-4xl font-black leading-tight mb-6">事業概要</h1>
+                <p class="text-sm text-gray-300 leading-relaxed">AIレンタカー事業の<br />全体像をご紹介します</p>
+            </div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-4 text-gray-500 text-xs">
+                    <span class="font-accent">Overview</span>
+                    <span>|</span>
+                    <span>提供価値</span>
+                    <span>|</span>
+                    <span>ターゲット</span>
+                </div>
+                <p class="text-xs text-gray-600 mt-4">Confidential</p>
+            </div>
+        </div>
+
+        <!-- Right Panel (light) -->
+        <div class="w-2/3 bg-gray-50 p-10 flex flex-col justify-center">
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-brand-accent mr-5">
+                        <i class="fas fa-briefcase text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-brand-accent font-accent font-semibold uppercase tracking-wider mb-1">Business Model</p>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">個人事業主による副業スタート</h3>
+                        <p class="text-sm text-gray-600">普通自動車のレンタカー事業（日貸・時間貸）</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-brand-warm mr-5">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-brand-warm font-accent font-semibold uppercase tracking-wider mb-1">Location</p>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">千葉県</h3>
+                        <p class="text-sm text-gray-600">首都圏・房総エリアへのアクセス拠点</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-brand-accent mr-5">
+                        <i class="fas fa-robot text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-brand-accent font-accent font-semibold uppercase tracking-wider mb-1">Future Vision</p>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">AI活用による高稼働運営</h3>
+                        <p class="text-sm text-gray-600">需要予測・価格最適化・予約最適化で競合と差別化</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

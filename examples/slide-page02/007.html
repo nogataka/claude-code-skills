@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - ターゲット顧客</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+        .accent-circle { position: absolute; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div class="accent-circle" style="width: 400px; height: 400px; top: -150px; right: -100px;"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Target Customer</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">ターゲット顧客</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-5 flex flex-col relative z-10">
+            <!-- Top: Primary targets -->
+            <div class="grid grid-cols-4 gap-4 mb-5">
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm text-center">
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-home text-brand-accent text-lg"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-brand-dark mb-1">首都圏在住の個人</h3>
+                    <p class="text-xs text-gray-500">東京・千葉・埼玉・神奈川エリアの個人ユーザー</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm text-center">
+                    <div class="w-14 h-14 rounded-full bg-yellow-50 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-child text-brand-warm text-lg"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-brand-dark mb-1">ファミリー層</h3>
+                    <p class="text-xs text-gray-500">子育て世帯の週末・連休利用</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm text-center">
+                    <div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-campground text-lg" style="color: #10B981;"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-brand-dark mb-1">アウトドア利用者</h3>
+                    <p class="text-xs text-gray-500">週末・連休の観光・キャンプ利用</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm text-center">
+                    <div class="w-14 h-14 rounded-full bg-purple-50 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-car text-lg" style="color: #8B5CF6;"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-brand-dark mb-1">マイカー非保有層</h3>
+                    <p class="text-xs text-gray-500">都市部で車を持たない個人・世帯</p>
+                </div>
+            </div>
+
+            <!-- Bottom: 2-column -->
+            <div class="grid grid-cols-2 gap-6 flex-1">
+                <!-- Left: Market environment -->
+                <div class="bg-brand-light rounded-xl p-6">
+                    <h3 class="text-sm font-bold text-brand-dark mb-4"><i class="fas fa-chart-line text-brand-accent mr-2"></i>市場環境</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-arrow-up text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-brand-dark">観光回復トレンド</p>
+                                <p class="text-xs text-gray-500">国内観光市場の回復に伴い、レンタカー需要が安定成長</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-arrow-up text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-brand-dark">アウトドア需要増加</p>
+                                <p class="text-xs text-gray-500">キャンプ・アウトドアブームの定着で車両ニーズが拡大</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Future expansion -->
+                <div class="bg-brand-dark rounded-xl p-6 flex flex-col justify-center" style="background-color: #333333;">
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-3">Future Target</p>
+                    <h3 class="text-lg font-bold text-white mb-4">将来のターゲット拡大</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-white bg-opacity-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-building text-brand-accent text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-300">法人利用・長期レンタル需要</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-white bg-opacity-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-rv text-brand-warm text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-300">キャンピングカー特化市場</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">07</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

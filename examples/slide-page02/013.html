@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - オペレーション体制</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div style="position:absolute;top:-200px;right:-200px;width:800px;height:800px;border-radius:50%;background:rgba(0,123,255,0.05);"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Operations</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">オペレーション体制</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-20 py-5 flex flex-col justify-center space-y-3 relative z-10">
+            <!-- Layer 1: Core -->
+            <div class="bg-blue-50 rounded-xl p-5 border-2" style="border-color: #007BFF;">
+                <div class="flex items-center mb-4">
+                    <span class="text-xs font-bold font-accent text-white bg-brand-accent px-3 py-1 rounded-full mr-3">Core</span>
+                    <span class="text-sm font-bold text-brand-dark">経営・管理</span>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user-tie text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">代表者</p>
+                            <p class="text-xs text-gray-500">受付・車両管理・事務を兼任</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clipboard-check text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">品質管理</p>
+                            <p class="text-xs text-gray-500">清掃・点検の徹底</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-bar text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">経営分析</p>
+                            <p class="text-xs text-gray-500">稼働率・収益のモニタリング</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chevron separator -->
+            <div class="flex justify-center">
+                <i class="fas fa-chevron-down text-gray-300 text-lg"></i>
+            </div>
+
+            <!-- Layer 2: Daily -->
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <span class="text-xs font-bold font-accent text-white bg-gray-500 px-3 py-1 rounded-full mr-3">Daily</span>
+                    <span class="text-sm font-bold text-brand-dark">日常オペレーション</span>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-car text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">車両受渡</p>
+                            <p class="text-xs text-gray-500">お客様への車両引渡・返却対応</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-broom text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">車両清掃</p>
+                            <p class="text-xs text-gray-500">返却後の清掃・消毒作業</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-tools text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">車両点検</p>
+                            <p class="text-xs text-gray-500">定期的な整備・安全確認</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chevron separator -->
+            <div class="flex justify-center">
+                <i class="fas fa-chevron-down text-gray-300 text-lg"></i>
+            </div>
+
+            <!-- Layer 3: External -->
+            <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                <div class="flex items-center mb-4">
+                    <span class="text-xs font-bold font-accent text-white bg-gray-400 px-3 py-1 rounded-full mr-3">External</span>
+                    <span class="text-sm font-bold text-brand-dark">外部委託（繁忙期）</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-hands-helping text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">清掃外注</p>
+                            <p class="text-xs text-gray-500">繁忙期の清掃・点検業務を外注</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-wrench text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">整備委託</p>
+                            <p class="text-xs text-gray-500">専門的な整備・修理は外部委託</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">13</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

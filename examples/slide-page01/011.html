@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>オペレーション体制 - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-warm"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Operations</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">オペレーション体制</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: Vertical Stack -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-3">
+            <!-- Layer 1: 運営体制 -->
+            <div class="bg-blue-50 rounded-xl border-2 border-brand-accent p-5 flex items-center">
+                <div class="w-28 flex-shrink-0">
+                    <p class="text-xs text-brand-accent font-bold font-accent uppercase tracking-wider">Core</p>
+                    <p class="text-sm font-bold text-brand-dark">運営体制</p>
+                </div>
+                <div class="flex-1 flex gap-3">
+                    <div class="flex-1 bg-white rounded-lg p-4 flex items-center border border-gray-100">
+                        <i class="fas fa-user-tie text-brand-accent mr-3 text-lg"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">代表者 1名</p>
+                            <p class="text-xs text-gray-500">受付・車両管理・清掃・事務を兼任</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chevron -->
+            <div class="flex items-center justify-center">
+                <i class="fas fa-chevron-down text-gray-300"></i>
+            </div>
+
+            <!-- Layer 2: 日常業務 -->
+            <div class="bg-gray-50 rounded-xl border border-gray-200 p-5 flex items-center">
+                <div class="w-28 flex-shrink-0">
+                    <p class="text-xs text-brand-accent font-bold font-accent uppercase tracking-wider">Daily</p>
+                    <p class="text-sm font-bold text-brand-dark">日常業務</p>
+                </div>
+                <div class="flex-1 grid grid-cols-4 gap-3">
+                    <div class="bg-white rounded-lg p-3 text-center border border-gray-100">
+                        <i class="fas fa-phone-alt text-brand-accent text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-brand-dark">受付対応</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 text-center border border-gray-100">
+                        <i class="fas fa-car text-brand-accent text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-brand-dark">車両管理</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 text-center border border-gray-100">
+                        <i class="fas fa-broom text-brand-accent text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-brand-dark">清掃</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 text-center border border-gray-100">
+                        <i class="fas fa-file-alt text-brand-accent text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-brand-dark">事務処理</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chevron -->
+            <div class="flex items-center justify-center">
+                <i class="fas fa-chevron-down text-gray-300"></i>
+            </div>
+
+            <!-- Layer 3: 繁忙期対応 -->
+            <div class="bg-gray-50 rounded-xl border border-gray-200 p-5 flex items-center">
+                <div class="w-28 flex-shrink-0">
+                    <p class="text-xs text-brand-warm font-bold font-accent uppercase tracking-wider">Peak</p>
+                    <p class="text-sm font-bold text-brand-dark">繁忙期対応</p>
+                </div>
+                <div class="flex-1 flex gap-3">
+                    <div class="flex-1 bg-white rounded-lg p-4 flex items-center border border-gray-100">
+                        <i class="fas fa-hands-helping text-brand-warm mr-3 text-lg"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">外注活用</p>
+                            <p class="text-xs text-gray-500">清掃・点検業務の外部委託を検討</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-white rounded-lg p-4 flex items-center border border-gray-100">
+                        <i class="fas fa-robot text-brand-warm mr-3 text-lg"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">AI効率化</p>
+                            <p class="text-xs text-gray-500">予約最適化で業務負荷を軽減</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">11</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

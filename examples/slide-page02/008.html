@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - 競合比較</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div style="position:absolute;bottom:-200px;left:-150px;width:600px;height:600px;border-radius:50%;background:rgba(0,123,255,0.04);"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Competitive Analysis</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">競合比較</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-5 flex flex-col relative z-10">
+            <!-- Grid Table (div-based, no <table>) -->
+            <div class="rounded-xl overflow-hidden shadow-sm border border-gray-200 mb-5">
+                <!-- Header row -->
+                <div class="grid grid-cols-4 bg-brand-accent text-white">
+                    <div class="p-4 font-bold text-sm">比較項目</div>
+                    <div class="p-4 font-bold text-sm">大手レンタカー</div>
+                    <div class="p-4 font-bold text-sm">地場中小</div>
+                    <div class="p-4 font-bold text-sm bg-brand-warm">AIレンタカー</div>
+                </div>
+                <!-- Row 1 -->
+                <div class="grid grid-cols-4 border-b border-gray-100">
+                    <div class="p-3 text-xs font-bold text-brand-dark bg-gray-50">価格帯</div>
+                    <div class="p-3 text-xs text-gray-600">高価格（画一的）</div>
+                    <div class="p-3 text-xs text-gray-600">低〜中価格</div>
+                    <div class="p-3 text-xs font-bold text-brand-accent bg-blue-50">適正価格（用途最適化）</div>
+                </div>
+                <!-- Row 2 -->
+                <div class="grid grid-cols-4 border-b border-gray-100">
+                    <div class="p-3 text-xs font-bold text-brand-dark bg-gray-50">車両品質</div>
+                    <div class="p-3 text-xs text-gray-600">標準的</div>
+                    <div class="p-3 text-xs text-gray-600">ばらつきあり</div>
+                    <div class="p-3 text-xs font-bold text-brand-accent bg-blue-50">清潔・高品質管理</div>
+                </div>
+                <!-- Row 3 -->
+                <div class="grid grid-cols-4 border-b border-gray-100">
+                    <div class="p-3 text-xs font-bold text-brand-dark bg-gray-50">サービス</div>
+                    <div class="p-3 text-xs text-gray-600">画一的な対応</div>
+                    <div class="p-3 text-xs text-gray-600">個人差あり</div>
+                    <div class="p-3 text-xs font-bold text-brand-accent bg-blue-50">柔軟な個別対応</div>
+                </div>
+                <!-- Row 4 -->
+                <div class="grid grid-cols-4 border-b border-gray-100">
+                    <div class="p-3 text-xs font-bold text-brand-dark bg-gray-50">用途特化</div>
+                    <div class="p-3 text-xs text-gray-600">汎用的</div>
+                    <div class="p-3 text-xs text-gray-600">限定的</div>
+                    <div class="p-3 text-xs font-bold text-brand-accent bg-blue-50">レジャー・週末特化</div>
+                </div>
+                <!-- Row 5 -->
+                <div class="grid grid-cols-4">
+                    <div class="p-3 text-xs font-bold text-brand-dark bg-gray-50">受渡し</div>
+                    <div class="p-3 text-xs text-gray-600">店舗固定</div>
+                    <div class="p-3 text-xs text-gray-600">店舗固定</div>
+                    <div class="p-3 text-xs font-bold text-brand-accent bg-blue-50">柔軟な受渡対応</div>
+                </div>
+            </div>
+
+            <!-- Bottom insight -->
+            <div class="bg-brand-dark rounded-xl px-8 py-5 flex items-center space-x-6">
+                <div class="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-lightbulb text-white text-lg"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-white font-bold text-sm mb-1">ポジショニング</h3>
+                    <p class="text-gray-400 text-xs">大手の画一性と地場中小の品質ばらつきの間に「用途特化 × 高品質 × 柔軟運営」のポジションを確立。将来のAI活用でさらに差別化を推進。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">08</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

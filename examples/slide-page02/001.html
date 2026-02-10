@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - 表紙</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+        .accent-circle { position: absolute; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .brand-name { font-size: 5rem; font-weight: 900; color: #007BFF; letter-spacing: 6px; }
+        .brand-sub { color: #F59E0B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-center">
+        <div class="accent-circle" style="width: 500px; height: 500px; top: -150px; right: -100px;"></div>
+        <div class="accent-circle" style="width: 400px; height: 400px; bottom: -120px; left: -80px;"></div>
+        <div class="text-center z-10 relative">
+            <p class="text-sm uppercase tracking-widest text-brand-accent font-accent mb-6">BUSINESS PLAN 2026</p>
+            <h1 class="brand-name mb-4"><span>AI</span><span class="brand-sub">レンタカー</span></h1>
+            <p class="text-lg text-gray-500 mb-8">普通自動車レンタカー事業計画書</p>
+            <div style="width: 80px; height: 4px; background: #007BFF; margin: 0 auto 32px auto;"></div>
+            <p class="text-xl font-bold text-brand-dark mb-16">「レジャー・週末利用に最適化した、AI活用型レンタカーサービス」</p>
+            <div class="flex items-center justify-center space-x-12">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center"><i class="fas fa-calendar text-brand-accent"></i></div>
+                    <span class="text-sm text-gray-600 font-accent font-semibold">2026</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center"><i class="fas fa-map-marker text-brand-accent"></i></div>
+                    <span class="text-sm text-gray-600">千葉県</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center"><i class="fas fa-user text-brand-accent"></i></div>
+                    <span class="text-sm text-gray-600">個人事業主（副業スタート）</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

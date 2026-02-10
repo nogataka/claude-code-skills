@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>リスクと対策 - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-warm"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Risk Management</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">リスクと対策</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: 2x2 Grid -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-5">
+            <div class="flex-1 grid grid-cols-2 gap-4">
+                <!-- Card 1: 稼働率低下 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-0.5 rounded">中</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-line text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">稼働率低下</p>
+                            <p class="text-xs text-gray-500">需要不足による低稼働</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-brand-accent text-xs"></i>
+                            <p class="text-xs font-bold text-brand-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600">副業スタートで固定費を抑制し、リスクを最小化</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: 事故・故障 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded">高</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-exclamation-triangle text-red-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">事故・故障</p>
+                            <p class="text-xs text-gray-500">車両損害・修理費用</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-brand-accent text-xs"></i>
+                            <p class="text-xs font-bold text-brand-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600">任意保険加入・定期点検の徹底</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: 価格競争 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-0.5 rounded">中</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-tags text-brand-warm"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">価格競争</p>
+                            <p class="text-xs text-gray-500">大手との価格競争激化</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-brand-accent text-xs"></i>
+                            <p class="text-xs font-bold text-brand-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600">レジャー特化・品質訴求で差別化</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: 資金繰り -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded">低</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-coins text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">資金繰り</p>
+                            <p class="text-xs text-gray-500">キャッシュフロー悪化</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-brand-accent text-xs"></i>
+                            <p class="text-xs font-bold text-brand-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600">慎重な台数拡大で財務を安定化</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Bar -->
+            <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-between border border-gray-200">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-shield-alt text-brand-accent"></i>
+                    <p class="text-xs font-bold text-brand-dark">総合リスク評価</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                        <span class="text-xs text-gray-500">高: 1</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                        <span class="text-xs text-gray-500">中: 2</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                        <span class="text-xs text-gray-500">低: 1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">16</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

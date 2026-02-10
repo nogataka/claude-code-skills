@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - 4つの強み</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+        .accent-circle { position: absolute; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Decorative circle -->
+        <div class="accent-circle" style="width: 300px; height: 300px; top: -100px; left: -80px;"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Value Proposition</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">4つの提供価値</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex flex-col justify-between">
+            <!-- Top: 3-column grid -->
+            <div class="grid grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm p-6" style="border-top: 4px solid #007BFF;">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                        <i class="fas fa-umbrella-beach text-brand-accent text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-brand-dark mb-2">レジャー最適化</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-3">観光・アウトドアに特化した車両ラインナップで、レジャー利用のお客様に最適なサービスを提供します。</p>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                        <p class="text-xs text-brand-accent font-semibold">週末・連休に強い車種構成</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm p-6" style="border-top: 4px solid #F59E0B;">
+                    <div class="w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center mb-4">
+                        <i class="fas fa-star text-brand-warm text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-brand-dark mb-2">高品質管理</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-3">徹底した清掃と品質管理で、お客様に安心・快適なドライブ体験をお届けします。</p>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand-warm"></div>
+                        <p class="text-xs text-brand-warm font-semibold">徹底した清掃・点検体制</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm p-6" style="border-top: 4px solid #10B981;">
+                    <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mb-4">
+                        <i class="fas fa-handshake text-green-500 text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-brand-dark mb-2">柔軟な運営</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-3">個人運営ならではの柔軟性で、お客様一人ひとりのニーズに迅速に対応します。</p>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-1.5 h-1.5 rounded-full" style="background: #10B981;"></div>
+                        <p class="text-xs font-semibold" style="color: #10B981;">お客様のニーズに即対応</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Dark bar -->
+            <div class="bg-brand-dark rounded-xl px-8 py-6 flex items-center space-x-8">
+                <div class="w-14 h-14 rounded-full bg-brand-accent flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-robot text-white text-xl"></i>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-white font-bold text-lg mb-1">将来のAI活用による高稼働運営</h3>
+                    <p class="text-gray-400 text-xs">需要予測・価格最適化・予約最適化により、車両稼働率を最大化し、収益性の高い運営を実現します。</p>
+                </div>
+                <div class="flex items-center space-x-6 flex-shrink-0">
+                    <div class="text-center">
+                        <div class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-1">
+                            <i class="fas fa-chart-line text-brand-accent text-sm"></i>
+                        </div>
+                        <p class="text-xs text-gray-400">需要予測</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-1">
+                            <i class="fas fa-tags text-brand-accent text-sm"></i>
+                        </div>
+                        <p class="text-xs text-gray-400">価格最適化</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-1">
+                            <i class="fas fa-calendar-check text-brand-accent text-sm"></i>
+                        </div>
+                        <p class="text-xs text-gray-400">予約最適化</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">05</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

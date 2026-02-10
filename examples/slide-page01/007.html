@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>市場・競合環境 - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Market Analysis</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">市場・競合環境</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: 2x2 Grid -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-5">
+            <div class="flex-1 grid grid-cols-2 gap-4">
+                <!-- Card 1: 市場動向 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded">成長</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-line text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">市場動向</p>
+                            <p class="text-xs text-gray-500">Market Trend</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 flex-1">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-brand-accent text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">観光回復による需要増加</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-brand-accent text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">アウトドアブームの継続</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-brand-accent text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">レンタカー市場は安定成長基調</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: 大手レンタカー -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded">競合</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-building text-red-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">大手レンタカー</p>
+                            <p class="text-xs text-gray-500">Major Players</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 flex-1">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-times-circle text-red-400 text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">画一的なサービス</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-times-circle text-red-400 text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">高価格設定</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-times-circle text-red-400 text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">柔軟性に欠ける対応</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: 地場中小 -->
+                <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-0.5 rounded">競合</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-store text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">地場中小レンタカー</p>
+                            <p class="text-xs text-gray-500">Local Players</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 flex-1">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">品質にばらつきがある</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">デジタル化の遅れ</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600">集客力が弱い</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: 当社の差別化 -->
+                <div class="bg-white rounded-xl border-2 border-brand-accent p-5 shadow-sm flex flex-col relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="text-xs font-bold text-white bg-brand-accent px-2 py-0.5 rounded">差別化</span>
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-star text-brand-accent"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">AIレンタカーの強み</p>
+                            <p class="text-xs text-gray-500">Our Advantage</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 flex-1">
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-brand-accent text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600 font-bold">用途特化（レジャー・アウトドア）</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-brand-accent text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600 font-bold">品質重視の車両管理</p>
+                        </div>
+                        <div class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-brand-accent text-xs mt-1 flex-shrink-0"></i>
+                            <p class="text-xs text-gray-600 font-bold">柔軟運営 + AI活用</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">07</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

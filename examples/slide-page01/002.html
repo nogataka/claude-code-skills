@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>目次 - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Agenda</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">目次</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-8 flex items-center">
+            <div class="grid grid-cols-2 gap-x-16 gap-y-6 w-full">
+                <!-- Section 1 -->
+                <div class="flex items-center group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-accent flex items-center justify-center text-white text-lg font-bold font-accent mr-5 shadow-sm">01</div>
+                    <div>
+                        <p class="text-xs text-brand-accent font-accent font-semibold uppercase tracking-wider mb-0.5">Overview</p>
+                        <p class="text-lg font-bold text-brand-dark">事業概要・提供価値・ターゲット</p>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="flex items-center group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-accent flex items-center justify-center text-white text-lg font-bold font-accent mr-5 shadow-sm">02</div>
+                    <div>
+                        <p class="text-xs text-brand-accent font-accent font-semibold uppercase tracking-wider mb-0.5">Market & Service</p>
+                        <p class="text-lg font-bold text-brand-dark">市場環境・サービス・集客</p>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="flex items-center group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-warm flex items-center justify-center text-white text-lg font-bold font-accent mr-5 shadow-sm">03</div>
+                    <div>
+                        <p class="text-xs text-brand-warm font-accent font-semibold uppercase tracking-wider mb-0.5">Operations & Finance</p>
+                        <p class="text-lg font-bold text-brand-dark">オペレーション・投資・収支</p>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="flex items-center group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-warm flex items-center justify-center text-white text-lg font-bold font-accent mr-5 shadow-sm">04</div>
+                    <div>
+                        <p class="text-xs text-brand-warm font-accent font-semibold uppercase tracking-wider mb-0.5">Growth Strategy</p>
+                        <p class="text-lg font-bold text-brand-dark">資金調達・リスク・成長戦略</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">02</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

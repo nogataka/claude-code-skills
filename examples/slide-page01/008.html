@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>サービス内容 - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Service Details</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">サービス内容</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: Stacked Cards -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-4">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs font-bold mr-4 font-accent">01</div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-brand-dark mb-2">レンタカー（日貸・時間貸）</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">普通自動車の日貸・時間貸サービス。利用者のニーズに合わせた柔軟な貸出期間を提供します。</p>
+                    </div>
+                    <div class="flex-shrink-0 ml-4">
+                        <span class="inline-block bg-brand-accent text-white text-xs font-bold px-2 py-0.5 rounded">メイン</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs font-bold mr-4 font-accent">02</div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-brand-dark mb-2">週末・連休向けプラン</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">レジャー需要にフォーカスした週末・連休パッケージプラン。お得な料金設定で稼働率を向上させます。</p>
+                    </div>
+                    <div class="flex-shrink-0 ml-4">
+                        <span class="inline-block bg-brand-accent text-white text-xs font-bold px-2 py-0.5 rounded">メイン</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-warm flex items-center justify-center text-white text-xs font-bold mr-4 font-accent">03</div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-brand-dark mb-2">オプションサービス</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">チャイルドシート、ETC車載器、アウトドア用品などのオプションを用意。ファミリー層やアウトドア利用者の利便性を高めます。</p>
+                    </div>
+                    <div class="flex-shrink-0 ml-4">
+                        <span class="inline-block bg-brand-warm text-white text-xs font-bold px-2 py-0.5 rounded">付加価値</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-warm flex items-center justify-center text-white text-xs font-bold mr-4 font-accent">04</div>
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-brand-dark mb-2">将来構想：キャンピングカー・法人契約・長期レンタル</p>
+                        <p class="text-xs text-gray-500 leading-relaxed">事業拡大フェーズではキャンピングカー特化、法人向け契約、長期レンタルサービスを展開し、収益の多角化を図ります。</p>
+                    </div>
+                    <div class="flex-shrink-0 ml-4">
+                        <span class="inline-flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded" style="background-color: #E2E8F0; color: #64748B;">将来</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">08</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

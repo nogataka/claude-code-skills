@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - 収支モデル・資金調達</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div style="position:absolute;top:-150px;right:-150px;width:600px;height:600px;border-radius:50%;background:rgba(0,123,255,0.04);"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Revenue Model &amp; Funding</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">収支モデル・資金調達</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: 2 Column -->
+        <div class="flex-1 px-16 py-5 flex gap-6 relative z-10">
+            <!-- Left: Revenue Model -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <h3 class="text-sm font-bold text-brand-dark"><i class="fas fa-calculator text-brand-accent mr-2"></i>月次収支モデル（標準）</h3>
+
+                <!-- KPI row -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <p class="text-xs text-gray-400 mb-1">稼働日数</p>
+                        <p class="text-2xl font-black text-brand-dark font-accent">12<span class="text-sm font-bold ml-1">日/月</span></p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <p class="text-xs text-gray-400 mb-1">平均単価</p>
+                        <p class="text-2xl font-black text-brand-dark font-accent">15,000<span class="text-sm font-bold ml-1">円/日</span></p>
+                    </div>
+                </div>
+
+                <!-- Revenue breakdown -->
+                <div class="bg-brand-light rounded-xl p-5 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-arrow-up text-brand-accent text-xs"></i>
+                            <span class="text-xs font-bold text-brand-dark">月商</span>
+                        </div>
+                        <span class="text-lg font-black text-brand-accent font-accent">約18万円</span>
+                    </div>
+                    <div class="border-t border-gray-200 pt-2 flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-minus text-gray-400 text-xs"></i>
+                            <span class="text-xs text-gray-500">固定費</span>
+                        </div>
+                        <span class="text-sm font-bold text-brand-dark font-accent">10〜14万円</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-minus text-gray-400 text-xs"></i>
+                            <span class="text-xs text-gray-500">変動費</span>
+                        </div>
+                        <span class="text-sm font-bold text-brand-dark font-accent">2万円</span>
+                    </div>
+                    <div class="border-t-2 border-brand-accent pt-2 flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-coins text-brand-warm text-xs"></i>
+                            <span class="text-xs font-bold text-brand-dark">月間利益</span>
+                        </div>
+                        <span class="text-xl font-black text-brand-accent font-accent">2〜5万円</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Funding -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <h3 class="text-sm font-bold text-brand-dark"><i class="fas fa-hand-holding-usd text-brand-warm mr-2"></i>資金調達計画</h3>
+
+                <!-- Funding KPIs -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                        <p class="text-xs text-gray-400 mb-1">自己資金</p>
+                        <p class="text-2xl font-black text-brand-dark font-accent">200<span class="text-sm font-bold ml-1">万円</span></p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm" style="border: 2px solid #F59E0B;">
+                        <p class="text-xs text-gray-400 mb-1">借入希望</p>
+                        <p class="text-2xl font-black text-brand-warm font-accent">800-1,000<span class="text-sm font-bold ml-1">万円</span></p>
+                    </div>
+                </div>
+
+                <!-- Funding bar -->
+                <div class="bg-brand-light rounded-xl p-5">
+                    <p class="text-xs font-bold text-brand-dark mb-3">資金構成</p>
+                    <div class="w-full bg-gray-200 rounded-full h-6 overflow-hidden flex">
+                        <div class="h-6 bg-brand-accent flex items-center justify-center" style="width: 20%;">
+                            <span class="text-white text-xs font-bold">自己資金</span>
+                        </div>
+                        <div class="h-6 bg-brand-warm flex items-center justify-center" style="width: 80%;">
+                            <span class="text-white text-xs font-bold">借入</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <span class="text-xs text-gray-500">200万円（20%）</span>
+                        <span class="text-xs text-gray-500">800〜1,000万円（80%）</span>
+                    </div>
+                </div>
+
+                <!-- Bottom dark box -->
+                <div class="bg-brand-dark rounded-xl p-5 flex-1 flex flex-col justify-center" style="background-color: #333333;">
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-2">Funding Purpose</p>
+                    <h3 class="text-white font-bold text-base mb-3">借入用途</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-accent flex items-center justify-center">
+                                <i class="fas fa-car text-white text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-300">車両購入費</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-warm flex items-center justify-center">
+                                <i class="fas fa-wallet text-white text-xs"></i>
+                            </div>
+                            <p class="text-sm text-gray-300">運転資金</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">16</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

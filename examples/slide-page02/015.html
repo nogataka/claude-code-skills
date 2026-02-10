@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - 初期投資</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div style="position:absolute;top:-200px;right:-200px;width:800px;height:800px;border-radius:50%;background:rgba(0,123,255,0.05);"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Initial Investment</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">初期投資の内訳</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-5 flex flex-col relative z-10">
+            <!-- KPI Cards Row -->
+            <div class="grid grid-cols-4 gap-4 mb-5">
+                <!-- Card 1 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-start">
+                    <div class="w-1 h-full rounded-full bg-brand-accent mr-4 self-stretch"></div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-xs text-gray-400">車両購入</p>
+                            <i class="fas fa-car text-brand-accent text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-black text-brand-dark font-accent">600-900<span class="text-sm font-bold ml-1">万円</span></p>
+                        <p class="text-xs text-gray-400 mt-1">中古車1台</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-start">
+                    <div class="w-1 h-full rounded-full bg-brand-warm mr-4 self-stretch"></div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-xs text-gray-400">登録・整備・保険</p>
+                            <i class="fas fa-shield-alt text-brand-warm text-sm"></i>
+                        </div>
+                        <p class="text-2xl font-black text-brand-dark font-accent">50<span class="text-sm font-bold ml-1">万円</span></p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-start">
+                    <div class="w-1 h-full rounded-full mr-4 self-stretch" style="background-color: #10B981;"></div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-xs text-gray-400">設備・備品</p>
+                            <i class="fas fa-box text-sm" style="color: #10B981;"></i>
+                        </div>
+                        <p class="text-2xl font-black text-brand-dark font-accent">20<span class="text-sm font-bold ml-1">万円</span></p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-start">
+                    <div class="w-1 h-full rounded-full mr-4 self-stretch" style="background-color: #8B5CF6;"></div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-xs text-gray-400">Web・広告</p>
+                            <i class="fas fa-laptop text-sm" style="color: #8B5CF6;"></i>
+                        </div>
+                        <p class="text-2xl font-black text-brand-dark font-accent">10<span class="text-sm font-bold ml-1">万円</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom 2-column area -->
+            <div class="grid grid-cols-2 gap-6 flex-1">
+                <!-- Left: Bar chart -->
+                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                    <h3 class="text-sm font-bold text-brand-dark mb-5">投資内訳チャート</h3>
+                    <div class="space-y-4">
+                        <!-- Bar: 車両 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs text-gray-500">車両</span>
+                                <span class="text-xs font-bold font-accent text-brand-dark">600-900万円</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-5">
+                                <div class="bg-brand-accent h-5 rounded-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <!-- Bar: 登録等 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs text-gray-500">登録等</span>
+                                <span class="text-xs font-bold font-accent text-brand-dark">50万円</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-5">
+                                <div class="bg-brand-warm h-5 rounded-full" style="width: 6%;min-width:24px;"></div>
+                            </div>
+                        </div>
+                        <!-- Bar: 設備 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs text-gray-500">設備</span>
+                                <span class="text-xs font-bold font-accent text-brand-dark">20万円</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-5">
+                                <div class="h-5 rounded-full" style="width: 3%;min-width:16px;background-color:#10B981;"></div>
+                            </div>
+                        </div>
+                        <!-- Bar: 広告 -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs text-gray-500">広告</span>
+                                <span class="text-xs font-bold font-accent text-brand-dark">10万円</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-5">
+                                <div class="h-5 rounded-full" style="width: 1.5%;min-width:12px;background-color:#8B5CF6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Summary card -->
+                <div class="bg-brand-dark rounded-xl p-8 flex flex-col justify-center" style="background-color: #333333;">
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-3">Total Investment</p>
+                    <p class="text-4xl font-black text-white font-accent mb-2">700〜1,000<span class="text-lg font-bold ml-1">万円</span></p>
+                    <div class="w-12 h-1 bg-brand-accent rounded-full my-4"></div>
+                    <p class="text-sm text-gray-400 leading-relaxed">車両購入費が全体の85%以上を占めます。中古車を活用し初期コストを抑制。段階的な投資で事業リスクを最小化する戦略です。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">15</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

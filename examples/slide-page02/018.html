@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - 成長ロードマップ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div style="position:absolute;top:-200px;left:-100px;width:600px;height:600px;border-radius:50%;background:rgba(0,123,255,0.04);"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Growth Roadmap</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">成長ロードマップ</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: Timeline -->
+        <div class="flex-1 px-16 py-6 flex flex-col relative z-10">
+            <!-- Timeline horizontal -->
+            <div class="flex gap-6 flex-1">
+                <!-- Phase 1 -->
+                <div class="flex-1 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-black font-accent text-sm">Y1</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-brand-accent ml-2"></div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex-1 flex flex-col" style="border-top: 4px solid #007BFF;">
+                        <h3 class="text-base font-bold text-brand-dark mb-2">1年目</h3>
+                        <p class="text-xs text-brand-accent font-bold mb-3">基盤構築フェーズ</p>
+                        <div class="space-y-2 flex-1">
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-accent text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">中古車1台で開業</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-accent text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">安定運営体制の確立</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-accent text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">稼働率の向上</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-accent text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">口コミ・リピーター獲得</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100">
+                            <p class="text-xs text-gray-400">目標</p>
+                            <p class="text-sm font-bold text-brand-dark">車両<span class="text-brand-accent font-accent"> 1</span>台 / 稼働率安定化</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="flex-1 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-warm flex items-center justify-center flex-shrink-0">
+                            <span class="text-white font-black font-accent text-sm">Y2-3</span>
+                        </div>
+                        <div class="flex-1 h-1 bg-brand-warm ml-2"></div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex-1 flex flex-col" style="border-top: 4px solid #F59E0B;">
+                        <h3 class="text-base font-bold text-brand-dark mb-2">2〜3年目</h3>
+                        <p class="text-xs text-brand-warm font-bold mb-3">拡大フェーズ</p>
+                        <div class="space-y-2 flex-1">
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-warm text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">2台目の車両導入</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-warm text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">車種バリエーション拡充</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-warm text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">集客チャネルの多角化</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-brand-warm text-xs mt-0.5"></i>
+                                <p class="text-xs text-gray-600">清掃・点検の一部外注化</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100">
+                            <p class="text-xs text-gray-400">目標</p>
+                            <p class="text-sm font-bold text-brand-dark">車両<span class="text-brand-warm font-accent"> 2</span>台 / 売上倍増</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="flex-1 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: #10B981;">
+                            <span class="text-white font-black font-accent text-sm">Y4+</span>
+                        </div>
+                        <div class="flex-1 h-1 ml-2" style="background: #10B981;"></div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex-1 flex flex-col" style="border-top: 4px solid #10B981;">
+                        <h3 class="text-base font-bold text-brand-dark mb-2">将来</h3>
+                        <p class="text-xs font-bold mb-3" style="color: #10B981;">発展フェーズ</p>
+                        <div class="space-y-2 flex-1">
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-xs mt-0.5" style="color: #10B981;"></i>
+                                <p class="text-xs text-gray-600">キャンピングカー特化</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-xs mt-0.5" style="color: #10B981;"></i>
+                                <p class="text-xs text-gray-600">AI活用運営の実装</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-xs mt-0.5" style="color: #10B981;"></i>
+                                <p class="text-xs text-gray-600">法人契約・長期レンタル</p>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-xs mt-0.5" style="color: #10B981;"></i>
+                                <p class="text-xs text-gray-600">エリア拡大</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-gray-100">
+                            <p class="text-xs text-gray-400">目標</p>
+                            <p class="text-sm font-bold text-brand-dark">AI活用 / キャンピングカー特化</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">18</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

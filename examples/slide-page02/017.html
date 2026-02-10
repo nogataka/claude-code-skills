@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AIレンタカー - リスクと対策</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #333333; }
+        .text-brand-dark { color: #333333; }
+        .bg-brand-accent { background-color: #007BFF; }
+        .text-brand-accent { color: #007BFF; }
+        .bg-brand-warm { background-color: #F59E0B; }
+        .text-brand-warm { color: #F59E0B; }
+        .bg-brand-light { background-color: #F8F9FA; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <div style="position:absolute;bottom:-200px;right:-100px;width:600px;height:600px;border-radius:50%;background:rgba(0,123,255,0.04);"></div>
+
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Risk Management</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">リスクと対策</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car-side text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: 2x2 Grid -->
+        <div class="flex-1 px-16 py-5 grid grid-cols-2 grid-rows-2 gap-5 relative z-10">
+            <!-- Card 1: Occupancy -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: #FEF3C7;">
+                        <i class="fas fa-chart-bar text-brand-warm"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-accent uppercase tracking-wide">Risk 01</p>
+                        <h3 class="text-sm font-bold text-brand-dark">稼働率低下</h3>
+                    </div>
+                </div>
+                <div class="border-l-2 border-red-300 pl-3 mb-3">
+                    <p class="text-xs text-gray-500">繁忙期と閑散期の需要差が大きく、平均稼働率が想定を下回るリスク</p>
+                </div>
+                <div class="border-l-2 pl-3 mt-auto" style="border-color: #10B981;">
+                    <p class="text-xs font-bold" style="color: #10B981;"><i class="fas fa-shield-alt mr-1"></i>対策</p>
+                    <p class="text-xs text-gray-500">副業スタートで固定費を抑制。本業収入でリスクヘッジ</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Accident -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: #FEE2E2;">
+                        <i class="fas fa-car-crash" style="color: #EF4444;"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-accent uppercase tracking-wide">Risk 02</p>
+                        <h3 class="text-sm font-bold text-brand-dark">事故・故障</h3>
+                    </div>
+                </div>
+                <div class="border-l-2 border-red-300 pl-3 mb-3">
+                    <p class="text-xs text-gray-500">車両の事故や故障により営業停止、修理費用が発生するリスク</p>
+                </div>
+                <div class="border-l-2 pl-3 mt-auto" style="border-color: #10B981;">
+                    <p class="text-xs font-bold" style="color: #10B981;"><i class="fas fa-shield-alt mr-1"></i>対策</p>
+                    <p class="text-xs text-gray-500">任意保険加入・定期点検の徹底で予防と補償を確保</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Price competition -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: #DBEAFE;">
+                        <i class="fas fa-tags text-brand-accent"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-accent uppercase tracking-wide">Risk 03</p>
+                        <h3 class="text-sm font-bold text-brand-dark">価格競争</h3>
+                    </div>
+                </div>
+                <div class="border-l-2 border-red-300 pl-3 mb-3">
+                    <p class="text-xs text-gray-500">大手や新規参入者との価格競争で収益性が圧迫されるリスク</p>
+                </div>
+                <div class="border-l-2 pl-3 mt-auto" style="border-color: #10B981;">
+                    <p class="text-xs font-bold" style="color: #10B981;"><i class="fas fa-shield-alt mr-1"></i>対策</p>
+                    <p class="text-xs text-gray-500">レジャー特化・品質訴求で価格以外の価値で差別化</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Cash flow -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: #F3E8FF;">
+                        <i class="fas fa-wallet" style="color: #8B5CF6;"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-accent uppercase tracking-wide">Risk 04</p>
+                        <h3 class="text-sm font-bold text-brand-dark">資金繰り</h3>
+                    </div>
+                </div>
+                <div class="border-l-2 border-red-300 pl-3 mb-3">
+                    <p class="text-xs text-gray-500">借入返済と運営費のバランスが崩れ、資金繰りが悪化するリスク</p>
+                </div>
+                <div class="border-l-2 pl-3 mt-auto" style="border-color: #10B981;">
+                    <p class="text-xs font-bold" style="color: #10B981;"><i class="fas fa-shield-alt mr-1"></i>対策</p>
+                    <p class="text-xs text-gray-500">慎重な台数拡大。1台で安定運営を確認してから次の投資へ</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">AIレンタカー - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">17</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

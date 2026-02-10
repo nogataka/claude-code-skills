@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>収支モデル - AIレンタカー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-accent { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F172A; }
+        .bg-brand-accent { background-color: #3B82F6; }
+        .bg-brand-warm { background-color: #F97316; }
+        .text-brand-dark { color: #0F172A; }
+        .text-brand-accent { color: #3B82F6; }
+        .text-brand-warm { color: #F97316; }
+        .border-brand-accent { border-color: #3B82F6; }
+        .border-brand-warm { border-color: #F97316; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-warm"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Revenue Model</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">収支モデル（月次・標準）</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-car text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">AI RENTAL CAR</p>
+            </div>
+        </div>
+
+        <!-- Body: Grid Table + Revenue Flow -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-5">
+            <!-- Grid Table -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 flex-1 flex flex-col">
+                <!-- Header Row -->
+                <div class="flex bg-brand-dark text-white text-xs font-bold">
+                    <div class="w-1/4 px-5 py-3">項目</div>
+                    <div class="w-1/4 px-5 py-3 text-center">数値</div>
+                    <div class="w-1/4 px-5 py-3 text-center">単位</div>
+                    <div class="w-1/4 px-5 py-3 text-center">備考</div>
+                </div>
+                <!-- Data Rows -->
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-check mr-2 text-brand-accent opacity-70"></i>
+                            <p>稼働日数</p>
+                        </div>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center">
+                        <p class="font-bold text-brand-dark font-accent">12</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-600">
+                        <p>日 / 月</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-500 text-xs">
+                        <p>週末+祝日中心</p>
+                    </div>
+                </div>
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-tag mr-2 text-brand-accent opacity-70"></i>
+                            <p>平均単価</p>
+                        </div>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center">
+                        <p class="font-bold text-brand-dark font-accent">15,000</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-600">
+                        <p>円 / 日</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-500 text-xs">
+                        <p>日貸ベース</p>
+                    </div>
+                </div>
+                <div class="flex text-sm border-b border-gray-100" style="background-color: rgba(59,130,246,0.05);">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-accent bg-blue-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-chart-bar mr-2 text-brand-accent"></i>
+                            <p>月商</p>
+                        </div>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center">
+                        <p class="font-bold text-brand-accent text-lg font-accent">180,000</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-brand-accent">
+                        <p>円 / 月</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-500 text-xs">
+                        <p>12日 x 15,000円</p>
+                    </div>
+                </div>
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-minus-circle mr-2 text-red-400 opacity-70"></i>
+                            <p>固定費</p>
+                        </div>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center">
+                        <p class="font-bold text-brand-dark font-accent">100,000 - 140,000</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-600">
+                        <p>円 / 月</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-500 text-xs">
+                        <p>保険・駐車場・ローン等</p>
+                    </div>
+                </div>
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">
+                        <div class="flex items-center">
+                            <i class="fas fa-minus-circle mr-2 text-red-400 opacity-70"></i>
+                            <p>変動費</p>
+                        </div>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center">
+                        <p class="font-bold text-brand-dark font-accent">20,000</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-600">
+                        <p>円 / 月</p>
+                    </div>
+                    <div class="w-1/4 px-5 py-3 text-center text-gray-500 text-xs">
+                        <p>ガソリン・消耗品等</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Flow -->
+            <div class="flex items-stretch gap-4">
+                <div class="flex-1 bg-white rounded-xl p-4 border-l-4 border-brand-accent shadow-sm">
+                    <p class="text-xs text-gray-500 uppercase mb-1 font-accent">Revenue</p>
+                    <p class="text-2xl font-black text-brand-dark font-accent">¥180,000</p>
+                </div>
+                <div class="flex items-center text-2xl text-gray-300">
+                    <i class="fas fa-minus"></i>
+                </div>
+                <div class="flex-1 bg-white rounded-xl p-4 border-l-4 border-red-400 shadow-sm">
+                    <p class="text-xs text-gray-500 uppercase mb-1 font-accent">Cost</p>
+                    <p class="text-2xl font-black text-brand-dark font-accent">¥120,000-160,000</p>
+                </div>
+                <div class="flex items-center text-2xl text-gray-300">
+                    <i class="fas fa-equals"></i>
+                </div>
+                <div class="flex-1 bg-green-50 rounded-xl p-4 border-l-4 border-green-500 shadow-sm">
+                    <p class="text-xs text-gray-500 uppercase mb-1 font-accent">Profit</p>
+                    <p class="text-2xl font-black text-green-700 font-accent">¥20,000-50,000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-accent">13</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
