@@ -1,27 +1,57 @@
-# Claude Code Skills
+# SlideKit
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) 用のカスタムスキル集です。
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) 用のプレゼンテーションスライド制作ツールキットです。
 
-プレゼンテーション資料の作成・変換に特化したスキルを提供しています。
+HTMLスライドの新規作成から、既存PDFのHTML化、さらにPowerPoint（PPTX）への変換まで、スライド制作の一連のワークフローをカバーします。
 
 ## Claude Code スキルとは
 
-Claude Code のスキルは、Claude に特定の専門知識やワークフローを教えるための仕組みです。スキルをインストールすると、Claude Code のセッション内でスラッシュコマンド（例: `/create-slide-template`）として呼び出せるようになります。
+Claude Code のスキルは、Claude に特定の専門知識やワークフローを教えるための仕組みです。スキルをインストールすると、Claude Code のセッション内でスラッシュコマンドとして呼び出せるようになります。
 
 スキルの実体は `SKILL.md` というMarkdownファイルで、Claude が従うべき手順・制約・デザインルールなどが記述されています。
 
 ## 収録スキル一覧
 
-| スキル名 | 概要 |
+| コマンド | 概要 |
 |---------|------|
-| [create-slide-template](#create-slide-template) | HTMLスライドテンプレートを新規作成 |
-| [pdf-to-html](#pdf-to-html) | PDF資料をHTMLスライドに変換 |
+| [`/slidekit-create`](#slidekitcreate) | HTMLスライドを新規作成 |
+| [`/slidekit-templ`](#slidekittempl) | PDFからHTMLスライドテンプレートを作成 |
+
+2つのスキルは連携して使えます:
+
+```
+slidekit-templ でPDFからテンプレートを作成
+        ↓
+  templates/ に配置
+        ↓
+slidekit-create でテンプレートを参考にスライドを新規作成
+        ↓
+  /pptx で PowerPoint に変換（任意）
+```
+
+## インストール
+
+全スキルを一括でインストール:
+
+```bash
+claude install-skill https://github.com/nogataka/claude-code-skills
+```
+
+個別にインストールする場合:
+
+```bash
+# slidekit-create のみ
+claude install-skill https://github.com/nogataka/claude-code-skills/tree/main/skills/slidekit-create
+
+# slidekit-templ のみ
+claude install-skill https://github.com/nogataka/claude-code-skills/tree/main/skills/slidekit-templ
+```
 
 ---
 
-## create-slide-template
+## slidekit-create
 
-HTMLスライドプレゼンテーションのテンプレートを新規作成するスキルです。
+HTMLスライドプレゼンテーションを新規作成するスキルです。
 
 ### 特徴
 
@@ -61,15 +91,15 @@ HTMLスライドプレゼンテーションのテンプレートを新規作成�
 
 ### カスタムテンプレート機能
 
-自作のHTMLスライドをスタイルの参考資料として登録できます。登録すると、新しいデッキ生成時にカラーパレット・フォント・ヘッダー/フッター・装飾要素などのデザインが自動的に抽出・反映されます。
+自作のHTMLスライドや `slidekit-templ` で作成したテンプレートをスタイルの参考資料として登録できます。登録すると、新しいデッキ生成時にカラーパレット・フォント・ヘッダー/フッター・装飾要素などのデザインが自動的に抽出・反映されます。
 
 **使い方:**
 
 ```
-~/.claude/skills/create-slide-template/references/templates/
+~/.claude/skills/slidekit-create/references/templates/
 ```
 
-上記ディレクトリに自作HTMLファイルを配置するだけです。`/create-slide-template` 実行時に自動で検出されます。
+上記ディレクトリに自作HTMLファイルを配置するだけです。`/slidekit-create` 実行時に自動で検出されます。
 
 **注意事項:**
 
@@ -85,38 +115,34 @@ HTMLスライドプレゼンテーションのテンプレートを新規作成�
 3. **デザイン決定** — カラーパレット（3〜4色）、フォントペア（日本語＋欧文）、ブランドアイコンを決定
 4. **HTML生成** — 全スライドを `001.html` 〜 `NNN.html` として出力
 5. **print.html生成** — 全スライドをiframeで並べた印刷用ページを出力
-6. **PPTX変換（任意）** — `/pptx` スキルがあれば PowerPoint に変換可能
-
-### インストール
-
-```bash
-claude install-skill https://github.com/nogataka/claude-code-skills/tree/main/skills/create-slide-template
-```
+6. **PPTX変換（任意）** — `/pptx` スキルがあれば PowerPoint に変換（後述）
 
 ### 使い方
 
 Claude Code で以下のように呼び出します:
 
 ```
-/create-slide-template
+/slidekit-create
 ```
 
 または自然言語で依頼できます:
 
 ```
-プレゼン資料のHTMLテンプレートを作ってください
+プレゼン資料を作ってください
 ```
 
 ---
 
-## pdf-to-html
+## slidekit-templ
 
-既存のPDFプレゼンテーションを高品質なHTMLスライドファイルに変換するスキルです。
+既存のPDFプレゼンテーションからHTMLスライドテンプレートを作成するスキルです。
+
+生成したテンプレートは `slidekit-create` のカスタムテンプレートとして登録でき、既存資料のデザインを踏襲した新しいスライドを作成できます。
 
 ### 特徴
 
 - PDFの各ページをスクリーンショット化し、Claudeがそれを見ながらHTMLを再現
-- `create-slide-template` のデザインシステムに準拠したHTML出力
+- `slidekit-create` のデザインシステムに準拠したHTML出力
 - 色・テキスト・レイアウトを元のPDFに忠実に再現
 - 変換後のビジュアルQAプロセスを内蔵
 
@@ -145,71 +171,139 @@ sudo apt-get install poppler-utils
 choco install poppler
 ```
 
-### インストール
-
-```bash
-claude install-skill https://github.com/nogataka/claude-code-skills/tree/main/skills/pdf-to-html
-```
-
 ### 使い方
 
 Claude Code で以下のように呼び出します:
 
 ```
-/pdf-to-html
+/slidekit-templ
 ```
 
 または自然言語で依頼できます:
 
 ```
-このPDFをHTMLスライドに変換してください: ./presentation.pdf
+このPDFからテンプレートを作ってください: ./presentation.pdf
 ```
 
 ### ワークフロー
 
 1. **スライド画像の生成** — PDFを `pdftoppm` でJPEG画像に変換
 2. **デッキ分析** — 全スライド画像を読み取り、カラーパレット・フォント・ヘッダー/フッターのパターンを特定
-3. **デザインシステムの読み込み** — `create-slide-template` のルール・パターンを参照
+3. **デザインシステムの読み込み** — `slidekit-create` のルール・パターンを参照
 4. **HTML生成** — 各スライド画像を見ながら、最も近いレイアウトパターンを選択してHTMLを作成
 5. **print.html生成** — 全スライドの一覧表示用ページを出力
 6. **ビジュアルQA** — 生成したHTMLと元のスクリーンショットを比較し、差異があれば修正
+7. **PPTX変換（任意）** — `/pptx` スキルがあれば PowerPoint に変換可能（手順は下記セクションを参照）
+
+### テンプレートとして登録する
+
+`slidekit-templ` で生成したHTMLの中から、デザインの参考にしたいファイルを選んでコピーします:
+
+```bash
+cp output/templ/003.html ~/.claude/skills/slidekit-create/references/templates/
+```
+
+登録後、`/slidekit-create` を実行すると、そのデザインが自動的に参考資料として読み込まれます。
+
+---
+
+## HTML から PowerPoint（PPTX）への変換
+
+`slidekit-create` および `slidekit-templ` が生成するのはHTMLファイルです。最終的にPowerPointファイル（`.pptx`）として使いたい場合は、別途 `/pptx` スキルを使って変換します。
+
+### 事前準備
+
+`/pptx` スキルをインストールしておきます（SlideKitには含まれていません）:
+
+```bash
+claude install-skill https://github.com/anthropics/claude-code-agent-skills/tree/main/skills/pptx
+```
+
+### 変換手順
+
+**方法A: ワークフロー内で自動変換**
+
+`/slidekit-create` のワークフロー完了後、Claude が「PPTXに変換しますか？」と確認します。「はい」と答えれば `/pptx` スキルが自動で呼び出され、HTMLからPowerPointに変換されます。
+
+**方法B: 手動で変換**
+
+既にHTMLスライドが生成済みの場合は、Claude Code で直接依頼できます:
+
+```
+output/slide-page01/ のHTMLスライドをPPTXに変換してください
+```
+
+または `/pptx` スキルを直接呼び出します:
+
+```
+/pptx
+```
+
+### 変換の全体像
+
+```
+/slidekit-create                         /pptx
+        │                                    │
+  ヒアリング                            HTMLファイルを読み取り
+        ↓                                    ↓
+  HTMLスライド生成                       各スライドのDOM・CSSを解析
+        ↓                                    ↓
+  001.html ~ NNN.html ──────→  PowerPoint要素に変換
+  + print.html                               ↓
+                                    presentation.pptx を出力
+```
+
+PDF からの場合:
+
+```
+PDF ──→ /slidekit-templ ──→ HTML ──→ /pptx ──→ PPTX
+```
+
+> **なぜHTMLを経由するのか:**
+> PDFから直接PPTXに変換するのではなく、一度HTMLを経由することで、PPTX変換しやすいDOM構造を確保しつつ、HTMLの段階で内容の確認・修正が行えます。
+
+### 注意事項
+
+- HTMLのDOM構造がPPTX変換精度に直結します。SlideKit はPPTX変換を前提としたルール（テキストは `<p>` / `<h*>` を使う、flexテーブルを使う、`::before` / `::after` にテキストを入れない等）を守ってHTMLを生成するため、高い変換精度が得られます
+- 複雑なCSSグラデーションなど一部の装飾はスクリーンショットとして埋め込まれる場合があります
+- `/pptx` スキルがインストールされていない場合、変換はスキップされます
 
 ---
 
 ## ディレクトリ構成
 
 ```
-claude-code-skills/
+claude-code-skills/              （リポジトリ名）
 ├── README.md
 ├── skills/
-│   ├── create-slide-template/
-│   │   ├── SKILL.md              # スキル定義（ルール・制約・ワークフロー）
+│   ├── slidekit-create/         # /slidekit-create
+│   │   ├── SKILL.md             # スキル定義（ルール・制約・ワークフロー）
 │   │   └── references/
-│   │       ├── patterns.md       # 15レイアウトパターンのDOMツリーとコンポーネント集
-│   │       └── templates/        # カスタムテンプレート置き場（自作HTMLを配置）
-│   │           └── README.md     # テンプレートの使い方
-│   └── pdf-to-html/
-│       ├── SKILL.md              # スキル定義（変換パイプライン・QAプロセス）
+│   │       ├── patterns.md      # 15レイアウトパターンのDOMツリーとコンポーネント集
+│   │       └── templates/       # カスタムテンプレート置き場（自作HTMLを配置）
+│   │           └── README.md    # テンプレートの使い方
+│   └── slidekit-templ/          # /slidekit-templ
+│       ├── SKILL.md             # スキル定義（変換パイプライン・QAプロセス）
 │       └── scripts/
-│           └── pdf_to_images.py  # PDF→JPEG変換スクリプト（pdftoppm利用）
+│           └── pdf_to_images.py # PDF→JPEG変換スクリプト（pdftoppm利用）
 └── .gitignore
 ```
 
 ## 動作環境
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) がインストール済みであること
-- `pdf-to-html` を使う場合は Poppler（`pdftoppm`）が必要
+- `slidekit-templ` を使う場合は Poppler（`pdftoppm`）が必要
 - PPTX変換を行う場合は別途 [`pptx` スキル](https://github.com/anthropics/claude-code-agent-skills/tree/main/skills/pptx) のインストールが必要
 
 ## よくある質問
 
 ### スキルはどこにインストールされますか？
 
-`~/.claude/skills/` 配下にインストールされます。例:
+`~/.claude/skills/` 配下にインストールされます:
 
 ```
-~/.claude/skills/create-slide-template/SKILL.md
-~/.claude/skills/pdf-to-html/SKILL.md
+~/.claude/skills/slidekit-create/SKILL.md
+~/.claude/skills/slidekit-templ/SKILL.md
 ```
 
 ### スキルをアンインストールするには？
@@ -217,21 +311,27 @@ claude-code-skills/
 `~/.claude/skills/` 内の該当ディレクトリを削除してください:
 
 ```bash
-rm -rf ~/.claude/skills/create-slide-template
-rm -rf ~/.claude/skills/pdf-to-html
+rm -rf ~/.claude/skills/slidekit-create
+rm -rf ~/.claude/skills/slidekit-templ
 ```
 
 ### 生成されたHTMLをPowerPointに変換できますか？
 
-はい。`/pptx` スキルが別途インストールされていれば、`create-slide-template` のワークフロー最後にPPTX変換を提案します。以下でインストールできます:
-
-```bash
-claude install-skill https://github.com/anthropics/claude-code-agent-skills/tree/main/skills/pptx
-```
+はい。詳しい手順は [HTML から PowerPoint（PPTX）への変換](#html-から-powerpointpptxへの変換) セクションをご覧ください。
 
 ### HTMLスライドを印刷・PDF化するには？
 
 生成される `print.html` をブラウザで開き、ブラウザの印刷機能（Ctrl/Cmd + P）から「PDFとして保存」を選択してください。
+
+### slidekit-templ と slidekit-create の違いは？
+
+| | slidekit-templ | slidekit-create |
+|---|---|---|
+| **入力** | 既存のPDFファイル | ユーザーへのヒアリング |
+| **目的** | PDFのデザインをHTMLで再現し、テンプレート化 | 新しいスライドをゼロから作成 |
+| **用途** | 既存資料のデザインを流用したいとき | 新しいプレゼン資料を作りたいとき |
+
+2つを組み合わせると、既存PDFのデザインを踏襲しつつ新しい内容のスライドを作成できます。
 
 ## ライセンス
 

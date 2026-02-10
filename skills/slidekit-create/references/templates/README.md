@@ -8,7 +8,7 @@ When generating a new deck, Claude will read these files and extract the visual 
 ## How to use
 
 1. Copy your HTML slide files into this directory
-2. Run `/create-slide-template` as usual
+2. Run `/slidekit-create` as usual
 3. Claude will automatically detect and reference the templates
 
 ## Rules

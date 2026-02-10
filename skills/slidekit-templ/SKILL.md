@@ -1,6 +1,6 @@
 ---
-name: pdf-to-html
-description: "Convert PDF presentations to high-quality HTML slide files using a visual reproduction approach. Pipeline: PDF → slide screenshots → Claude writes HTML matching each screenshot. Use when the user wants to convert a PDF to HTML slides, reproduce a presentation as HTML, or create HTML versions of existing decks. Triggers: 'pdf to html', 'convert pdf to html', 'reproduce this deck as html', 'convert slides to html'."
+name: slidekit-templ
+description: "Convert PDF presentations to HTML slide templates using a visual reproduction approach. Pipeline: PDF → slide screenshots → Claude writes HTML matching each screenshot. Use when the user wants to convert a PDF to HTML slide templates, reproduce a presentation as HTML, or create reusable templates from existing decks. Triggers: 'pdf to html', 'convert pdf to template', 'reproduce this deck as html', 'create template from pdf'."
 ---
 
 # PDF to HTML Slide Converter
@@ -47,10 +47,10 @@ Before writing any HTML:
 
 Read these files to load the HTML design system rules:
 
-1. `~/.claude/skills/create-slide-template/SKILL.md` — Mandatory constraints, PPTX conversion rules, anti-patterns, design guidelines, HTML boilerplate, pre-delivery checklist
-2. `~/.claude/skills/create-slide-template/references/patterns.md` — 15 layout patterns with DOM trees, component snippets
+1. `~/.claude/skills/slidekit-create/SKILL.md` — Mandatory constraints, PPTX conversion rules, anti-patterns, design guidelines, HTML boilerplate, pre-delivery checklist
+2. `~/.claude/skills/slidekit-create/references/patterns.md` — 15 layout patterns with DOM trees, component snippets
 
-**All rules in create-slide-template apply.** Key constraints:
+**All rules in slidekit-create apply.** Key constraints:
 
 - Slide size: 1280x720px
 - Tailwind CSS 2.2.19 + Font Awesome 6.4.0 + Google Fonts via CDN
@@ -64,7 +64,7 @@ Read these files to load the HTML design system rules:
 For each slide image, one at a time:
 
 1. **Read the slide image** carefully
-2. **Pick the closest layout pattern** from create-slide-template's 15 patterns
+2. **Pick the closest layout pattern** from slidekit-create's 15 patterns
 3. **Write the HTML** that visually reproduces the slide:
    - Match colors precisely (use hex values observed in the image)
    - Match text content exactly (all text, numbers, labels)
@@ -122,7 +122,12 @@ After all slides are written, generate `{output_dir}/print.html`:
         }
         .slide-frame iframe { width: 1280px; height: 720px; border: none; }
         @media print {
-            .slide-frame { page-break-after: always; box-shadow: none; border: none; margin: 0 auto; }
+            body { background: #FFFFFF; }
+            .slide-frame {
+                page-break-after: always; box-shadow: none; border: none;
+                margin: 0 auto;
+                transform: scale(0.85); transform-origin: top center;
+            }
         }
     </style>
 </head>
