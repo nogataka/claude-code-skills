@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ロードマップ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Roadmap</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">6ヶ月ロードマップ</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 2 Columns -->
+        <div class="flex-1 px-16 py-6 flex gap-8">
+            <!-- Left: Timeline -->
+            <div class="w-1/2 flex flex-col gap-1">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-lato mb-3">Timeline</h3>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs font-bold mr-3 font-lato">M1</div>
+                    <div class="border-l-2 border-brand-accent pl-4 pb-4">
+                        <p class="text-sm font-bold text-brand-dark">要件定義・データ調査</p>
+                        <p class="text-xs text-gray-500">業務フロー分析、データ品質評価、AI適用箇所の特定</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs font-bold mr-3 font-lato">M2</div>
+                    <div class="border-l-2 border-brand-accent pl-4 pb-4">
+                        <p class="text-sm font-bold text-brand-dark">PoC開発・検証</p>
+                        <p class="text-xs text-gray-500">チャットボットのプロトタイプ構築、精度検証</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-sub flex items-center justify-center text-white text-xs font-bold mr-3 font-lato">M3</div>
+                    <div class="border-l-2 border-brand-sub pl-4 pb-4">
+                        <p class="text-sm font-bold text-brand-dark">パイロット導入（CS部門）</p>
+                        <p class="text-xs text-gray-500">カスタマーサポート部門で先行運用開始</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-sub flex items-center justify-center text-white text-xs font-bold mr-3 font-lato">M4</div>
+                    <div class="border-l-2 border-brand-sub pl-4 pb-4">
+                        <p class="text-sm font-bold text-brand-dark">データ分析基盤構築</p>
+                        <p class="text-xs text-gray-500">ダッシュボード開発、予測モデルの本番導入</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-full bg-gray-400 flex items-center justify-center text-white text-xs font-bold mr-3 font-lato">M5-6</div>
+                    <div class="border-l-2 border-gray-300 pl-4">
+                        <p class="text-sm font-bold text-brand-dark">全社展開・最適化</p>
+                        <p class="text-xs text-gray-500">全部門へロールアウト、継続改善サイクルの確立</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Milestones -->
+            <div class="w-1/2 flex flex-col gap-3">
+                <h3 class="text-sm font-bold text-brand-sub uppercase tracking-wider font-lato mb-2">Key Milestones</h3>
+                <div class="bg-yellow-50 rounded-xl p-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="fas fa-flag text-brand-accent mr-3"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">PoC完了・Go判定</p>
+                            <p class="text-xs text-gray-500">精度80%以上で本格導入を決定</p>
+                        </div>
+                    </div>
+                    <span class="inline-block bg-brand-accent text-white text-xs font-bold px-2 py-0.5 rounded font-lato">M2</span>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-brand-accent mr-3"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">パイロット成果報告</p>
+                            <p class="text-xs text-gray-500">CS部門の応答時間50%削減を確認</p>
+                        </div>
+                    </div>
+                    <span class="inline-block bg-brand-accent text-white text-xs font-bold px-2 py-0.5 rounded font-lato">M3</span>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="fas fa-chart-bar text-brand-sub mr-3"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">分析基盤リリース</p>
+                            <p class="text-xs text-gray-500">全社KPIダッシュボード稼働開始</p>
+                        </div>
+                    </div>
+                    <span class="inline-block bg-brand-sub text-white text-xs font-bold px-2 py-0.5 rounded font-lato">M4</span>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <i class="fas fa-rocket text-brand-sub mr-3"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">全社展開完了</p>
+                            <p class="text-xs text-gray-500">年間¥8,000万のコスト削減効果達成</p>
+                        </div>
+                    </div>
+                    <span class="inline-block bg-brand-sub text-white text-xs font-bold px-2 py-0.5 rounded font-lato">M6</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">11</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

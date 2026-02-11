@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>市場規模</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .text-navy-900 { color: #0F172A; }
+        .text-navy-800 { color: #1E293B; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+        .border-navy-700 { border-color: #334155; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">Market Size</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">市場規模</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex gap-8">
+            <!-- Left: KPI + Descriptions -->
+            <div class="w-1/2 flex flex-col justify-between">
+                <!-- KPI Row -->
+                <div class="grid grid-cols-3 gap-3 mb-6">
+                    <div class="bg-navy-800 rounded-xl p-4 border border-blue-900 text-center">
+                        <p class="text-xs text-gray-500 font-inter uppercase tracking-wider mb-1">TAM</p>
+                        <p class="text-3xl font-black text-white font-inter">¥1.2<span class="text-lg text-accent-orange ml-1">兆</span></p>
+                        <p class="text-xs text-gray-500 mt-1">国内DX市場全体</p>
+                    </div>
+                    <div class="bg-navy-800 rounded-xl p-4 border border-blue-900 text-center">
+                        <p class="text-xs text-gray-500 font-inter uppercase tracking-wider mb-1">SAM</p>
+                        <p class="text-3xl font-black text-white font-inter">¥2,400<span class="text-lg text-accent-orange ml-1">億</span></p>
+                        <p class="text-xs text-gray-500 mt-1">BtoBクラウドSaaS</p>
+                    </div>
+                    <div class="bg-accent-orange rounded-xl p-4 text-center">
+                        <p class="text-xs text-white font-inter uppercase tracking-wider mb-1 opacity-80">SOM</p>
+                        <p class="text-3xl font-black text-white font-inter">¥120<span class="text-lg ml-1">億</span></p>
+                        <p class="text-xs text-white mt-1 opacity-80">獲得可能市場</p>
+                    </div>
+                </div>
+
+                <!-- Segment Details -->
+                <div class="space-y-3 flex-1">
+                    <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider font-inter mb-2">Market Segments</h3>
+                    <div class="bg-navy-800 rounded-xl p-4 border-l-4 border-accent-orange">
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-white">データ統合・ETL</p>
+                            <p class="text-lg font-black text-accent-orange font-inter">35%</p>
+                        </div>
+                        <p class="text-xs text-gray-500">企業のデータサイロ解消ニーズが最大セグメント</p>
+                    </div>
+                    <div class="bg-navy-800 rounded-xl p-4 border-l-4 border-accent-blue">
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-white">AI・予測分析</p>
+                            <p class="text-lg font-black text-accent-blue font-inter">28%</p>
+                        </div>
+                        <p class="text-xs text-gray-500">AIを活用した意思決定支援の需要が急成長</p>
+                    </div>
+                    <div class="bg-navy-800 rounded-xl p-4 border-l-4 border-gray-600">
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-white">業務自動化・RPA</p>
+                            <p class="text-lg font-black text-gray-400 font-inter">22%</p>
+                        </div>
+                        <p class="text-xs text-gray-500">定型業務の自動化によるコスト削減需要</p>
+                    </div>
+                    <div class="bg-navy-800 rounded-xl p-4 border-l-4 border-gray-700">
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-white">CX・エンゲージメント</p>
+                            <p class="text-lg font-black text-gray-500 font-inter">15%</p>
+                        </div>
+                        <p class="text-xs text-gray-500">顧客体験向上とリテンション改善</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Doughnut Chart -->
+            <div class="w-1/2 flex flex-col items-center justify-center relative">
+                <div class="w-full" style="max-width: 420px; height: 380px;">
+                    <canvas id="marketChart"></canvas>
+                </div>
+                <div class="mt-4 flex items-center gap-3">
+                    <span class="bg-green-500 bg-opacity-20 text-green-400 text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                        <i class="fas fa-arrow-trend-up mr-1"></i> CAGR +18.5%
+                    </span>
+                    <span class="text-xs text-gray-500">2024–2028年 予測成長率</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">05</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('marketChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['データ統合・ETL', 'AI・予測分析', '業務自動化・RPA', 'CX・エンゲージメント'],
+                datasets: [{
+                    data: [35, 28, 22, 15],
+                    backgroundColor: ['#F97316', '#3B82F6', '#64748B', '#334155'],
+                    borderColor: '#0F172A',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#94A3B8',
+                            font: { family: "'Noto Sans JP', sans-serif", size: 12 },
+                            padding: 16,
+                            usePointStyle: true,
+                            pointStyleWidth: 12
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#1E293B',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#94A3B8',
+                        borderColor: '#334155',
+                        borderWidth: 1,
+                        titleFont: { family: "'Noto Sans JP', sans-serif" },
+                        bodyFont: { family: "'Inter', sans-serif" },
+                        callbacks: {
+                            label: function(context) {
+                                return ' ' + context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

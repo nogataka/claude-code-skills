@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Risk Analysis &amp; Summary</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .risk-card {
+            transition: all 0.2s ease;
+        }
+
+        .risk-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .action-item::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        .action-item:last-child::before {
+            height: 1rem;
+        }
+
+        .checkbox-custom {
+            z-index: 10;
+            position: relative;
+        }
+
+        /* Custom Scrollbar for Risk Section if needed */
+        .custom-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container p-10">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-6 border-b border-gray-200 pb-3">
+            <div>
+                <div class="flex items-center space-x-2 text-indigo-600 mb-1">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Risk &amp; Action Plan</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900">リスク分析と今後のアクション</h1>
+                <p class="text-sm text-gray-500 mt-1">事業リスクの可視化と、確実な立ち上げに向けたロードマップ</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-gray-800 text-white text-xs font-bold px-3 py-1 rounded-full">15</span>
+            </div>
+        </div>
+        <div class="flex gap-8 h-full overflow-hidden pb-4">
+            <!-- Left Column: Risk Analysis (60%) -->
+            <div class="w-7/12 flex flex-col">
+                <h3 class="font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-triangle-exclamation text-orange-500 mr-2"></i>
+                    主要リスクと軽減戦略 (Risk &amp; Mitigation)
+                </h3>
+                <div class="grid grid-cols-2 gap-4 flex-1 overflow-y-auto custom-scroll pr-2">
+                    <!-- Risk 1: Demand -->
+                    <div class="risk-card bg-orange-50 border border-orange-100 rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-800 text-sm">需要の伸び悩み</h4>
+                            <span
+                                class="text-[10px] bg-orange-200 text-orange-800 px-2 py-0.5 rounded font-bold">高</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">認知不足により初期予約が入らない。</p>
+                        <div class="bg-white p-2 rounded border border-orange-100">
+                            <p class="text-[10px] font-bold text-indigo-600"><i
+                                    class="fa-solid fa-arrow-right mr-1"></i>軽減策</p>
+                            <p class="text-[10px] text-gray-500">口コミ獲得CPの徹底、インフルエンサー(UGC)活用、Googleマップ最適化。</p>
+                        </div>
+                    </div>
+                    <!-- Risk 2: Seasonality -->
+                    <div class="risk-card bg-orange-50 border border-orange-100 rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-800 text-sm">季節偏重 (Seasonality)</h4>
+                            <span
+                                class="text-[10px] bg-orange-200 text-orange-800 px-2 py-0.5 rounded font-bold">高</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">冬場・平日などオフシーズンの稼働減。</p>
+                        <div class="bg-white p-2 rounded border border-orange-100">
+                            <p class="text-[10px] font-bold text-indigo-600"><i
+                                    class="fa-solid fa-arrow-right mr-1"></i>軽減策</p>
+                            <p class="text-[10px] text-gray-500">平日最大30%OFF、ワーケーション提案、メンテナンス期間としての活用。</p>
+                        </div>
+                    </div>
+                    <!-- Risk 3: Operation Overload -->
+                    <div class="risk-card bg-blue-50 border border-blue-100 rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-800 text-sm">オペレーション過負荷</h4>
+                            <span class="text-[10px] bg-blue-200 text-blue-800 px-2 py-0.5 rounded font-bold">中</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">問い合わせ対応や清掃でパンク。</p>
+                        <div class="bg-white p-2 rounded border border-blue-100">
+                            <p class="text-[10px] font-bold text-indigo-600"><i
+                                    class="fa-solid fa-arrow-right mr-1"></i>軽減策</p>
+                            <p class="text-[10px] text-gray-500">動画マニュアル化、FAQ充実、清掃の外注化、緊急時以外の翌朝対応ルール。</p>
+                        </div>
+                    </div>
+                    <!-- Risk 4: Vehicle Trouble -->
+                    <div class="risk-card bg-blue-50 border border-blue-100 rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-800 text-sm">車両故障・事故</h4>
+                            <span class="text-[10px] bg-blue-200 text-blue-800 px-2 py-0.5 rounded font-bold">中</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">貸出不可による機会損失・賠償。</p>
+                        <div class="bg-white p-2 rounded border border-blue-100">
+                            <p class="text-[10px] font-bold text-indigo-600"><i
+                                    class="fa-solid fa-arrow-right mr-1"></i>軽減策</p>
+                            <p class="text-[10px] text-gray-500">定期点検の徹底、予備部品確保、代車提携検討、免責補償制度の整備。</p>
+                        </div>
+                    </div>
+                    <!-- Risk 5: AI Quality -->
+                    <div class="risk-card bg-gray-50 border border-gray-200 rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-800 text-sm">AI提案品質の不足</h4>
+                            <span class="text-[10px] bg-gray-200 text-gray-700 px-2 py-0.5 rounded font-bold">低</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">自動応答の精度が悪く満足度低下。</p>
+                        <div class="bg-white p-2 rounded border border-gray-200">
+                            <p class="text-[10px] font-bold text-indigo-600"><i
+                                    class="fa-solid fa-arrow-right mr-1"></i>軽減策</p>
+                            <p class="text-[10px] text-gray-500">初年度は「人力90%」運用。定型ルート記事への誘導を優先。</p>
+                        </div>
+                    </div>
+                    <!-- Risk 6: Staffing -->
+                    <div class="risk-card bg-gray-50 border border-gray-200 rounded-lg p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-800 text-sm">人員確保（清掃等）</h4>
+                            <span class="text-[10px] bg-gray-200 text-gray-700 px-2 py-0.5 rounded font-bold">低</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mb-2">パート採用難による業務遅延。</p>
+                        <div class="bg-white p-2 rounded border border-gray-200">
+                            <p class="text-[10px] font-bold text-indigo-600"><i
+                                    class="fa-solid fa-arrow-right mr-1"></i>軽減策</p>
+                            <p class="text-[10px] text-gray-500">マニュアル整備による副業人材活用、シルバー人材センターとの連携。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Withdrawal Criteria -->
+                <div class="mt-4 bg-red-50 border border-red-200 rounded-lg p-3 flex items-center shadow-sm">
+                    <div
+                        class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-500 mr-3 flex-shrink-0">
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-red-800 uppercase">撤退 / 事業見直し基準</h4>
+                        <p class="text-xs text-red-700 mt-1">
+                            <span
+                                class="font-bold">24ヶ月連続</span>で目標売上の60%未達、かつ改善の見込みが立たない場合は、車両売却を含めた撤退または業態転換（一般レンタカー化など）を判断。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Next Actions (40%) -->
+            <div class="w-5/12 flex flex-col h-full">
+                <h3 class="font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-list-check text-indigo-600 mr-2"></i>
+                    直近のアクション (Next Steps)
+                </h3>
+                <div class="bg-white border border-gray-200 rounded-xl shadow-lg flex-1 p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full -mr-4 -mt-4 z-0"></div>
+                    <div class="relative z-10 space-y-6">
+                        <!-- Step 1 -->
+                        <div class="action-item flex items-start">
+                            <div
+                                class="checkbox-custom w-6 h-6 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs mr-3 shadow-md flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">車両最終仕様の確定・発注</h4>
+                                <p class="text-xs text-gray-500 mt-1">ペット対応改装（床材・固定フック）および保険の手配完了。</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="action-item flex items-start">
+                            <div
+                                class="checkbox-custom w-6 h-6 rounded-full bg-white border-2 border-indigo-600 flex items-center justify-center text-indigo-600 text-xs mr-3 shadow-sm flex-shrink-0">
+                                2
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">Webコンテンツ制作</h4>
+                                <p class="text-xs text-gray-500 mt-1">定番ルート記事（周辺観光エリア）×5本作成、写真撮影、LP構築。</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="action-item flex items-start">
+                            <div
+                                class="checkbox-custom w-6 h-6 rounded-full bg-white border-2 border-indigo-600 flex items-center justify-center text-indigo-600 text-xs mr-3 shadow-sm flex-shrink-0">
+                                3
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">集客チャネルの初期設定</h4>
+                                <p class="text-xs text-gray-500 mt-1">Googleビジネスプロフィール登録、OTA（1〜2社）掲載申請、Instagram開設。</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="action-item flex items-start">
+                            <div
+                                class="checkbox-custom w-6 h-6 rounded-full bg-white border-2 border-indigo-600 flex items-center justify-center text-indigo-600 text-xs mr-3 shadow-sm flex-shrink-0">
+                                4
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">オペレーション資材の整備</h4>
+                                <p class="text-xs text-gray-500 mt-1">引渡しチェックリスト作成、操作説明動画（YouTube限定公開）の撮影。</p>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="action-item flex items-start">
+                            <div
+                                class="checkbox-custom w-6 h-6 rounded-full bg-white border-2 border-indigo-600 flex items-center justify-center text-indigo-600 text-xs mr-3 shadow-sm flex-shrink-0">
+                                5
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">初期キャンペーン準備</h4>
+                                <p class="text-xs text-gray-500 mt-1">「初回レビュー10件獲得キャンペーン」の特典設計と告知準備。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-100 text-center">
+                        <p class="text-xs text-gray-400 font-bold uppercase mb-2">Target Launch Date</p>
+                        <p class="text-3xl font-black text-indigo-600">2026.04.01</p>
+                        <p class="text-[10px] text-gray-400 mt-1">GW商戦に向けて3月中にプレオープン予定</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

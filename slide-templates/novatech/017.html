@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>組織体制</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">Team & Organization</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">組織体制</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 2-column -->
+        <div class="flex-1 px-16 py-5 flex gap-6">
+            <!-- Left Column: Core Team -->
+            <div class="w-1/2 flex flex-col">
+                <p class="text-xs text-accent-orange font-bold font-inter uppercase tracking-wider mb-3">Core Team</p>
+                <div class="flex flex-col gap-2.5 flex-1">
+                    <!-- CEO -->
+                    <div class="bg-navy-800 rounded-xl p-4 flex items-center gap-4 border border-blue-900">
+                        <div class="w-12 h-12 rounded-full bg-accent-orange bg-opacity-20 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user-tie text-accent-orange text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <p class="text-sm font-bold text-white">山田 太郎</p>
+                                <span class="text-xs font-bold text-accent-orange font-inter bg-accent-orange bg-opacity-10 px-2 py-0.5 rounded">CEO</span>
+                            </div>
+                            <p class="text-xs text-gray-400">SaaS経営10年 / IPO経験</p>
+                        </div>
+                    </div>
+                    <!-- CTO -->
+                    <div class="bg-navy-800 rounded-xl p-4 flex items-center gap-4 border border-blue-900">
+                        <div class="w-12 h-12 rounded-full bg-accent-blue bg-opacity-20 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-laptop-code text-accent-blue text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <p class="text-sm font-bold text-white">高橋 健一</p>
+                                <span class="text-xs font-bold text-accent-blue font-inter bg-accent-blue bg-opacity-10 px-2 py-0.5 rounded">CTO</span>
+                            </div>
+                            <p class="text-xs text-gray-400">Google出身 / AI・ML 12年</p>
+                        </div>
+                    </div>
+                    <!-- VP Sales -->
+                    <div class="bg-navy-800 rounded-xl p-4 flex items-center gap-4 border border-blue-900">
+                        <div class="w-12 h-12 rounded-full bg-accent-orange bg-opacity-20 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-line text-accent-orange text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <p class="text-sm font-bold text-white">伊藤 美咲</p>
+                                <span class="text-xs font-bold text-accent-orange font-inter bg-accent-orange bg-opacity-10 px-2 py-0.5 rounded">VP Sales</span>
+                            </div>
+                            <p class="text-xs text-gray-400">Salesforce 8年 / エンプラ営業</p>
+                        </div>
+                    </div>
+                    <!-- VP Product -->
+                    <div class="bg-navy-800 rounded-xl p-4 flex items-center gap-4 border border-blue-900">
+                        <div class="w-12 h-12 rounded-full bg-accent-blue bg-opacity-20 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-cubes text-accent-blue text-lg"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <p class="text-sm font-bold text-white">渡辺 健太</p>
+                                <span class="text-xs font-bold text-accent-blue font-inter bg-accent-blue bg-opacity-10 px-2 py-0.5 rounded">VP Product</span>
+                            </div>
+                            <p class="text-xs text-gray-400">プロダクトマネジメント 7年</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Hiring Plan -->
+            <div class="w-1/2 flex flex-col">
+                <p class="text-xs text-accent-blue font-bold font-inter uppercase tracking-wider mb-3">Hiring Roadmap</p>
+
+                <!-- Phases -->
+                <div class="bg-navy-800 rounded-xl p-5 border border-blue-900 mb-3">
+                    <div class="flex flex-col gap-4">
+                        <!-- Phase 1 -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-20 flex-shrink-0">
+                                <p class="text-xs font-bold text-accent-orange font-inter">Phase 1</p>
+                                <p class="text-xs text-gray-500">Y1 Q1-Q2</p>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <div class="h-5 rounded-full bg-accent-orange" style="width: 20%;"></div>
+                                    <span class="text-sm font-bold text-white font-inter">4名</span>
+                                    <span class="text-xs text-gray-500">Founding Team</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Phase 2 -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-20 flex-shrink-0">
+                                <p class="text-xs font-bold text-accent-blue font-inter">Phase 2</p>
+                                <p class="text-xs text-gray-500">Y1 Q3-Q4</p>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <div class="h-5 rounded-full bg-accent-blue" style="width: 50%;"></div>
+                                    <span class="text-sm font-bold text-white font-inter">10名</span>
+                                    <span class="text-xs text-gray-500">+6 エンジニア・営業</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Phase 3 -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-20 flex-shrink-0">
+                                <p class="text-xs font-bold text-accent-orange font-inter">Phase 3</p>
+                                <p class="text-xs text-gray-500">Y2</p>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <div class="h-5 rounded-full bg-accent-orange" style="width: 100%;"></div>
+                                    <span class="text-sm font-bold text-white font-inter">20名</span>
+                                    <span class="text-xs text-gray-500">+10 全部門拡大</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advisory Board -->
+                <div class="bg-navy-800 rounded-xl p-4 border border-blue-900 flex-1">
+                    <p class="text-xs text-gray-400 font-bold font-inter uppercase tracking-wider mb-3">Advisory Board</p>
+                    <div class="flex flex-col gap-2.5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-navy-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-university text-accent-orange text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-white">佐藤 一郎 <span class="text-gray-500 font-normal">— 元CTO / 東証プライム上場企業</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-navy-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-accent-blue text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-white">鈴木 教授 <span class="text-gray-500 font-normal">— AI研究 / 東京大学</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-navy-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-handshake text-accent-orange text-xs"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-white">田中 誠 <span class="text-gray-500 font-normal">— VC パートナー / SaaS投資実績20社+</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">17</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

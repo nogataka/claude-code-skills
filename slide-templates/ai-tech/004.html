@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI導入の主要メリット - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&amp;family=Raleway:wght@400;500;600&amp;family=Saira+Condensed:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Raleway', 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(236,236,236,0.3) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.4;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .company-pill {
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #000000;
+            font-family: 'Saira Condensed', sans-serif;
+        }
+        
+        .nav-arrow {
+            background-color: #000000;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-family: 'Saira Condensed', 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 5rem; /* Adjusted for Japanese text fit */
+            line-height: 1.1;
+            letter-spacing: 0.05em;
+        }
+        
+        .body-text {
+            font-family: 'Raleway', 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .gray-banner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 85%;
+            height: 210px;
+            background-color: #ececec;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+            z-index: 0;
+        }
+
+        /* Custom styles for the 5 benefits layout */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            color: #333;
+            width: 2.5rem;
+            text-align: center;
+            padding-top: 0.25rem;
+        }
+
+        .benefit-content {
+            flex: 1;
+        }
+
+        .benefit-title {
+            font-family: 'Saira Condensed', 'Noto Sans JP', sans-serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .benefit-desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+        }
+        
+        .highlight-stat {
+            font-weight: 700;
+            background-color: #ececec;
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- Gray banner -->
+<div class="gray-banner"></div>
+<!-- TechVantage branding -->
+<div class="absolute top-8 left-10 z-10">
+<div class="company-pill">
+                TECHVANTAGE
+            </div>
+</div>
+<!-- Main content -->
+<div class="px-20 pt-40 relative z-10 flex-1 flex flex-col">
+<h2 class="section-title mb-10">AI導入の主要メリット</h2>
+<div class="benefits-grid">
+<!-- Item 1 -->
+<div class="benefit-item">
+<div class="benefit-icon">
+<i class="fas fa-cogs"></i>
+</div>
+<div class="benefit-content">
+<span class="benefit-title">01. 運用効率の最大化</span>
+<p class="benefit-desc">
+                        高度な自動化プロセスの導入により、反復業務における工数を最大<span class="highlight-stat">30–40%削減</span>し、リソース配分を最適化します。
+                    </p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="benefit-item">
+<div class="benefit-icon">
+<i class="fas fa-chart-line"></i>
+</div>
+<div class="benefit-content">
+<span class="benefit-title">02. 品質の向上</span>
+<p class="benefit-desc">
+                        AIによる常時監視と予測検知で、異常検知精度が<span class="highlight-stat">10–20%向上</span>。ヒューマンエラーを大幅に低減します。
+                    </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="benefit-item">
+<div class="benefit-icon">
+<i class="fas fa-users"></i>
+</div>
+<div class="benefit-content">
+<span class="benefit-title">03. 顧客体験の変革</span>
+<p class="benefit-desc">
+                        リアルタイムなパーソナライゼーションにより、LTV（顧客生涯価値）を向上させ、解約率を低下させます。
+                    </p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="benefit-item">
+<div class="benefit-icon">
+<i class="fas fa-tachometer-alt"></i>
+</div>
+<div class="benefit-content">
+<span class="benefit-title">04. 圧倒的な処理スピード</span>
+<p class="benefit-desc">
+                        エンタープライズ規模の大規模データセットを、従来の手法と比較して<span class="highlight-stat">100–200倍</span>の速度で処理・分析可能です。
+                    </p>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="benefit-item" style="grid-column: span 2;">
+<div class="benefit-item" style="max-width: 50%;">
+<div class="benefit-icon">
+<i class="fas fa-coins"></i>
+</div>
+<div class="benefit-content">
+<span class="benefit-title">05. コスト最適化</span>
+<p class="benefit-desc">
+                            単純反復業務の自動化とリソース効率化により、全体的な運営コストを持続的に最適化します。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-10 z-20">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-white text-xl"></i>
+</div>
+</div>
+</div>
+</body>
+</html>

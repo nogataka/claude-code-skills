@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Competition Matrix</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .advantage-card {
+            transition: transform 0.2s;
+        }
+
+        .advantage-card:hover {
+            transform: translateX(5px);
+        }
+
+        /* Custom checkmark styles */
+        .check-icon {
+            color: #10B981;
+            /* green-500 */
+        }
+
+        .cross-icon {
+            color: #EF4444;
+            /* red-500 */
+        }
+
+        .triangle-icon {
+            color: #F59E0B;
+            /* amber-500 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container p-10">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-6 border-b border-gray-200 pb-4">
+            <div>
+                <div class="flex items-center space-x-2 text-indigo-600 mb-1">
+                    <i class="fa-solid fa-chess-board"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Competition &amp; Strategy</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900">競合分析と差別化</h1>
+                <p class="text-sm text-gray-500 mt-1">「ペット×初心者×デジタル」の独自ポジションで優位性を確立</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">08</span>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex flex-1 gap-8">
+            <!-- Left: Matrix Table (60%) -->
+            <div class="w-7/12 flex flex-col">
+                <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <span class="w-1 h-6 bg-indigo-600 mr-2 rounded-full"></span>競合比較マトリクス
+                </h3>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex-1">
+                    <table class="w-full text-sm h-full">
+                        <thead class="bg-gray-50 text-gray-500 font-medium border-b border-gray-200">
+                            <tr>
+                                <th class="py-3 px-4 text-left w-1/4">プレイヤー</th>
+                                <th class="py-3 px-2 text-center w-1/6">価格</th>
+                                <th class="py-3 px-2 text-center w-1/6">ペット<br />対応</th>
+                                <th class="py-3 px-2 text-center w-1/6">初心者<br />サポート</th>
+                                <th class="py-3 px-2 text-center w-1/6">UX<br />利便性</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <!-- OUTDOOR+ (Highlighted) -->
+                            <tr class="bg-indigo-50 border-l-4 border-indigo-600">
+                                <td class="py-4 px-4">
+                                    <div class="flex items-center">
+                                        <div
+                                            class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-white mr-3">
+                                            <i class="fa-solid fa-r"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-indigo-900 text-base">OUTDOOR+</p>
+                                            <p class="text-[10px] text-indigo-600">当社サービス</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center px-2">
+                                    <p class="font-bold text-gray-700">中</p>
+                                    <p class="text-[10px] text-gray-500">2万円~</p>
+                                </td>
+                                <td class="text-center px-2 bg-indigo-100">
+                                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                                    <p class="text-[10px] text-indigo-700 font-bold">専用設計</p>
+                                </td>
+                                <td class="text-center px-2 bg-indigo-100">
+                                    <i class="fa-solid fa-circle-check text-indigo-600 text-lg"></i>
+                                    <p class="text-[10px] text-indigo-700 font-bold">24h/動画</p>
+                                </td>
+                                <td class="text-center px-2 bg-indigo-100">
+                                    <i class="fa-solid fa-mobile-screen text-indigo-600 text-lg"></i>
+                                    <p class="text-[10px] text-indigo-700 font-bold">完全Digital</p>
+                                </td>
+                            </tr>
+                            <!-- Competitor 1: Local Shops -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-4">
+                                    <p class="font-bold text-gray-700">地域レンタル店</p>
+                                    <p class="text-[10px] text-gray-400">中小・個人経営</p>
+                                </td>
+                                <td class="text-center px-2 text-gray-600">中〜高</td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-circle text-green-500 text-sm"></i>
+                                    <p class="text-[10px] text-gray-400">可(一部)</p>
+                                </td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-play text-yellow-500 text-sm transform -rotate-90"></i>
+                                    <p class="text-[10px] text-gray-400">店主次第</p>
+                                </td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-xmark text-red-400 text-lg"></i>
+                                    <p class="text-[10px] text-gray-400">電話/メール</p>
+                                </td>
+                            </tr>
+                            <!-- Competitor 2: Major Rental -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-4">
+                                    <p class="font-bold text-gray-700">大手レンタカー</p>
+                                    <p class="text-[10px] text-gray-400">全国チェーン</p>
+                                </td>
+                                <td class="text-center px-2 text-gray-600">高</td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-play text-yellow-500 text-sm transform -rotate-90"></i>
+                                    <p class="text-[10px] text-gray-400">制限多</p>
+                                </td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-circle text-green-500 text-sm"></i>
+                                    <p class="text-[10px] text-gray-400">マニュアル有</p>
+                                </td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-play text-yellow-500 text-sm transform -rotate-90"></i>
+                                    <p class="text-[10px] text-gray-400">WEB予約のみ</p>
+                                </td>
+                            </tr>
+                            <!-- Competitor 3: P2P -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-4 px-4">
+                                    <p class="font-bold text-gray-700">P2Pカーシェア</p>
+                                    <p class="text-[10px] text-gray-400">Anyca等</p>
+                                </td>
+                                <td class="text-center px-2 text-gray-600">低</td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-play text-yellow-500 text-sm transform -rotate-90"></i>
+                                    <p class="text-[10px] text-gray-400">オーナー次第</p>
+                                </td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-xmark text-red-400 text-lg"></i>
+                                    <p class="text-[10px] text-gray-400">ばらつき大</p>
+                                </td>
+                                <td class="text-center px-2">
+                                    <i class="fa-solid fa-circle text-green-500 text-sm"></i>
+                                    <p class="text-[10px] text-gray-400">アプリ</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Right: Advantages & Moat (40%) -->
+            <div class="w-5/12 flex flex-col gap-6">
+                <!-- 3 Advantages -->
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 flex flex-col h-2/3">
+                    <h3 class="text-sm font-bold text-gray-500 uppercase mb-4 tracking-wider">
+                        <i class="fa-solid fa-trophy mr-2 text-yellow-500"></i>3つの競争優位性
+                    </h3>
+                    <div class="flex-1 space-y-3">
+                        <div
+                            class="advantage-card bg-white p-3 rounded-lg shadow-sm border-l-4 border-teal-500 flex items-start">
+                            <div
+                                class="w-8 h-8 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 mr-3 flex-shrink-0">
+                                <span class="font-bold text-sm">01</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-800">地域密着ネットワーク</p>
+                                <p class="text-xs text-gray-600 mt-1 leading-tight">
+                                    ペット可キャンプ場・ドッグランとの提携＆独自ルート提案で「体験」を差別化。</p>
+                            </div>
+                        </div>
+                        <div
+                            class="advantage-card bg-white p-3 rounded-lg shadow-sm border-l-4 border-blue-500 flex items-start">
+                            <div
+                                class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0">
+                                <span class="font-bold text-sm">02</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-800">フルデジタルUX＋安心</p>
+                                <p class="text-xs text-gray-600 mt-1 leading-tight">
+                                    予約・決済・鍵の受け渡しまでスマホ完結。緊急時は24時間有人対応のハイブリッド。</p>
+                            </div>
+                        </div>
+                        <div
+                            class="advantage-card bg-white p-3 rounded-lg shadow-sm border-l-4 border-orange-500 flex items-start">
+                            <div
+                                class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 mr-3 flex-shrink-0">
+                                <span class="font-bold text-sm">03</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-800">ペットファースト仕様</p>
+                                <p class="text-xs text-gray-600 mt-1 leading-tight">
+                                    汚損に強い内装、ケージ固定スペース。飼い主目線の設計で心理的ハードルを下げる。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Entry Barriers -->
+                <div class="bg-gray-800 rounded-xl p-5 text-white flex-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gray-700 rounded-bl-full opacity-50 -z-0"></div>
+                    <h3 class="text-sm font-bold text-gray-300 uppercase mb-3 relative z-10">
+                        <i class="fa-solid fa-shield-halved mr-2"></i>参入障壁 (Moat)
+                    </h3>
+                    <div class="flex flex-col justify-center h-full relative z-10 space-y-3">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-database w-6 text-center text-gray-400 mr-2"></i>
+                            <p class="text-xs font-medium"><span class="text-white font-bold">レビュー資産</span>の蓄積</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-hand-holding-heart w-6 text-center text-gray-400 mr-2"></i>
+                            <p class="text-xs font-medium">ペット対応の<span class="text-white font-bold">運用ノウハウ</span></p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-map-pin w-6 text-center text-gray-400 mr-2"></i>
+                            <p class="text-xs font-medium">地域独自の<span class="text-white font-bold">提携ネットワーク</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

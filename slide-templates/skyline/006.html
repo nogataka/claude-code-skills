@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>市場環境分析</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex">
+        <!-- Left Panel -->
+        <div class="w-1/3 bg-brand-dark text-white p-10 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-brand-accent rounded-bl-full opacity-20"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-white"></i>
+                    </div>
+                    <span class="text-brand-accent font-bold uppercase text-sm tracking-widest font-inter">Section 02</span>
+                </div>
+                <h1 class="text-4xl font-black leading-tight mb-6">市場環境<br />分析</h1>
+                <p class="text-sm text-gray-300 leading-relaxed">国内外のDX・AI市場動向と競合環境を分析し、SkyLineのポジショニングを明確にします。</p>
+            </div>
+            <p class="relative z-10 text-xs text-gray-500">Confidential</p>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="w-2/3 bg-white p-10 flex flex-col justify-center">
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent mr-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">グローバル市場規模</h3>
+                        <p class="text-sm text-gray-600">AI・データ分析市場は年率28%で拡大中</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent mr-4">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">国内DX投資動向</h3>
+                        <p class="text-sm text-gray-600">企業のDX投資額は前年比+35%を記録</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-brand-warm mr-4">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">競合分析</h3>
+                        <p class="text-sm text-gray-600">差別化要因と市場における当社の優位性</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-brand-warm mr-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">ターゲットセグメント</h3>
+                        <p class="text-sm text-gray-600">エンタープライズ向けSaaS+AIの成長機会</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

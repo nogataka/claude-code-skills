@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>初期投資計画</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .inv-table { width: 100%; border-collapse: collapse; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); }
+        .inv-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: left; padding: 7px 10px; font-size: 0.8rem; }
+        .inv-table td { padding: 5px 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.8rem; color: #333; }
+        .inv-table .total-row td { background-color: rgba(0, 123, 255, 0.08); font-weight: 700; }
+        .inv-table .subtotal-row td { background-color: rgba(0, 123, 255, 0.04); font-weight: 600; }
+        .funding-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 14px 16px; }
+        .milestone-card { background-color: #F8F9FA; border-left: 4px solid #007BFF; padding: 8px 12px; border-radius: 0 4px 4px 0; }
+        .runway-card { background-color: #FEF3C7; border-left: 4px solid #F59E0B; padding: 10px 14px; border-radius: 0 4px 4px 0; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-2">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">初期投資計画</h1>
+
+            <div class="flex gap-6 flex-grow">
+                <!-- Left: Investment Table -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <table class="inv-table">
+                        <thead>
+                            <tr><th>項目</th><th style="text-align: right;">金額</th><th>備考</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>中古キャンピングカー本体</td><td style="text-align: right;">¥9,150,000</td><td class="text-xs" style="color: #666;">新しめの中古車</td></tr>
+                            <tr><td>登録・税金・保険</td><td style="text-align: right;">¥200,000</td><td class="text-xs" style="color: #666;">名義変更・自賠責等</td></tr>
+                            <tr><td>追加装備・架装</td><td style="text-align: right;">¥300,000</td><td class="text-xs" style="color: #666;">ペット対応・電源・ネット等</td></tr>
+                            <tr><td>予備整備費</td><td style="text-align: right;">¥200,000</td><td class="text-xs" style="color: #666;">納車前点検・消耗品</td></tr>
+                            <tr class="subtotal-row"><td>車両小計</td><td style="text-align: right;" class="highlight">¥9,850,000</td><td></td></tr>
+                            <tr><td>開業届・許認可</td><td style="text-align: right;">¥110,000</td><td class="text-xs" style="color: #666;">各種登録関連(登録免許税、古物商認可)</td></tr>
+                            <tr><td>行政書士・専門家相談</td><td style="text-align: right;">¥80,000</td><td class="text-xs" style="color: #666;">申請書・契約書・保険設計</td></tr>
+                            <tr class="subtotal-row"><td>初期投資小計</td><td style="text-align: right;" class="highlight">¥10,040,000</td><td></td></tr>
+                            <tr><td>運転資金（予備）</td><td style="text-align: right;">¥1,460,000</td><td class="text-xs" style="color: #666;">赤字補填・緊急対応用</td></tr>
+                            <tr class="total-row"><td class="font-bold">合計</td><td style="text-align: right;" class="highlight text-lg">¥11,500,000</td><td></td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="funding-box">
+                        <h3 class="font-bold text-sm mb-2"><i class="fas fa-university mr-2"></i>資金調達計画</h3>
+                        <div class="flex gap-4">
+                            <div class="flex-1 text-center">
+                                <p class="text-xs opacity-80">自己資金</p>
+                                <p class="text-xl font-black">150万円</p>
+                                <p class="text-xs opacity-70">13.0%</p>
+                            </div>
+                            <div class="flex-1 text-center">
+                                <p class="text-xs opacity-80">融資</p>
+                                <p class="text-xl font-black">1,000万円</p>
+                                <p class="text-xs opacity-70">87.0%</p>
+                            </div>
+                            <div class="flex-1 text-center">
+                                <p class="text-xs opacity-80">月返済</p>
+                                <p class="text-xl font-black">7万円</p>
+                                <p class="text-xs opacity-70">15年返済</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Milestones + Runway -->
+                <div class="w-1/2 flex flex-col gap-2">
+                    <h3 class="font-bold text-sm body-text"><i class="fas fa-flag-checkered text-blue-500 mr-2"></i>マイルストーン</h3>
+
+                    <div class="milestone-card">
+                        <p class="text-xs"><span class="highlight font-bold">Phase 0: 開業準備（0-2ヶ月）</span></p>
+                        <p class="text-xs" style="color: #666;">車両購入＋登録＋ペット装備完了、予約/決済システム稼働、Webサイト公開、パートナー契約締結</p>
+                    </div>
+
+                    <div class="milestone-card">
+                        <p class="text-xs"><span class="highlight font-bold">Phase 1: ソフトオープン（2-4ヶ月）</span></p>
+                        <p class="text-xs" style="color: #666;">累計5-8件予約、レビュー3件以上（★4.5+）、AIコンシェルジュβ運用開始、オペレーション検証完了</p>
+                    </div>
+
+                    <div class="milestone-card">
+                        <p class="text-xs"><span class="highlight font-bold">Phase 2: 1年目終了（12ヶ月）</span></p>
+                        <p class="text-xs" style="color: #666;">年間30-40件予約（月2-3件平均）、売上¥231万、レビュー15件以上（★4.6+）、ほぼ損益分岐点</p>
+                    </div>
+
+                    <div class="milestone-card">
+                        <p class="text-xs"><span class="highlight font-bold">Phase 3: 3年目（36ヶ月）</span></p>
+                        <p class="text-xs" style="color: #666;">2台体制完了、年間120-150件予約、売上¥800-1,200万、月次黒字安定、LTV/CAC・リピート指標安定</p>
+                    </div>
+
+                    <div class="runway-card mt-auto">
+                        <h3 class="font-bold text-xs body-text mb-1"><i class="fas fa-shield-alt text-yellow-600 mr-1"></i> ランウェイ分析</h3>
+                        <div class="flex gap-3 text-xs">
+                            <div class="flex-1">
+                                <p style="color: #666;">最悪ケース<br>（売上ゼロ）</p>
+                                <p class="font-bold" style="color: #D97706;">約13ヶ月</p>
+                            </div>
+                            <div class="flex-1">
+                                <p style="color: #666;">保守ケース<br>（月1件/¥7万）</p>
+                                <p class="font-bold" style="color: #007BFF;">約28ヶ月</p>
+                            </div>
+                            <div class="flex-1">
+                                <p style="color: #666;">計画ケース<br>（月3件安定）</p>
+                                <p class="font-bold" style="color: #007BFF;">BEP達成</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

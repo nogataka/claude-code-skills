@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Presentation Overview - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            display: flex;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.4;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .techvantage-pill {
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+            font-family: 'Noto Sans JP', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        
+        .nav-arrow {
+            background-color: white;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 4rem;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+        
+        .body-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .presenter-info {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.2);
+        }
+        
+        .gray-section {
+            background-color: #ececec;
+            color: #000000;
+            padding: 2.5rem 2.5rem 2.5rem 4rem;
+            height: 100%;
+            clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .agenda-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .agenda-item {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 500;
+            color: #000000;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .agenda-number {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            margin-right: 0.75rem;
+            opacity: 0.6;
+            min-width: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- TechVantage branding -->
+<div class="absolute top-8 left-10 z-10">
+<div class="techvantage-pill">
+            TECHVANTAGE
+        </div>
+</div>
+<!-- Main content - Left side -->
+<div class="w-1/2 flex flex-col justify-center pl-20 pr-10 z-10">
+<h2 class="section-title mb-6">プレゼンテーション<br/>概要</h2>
+<p class="body-text mt-2">
+            本プレゼンテーションでは、現代AIの基礎から実装、価値創出、ガバナンスまでを包括的に解説し、ビジネスにおける変革の道筋を提示します。
+        </p>
+<div class="presenter-info">
+<p><strong>Presented by:</strong> Dr. Sarah Chen</p>
+<p>VP of AI Innovation</p>
+<p class="mt-1 text-sm opacity-80">sarah.chen@techvantage.com | +1 (555) 847-2900</p>
+<p class="text-sm opacity-80">www.techvantage.com</p>
+</div>
+</div>
+<!-- Right side with gray background -->
+<div class="w-1/2 relative h-full">
+<div class="gray-section">
+<h3 class="agenda-title">AGENDA</h3>
+<div class="agenda-item">
+<span class="agenda-number">01</span>
+<span>AIの基本概念</span>
+</div>
+<div class="agenda-item">
+<span class="agenda-number">02</span>
+<span>導入メリット（効率/品質/収益）</span>
+</div>
+<div class="agenda-item">
+<span class="agenda-number">03</span>
+<span>コア技術の要点</span>
+</div>
+<div class="agenda-item">
+<span class="agenda-number">04</span>
+<span>主要アプリケーション領域</span>
+</div>
+<div class="agenda-item">
+<span class="agenda-number">05</span>
+<span>企業での活用フレームワーク</span>
+</div>
+<div class="agenda-item">
+<span class="agenda-number">06</span>
+<span>課題と倫理</span>
+</div>
+<div class="agenda-item">
+<span class="agenda-number">07</span>
+<span>将来トレンド</span>
+</div>
+<div class="agenda-item">
+<span class="agenda-number">08</span>
+<span>まとめとQ&amp;A</span>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-8">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-black text-xl"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

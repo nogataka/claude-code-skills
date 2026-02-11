@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KPI サマリー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Key Performance Indicators</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">主要KPI</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6">
+            <!-- KPI Row -->
+            <div class="grid grid-cols-4 gap-5 mb-6">
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-accent"></div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">Revenue</p>
+                            <p class="text-3xl font-black text-brand-dark font-inter">¥48<span class="text-sm font-normal text-gray-500 ml-1">億</span></p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent">
+                            <i class="fas fa-yen-sign"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-500 mt-2 font-inter font-bold"><i class="fas fa-arrow-up mr-1"></i>+24% YoY</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-warm"></div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">Clients</p>
+                            <p class="text-3xl font-black text-brand-dark font-inter">1,240</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-brand-warm">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-500 mt-2 font-inter font-bold"><i class="fas fa-arrow-up mr-1"></i>+18% YoY</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-accent"></div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">NPS</p>
+                            <p class="text-3xl font-black text-brand-dark font-inter">72</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-500 mt-2 font-inter font-bold"><i class="fas fa-arrow-up mr-1"></i>+8pts YoY</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-warm"></div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">Churn</p>
+                            <p class="text-3xl font-black text-brand-dark font-inter">1.8<span class="text-sm font-normal text-gray-500 ml-1">%</span></p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-brand-warm">
+                            <i class="fas fa-user-minus"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-green-500 mt-2 font-inter font-bold"><i class="fas fa-arrow-down mr-1"></i>-0.4pts YoY</p>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="bg-gray-50 rounded-xl p-6">
+                <h3 class="text-sm font-bold text-brand-dark uppercase tracking-wider font-inter mb-4">Performance Highlights</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5"></i>
+                        <p class="text-sm text-gray-600">SaaS事業が前年比32%成長、ARRが¥30億を突破</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5"></i>
+                        <p class="text-sm text-gray-600">エンタープライズ顧客が45社増加、LTVが1.5倍に</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5"></i>
+                        <p class="text-sm text-gray-600">AI機能リリースにより顧客満足度が大幅改善</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5"></i>
+                        <p class="text-sm text-gray-600">チャーンレート1.8%は業界平均の半分以下を維持</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">04</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

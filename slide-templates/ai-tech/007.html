@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Corporate AI Framework - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;family=Morisawa+Shin+Go+Condensed:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(236,236,236,0.6) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .shape-top {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 120px;
+            background-color: #ececec;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+            z-index: 1;
+        }
+        
+        .shape-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 15%;
+            height: 120px;
+            background-color: #ececec;
+            clip-path: polygon(0 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+        
+        .tech-pill {
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+            font-family: 'Noto Sans JP', sans-serif; 
+            /* Fallback for 'Saira Condensed' equivalent */
+        }
+        
+        .nav-arrow {
+            background-color: #000000;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 4rem; 
+            line-height: 1.1;
+            letter-spacing: 0.05em;
+        }
+        
+        .body-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .framework-list {
+            margin-top: 1.5rem;
+        }
+        
+        .framework-item {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .framework-icon {
+            color: #000;
+            margin-right: 0.8rem;
+            width: 1.2rem;
+            text-align: center;
+        }
+        
+        .framework-label {
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        .icon-container {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .illustration-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- Geometric shapes -->
+<div class="shape-top"></div>
+<div class="shape-bottom"></div>
+<!-- TechVantage branding -->
+<div class="absolute top-8 left-10 z-10">
+<div class="tech-pill">
+            TECHVANTAGE
+        </div>
+</div>
+<!-- Main content -->
+<div class="z-10 px-20 pt-32 flex flex-1 w-full h-full">
+<!-- Left side with text -->
+<div class="w-1/2 pr-10 flex flex-col justify-center">
+<h2 class="section-title mb-4">企業のAI活用<br/>フレームワーク</h2>
+<p class="body-text mb-4">
+                成功するAI導入には、技術だけでなく組織全体のアプローチが不可欠です。私たちは5つの柱で変革を支援します。
+            </p>
+<div class="framework-list">
+<div class="framework-item">
+<span class="framework-icon"><i class="fas fa-chess-queen"></i></span>
+<p class="body-text"><span class="framework-label">戦略:</span> 事業KGI/KPIから逆算したユースケース選定</p>
+</div>
+<div class="framework-item">
+<span class="framework-icon"><i class="fas fa-database"></i></span>
+<p class="body-text"><span class="framework-label">データ基盤:</span> ガバナンス・品質・アクセス設計の確立</p>
+</div>
+<div class="framework-item">
+<span class="framework-icon"><i class="fas fa-cogs"></i></span>
+<p class="body-text"><span class="framework-label">モデル運用:</span> 実験管理と継続学習（MLOps/LLMOps）</p>
+</div>
+<div class="framework-item">
+<span class="framework-icon"><i class="fas fa-users"></i></span>
+<p class="body-text"><span class="framework-label">組織:</span> PdM、DS、エンジニアの役割分担と育成</p>
+</div>
+<div class="framework-item">
+<span class="framework-icon"><i class="fas fa-chart-line"></i></span>
+<p class="body-text"><span class="framework-label">価値実証:</span> PoCから本番への明確なゲート基準</p>
+</div>
+</div>
+</div>
+<!-- Right side with illustration -->
+<div class="w-1/2 flex items-center justify-center">
+<div class="icon-container">
+<img alt="Corporate AI Framework Illustration" class="illustration-image" src="https://page.gensparksite.com/v1/base64_upload/29d5a54d542c5319ae1d16b9f940a7d4"/>
+</div>
+</div>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-10 z-20">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-white text-xl"></i>
+</div>
+</div>
+</div>
+</body>
+</html>

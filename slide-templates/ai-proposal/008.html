@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>導入プロセス</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Implementation Process</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">導入プロセス</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 4-Column Process Flow -->
+        <div class="flex-1 px-16 py-8 grid grid-cols-4 gap-4">
+            <!-- Phase 1 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col relative">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-brand-accent">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded font-lato">Phase 1</span>
+                </div>
+                <h3 class="text-lg font-bold text-brand-dark mb-2">要件定義</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">業務ヒアリング・課題の優先順位付け・AI適用領域の特定</p>
+                <div class="mt-3 pt-2 border-t border-gray-100">
+                    <p class="text-xs text-gray-400 font-lato"><i class="far fa-clock mr-1"></i>2週間</p>
+                </div>
+                <!-- Arrow -->
+                <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col relative">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-brand-accent">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded font-lato">Phase 2</span>
+                </div>
+                <h3 class="text-lg font-bold text-brand-dark mb-2">PoC実施</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">プロトタイプ構築・限定環境でのAI精度検証・効果測定</p>
+                <div class="mt-3 pt-2 border-t border-gray-100">
+                    <p class="text-xs text-gray-400 font-lato"><i class="far fa-clock mr-1"></i>4週間</p>
+                </div>
+                <!-- Arrow -->
+                <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-sub p-5 flex flex-col relative">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-sub">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-sub text-white px-2 py-0.5 rounded font-lato">Phase 3</span>
+                </div>
+                <h3 class="text-lg font-bold text-brand-dark mb-2">パイロット展開</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">特定部門での本格導入・ユーザー教育・運用フロー確立</p>
+                <div class="mt-3 pt-2 border-t border-gray-100">
+                    <p class="text-xs text-gray-400 font-lato"><i class="far fa-clock mr-1"></i>8週間</p>
+                </div>
+                <!-- Arrow -->
+                <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-sub p-5 flex flex-col">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-sub">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <span class="text-xs font-bold bg-brand-sub text-white px-2 py-0.5 rounded font-lato">Phase 4</span>
+                </div>
+                <h3 class="text-lg font-bold text-brand-dark mb-2">全社展開</h3>
+                <p class="text-xs text-gray-500 leading-relaxed flex-1">全部門へのロールアウト・継続改善・効果モニタリング</p>
+                <div class="mt-3 pt-2 border-t border-gray-100">
+                    <p class="text-xs text-gray-400 font-lato"><i class="far fa-clock mr-1"></i>12週間</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">08</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

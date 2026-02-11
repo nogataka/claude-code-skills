@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>技術アーキテクチャ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">Technical Architecture</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">技術アーキテクチャ</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body: Architecture Layers -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-3">
+            <!-- Layer 1: Client -->
+            <div class="bg-navy-800 rounded-xl border border-blue-900 p-4 flex items-center">
+                <div class="w-32 flex-shrink-0">
+                    <p class="text-xs text-accent-orange font-bold font-inter uppercase tracking-wider">Frontend</p>
+                    <p class="text-sm font-bold text-white">クライアント層</p>
+                </div>
+                <div class="flex-1 flex gap-3">
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-desktop text-accent-orange mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">Web Dashboard</p>
+                            <p class="text-xs text-gray-500">React / Next.js / TypeScript</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-mobile-alt text-accent-orange mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">Mobile App</p>
+                            <p class="text-xs text-gray-500">React Native</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-code text-accent-orange mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">Public API</p>
+                            <p class="text-xs text-gray-500">REST / GraphQL / SDK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 2: API Gateway -->
+            <div class="flex items-center justify-center">
+                <i class="fas fa-chevron-down text-blue-900"></i>
+            </div>
+
+            <div class="bg-navy-800 rounded-xl border border-blue-900 p-4 flex items-center">
+                <div class="w-32 flex-shrink-0">
+                    <p class="text-xs text-accent-blue font-bold font-inter uppercase tracking-wider">Gateway</p>
+                    <p class="text-sm font-bold text-white">API層</p>
+                </div>
+                <div class="flex-1 flex gap-3">
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-shield-alt text-accent-blue mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">API Gateway</p>
+                            <p class="text-xs text-gray-500">認証 / レート制限 / ルーティング</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-key text-accent-blue mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">Auth Service</p>
+                            <p class="text-xs text-gray-500">OAuth2 / SAML / SSO</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-tachometer-alt text-accent-blue mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">Load Balancer</p>
+                            <p class="text-xs text-gray-500">Auto-scaling / Health Check</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 3: Microservices -->
+            <div class="flex items-center justify-center">
+                <i class="fas fa-chevron-down text-blue-900"></i>
+            </div>
+
+            <div class="bg-accent-orange bg-opacity-10 rounded-xl border-2 border-accent-orange p-4 flex items-center">
+                <div class="w-32 flex-shrink-0">
+                    <p class="text-xs text-accent-orange font-bold font-inter uppercase tracking-wider">Core</p>
+                    <p class="text-sm font-bold text-white">サービス層</p>
+                </div>
+                <div class="flex-1 grid grid-cols-4 gap-3">
+                    <div class="bg-navy-800 rounded-lg p-3 text-center border border-blue-900">
+                        <i class="fas fa-database text-accent-orange text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-white">Data Hub</p>
+                        <p class="text-xs text-gray-500">ETL / CDC</p>
+                    </div>
+                    <div class="bg-navy-800 rounded-lg p-3 text-center border border-blue-900">
+                        <i class="fas fa-brain text-accent-orange text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-white">AI Engine</p>
+                        <p class="text-xs text-gray-500">ML Pipeline</p>
+                    </div>
+                    <div class="bg-navy-800 rounded-lg p-3 text-center border border-blue-900">
+                        <i class="fas fa-cogs text-accent-orange text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-white">Automation</p>
+                        <p class="text-xs text-gray-500">Workflow / RPA</p>
+                    </div>
+                    <div class="bg-navy-800 rounded-lg p-3 text-center border border-blue-900">
+                        <i class="fas fa-chart-bar text-accent-orange text-lg mb-1"></i>
+                        <p class="text-xs font-bold text-white">Analytics</p>
+                        <p class="text-xs text-gray-500">BI / Reporting</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layer 4: Infrastructure -->
+            <div class="flex items-center justify-center">
+                <i class="fas fa-chevron-down text-blue-900"></i>
+            </div>
+
+            <div class="bg-navy-800 rounded-xl border border-blue-900 p-4 flex items-center">
+                <div class="w-32 flex-shrink-0">
+                    <p class="text-xs text-gray-400 font-bold font-inter uppercase tracking-wider">Infra</p>
+                    <p class="text-sm font-bold text-white">基盤層</p>
+                </div>
+                <div class="flex-1 flex gap-3">
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-cloud text-gray-400 mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">AWS / GCP</p>
+                            <p class="text-xs text-gray-500">Kubernetes / Terraform</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-server text-gray-400 mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">PostgreSQL / Redis</p>
+                            <p class="text-xs text-gray-500">TimescaleDB / S3</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-navy-700 rounded-lg p-3 flex items-center">
+                        <i class="fas fa-lock text-gray-400 mr-3"></i>
+                        <div>
+                            <p class="text-xs font-bold text-white">Security</p>
+                            <p class="text-xs text-gray-500">SOC2 / ISO27001 / 暗号化</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">12</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

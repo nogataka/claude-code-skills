@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>売上予測</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .accent-shape { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); z-index: 0; }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .chart-container { width: 100%; overflow: hidden; border: 1px solid rgba(0, 123, 255, 0.3); border-radius: 8px; padding: 10px; background-color: #FFFFFF; height: 220px; }
+        .scenario-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); }
+        .scenario-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: center; padding: 6px 8px; }
+        .scenario-table td { padding: 5px 8px; border-bottom: 1px solid #e2e8f0; text-align: center; color: #333; }
+        .scenario-table .highlight-row td { background-color: rgba(0, 123, 255, 0.08); font-weight: 700; }
+    </style>
+</head>
+
+<body>
+    <div class="slide p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-2 relative z-10">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">売上予測</h1>
+
+            <!-- Charts Row -->
+            <div class="flex gap-4 mb-3">
+                <div class="w-1/2">
+                    <div class="chart-container shadow-sm">
+                        <canvas id="monthlyChart"></canvas>
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <div class="chart-container shadow-sm">
+                        <canvas id="annualChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario Table -->
+            <div class="flex gap-4">
+                <div class="w-2/3">
+                    <p class="text-xs font-bold body-text mb-1"><i class="fas fa-chart-line text-blue-500 mr-1"></i> シナリオ分析（3年間比較）</p>
+                    <table class="scenario-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="3">保守的</th>
+                                <th colspan="3">標準（計画）</th>
+                                <th colspan="3">楽観的</th>
+                            </tr>
+                            <tr>
+                                <th>年</th>
+                                <th>件数</th><th>単価</th><th>売上</th>
+                                <th>件数</th><th>単価</th><th>売上</th>
+                                <th>件数</th><th>単価</th><th>売上</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">1年</td>
+                                <td>33</td><td>¥7万</td><td>¥231万</td>
+                                <td class="highlight">33</td><td class="highlight">¥7万</td><td class="highlight">¥231万</td>
+                                <td>33</td><td>¥7万</td><td>¥231万</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">2年</td>
+                                <td>35</td><td>¥7万</td><td>¥245万</td>
+                                <td class="highlight">41</td><td class="highlight">¥7万</td><td class="highlight">¥287万</td>
+                                <td>50</td><td>¥7.35万</td><td>¥368万</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td class="font-bold">3年</td>
+                                <td>90</td><td>¥7万</td><td>¥630万</td>
+                                <td class="highlight">120</td><td class="highlight">¥7.14万</td><td class="highlight">¥857万</td>
+                                <td>150</td><td>¥7.5万</td><td>¥1,125万</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="w-1/3 flex flex-col gap-2">
+                    <p class="text-xs font-bold body-text"><i class="fas fa-tachometer-alt text-blue-500 mr-1"></i> 主要KPI</p>
+                    <div class="bg-gray-50 p-2 rounded text-xs" style="color: #666;">
+                        <div class="flex justify-between mb-1"><span>月間予約</span><span class="highlight">1Y: 2-3件 → 3Y: 10-12件</span></div>
+                        <div class="flex justify-between mb-1"><span>稼働率</span><span class="highlight">1Y: 10-15% → 3Y: 30-40%</span></div>
+                        <div class="flex justify-between mb-1"><span>平均客単価</span><span class="highlight">¥70,000以上維持</span></div>
+                        <div class="flex justify-between mb-1"><span>キャンセル率</span><span class="highlight">8-10%</span></div>
+                        <div class="flex justify-between"><span>BEP</span><span class="highlight">月1.9件</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Monthly Chart (Year 1)
+            const mCtx = document.getElementById('monthlyChart').getContext('2d');
+            new Chart(mCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+                    datasets: [{
+                        label: '月間売上（万円）',
+                        data: [14, 14, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21],
+                        backgroundColor: 'rgba(0, 123, 255, 0.7)',
+                        borderColor: '#007BFF',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '月次売上予測（1年目）', font: { family: 'BIZ UDGothic', size: 13, weight: 'bold' }, color: '#333', padding: { bottom: 6 } },
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: '万円', font: { size: 10 } }, ticks: { font: { size: 10 } } },
+                        x: { ticks: { font: { size: 9 } } }
+                    }
+                }
+            });
+
+            // Annual Chart (5 Years)
+            const aCtx = document.getElementById('annualChart').getContext('2d');
+            new Chart(aCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['1年目','2年目','3年目','4年目','5年目'],
+                    datasets: [
+                        {
+                            label: '年間売上（万円）',
+                            data: [231, 287, 857, 919, 980],
+                            backgroundColor: 'rgba(0, 123, 255, 0.7)',
+                            borderColor: '#007BFF',
+                            borderWidth: 1
+                        },
+                        {
+                            label: '予約件数',
+                            data: [33, 41, 120, 126, 132],
+                            type: 'line',
+                            borderColor: '#F59E0B',
+                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#F59E0B',
+                            pointRadius: 4,
+                            yAxisID: 'y1',
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '年次売上予測（標準シナリオ）', font: { family: 'BIZ UDGothic', size: 13, weight: 'bold' }, color: '#333', padding: { bottom: 6 } },
+                        legend: { labels: { font: { family: 'BIZ UDGothic', size: 10 } } }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: '売上（万円）', font: { size: 10 } }, ticks: { font: { size: 10 } } },
+                        y1: { position: 'right', beginAtZero: true, title: { display: true, text: '予約件数', font: { size: 10 } }, ticks: { font: { size: 10 } }, grid: { drawOnChartArea: false } },
+                        x: { ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

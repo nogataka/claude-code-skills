@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sales Forecast &amp; Break-even Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .metric-card {
+            transition: transform 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="h-24 px-12 flex items-end pb-6 justify-between bg-white border-b border-gray-100 z-10">
+            <div>
+                <div class="flex items-center space-x-2 text-indigo-600 mb-1">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Financial Forecast</span>
+                </div>
+                <h1 class="text-3xl font-black text-gray-900">売上予測・損益分岐点</h1>
+                <p class="text-sm text-gray-500 mt-1">低リスクな損益分岐点構造と、3年後のスケールモデル</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">17</span>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-50 p-10 flex gap-8">
+            <!-- Left Column: Break-even & Key Metrics (35%) -->
+            <div class="w-4/12 flex flex-col gap-6">
+                <!-- Break-even Point Card -->
+                <div class="bg-white rounded-2xl shadow-md border-l-8 border-green-500 p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i class="fa-solid fa-scale-balanced text-8xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-gray-500 uppercase mb-2">損益分岐点 (月次)</h3>
+                    <div class="flex items-baseline space-x-2 mb-4 relative z-10">
+                        <span class="text-6xl font-black text-green-600">2.9</span>
+                        <span class="text-xl font-bold text-gray-600">件 / 月</span>
+                    </div>
+                    <div class="space-y-3 relative z-10">
+                        <div class="flex justify-between text-sm border-b border-dashed border-gray-200 pb-2">
+                            <span class="text-gray-500">月間固定費上限</span>
+                            <span class="font-bold text-gray-800">14.5万円</span>
+                        </div>
+                        <div class="flex justify-between text-sm border-b border-dashed border-gray-200 pb-2">
+                            <span class="text-gray-500">1予約あたり粗利</span>
+                            <span class="font-bold text-gray-800">約5.0万円</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-green-50 text-green-800 text-xs font-bold p-3 rounded-lg flex items-start">
+                        <i class="fa-solid fa-check-circle mt-0.5 mr-2"></i>
+                        <p>月3回の週末稼働だけで黒字化可能。<br />平日は無理な安売りをせず価値を維持。</p>
+                    </div>
+                </div>
+                <!-- Strategy Summary -->
+                <div
+                    class="bg-indigo-900 text-white rounded-2xl p-6 shadow-md flex-1 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute bottom-0 right-0 w-32 h-32 bg-indigo-700 rounded-tl-full opacity-50"></div>
+                    <h3 class="text-sm font-bold text-indigo-300 uppercase mb-4">成長戦略の要諦</h3>
+                    <ul class="space-y-4 relative z-10">
+                        <li class="flex items-start">
+                            <div
+                                class="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center text-xs mr-3 shrink-0">
+                                1</div>
+                            <div class="flex-1">
+                                <p class="font-bold text-sm">初年度は「評価」を蓄積</p>
+                                <p class="text-xs text-indigo-200 mt-1">損益トントンでも高評価レビューとリピーター獲得を最優先。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center text-xs mr-3 shrink-0">
+                                2</div>
+                            <div class="flex-1">
+                                <p class="font-bold text-sm">3年目に「多店舗化」</p>
+                                <p class="text-xs text-indigo-200 mt-1">2台体制への移行で売上・利益を一気に拡大（3.7倍成長）。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Right Column: Forecast Chart (65%) -->
+            <div class="w-8/12 bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-gray-800 text-lg border-l-4 border-indigo-600 pl-3">3カ年 売上・予約数推移予測</h3>
+                    <div class="flex items-center space-x-4 text-xs">
+                        <div class="flex items-center">
+                            <span class="w-3 h-3 bg-indigo-500 rounded-sm mr-1"></span>
+                            <span class="text-gray-600">売上高 (万円)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-3 h-1 bg-orange-500 mr-1"></span> <!-- Line indicator -->
+                            <span class="text-gray-600">年間予約数 (件)</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chart Container -->
+                <div class="w-full flex-1" id="forecastChart"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var chartDom = document.getElementById('forecastChart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        crossStyle: {
+                            color: '#999'
+                        }
+                    }
+                },
+                grid: {
+                    top: '15%',
+                    right: '10%',
+                    bottom: '10%',
+                    left: '10%',
+                    containLabel: true
+                },
+                legend: {
+                    data: ['売上高', '予約数'],
+                    show: false // Custom legend used in HTML
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ['1年目\n(基盤構築)', '2年目\n(認知拡大)', '3年目\n(2台体制)'],
+                        axisPointer: {
+                            type: 'shadow'
+                        },
+                        axisLabel: {
+                            fontSize: 12,
+                            fontWeight: 'bold',
+                            color: '#4B5563',
+                            lineHeight: 18
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                color: '#E5E7EB'
+                            }
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: '売上高 (万円)',
+                        min: 0,
+                        max: 1000,
+                        interval: 200,
+                        axisLabel: {
+                            formatter: '{value}'
+                        },
+                        nameTextStyle: {
+                            color: '#6B7280',
+                            align: 'right',
+                            padding: [0, 10, 0, 0]
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                type: 'dashed',
+                                color: '#F3F4F6'
+                            }
+                        }
+                    },
+                    {
+                        type: 'value',
+                        name: '予約数 (件)',
+                        min: 0,
+                        max: 150,
+                        interval: 30,
+                        axisLabel: {
+                            formatter: '{value}'
+                        },
+                        nameTextStyle: {
+                            color: '#6B7280',
+                            align: 'left',
+                            padding: [0, 0, 0, 10]
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: '売上高',
+                        type: 'bar',
+                        barWidth: '40%',
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                { offset: 0, color: '#4F46E5' }, // Indigo 600
+                                { offset: 1, color: '#818CF8' }  // Indigo 400
+                            ]),
+                            borderRadius: [4, 4, 0, 0]
+                        },
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '¥{c}万',
+                            fontWeight: 'bold',
+                            color: '#4338CA',
+                            fontSize: 14,
+                            offset: [0, 5]
+                        },
+                        data: [231, 287, 856.8]
+                    },
+                    {
+                        name: '予約数',
+                        type: 'line',
+                        yAxisIndex: 1,
+                        smooth: true,
+                        symbol: 'circle',
+                        symbolSize: 10,
+                        itemStyle: {
+                            color: '#F97316', // Orange 500
+                            borderWidth: 3,
+                            borderColor: '#fff',
+                            shadowColor: 'rgba(0, 0, 0, 0.2)',
+                            shadowBlur: 5
+                        },
+                        lineStyle: {
+                            width: 4,
+                            color: '#F97316'
+                        },
+                        label: {
+                            show: true,
+                            position: 'bottom',
+                            formatter: '{c}件',
+                            fontWeight: 'bold',
+                            color: '#C2410C',
+                            backgroundColor: '#FFF7ED',
+                            padding: [4, 8],
+                            borderRadius: 4,
+                            offset: [0, 10] // Shift down to avoid overlap with bar labels in some cases, though they are on different axes
+                        },
+                        data: [33, 41, 120]
+                    }
+                ]
+            };
+            option && myChart.setOption(option);
+
+            // Resize handling
+            window.addEventListener('resize', function () {
+                myChart.resize();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-lato { font-family: 'Lato', sans-serif; }
+    .text-navy-900 { color: #0F2027; }
+    .text-navy-primary { color: #203A43; }
+    .bg-navy-accent { background-color: #2C5364; }
+    .text-navy-accent { color: #2C5364; }
+    .text-accent-gold { color: #C5A065; }
+    .bg-accent-gold { background-color: #C5A065; }
+    .border-accent-gold { border-color: #C5A065; }
+    .border-navy-accent { border-color: #2C5364; }
+    
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+</style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<!-- Main Container -->
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Value Proposition</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">提供価値の3つの柱</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content (3 Columns) -->
+<div class="flex-1 px-24 py-12">
+<div class="grid grid-cols-3 gap-8 h-full">
+<!-- Column A: Efficiency -->
+<div class="bg-gray-50 rounded-xl p-8 card-hover border-t-4 border-navy-accent shadow-sm flex flex-col relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-12 -mt-12 opacity-50 transition-transform group-hover:scale-110"></div>
+<div class="flex items-center mb-6 relative z-10">
+<div class="w-12 h-12 rounded-lg bg-white shadow-sm flex items-center justify-center text-navy-accent mr-4">
+<i class="fas fa-rocket text-2xl"></i>
+</div>
+<div>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Pillar 01</p>
+<h2 class="text-2xl font-bold text-navy-900">効率化</h2>
+</div>
+</div>
+<p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        最新のテクノロジーを活用し、業務プロセスの無駄を排除することで生産性を最大化します。
+                    </p>
+<ul class="space-y-4 mt-auto">
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-navy-accent mr-3"></i>
+<span class="font-bold text-gray-700">業務自動化</span>
+</li>
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-navy-accent mr-3"></i>
+<span class="font-bold text-gray-700">人的ミス削減</span>
+</li>
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-navy-accent mr-3"></i>
+<span class="font-bold text-gray-700">工数30%削減</span>
+</li>
+</ul>
+</div>
+<!-- Column B: Growth -->
+<div class="bg-gray-50 rounded-xl p-8 card-hover border-t-4 border-accent-gold shadow-sm flex flex-col relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-yellow-100 rounded-bl-full -mr-12 -mt-12 opacity-50 transition-transform group-hover:scale-110"></div>
+<div class="flex items-center mb-6 relative z-10">
+<div class="w-12 h-12 rounded-lg bg-white shadow-sm flex items-center justify-center text-accent-gold mr-4">
+<i class="fas fa-chart-line text-2xl"></i>
+</div>
+<div>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Pillar 02</p>
+<h2 class="text-2xl font-bold text-navy-900">成長</h2>
+</div>
+</div>
+<p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        顧客接点の強化とデータの活用により、売上機会を創出し持続的な成長を実現します。
+                    </p>
+<ul class="space-y-4 mt-auto">
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-accent-gold mr-3"></i>
+<span class="font-bold text-gray-700">クロスセル強化</span>
+</li>
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-accent-gold mr-3"></i>
+<span class="font-bold text-gray-700">新規顧客獲得</span>
+</li>
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-accent-gold mr-3"></i>
+<span class="font-bold text-gray-700">LTV最大化</span>
+</li>
+</ul>
+</div>
+<!-- Column C: Control -->
+<div class="bg-gray-50 rounded-xl p-8 card-hover border-t-4 border-navy-primary shadow-sm flex flex-col relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gray-200 rounded-bl-full -mr-12 -mt-12 opacity-50 transition-transform group-hover:scale-110"></div>
+<div class="flex items-center mb-6 relative z-10">
+<div class="w-12 h-12 rounded-lg bg-white shadow-sm flex items-center justify-center text-navy-primary mr-4">
+<i class="fas fa-shield-alt text-2xl"></i>
+</div>
+<div>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Pillar 03</p>
+<h2 class="text-2xl font-bold text-navy-900">統制</h2>
+</div>
+</div>
+<p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        組織全体のガバナンスを強化し、リスクを低減しながら安定した運用基盤を構築します。
+                    </p>
+<ul class="space-y-4 mt-auto">
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-navy-primary mr-3"></i>
+<span class="font-bold text-gray-700">プロセスの可視化</span>
+</li>
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-navy-primary mr-3"></i>
+<span class="font-bold text-gray-700">業務標準化</span>
+</li>
+<li class="flex items-center p-3 bg-white rounded shadow-sm border border-gray-100">
+<i class="fas fa-check-circle text-navy-primary mr-3"></i>
+<span class="font-bold text-gray-700">コンプライアンス</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">08</span>
+</div>
+</div>
+<!-- Background Decorations -->
+<div class="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-navy-accent via-accent-gold to-navy-primary opacity-20"></div>
+</div>
+</body>
+</html>

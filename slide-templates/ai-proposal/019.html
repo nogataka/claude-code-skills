@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>まとめ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Summary & Next Steps</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">まとめ・次のアクション</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-5">
+            <!-- Key Takeaways -->
+            <div class="flex-1">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-lato mb-4">Key Takeaways</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-yellow-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">業務効率の大幅改善</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">手作業工数を年間1,400時間削減。コア業務への集中を実現。</p>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-yen-sign"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">高い投資対効果</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">初期投資¥4,800万に対し、年間¥8,000万のコスト削減。ROI 340%。</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-sub flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">低リスクな段階導入</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">PoC→パイロット→全社展開の3段階で確実に成果を確認。</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-sub flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">伴走型サポート</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">NexTechが要件定義から運用定着まで一貫してサポート。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Actions -->
+            <div class="bg-brand-dark rounded-xl p-6 text-white">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-lato mb-3">Next Actions</h3>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-brand-dark text-xs font-bold mr-3 font-lato">1</div>
+                        <p class="text-sm">経営層への<br />提案承認</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-brand-dark text-xs font-bold mr-3 font-lato">2</div>
+                        <p class="text-sm">キックオフ<br />ミーティング</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-brand-dark text-xs font-bold mr-3 font-lato">3</div>
+                        <p class="text-sm">要件定義<br />フェーズ開始</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">19</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .text-navy-900 { color: #0F2027; }
+        .text-navy-primary { color: #203A43; }
+        .bg-navy-accent { background-color: #2C5364; }
+        .text-navy-accent { color: #2C5364; }
+        .text-accent-gold { color: #C5A065; }
+        .bg-accent-gold { background-color: #C5A065; }
+        .border-navy-accent { border-color: #2C5364; }
+        .border-accent-gold { border-color: #C5A065; }
+        
+        /* Timeline specific styles */
+        .timeline-line {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+        
+        .timeline-progress {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            width: 20%; /* Example progress */
+            height: 4px;
+            background-color: #2C5364;
+            z-index: 1;
+        }
+
+        .phase-card {
+            transition: all 0.3s ease;
+        }
+        .phase-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Connector lines for milestones */
+        .milestone-connector {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 2rem;
+            background-color: #C5A065;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Roadmap 2026</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">ロードマップ（2026）</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 flex flex-col justify-center">
+<!-- Timeline Container -->
+<div class="relative w-full max-w-7xl mx-auto pt-8 pb-4">
+<!-- Base Line -->
+<div class="timeline-line rounded-full"></div>
+<div class="timeline-progress rounded-full opacity-50"></div>
+<!-- Quarters Grid -->
+<div class="grid grid-cols-4 gap-8 relative z-10">
+<!-- Q1 -->
+<div class="flex flex-col relative">
+<!-- Milestone Marker (Top) -->
+<div class="absolute -top-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center group">
+<div class="bg-accent-gold text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Kick-off
+                            </div>
+<div class="w-4 h-4 rounded-full border-4 border-white bg-accent-gold shadow-md z-20"></div>
+</div>
+<!-- Quarter Label -->
+<div class="flex justify-center mb-10">
+<div class="bg-navy-accent text-white w-12 h-12 rounded-full flex items-center justify-center font-bold font-lato shadow-md z-10 border-4 border-white">
+                                Q1
+                            </div>
+</div>
+<!-- Content Card -->
+<div class="phase-card bg-white rounded-xl border-l-4 border-navy-accent shadow-sm p-6 relative overflow-hidden h-64">
+<div class="absolute right-0 top-0 p-4 opacity-5">
+<i class="fas fa-search text-6xl text-navy-accent"></i>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-1">要件定義／PoC</h3>
+<p class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-4">Planning Phase</p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">現状業務フローの分析</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">主要機能のPoC実施</p>
+</li>
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">インフラ基本設計</p>
+</li>
+</ul>
+<div class="absolute bottom-4 right-4 text-xs font-bold text-navy-accent">
+                                M1: 要件確定
+                            </div>
+</div>
+</div>
+<!-- Q2 -->
+<div class="flex flex-col relative">
+<!-- Milestone Marker -->
+<div class="absolute -top-12 left-3/4 transform -translate-x-1/2 flex flex-col items-center group">
+<div class="bg-accent-gold text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Dev Complete
+                            </div>
+<div class="w-4 h-4 rounded-full border-4 border-white bg-white border-accent-gold shadow-md z-20"></div>
+</div>
+<!-- Quarter Label -->
+<div class="flex justify-center mb-10">
+<div class="bg-white text-navy-900 border-2 border-navy-accent w-12 h-12 rounded-full flex items-center justify-center font-bold font-lato shadow-sm z-10">
+                                Q2
+                            </div>
+</div>
+<!-- Content Card -->
+<div class="phase-card bg-white rounded-xl border-l-4 border-navy-primary shadow-sm p-6 relative overflow-hidden h-64">
+<div class="absolute right-0 top-0 p-4 opacity-5">
+<i class="fas fa-code text-6xl text-navy-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-1">本番構築</h3>
+<p class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-4">Development Phase</p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">環境構築・データ移行</p>
+</li>
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">API連携実装</p>
+</li>
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">結合テスト</p>
+</li>
+</ul>
+<div class="absolute bottom-4 right-4 text-xs font-bold text-navy-primary">
+                                M2: 環境引渡
+                            </div>
+</div>
+</div>
+<!-- Q3 -->
+<div class="flex flex-col relative">
+<!-- Milestone Marker (Main) -->
+<div class="absolute -top-16 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+<div class="bg-navy-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md mb-1 whitespace-nowrap animate-bounce">
+                                GO-LIVE
+                            </div>
+<div class="w-6 h-6 rounded-full border-4 border-white bg-red-500 shadow-lg z-20 relative">
+<span class="absolute top-0 right-0 -mt-1 -mr-1 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+</span>
+</div>
+</div>
+<!-- Quarter Label -->
+<div class="flex justify-center mb-10">
+<div class="bg-white text-navy-900 border-2 border-gray-200 w-12 h-12 rounded-full flex items-center justify-center font-bold font-lato shadow-sm z-10">
+                                Q3
+                            </div>
+</div>
+<!-- Content Card -->
+<div class="phase-card bg-white rounded-xl border-l-4 border-accent-gold shadow-sm p-6 relative overflow-hidden h-64 border-t border-r border-b border-gray-100">
+<div class="absolute right-0 top-0 p-4 opacity-5">
+<i class="fas fa-rocket text-6xl text-accent-gold"></i>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-1">段階リリース</h3>
+<p class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-4">Deployment Phase</p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">パイロット運用開始</p>
+</li>
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">ユーザートレーニング</p>
+</li>
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">全社展開</p>
+</li>
+</ul>
+<div class="absolute bottom-4 right-4 text-xs font-bold text-accent-gold">
+                                M3: 運用安定化
+                            </div>
+</div>
+</div>
+<!-- Q4 -->
+<div class="flex flex-col relative">
+<!-- Milestone Marker -->
+<div class="absolute -top-12 right-0 transform translate-x-1/2 flex flex-col items-center group">
+<div class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full shadow-sm mb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                2027 Review
+                            </div>
+<div class="w-3 h-3 rounded-full bg-gray-300 z-20"></div>
+</div>
+<!-- Quarter Label -->
+<div class="flex justify-center mb-10">
+<div class="bg-white text-navy-900 border-2 border-gray-200 w-12 h-12 rounded-full flex items-center justify-center font-bold font-lato shadow-sm z-10">
+                                Q4
+                            </div>
+</div>
+<!-- Content Card -->
+<div class="phase-card bg-white rounded-xl border-l-4 border-gray-400 shadow-sm p-6 relative overflow-hidden h-64 border-t border-r border-b border-gray-100">
+<div class="absolute right-0 top-0 p-4 opacity-5">
+<i class="fas fa-chart-line text-6xl text-gray-400"></i>
+</div>
+<h3 class="text-xl font-bold text-navy-900 mb-1">最適化・拡張</h3>
+<p class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-4">Growth Phase</p>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">効果測定・KPI分析</p>
+</li>
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">追加機能開発</p>
+</li>
+<li class="flex items-start">
+<i class="far fa-circle text-gray-400 mt-1 mr-2 text-xs"></i>
+<p class="text-sm text-gray-600">運用プロセスの改善</p>
+</li>
+</ul>
+<div class="absolute bottom-4 right-4 text-xs font-bold text-gray-400">
+                                M4: 次年度計画
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Note -->
+<div class="mt-8 flex justify-center w-full">
+<div class="bg-blue-50 px-6 py-3 rounded-lg flex items-center shadow-sm max-w-3xl">
+<i class="fas fa-info-circle text-navy-accent mr-3"></i>
+<p class="text-sm text-gray-600">
+                    ※ 本スケジュールは現時点での計画であり、要件定義フェーズの結果により、Q3以降のマイルストーンが見直される可能性があります。
+                </p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">18</span>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .text-navy-900 { color: #0F2027; }
+        .text-navy-primary { color: #203A43; }
+        .bg-navy-accent { background-color: #2C5364; }
+        .text-navy-accent { color: #2C5364; }
+        .text-accent-gold { color: #C5A065; }
+        .bg-accent-gold { background-color: #C5A065; }
+        .border-navy-accent { border-color: #2C5364; }
+        .border-accent-gold { border-color: #C5A065; }
+        
+        .chart-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">KPI Trends</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">KPIトレンド（12ヶ月）</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-24 py-8 flex">
+<!-- Left Column: Key Insights & Metrics -->
+<div class="w-1/3 pr-10 flex flex-col h-full">
+<!-- Insight Box -->
+<div class="bg-gray-50 rounded-xl p-6 border-l-4 border-accent-gold mb-6 shadow-sm">
+<h3 class="text-lg font-bold text-navy-900 mb-2">効率性の改善</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                        下半期のマーケティングオートメーション導入により、<span class="font-bold text-navy-accent">CVRが2.1%から2.9%へ向上</span>。同時に獲得単価（CAC）の削減にも成功し、収益性が大幅に改善しました。
+                    </p>
+</div>
+<!-- Metrics Cards -->
+<div class="space-y-4 flex-1">
+<div class="flex flex-col justify-center h-full space-y-4">
+<!-- Metric 1: CVR -->
+<div class="flex items-center justify-between p-4 border border-gray-100 rounded-lg bg-white shadow-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 h-full w-1 bg-navy-accent"></div>
+<div class="z-10">
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">CVR (Conversion Rate)</p>
+<div class="flex items-end">
+<span class="text-2xl font-bold text-navy-900 font-lato">2.9%</span>
+<span class="text-xs text-green-600 font-bold ml-2 mb-1"><i class="fas fa-arrow-up"></i> +0.8pt</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-navy-accent">
+<i class="fas fa-mouse-pointer"></i>
+</div>
+</div>
+<!-- Metric 2: CAC -->
+<div class="flex items-center justify-between p-4 border border-gray-100 rounded-lg bg-white shadow-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 h-full w-1 bg-accent-gold"></div>
+<div class="z-10">
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">CAC (Cost/Acquisition)</p>
+<div class="flex items-end">
+<span class="text-2xl font-bold text-navy-900 font-lato">¥49,000</span>
+<span class="text-xs text-green-600 font-bold ml-2 mb-1"><i class="fas fa-arrow-down"></i> -15.5%</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-accent-gold">
+<i class="fas fa-coins"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Line Chart -->
+<div class="w-2/3 h-full pb-4">
+<div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm h-full flex flex-col relative">
+<!-- Chart Header -->
+<div class="flex justify-between items-center mb-4">
+<div class="flex items-center space-x-6">
+<div class="flex items-center">
+<span class="w-3 h-3 bg-navy-accent rounded-full mr-2"></span>
+<span class="text-xs font-bold text-navy-900">CVR (%)</span>
+</div>
+<div class="flex items-center">
+<span class="w-3 h-3 bg-accent-gold rounded-full mr-2"></span>
+<span class="text-xs font-bold text-navy-900">CAC (千円)</span>
+</div>
+</div>
+<div class="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">
+<span>Last 12 Months</span>
+</div>
+</div>
+<!-- Chart Canvas -->
+<div class="flex-1 relative w-full h-full overflow-hidden">
+<canvas id="kpiLineChart"></canvas>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">13</span>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('kpiLineChart').getContext('2d');
+            
+            // Gradient for CVR
+            const gradientCVR = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientCVR.addColorStop(0, 'rgba(44, 83, 100, 0.2)');
+            gradientCVR.addColorStop(1, 'rgba(44, 83, 100, 0.0)');
+            
+            const kpiLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [
+                        {
+                            label: 'CVR (%)',
+                            data: [2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.5, 2.65, 2.75, 2.85, 2.9],
+                            borderColor: '#2C5364', // Navy Accent
+                            backgroundColor: gradientCVR,
+                            borderWidth: 3,
+                            pointBackgroundColor: '#fff',
+                            pointBorderColor: '#2C5364',
+                            pointBorderWidth: 2,
+                            pointRadius: 4,
+                            pointHoverRadius: 6,
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'CAC (千円)',
+                            data: [58, 57.5, 57, 56.5, 56, 55.5, 55, 53, 51.5, 50.5, 49.5, 49],
+                            borderColor: '#C5A065', // Gold
+                            backgroundColor: 'transparent', // No fill for CAC to keep it clean
+                            borderWidth: 3,
+                            borderDash: [5, 5], // Dashed line for contrast
+                            pointBackgroundColor: '#fff',
+                            pointBorderColor: '#C5A065',
+                            pointBorderWidth: 2,
+                            pointRadius: 4,
+                            pointHoverRadius: 6,
+                            tension: 0.4,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    plugins: {
+                        legend: {
+                            display: false // Using custom legend
+                        },
+                        tooltip: {
+                            backgroundColor: '#0F2027',
+                            titleFont: { family: "'Noto Sans JP', sans-serif", size: 13 },
+                            bodyFont: { family: "'Lato', sans-serif", size: 14, weight: 'bold' },
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y;
+                                        if (context.dataset.yAxisID === 'y') label += '%';
+                                        if (context.dataset.yAxisID === 'y1') label += 'k';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: { family: "'Lato', sans-serif", size: 11 },
+                                color: '#9CA3AF'
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'CVR (%)',
+                                color: '#2C5364',
+                                font: { size: 10, weight: 'bold' }
+                            },
+                            grid: {
+                                color: '#F3F4F6',
+                                borderDash: [2, 2]
+                            },
+                            ticks: {
+                                color: '#2C5364',
+                                font: { family: "'Lato', sans-serif" }
+                            },
+                            min: 1.5,
+                            max: 3.5
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'CAC (千円)',
+                                color: '#C5A065',
+                                font: { size: 10, weight: 'bold' }
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            },
+                            ticks: {
+                                color: '#C5A065',
+                                font: { family: "'Lato', sans-serif" }
+                            },
+                            min: 40,
+                            max: 65
+                        }
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

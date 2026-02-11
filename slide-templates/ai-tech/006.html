@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Major Application Areas - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Replaced CSS gradient with SVG background for export compatibility */
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='rgba(0,0,0,0.1)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            opacity: 0.6;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .company-pill {
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: 0.05em;
+        }
+        
+        .nav-arrow {
+            background-color: #000000;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-weight: 900;
+            color: #000000;
+            font-size: 4rem; /* Adjusted for Japanese vertical spacing */
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+        
+        .body-text {
+            font-weight: 400;
+            color: #000000;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .list-item {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .list-label {
+            font-weight: 700;
+            min-width: 140px;
+            color: #000000;
+            flex-shrink: 0;
+        }
+        
+        .illustration-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+        }
+        
+        .illustration-image {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            filter: grayscale(100%); /* Monochrome style */
+        }
+        
+        .triangle-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            background: #ececec;
+            clip-path: polygon(0 100%, 100% 100%, 0 0);
+            z-index: 1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex: 1;
+            padding-top: 6rem; /* Space for branding */
+            padding-left: 5rem; /* px-20 equivalent */
+            padding-right: 4rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- Triangle shape at bottom -->
+<div class="triangle-shape"></div>
+<!-- TechVantage branding -->
+<div class="absolute top-8 left-10 z-20">
+<div class="company-pill">
+            TECHVANTAGE
+        </div>
+</div>
+<!-- Main content -->
+<div class="content-wrapper">
+<!-- Left side with text -->
+<div class="w-3/5 pr-8 flex flex-col justify-center pb-16">
+<h2 class="section-title mb-6">主要アプリケーション<br/>領域</h2>
+<div class="body-text space-y-4">
+<div class="list-item">
+<span class="list-label"><i class="fas fa-heartbeat mr-2"></i>ヘルスケア</span>
+<span>診断支援、創薬探索、患者トリアージによる医療品質の向上</span>
+</div>
+<div class="list-item">
+<span class="list-label"><i class="fas fa-chart-line mr-2"></i>金融</span>
+<span>AIによる不正検知、高精度な与信管理、アルゴリズム取引の実装</span>
+</div>
+<div class="list-item">
+<span class="list-label"><i class="fas fa-industry mr-2"></i>製造/自動車</span>
+<span>需要予測、外観検査の自動化、設備の予知保全、自動運転技術</span>
+</div>
+<div class="list-item">
+<span class="list-label"><i class="fas fa-shopping-cart mr-2"></i>小売/EC</span>
+<span>高度なレコメンド、在庫最適化、チャットボットによる接客自動化</span>
+</div>
+<div class="list-item">
+<span class="list-label"><i class="fas fa-laptop-code mr-2"></i>バックオフィス</span>
+<span>RPA拡張、社内ナレッジ検索、文書の要約・分類による業務効率化</span>
+</div>
+</div>
+</div>
+<!-- Right side with illustration -->
+<div class="w-2/5 flex items-center justify-center pb-10">
+<div class="illustration-container">
+<img alt="AI Applications Illustration" class="illustration-image" src="https://page.gensparksite.com/slides_images/90b01673f5efd6ebaa39ce2e900da966.webp" style="mix-blend-mode: multiply;"/>
+</div>
+</div>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-10 z-20">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-white text-xl"></i>
+</div>
+</div>
+</div>
+</body>
+</html>

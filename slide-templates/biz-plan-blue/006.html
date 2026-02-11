@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>既存解決策とその限界</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .existing-card { background-color: #F8F9FA; border-radius: 6px; padding: 8px 12px; }
+        .limit-card { background-color: #FEF2F2; border-left: 4px solid #EF4444; padding: 10px 14px; border-radius: 0 4px 4px 0; }
+        .solution-hint { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 12px 16px; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-3">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">既存解決策とその限界</h1>
+
+            <div class="flex gap-6 mb-3">
+                <!-- Left: Existing Solutions -->
+                <div class="w-1/2">
+                    <h3 class="font-bold text-sm body-text mb-2"><i class="fas fa-list text-gray-400 mr-2"></i>現在の対処法</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="existing-card">
+                            <p class="text-xs font-bold body-text"><i class="fas fa-hotel text-gray-400 mr-1"></i> ホテル・旅館＋自家用車</p>
+                            <p class="text-xs" style="color: #888;">宿のグレードを落とす・泊数を減らす等で対応</p>
+                        </div>
+                        <div class="existing-card">
+                            <p class="text-xs font-bold body-text"><i class="fas fa-home text-gray-400 mr-1"></i> 民泊・貸別荘</p>
+                            <p class="text-xs" style="color: #888;">ペット同伴可物件は限定的、予約困難</p>
+                        </div>
+                        <div class="existing-card">
+                            <p class="text-xs font-bold body-text"><i class="fas fa-paw text-gray-400 mr-1"></i> ペットと泊まれる宿</p>
+                            <p class="text-xs" style="color: #888;">料金高め、予約難易度高い</p>
+                        </div>
+                        <div class="existing-card">
+                            <p class="text-xs font-bold body-text"><i class="fas fa-suitcase text-gray-400 mr-1"></i> パッケージツアー</p>
+                            <p class="text-xs" style="color: #888;">ペット同伴・三世代ニーズに未対応</p>
+                        </div>
+                        <div class="existing-card">
+                            <p class="text-xs font-bold body-text"><i class="fas fa-bus text-gray-400 mr-1"></i> キャンピングカー専門店</p>
+                            <p class="text-xs" style="color: #888;">初心者サポート不足、ペット対応限定的</p>
+                        </div>
+                        <div class="existing-card">
+                            <p class="text-xs font-bold body-text"><i class="fas fa-handshake text-gray-400 mr-1"></i> P2Pカーシェア</p>
+                            <p class="text-xs" style="color: #888;">品質・保険のばらつき、初心者にハードル高い</p>
+                        </div>
+                    </div>
+                    <p class="text-xs mt-2 italic" style="color: #999;">「旅行自体を諦める／回数を減らす」という暗黙の対処も広がっている</p>
+                </div>
+
+                <!-- Right: Structural Limitations -->
+                <div class="w-1/2">
+                    <h3 class="font-bold text-sm body-text mb-2"><i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>構造的限界</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="limit-card">
+                            <p class="text-xs font-bold body-text">①「移動」と「宿泊」の分断</p>
+                            <p class="text-xs" style="color: #666;">宿泊場所と移動手段を別々に手配。夜間の自由な移動不可。チェックイン/アウトの煩雑さが家族の体力負担に。</p>
+                        </div>
+                        <div class="limit-card">
+                            <p class="text-xs font-bold body-text">② 宿泊施設側の制約</p>
+                            <p class="text-xs" style="color: #666;">「子どもの騒音」「ペットの臭い・鳴き声」に対する施設側の制限が年々強化。ペット可の選択肢が構造的に少ない。</p>
+                        </div>
+                        <div class="limit-card">
+                            <p class="text-xs font-bold body-text">③ 既存キャンピングカーレンタルのハードル</p>
+                            <p class="text-xs" style="color: #666;">「運転が不安」「操作がわからない」「どこに行けばいいか不明」。初心者向けサポートが充実した事業者は少ない。</p>
+                        </div>
+                        <div class="limit-card">
+                            <p class="text-xs font-bold body-text">④「特別な体験」と「安心・手軽さ」の両立困難</p>
+                            <p class="text-xs" style="color: #666;">非日常の体験を求めると手軽さが犠牲に。安心・手軽を優先すると体験が画一的。両方を満たすサービスが不在。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: OUTDOOR+ Solution Hint -->
+            <div class="solution-hint">
+                <div class="flex items-center">
+                    <i class="fas fa-lightbulb text-yellow-300 mr-3 text-lg"></i>
+                    <div>
+                        <p class="text-sm font-bold">OUTDOOR+ が解決する領域</p>
+                        <p class="text-xs opacity-90">移動と宿泊を一体化し、ペットファースト設計＋初心者サポート＋フルデジタルUXで「特別な体験」と「安心・手軽さ」を両立</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

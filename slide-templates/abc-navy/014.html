@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .text-navy-900 { color: #0F2027; }
+        .text-navy-primary { color: #203A43; }
+        .bg-navy-accent { background-color: #2C5364; }
+        .text-navy-accent { color: #2C5364; }
+        .text-accent-gold { color: #C5A065; }
+        .bg-accent-gold { background-color: #C5A065; }
+        .border-navy-accent { border-color: #2C5364; }
+        .border-accent-gold { border-color: #C5A065; }
+        
+        .chart-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Revenue &amp; Cost Trends</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">収益とコストの推移</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-24 py-8 flex flex-col">
+<!-- KPI Cards Section -->
+<div class="grid grid-cols-3 gap-6 mb-6">
+<!-- Card 1 -->
+<div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Total Revenue</p>
+<p class="text-2xl font-bold text-navy-900 font-lato">¥415<span class="text-sm font-normal text-gray-500 ml-1">M</span></p>
+</div>
+<div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-navy-accent">
+<i class="fas fa-chart-bar"></i>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-accent-gold"></div>
+<div>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Gross Margin</p>
+<p class="text-2xl font-bold text-navy-900 font-lato">38.0<span class="text-sm font-normal text-gray-500 ml-1">%</span></p>
+</div>
+<div class="flex items-center text-green-600 text-sm font-bold bg-green-50 px-2 py-1 rounded">
+<i class="fas fa-arrow-up mr-1"></i> +2.0pt
+                    </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-navy-primary rounded-xl p-5 shadow-sm flex items-center justify-between text-white relative overflow-hidden">
+<!-- Background pattern -->
+<div class="absolute right-0 top-0 h-full w-20 bg-white opacity-5 skew-x-12"></div>
+<div>
+<p class="text-xs text-gray-300 font-bold uppercase tracking-wider mb-1">YoY Growth</p>
+<p class="text-2xl font-bold font-lato">+18.5<span class="text-sm font-normal text-gray-300 ml-1">%</span></p>
+</div>
+<div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-white">
+<i class="fas fa-rocket"></i>
+</div>
+</div>
+</div>
+<!-- Chart Section -->
+<div class="flex-1 bg-white rounded-xl border border-gray-100 p-6 shadow-sm relative">
+<!-- Chart Header & Legend -->
+<div class="flex justify-between items-center mb-4 absolute top-6 left-6 right-6 z-10 pointer-events-none">
+<div class="pointer-events-auto">
+<h3 class="text-lg font-bold text-navy-900">収益拡大と利益率向上</h3>
+<p class="text-xs text-gray-500">売上の伸長に伴い、スケールメリットによる利益率改善が実現</p>
+</div>
+<div class="flex items-center space-x-6 pointer-events-auto bg-white bg-opacity-90 px-4 py-2 rounded-lg shadow-sm border border-gray-100">
+<div class="flex items-center">
+<span class="w-3 h-3 bg-navy-accent rounded-sm mr-2"></span>
+<span class="text-xs font-bold text-navy-900">収益 (百万円)</span>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-0.5 bg-accent-gold relative mr-2 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-accent-gold border-2 border-white"></div>
+</div>
+<span class="text-xs font-bold text-navy-900">粗利率 (%)</span>
+</div>
+</div>
+</div>
+<!-- Chart Container -->
+<div class="chart-container pt-12">
+<canvas id="comboChart"></canvas>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">14</span>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('comboChart').getContext('2d');
+            
+            const comboChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                    datasets: [
+                        {
+                            label: '収益 (百万円)',
+                            data: [80, 95, 110, 130],
+                            backgroundColor: '#2C5364', // navy-accent
+                            borderRadius: 4,
+                            barPercentage: 0.5,
+                            categoryPercentage: 0.8,
+                            order: 2,
+                            yAxisID: 'y'
+                        },
+                        {
+                            type: 'line',
+                            label: '粗利率 (%)',
+                            data: [32, 34, 36, 38],
+                            borderColor: '#C5A065', // accent-gold
+                            backgroundColor: '#C5A065',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#fff',
+                            pointBorderColor: '#C5A065',
+                            pointBorderWidth: 2,
+                            pointRadius: 6,
+                            pointHoverRadius: 8,
+                            tension: 0.1,
+                            order: 1,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false // Custom legend used
+                        },
+                        tooltip: {
+                            backgroundColor: '#0F2027',
+                            titleFont: { family: "'Noto Sans JP', sans-serif", size: 13 },
+                            bodyFont: { family: "'Lato', sans-serif", size: 14, weight: 'bold' },
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label = label.split(' ')[0] + ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y;
+                                        if (context.dataset.yAxisID === 'y') label += ' M';
+                                        if (context.dataset.yAxisID === 'y1') label += '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: { family: "'Lato', sans-serif", size: 12, weight: 'bold' },
+                                color: '#4B5563'
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: false,
+                                text: 'Revenue'
+                            },
+                            grid: {
+                                color: '#F3F4F6',
+                                borderDash: [2, 2]
+                            },
+                            ticks: {
+                                color: '#2C5364',
+                                font: { family: "'Lato', sans-serif" },
+                                callback: function(value) { return value + 'M'; }
+                            },
+                            min: 0,
+                            max: 160
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: false,
+                                text: 'Margin'
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            },
+                            ticks: {
+                                color: '#C5A065',
+                                font: { family: "'Lato', sans-serif" },
+                                callback: function(value) { return value + '%'; }
+                            },
+                            min: 20,
+                            max: 50
+                        }
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

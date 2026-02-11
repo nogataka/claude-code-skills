@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>競合分析</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Competitive Analysis</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">競合分析</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body: Table -->
+        <div class="flex-1 px-16 py-6">
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                <!-- Header Row -->
+                <div class="flex bg-brand-dark text-white text-xs font-bold">
+                    <div class="w-1/5 px-5 py-3">企業</div>
+                    <div class="w-1/5 px-5 py-3">強み</div>
+                    <div class="w-1/5 px-5 py-3">弱み</div>
+                    <div class="w-1/5 px-5 py-3">市場シェア</div>
+                    <div class="w-1/5 px-5 py-3">脅威度</div>
+                </div>
+                <!-- Row 1 -->
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/5 px-5 py-3 font-bold text-brand-accent">SkyLine Corp.</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">AI統合、UX</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">認知度</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600 font-inter font-bold">8.2%</div>
+                    <div class="w-1/5 px-5 py-3"><span class="inline-block bg-brand-accent text-white text-xs font-bold px-2 py-0.5 rounded">自社</span></div>
+                </div>
+                <!-- Row 2 -->
+                <div class="flex text-sm border-b border-gray-100 bg-gray-50">
+                    <div class="w-1/5 px-5 py-3 font-bold text-gray-800">A社</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">ブランド力</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">価格高</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600 font-inter font-bold">22.5%</div>
+                    <div class="w-1/5 px-5 py-3"><span class="inline-block bg-brand-warm text-white text-xs font-bold px-2 py-0.5 rounded">高</span></div>
+                </div>
+                <!-- Row 3 -->
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/5 px-5 py-3 font-bold text-gray-800">B社</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">低価格</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">機能限定</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600 font-inter font-bold">15.8%</div>
+                    <div class="w-1/5 px-5 py-3"><span class="inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded">中</span></div>
+                </div>
+                <!-- Row 4 -->
+                <div class="flex text-sm border-b border-gray-100 bg-gray-50">
+                    <div class="w-1/5 px-5 py-3 font-bold text-gray-800">C社</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">グローバル展開</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">日本語対応弱</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600 font-inter font-bold">12.1%</div>
+                    <div class="w-1/5 px-5 py-3"><span class="inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded">中</span></div>
+                </div>
+                <!-- Row 5 -->
+                <div class="flex text-sm">
+                    <div class="w-1/5 px-5 py-3 font-bold text-gray-800">D社</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">業界特化</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600">汎用性低</div>
+                    <div class="w-1/5 px-5 py-3 text-gray-600 font-inter font-bold">6.4%</div>
+                    <div class="w-1/5 px-5 py-3"><span class="inline-block bg-gray-400 text-white text-xs font-bold px-2 py-0.5 rounded">低</span></div>
+                </div>
+            </div>
+
+            <!-- Competitive Advantage -->
+            <div class="mt-5 bg-blue-50 rounded-xl p-5 flex items-start">
+                <div class="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white mr-4 flex-shrink-0">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-brand-dark mb-1">SkyLineの競争優位性</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">AI統合プラットフォームとしての独自ポジション。生成AI×業務データ統合で他社が追随困難な領域を構築。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">08</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

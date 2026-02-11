@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>リスク管理</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-warm"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Risk Management</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">リスク管理</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body: 2 Columns -->
+        <div class="flex-1 px-16 py-6 flex gap-8">
+            <!-- Left: Risk List -->
+            <div class="w-1/2 flex flex-col gap-3">
+                <h3 class="text-sm font-bold text-brand-warm uppercase tracking-wider font-inter mb-1">Identified Risks</h3>
+                <div class="bg-red-50 rounded-xl p-4 border-l-4 border-brand-warm">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">エンジニア採用リスク</p>
+                        <span class="inline-block bg-brand-warm text-white text-xs font-bold px-2 py-0.5 rounded">高</span>
+                    </div>
+                    <p class="text-xs text-gray-500">AI人材の獲得競争が激化。採用計画の未達リスク。</p>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4 border-l-4 border-yellow-400">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">為替変動リスク</p>
+                        <span class="inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded">中</span>
+                    </div>
+                    <p class="text-xs text-gray-500">海外展開時の為替影響。クラウドコストの変動。</p>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4 border-l-4 border-yellow-400">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">規制変更リスク</p>
+                        <span class="inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded">中</span>
+                    </div>
+                    <p class="text-xs text-gray-500">AI規制法案の動向。個人情報保護法改正の影響。</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 border-l-4 border-gray-300">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">技術陳腐化リスク</p>
+                        <span class="inline-block bg-gray-400 text-white text-xs font-bold px-2 py-0.5 rounded">低</span>
+                    </div>
+                    <p class="text-xs text-gray-500">技術トレンドの変化。継続的なR&D投資で対応。</p>
+                </div>
+            </div>
+
+            <!-- Right: Mitigation -->
+            <div class="w-1/2 flex flex-col gap-3">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-inter mb-1">Mitigation Strategy</h3>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-shield-alt text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">採用チャネルの多角化</p>
+                            <p class="text-xs text-gray-500">海外リモート採用、アカデミア連携、副業人材活用を推進。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-balance-scale text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">為替ヘッジ</p>
+                            <p class="text-xs text-gray-500">先物為替予約と現地通貨建て契約の組み合わせ。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-gavel text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">コンプライアンス体制強化</p>
+                            <p class="text-xs text-gray-500">専任法務チーム設置。外部アドバイザー活用。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-flask text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">継続的R&D投資</p>
+                            <p class="text-xs text-gray-500">売上の15%をR&Dに継続投資。最新技術のキャッチアップ。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">18</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

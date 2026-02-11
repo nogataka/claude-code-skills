@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Study: CX in Action</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=M+PLUS+1p:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 15px 40px;
+            color: #1E3A8A;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .content {
+            padding: 40px;
+            height: calc(100% - 60px);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 1.1;
+            color: #1E3A8A;
+            margin-bottom: 60px;
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        .metrics-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+        
+        .metric-section {
+            flex: 1;
+            max-width: 45%;
+            padding-right: 20px;
+        }
+        
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #1E3A8A;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .icon-circle i {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .metric-value {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 10px;
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        .metric-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1E40AF;
+            margin-bottom: 15px;
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        .metric-description {
+            font-size: 1rem;
+            color: #6B7280;
+            line-height: 1.6;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .result-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: rgba(191, 219, 254, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .arrow-container {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #1E3A8A;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .arrow-container i {
+            color: #1E3A8A;
+            font-size: 1.5rem;
+        }
+        
+        .result-percentage {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-left: 30px;
+            font-family: 'Noto Serif JP', serif;
+            flex-shrink: 0;
+        }
+        
+        .result-text {
+            font-size: 1.1rem;
+            color: #6B7280;
+            line-height: 1.5;
+            margin-left: 30px;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #BFDBFE;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        
+        .circle-1 {
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: 10%;
+        }
+        
+        .circle-3 {
+            width: 300px;
+            height: 300px;
+            top: 30%;
+            left: 40%;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<div class="circle circle-3"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<h1 class="title">事例：CXの実践</h1>
+<div class="metrics-container">
+<div class="metric-section">
+<div class="icon-circle">
+<i class="fas fa-shopping-cart"></i>
+</div>
+<div class="metric-value">3.2/5</div>
+<p class="metric-title">改善前（Before）:</p>
+<p class="metric-description">
+                        複雑なチェックアウトプロセスが原因で、決済段階での離脱率が高止まりし、顧客満足度が低下していました。
+                    </p>
+</div>
+<div class="metric-section">
+<div class="icon-circle">
+<i class="fas fa-credit-card"></i>
+</div>
+<div class="metric-value">300,000<sup>+</sup></div>
+<p class="metric-title">改善後（After）:</p>
+<p class="metric-description">
+                        不要なステップを削減し、複数の決済オプションを統合することで、スムーズかつ迅速なチェックアウト体験を実現しました。
+                    </p>
+</div>
+</div>
+<div class="result-container">
+<div class="arrow-container">
+<i class="fas fa-arrow-right"></i>
+</div>
+<div class="result-percentage">25%</div>
+<div class="result-text">
+<p>
+                        カート放棄率が25%減少するとともに、顧客満足度が18%向上。オンライン体験の刷新が直接的な成果につながりました。
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

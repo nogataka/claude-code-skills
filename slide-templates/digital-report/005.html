@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>KPI and Key Metrics</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #1a2332; /* Navy Blue */
+            color: #ffffff;
+        }
+        .slide-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .text-gold {
+            color: #d4af37;
+        }
+        .bg-gold {
+            background-color: #d4af37;
+        }
+        .border-gold {
+            border-color: #d4af37;
+        }
+        
+        /* Background Pattern */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.03;
+            background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="1" cy="1" r="1" fill="white"/></svg>');
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+
+        /* Card Styling */
+        .chart-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            position: relative;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+        }
+        .chart-title {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #cbd5e0;
+            margin-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chart-container {
+            flex: 1;
+            position: relative;
+            width: 100%;
+            min-height: 0; /* Important for Chart.js in flex container */
+        }
+
+        /* Highlight Metric Card */
+        .metric-card {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-left: 3px solid #d4af37;
+            padding: 0.75rem 1rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Decorative Grid Lines */
+        .grid-line {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.05);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background -->
+<div class="bg-pattern"></div>
+<div class="grid-line" style="top: 100px; left: 0; width: 100%; height: 1px;"></div>
+<!-- Header -->
+<div class="pt-8 px-12 mb-4 z-10 flex justify-between items-end h-20">
+<div>
+<div class="flex items-center mb-1">
+<div class="w-2 h-2 rounded-full bg-gold mr-2"></div>
+<p class="text-gold text-xs font-bold tracking-widest uppercase">Chapter 01 - Data Insights</p>
+</div>
+<h1 class="text-3xl font-bold text-white tracking-tight">KPIと主要指標</h1>
+</div>
+<div class="flex items-center space-x-4">
+<div class="text-right">
+<p class="text-xs text-gray-400">TARGET YEAR</p>
+<p class="text-lg font-mono font-bold text-gold">2028</p>
+</div>
+<div class="h-8 w-px bg-gray-700"></div>
+<div class="text-right">
+<p class="text-xs text-gray-400">STATUS</p>
+<p class="text-xs font-bold bg-green-900 text-green-300 px-2 py-1 rounded inline-block">ON TRACK</p>
+</div>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="flex-1 px-12 pb-10 grid grid-cols-12 gap-6 z-10 overflow-hidden">
+<!-- Top Row: Main Charts -->
+<div class="col-span-7 h-full flex flex-col space-y-6">
+<!-- Line Chart: Sales Ratio -->
+<div class="chart-card flex-grow h-3/5">
+<div class="chart-title">
+<span><i class="fas fa-chart-line text-gold mr-2"></i>デジタル売上比率推移 (%)</span>
+<span class="text-xs bg-gray-700 px-2 py-0.5 rounded text-gray-300">Annual</span>
+</div>
+<div class="chart-container">
+<canvas id="salesRatioChart"></canvas>
+</div>
+</div>
+<!-- Bar Chart: MAU -->
+<div class="chart-card flex-grow h-2/5">
+<div class="chart-title">
+<span><i class="fas fa-users text-gold mr-2"></i>月間アクティブユーザー (万人)</span>
+<span class="text-xs text-gold">+150% Growth</span>
+</div>
+<div class="chart-container">
+<canvas id="mauChart"></canvas>
+</div>
+</div>
+</div>
+<!-- Right Column: Composition & Highlights -->
+<div class="col-span-5 h-full flex flex-col space-y-6">
+<!-- Doughnut Chart -->
+<div class="chart-card h-1/2">
+<div class="chart-title">
+<span><i class="fas fa-chart-pie text-gold mr-2"></i>チャネル構成比 (2028予測)</span>
+</div>
+<div class="chart-container relative flex justify-center items-center">
+<canvas id="channelChart"></canvas>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="text-center mt-4">
+<p class="text-3xl font-bold text-white">45<span class="text-sm">%</span></p>
+<p class="text-xs text-gray-400 uppercase">Mobile</p>
+</div>
+</div>
+</div>
+</div>
+<!-- KPI Highlights -->
+<div class="h-1/2 flex flex-col justify-between">
+<h3 class="text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider pl-1 border-l-2 border-gold">Impact Highlights</h3>
+<div class="space-y-3 flex-1 flex flex-col justify-between">
+<!-- Metric 1 -->
+<div class="metric-card flex-1">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm text-gray-200 font-medium">コンバージョン率 (CVR)</p>
+<i class="fas fa-arrow-up text-green-400 text-xs"></i>
+</div>
+<div class="flex items-baseline">
+<p class="text-gray-400 text-sm line-through mr-2">2.4%</p>
+<i class="fas fa-caret-right text-gold text-xs mx-1"></i>
+<p class="text-2xl font-bold text-white">3.6%</p>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="metric-card flex-1">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm text-gray-200 font-medium">カゴ落ち率 (Cart Abandon)</p>
+<i class="fas fa-arrow-down text-green-400 text-xs"></i>
+</div>
+<div class="flex items-baseline">
+<p class="text-gray-400 text-sm line-through mr-2">68%</p>
+<i class="fas fa-caret-right text-gold text-xs mx-1"></i>
+<p class="text-2xl font-bold text-white">54%</p>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="metric-card flex-1">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm text-gray-200 font-medium">定期購入比率 (Subscription)</p>
+<i class="fas fa-arrow-up text-green-400 text-xs"></i>
+</div>
+<div class="flex items-baseline">
+<p class="text-gray-400 text-sm line-through mr-2">6%</p>
+<i class="fas fa-caret-right text-gold text-xs mx-1"></i>
+<p class="text-2xl font-bold text-white">12%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex items-center justify-between px-12 border-t border-gray-800 z-20 bg-gray-900 bg-opacity-80">
+<div class="flex items-center">
+<p class="text-gray-500 text-xs font-mono">CONFIDENTIAL // DIGITAL STRATEGY 2026-2028</p>
+</div>
+<div class="flex items-center">
+<span class="text-gold font-bold mr-2">5</span>
+<span class="text-gray-600 text-xs">/ 11</span>
+</div>
+</div>
+</div>
+<script>
+    // Global defaults
+    Chart.defaults.color = '#a0aec0';
+    Chart.defaults.font.family = "'Noto Sans JP', sans-serif";
+    Chart.defaults.scale.grid.color = 'rgba(255, 255, 255, 0.05)';
+
+    // 1. Digital Sales Ratio Chart (Line)
+    const ctxSales = document.getElementById('salesRatioChart').getContext('2d');
+    
+    // Gradient for line chart
+    const gradientSales = ctxSales.createLinearGradient(0, 0, 0, 400);
+    gradientSales.addColorStop(0, 'rgba(212, 175, 55, 0.5)');
+    gradientSales.addColorStop(1, 'rgba(212, 175, 55, 0.0)');
+
+    new Chart(ctxSales, {
+        type: 'line',
+        data: {
+            labels: ['2024', '2025', '2026', '2027', '2028'],
+            datasets: [{
+                label: 'Digital Sales Ratio',
+                data: [18, 28, 35, 41, 45],
+                borderColor: '#d4af37',
+                backgroundColor: gradientSales,
+                borderWidth: 3,
+                pointBackgroundColor: '#1a2332',
+                pointBorderColor: '#d4af37',
+                pointBorderWidth: 2,
+                pointRadius: 5,
+                pointHoverRadius: 7,
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: 'rgba(26, 35, 50, 0.9)',
+                    titleColor: '#d4af37',
+                    bodyColor: '#fff',
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    borderWidth: 1,
+                    displayColors: false,
+                    callbacks: {
+                        label: function(context) {
+                            return context.parsed.y + '%';
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 50,
+                    ticks: { callback: function(value) { return value + '%'; } }
+                }
+            }
+        }
+    });
+
+    // 2. MAU Chart (Bar)
+    const ctxMau = document.getElementById('mauChart').getContext('2d');
+    new Chart(ctxMau, {
+        type: 'bar',
+        data: {
+            labels: ['2024', '2025', '2026', '2027', '2028'],
+            datasets: [{
+                label: 'MAU (万人)',
+                data: [120, 160, 210, 260, 300],
+                backgroundColor: 'rgba(52, 152, 219, 0.7)', // Blue accent
+                borderRadius: 4,
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: { display: false }
+                },
+                x: {
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+
+    // 3. Channel Chart (Doughnut)
+    const ctxChannel = document.getElementById('channelChart').getContext('2d');
+    new Chart(ctxChannel, {
+        type: 'doughnut',
+        data: {
+            labels: ['Web', 'Mobile App', 'Physical Store'],
+            datasets: [{
+                data: [50, 40, 10],
+                backgroundColor: [
+                    'rgba(52, 152, 219, 0.8)', // Web (Blue)
+                    'rgba(212, 175, 55, 0.8)', // Mobile (Gold)
+                    'rgba(160, 174, 192, 0.5)'  // Store (Gray)
+                ],
+                borderColor: '#1a2332',
+                borderWidth: 2,
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '70%',
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 20,
+                        color: '#cbd5e0'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

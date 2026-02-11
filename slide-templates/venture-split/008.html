@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Key Features &amp; Focus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-list li::before {
+            content: '\f00c';
+            /* fa-check */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #10B981;
+            /* green-500 */
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Left Panel: Concept & Header -->
+        <div class="w-1/3 bg-gray-900 text-white p-10 flex flex-col justify-between relative overflow-hidden">
+            <!-- Background accents -->
+            <div class="absolute top-0 right-0 w-40 h-40 bg-blue-500 rounded-bl-full opacity-20"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-purple-500 rounded-tr-full opacity-20"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <span class="text-blue-400 font-bold tracking-widest uppercase text-sm">Features &amp;
+                        Strategy</span>
+                </div>
+                <h1 class="text-4xl font-black leading-tight mb-6">
+                    主要機能と<br />初年度フォーカス
+                </h1>
+                <div class="border-l-4 border-blue-500 pl-4 mb-8">
+                    <p class="text-lg font-bold text-white mb-2">実行戦略の要点</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        高機能な車両とデジタル化された体験を提供しつつ、
+                        運営側は「やりすぎを削り、集中する」ことで
+                        効率的な立ち上げを実現する。
+                    </p>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
+                    <p class="text-xs text-gray-400 uppercase mb-2 font-bold">Strategic Focus</p>
+                    <p class="text-base font-medium text-blue-400">
+                        <i class="fa-solid fa-bullseye mr-2"></i>
+                        AIは半手動、集客は3チャネル。<br />
+                        リソースを集中投下。
+                    </p>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-10 text-xs text-gray-500">
+                <p>Confidential - OUTDOOR+ Business Plan</p>
+            </div>
+        </div>
+        <!-- Right Panel: Features & Focus Points -->
+        <div class="w-2/3 bg-gray-50 p-10 flex flex-col">
+            <!-- Section 1: 3 Key Features -->
+            <div class="mb-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-5 flex items-center">
+                    <span
+                        class="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">01</span>
+                    3つの主要機能（顧客提供価値）
+                </h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- Feature 1: Vehicle -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm border-t-4 border-orange-500 h-full">
+                        <div class="text-orange-500 text-2xl mb-2">
+                            <i class="fa-solid fa-shield-dog"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2 text-sm">ペットファースト仕様</h3>
+                        <ul class="text-xs text-gray-600 space-y-1 list-none feature-list">
+                            <li>
+                                <p>防水・防汚シート/床材</p>
+                            </li>
+                            <li>
+                                <p>ケージ固定・リードフック</p>
+                            </li>
+                            <li>
+                                <p>強力換気・温度管理</p>
+                            </li>
+                            <li>
+                                <p>安全装備・ドラレコ完備</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Feature 2: AI Concierge -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm border-t-4 border-purple-500 h-full">
+                        <div class="text-purple-500 text-2xl mb-2">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2 text-sm">AIコンシェルジュ</h3>
+                        <ul class="text-xs text-gray-600 space-y-1 list-none feature-list">
+                            <li>
+                                <p>定番モデルコース提案</p>
+                            </li>
+                            <li>
+                                <p>ペット有無での調整</p>
+                            </li>
+                            <li>
+                                <p>人力90%の半手動運用</p>
+                            </li>
+                            <li>
+                                <p>初心者の不安低減</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Feature 3: Digital UX -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm border-t-4 border-green-500 h-full">
+                        <div class="text-green-500 text-2xl mb-2">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2 text-sm">フルデジタルUX</h3>
+                        <ul class="text-xs text-gray-600 space-y-1 list-none feature-list">
+                            <li>
+                                <p>オンライン予約・決済</p>
+                            </li>
+                            <li>
+                                <p>動画マニュアル案内</p>
+                            </li>
+                            <li>
+                                <p>車内QR付きFAQ</p>
+                            </li>
+                            <li>
+                                <p>緊急時24h電話対応</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2: First Year Focus -->
+            <div class="flex-grow flex flex-col">
+                <h2 class="text-xl font-bold text-gray-800 mb-5 flex items-center">
+                    <span
+                        class="bg-red-100 text-red-600 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">02</span>
+                    初年度の実行フォーカス（選択と集中）
+                </h2>
+                <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex-grow">
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                        <!-- Item 1 -->
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mr-3">
+                                <i class="fa-solid fa-bullhorn text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">集客チャネルの限定</h4>
+                                <p class="text-xs text-gray-600 mt-1">Googleマップ、OTA(1-2社)、Instagramの3本に集中。P2P等は2年目以降。
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mr-3">
+                                <i class="fa-solid fa-laptop-code text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">AIは「半手動」運用</h4>
+                                <p class="text-xs text-gray-600 mt-1">定型ルート記事＋問合せフォーム＋人力対応でスタート。システム開発投資はゼロ。</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mr-3">
+                                <i class="fa-solid fa-clock text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">引渡し時間の短縮固定</h4>
+                                <p class="text-xs text-gray-600 mt-1">チェックリスト＋事前動画マニュアル活用により、当日の説明時間を20分以内に固定。</p>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mr-3">
+                                <i class="fa-solid fa-headset text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-gray-800">サポートのメリハリ</h4>
+                                <p class="text-xs text-gray-600 mt-1">緊急時（事故・故障）は24h電話対応、通常質問は翌朝対応とルールを明確化。</p>
+                            </div>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="flex items-start col-span-2 border-t border-gray-100 pt-3 mt-1">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center text-red-600 mr-3">
+                                <i class="fa-solid fa-chart-line text-sm"></i>
+                            </div>
+                            <div class="flex-grow flex items-center justify-between">
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-800">月次KPI（テスト目標）</h4>
+                                    <p class="text-xs text-gray-600 mt-1">Googleマップレビュー×1、OTA予約×1、自社/IG予約×1〜2でCACを実測。
+                                    </p>
+                                </div>
+                                <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full font-bold">
+                                    目標: 月3〜4件の安定獲得
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

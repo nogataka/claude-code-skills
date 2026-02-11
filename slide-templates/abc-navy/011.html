@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .text-navy-900 { color: #0F2027; }
+        .text-navy-primary { color: #203A43; }
+        .bg-navy-accent { background-color: #2C5364; }
+        .text-navy-accent { color: #2C5364; }
+        .text-accent-gold { color: #C5A065; }
+        .bg-accent-gold { background-color: #C5A065; }
+        .border-navy-accent { border-color: #2C5364; }
+        
+        /* Custom chart container styles */
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Quarterly Performance</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">売上推移（四半期）</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-24 py-10 flex">
+<!-- Left Column: Key Insights & Context -->
+<div class="w-1/3 pr-10 flex flex-col justify-center">
+<div class="bg-gray-50 rounded-xl p-6 border-l-4 border-navy-accent mb-6 shadow-sm">
+<h3 class="text-lg font-bold text-navy-900 mb-2">好調な成長トレンド</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                        第1四半期から第4四半期にかけて着実な成長を達成。特に第4四半期は季節要因と新規キャンペーンの相乗効果により、前四半期比で<span class="font-bold text-navy-primary">約16%</span>の伸びを記録しました。
+                    </p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 border border-gray-100 rounded-lg">
+<div class="flex items-center">
+<div class="w-2 h-2 rounded-full bg-navy-accent mr-3"></div>
+<span class="text-sm text-gray-500">年間合計売上</span>
+</div>
+<span class="text-xl font-bold text-navy-900 font-lato">¥660M</span>
+</div>
+<div class="flex items-center justify-between p-4 border border-gray-100 rounded-lg">
+<div class="flex items-center">
+<div class="w-2 h-2 rounded-full bg-accent-gold mr-3"></div>
+<span class="text-sm text-gray-500">平均成長率</span>
+</div>
+<span class="text-xl font-bold text-navy-900 font-lato">+12.5%</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Bar Chart -->
+<div class="w-2/3 h-full flex flex-col justify-center bg-white rounded-xl border border-gray-100 p-6 shadow-sm relative">
+<!-- Chart Title in corner -->
+<div class="absolute top-6 left-6 z-10">
+<p class="text-xs text-gray-400 uppercase tracking-widest font-bold">Sales Revenue (Millions JPY)</p>
+</div>
+<div class="chart-container">
+<canvas id="salesBarChart"></canvas>
+</div>
+<!-- Chart Legend/Annotation -->
+<div class="mt-4 flex justify-end items-center space-x-6 text-xs text-gray-500">
+<div class="flex items-center">
+<span class="w-3 h-3 bg-navy-accent rounded-sm mr-2"></span>
+<span>実績値</span>
+</div>
+<div class="flex items-center">
+<span class="w-3 h-3 bg-gray-200 rounded-sm mr-2"></span>
+<span>目標値</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">11</span>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('salesBarChart').getContext('2d');
+            
+            // Register specific plugin if needed, usually defaults work fine
+            
+            const salesBarChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                    datasets: [
+                        {
+                            label: '売上（百万円）',
+                            data: [120, 150, 180, 210],
+                            backgroundColor: '#2C5364', // navy-accent
+                            borderRadius: 4,
+                            barPercentage: 0.6,
+                            categoryPercentage: 0.8
+                        },
+                        {
+                            label: '目標（百万円）',
+                            data: [110, 140, 170, 200],
+                            backgroundColor: '#E5E7EB', // gray-200
+                            borderRadius: 4,
+                            barPercentage: 0.6,
+                            categoryPercentage: 0.8,
+                            grouped: false, // Make bars overlap slightly or appear behind if needed, but here side-by-side is standard unless we do grouped: false with different widths
+                            order: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false // Custom legend implemented in HTML
+                        },
+                        tooltip: {
+                            backgroundColor: '#0F2027',
+                            titleFont: {
+                                family: "'Noto Sans JP', sans-serif",
+                                size: 13
+                            },
+                            bodyFont: {
+                                family: "'Lato', sans-serif",
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            padding: 12,
+                            cornerRadius: 8,
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + ' 百万円';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#F3F4F6',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                font: {
+                                    family: "'Lato', sans-serif",
+                                    size: 11
+                                },
+                                color: '#9CA3AF',
+                                callback: function(value) {
+                                    return value + 'M';
+                                }
+                            },
+                            max: 250
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                font: {
+                                    family: "'Lato', sans-serif",
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                color: '#4B5563'
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

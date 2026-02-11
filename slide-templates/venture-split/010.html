@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Market Size (TAM/SAM/SOM)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        /* Circle Styles */
+        .circle-container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle {
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .circle-tam {
+            width: 580px;
+            height: 580px;
+            background-color: #E0F2FE;
+            /* blue-100 */
+            border: 2px solid #BAE6FD;
+            /* blue-200 */
+            z-index: 10;
+            padding-top: 40px;
+        }
+
+        .circle-sam {
+            width: 380px;
+            height: 380px;
+            background-color: #7DD3FC;
+            /* blue-300 */
+            border: 2px solid #38BDF8;
+            /* blue-400 */
+            z-index: 20;
+            padding-top: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .circle-som {
+            width: 180px;
+            height: 180px;
+            background-color: #0369A1;
+            /* blue-700 */
+            border: 2px solid #075985;
+            /* blue-800 */
+            z-index: 30;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Left Panel: Text Content -->
+        <div class="w-1/3 bg-gray-50 border-r border-gray-200 p-10 flex flex-col justify-between z-10 shadow-lg">
+            <div>
+                <div class="flex items-center space-x-2 text-blue-600 mb-2">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Market Size</span>
+                </div>
+                <h1 class="text-3xl font-black text-gray-900 leading-tight mb-6">
+                    市場規模<br />
+                    <span class="text-xl font-medium text-gray-500">TAM / SAM / SOM</span>
+                </h1>
+                <div class="space-y-8">
+                    <!-- TAM Description -->
+                    <div class="relative pl-6 border-l-4 border-blue-100">
+                        <h3 class="text-sm font-bold text-gray-500 uppercase mb-1">TAM (Total Addressable Market)</h3>
+                        <p class="text-2xl font-bold text-gray-800">250 <span
+                                class="text-sm font-normal text-gray-500">億円/年</span></p>
+                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                            国内キャンピングカーレンタルおよび関連する家族向けアウトドア旅市場の理論上の最大規模。
+                        </p>
+                    </div>
+                    <!-- SAM Description -->
+                    <div class="relative pl-6 border-l-4 border-blue-300">
+                        <h3 class="text-sm font-bold text-gray-500 uppercase mb-1">SAM (Serviceable Available Market)
+                        </h3>
+                        <p class="text-2xl font-bold text-gray-800">50 <span
+                                class="text-sm font-normal text-gray-500">億円/年</span></p>
+                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                            OUTDOOR+がターゲットとする「初心者・ファミリー・ペット同伴ニーズ」を持つ層に提供可能な市場。
+                        </p>
+                    </div>
+                    <!-- SOM Description -->
+                    <div class="relative pl-6 border-l-4 border-blue-700">
+                        <h3 class="text-sm font-bold text-blue-700 uppercase mb-1">SOM (Serviceable Obtainable Market)
+                        </h3>
+                        <p class="text-3xl font-bold text-blue-700">2.5 <span
+                                class="text-lg font-normal text-blue-600">億円/年</span></p>
+                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                            首都圏近郊エリアにおける、現実的に獲得可能な市場規模。初期〜中期のターゲット。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Trend Box -->
+            <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm mt-8">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold text-gray-500 uppercase">Market Trend</span>
+                    <span
+                        class="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full flex items-center">
+                        <i class="fa-solid fa-arrow-trend-up mr-1"></i> CAGR +5%
+                    </span>
+                </div>
+                <p class="text-xs text-gray-600 leading-snug">
+                    アウトドア志向、ペット同伴旅行、プライベート空間重視のトレンドを背景に堅調な成長が見込まれる。
+                </p>
+            </div>
+        </div>
+        <!-- Right Panel: Visualization -->
+        <div class="w-2/3 bg-white flex items-center justify-center relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute top-10 right-10 text-9xl text-gray-50 opacity-50">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <!-- Circles Diagram -->
+            <div class="circle-container">
+                <!-- TAM Circle -->
+                <div class="circle circle-tam">
+                    <div class="text-center">
+                        <p class="text-blue-900 font-bold text-lg">TAM</p>
+                        <p class="text-blue-800 text-sm">国内レンタル市場全体</p>
+                        <p class="text-blue-900 font-black text-2xl mt-1">¥250億</p>
+                    </div>
+                </div>
+                <!-- SAM Circle -->
+                <div class="circle circle-sam">
+                    <div class="text-center">
+                        <p class="text-blue-900 font-bold text-lg">SAM</p>
+                        <p class="text-blue-900 text-xs opacity-80">ペット・ファミリー特化</p>
+                        <p class="text-white font-black text-2xl mt-1 drop-shadow-sm">¥50億</p>
+                    </div>
+                </div>
+                <!-- SOM Circle -->
+                <div class="circle circle-som">
+                    <div class="text-center">
+                        <p class="text-blue-100 text-xs font-bold tracking-wider mb-1">TARGET</p>
+                        <p class="text-white font-bold text-2xl">SOM</p>
+                        <p class="text-blue-100 text-xs mt-1">首都圏近郊</p>
+                        <div class="w-8 h-1 bg-orange-500 rounded-full my-2"></div>
+                        <p class="text-white font-black text-3xl">¥2.5億</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Callout / Arrow for SOM -->
+            <div class="absolute bottom-10 right-10 max-w-xs">
+                <div class="flex items-start space-x-3">
+                    <div class="text-orange-500 text-2xl mt-1">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-gray-800">地域密着の優位性</p>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                            人口密度の高い首都圏エリアに特化し、高稼働率とリピート率を確保することで、ニッチながら高収益なポジションを確立する。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

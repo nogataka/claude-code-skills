@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>As-Is / To-Be Comparison</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1a2332; /* Navy Blue */
+        color: #ffffff;
+    }
+    .slide-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .text-gold {
+        color: #d4af37;
+    }
+    .bg-gold {
+        background-color: #d4af37;
+    }
+    .border-gold {
+        border-color: #d4af37;
+    }
+    
+    /* Background Pattern */
+    .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.03;
+        background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M0 40L40 0H20L0 20M40 40V20L20 40" stroke="white" stroke-width="1"/></svg>');
+        background-size: 40px 40px;
+        z-index: 0;
+    }
+
+    /* Comparison Columns */
+    .col-asis {
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        position: relative;
+    }
+    .col-tobe {
+        background-color: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 1rem;
+        position: relative;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+    }
+
+    /* Item Cards */
+    .item-card {
+        background-color: rgba(26, 35, 50, 0.6);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: flex-start;
+        transition: transform 0.2s;
+    }
+    .col-tobe .item-card {
+        background-color: rgba(26, 35, 50, 0.8);
+        border-left: 3px solid #d4af37;
+    }
+    .col-asis .item-card {
+        border-left: 3px solid #4a5568;
+    }
+
+    .icon-box {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 1rem;
+    }
+    .col-asis .icon-box {
+        background-color: rgba(74, 85, 104, 0.3);
+        color: #a0aec0;
+    }
+    .col-tobe .icon-box {
+        background-color: rgba(212, 175, 55, 0.2);
+        color: #d4af37;
+    }
+
+    /* Impact Section */
+    .impact-metric {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-top: 2px solid #d4af37;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* Arrow Divider */
+    .arrow-divider {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        background-color: #1a2332;
+        border: 1px solid #d4af37;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d4af37;
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<div class="bg-pattern"></div>
+<!-- Header -->
+<div class="pt-8 px-12 mb-6 z-10">
+<div class="flex items-center mb-2">
+<div class="w-8 h-1 bg-gold mr-3"></div>
+<p class="text-gold text-xs font-bold tracking-widest uppercase">Gap Analysis</p>
+</div>
+<h1 class="text-4xl font-bold text-white mb-2">As-Is / To-Be 比較</h1>
+<p class="text-gray-400 text-sm">現状の課題とデジタルトランスフォーメーション後の将来像</p>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 flex flex-col z-10">
+<!-- Comparison Area -->
+<div class="flex-1 flex relative mb-8">
+<!-- Arrow Center -->
+<div class="arrow-divider">
+<i class="fas fa-arrow-right"></i>
+</div>
+<!-- As-Is Column -->
+<div class="w-1/2 pr-8 flex flex-col">
+<div class="col-asis h-full p-6 flex flex-col">
+<div class="flex items-center justify-between mb-6 border-b border-gray-700 pb-4">
+<h2 class="text-xl font-bold text-gray-300">As-Is <span class="text-sm font-normal text-gray-500 ml-2">(Current State)</span></h2>
+<span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">PAIN POINTS</span>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Item 1 -->
+<div class="item-card">
+<div class="icon-box">
+<i class="fas fa-database"></i>
+</div>
+<div>
+<h3 class="text-gray-200 font-bold text-sm mb-1">サイロ化されたデータ基盤</h3>
+<p class="text-gray-400 text-xs leading-relaxed">部門ごとにデータが分断され、顧客の全体像が把握できないレガシー依存構造。</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="item-card">
+<div class="icon-box">
+<i class="fas fa-exclamation-triangle"></i>
+</div>
+<div>
+<h3 class="text-gray-200 font-bold text-sm mb-1">在庫・価格の不整合</h3>
+<p class="text-gray-400 text-xs leading-relaxed">Webと実店舗で在庫情報がリアルタイム連携されず、機会損失が発生。</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="item-card">
+<div class="icon-box">
+<i class="fas fa-clock"></i>
+</div>
+<div>
+<h3 class="text-gray-200 font-bold text-sm mb-1">手作業によるキャンペーン</h3>
+<p class="text-gray-400 text-xs leading-relaxed">施策実行までのリードタイムが長く、市場変化への即応性が低い。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- To-Be Column -->
+<div class="w-1/2 pl-8 flex flex-col">
+<div class="col-tobe h-full p-6 flex flex-col">
+<div class="flex items-center justify-between mb-6 border-b border-yellow-900 border-opacity-30 pb-4">
+<h2 class="text-xl font-bold text-white">To-Be <span class="text-sm font-normal text-gold ml-2">(Future State)</span></h2>
+<span class="px-2 py-1 bg-gold bg-opacity-20 text-gold text-xs rounded">SOLUTION</span>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Item 1 -->
+<div class="item-card">
+<div class="icon-box">
+<i class="fas fa-network-wired"></i>
+</div>
+<div>
+<h3 class="text-white font-bold text-sm mb-1">統合CDP ＋ イベント駆動</h3>
+<p class="text-gray-300 text-xs leading-relaxed">全タッチポイントのデータを統合し、顧客行動に即座に反応するアーキテクチャ。</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="item-card">
+<div class="icon-box">
+<i class="fas fa-sync-alt"></i>
+</div>
+<div>
+<h3 class="text-white font-bold text-sm mb-1">リアルタイム同期と一貫UX</h3>
+<p class="text-gray-300 text-xs leading-relaxed">チャネルを横断して在庫・価格・体験を統一し、シームレスな購買を提供。</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="item-card">
+<div class="icon-box">
+<i class="fas fa-robot"></i>
+</div>
+<div>
+<h3 class="text-white font-bold text-sm mb-1">マーケティング自動化 ＋ AI</h3>
+<p class="text-gray-300 text-xs leading-relaxed">AIによるパーソナライズと自動化で、運用負荷を下げつつLTVを最大化。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Impact Metrics Section -->
+<div class="h-24 w-full mb-6">
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 ml-1">Expected Impact</h3>
+<div class="grid grid-cols-3 gap-6 h-full">
+<!-- Metric 1 -->
+<div class="impact-metric flex flex-col justify-center items-center">
+<p class="text-gray-400 text-xs mb-1">リードタイム短縮</p>
+<div class="flex items-baseline">
+<i class="fas fa-arrow-down text-green-400 mr-2 text-sm"></i>
+<span class="text-3xl font-bold text-white font-mono">40</span>
+<span class="text-sm text-white ml-1">%</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="impact-metric flex flex-col justify-center items-center">
+<p class="text-gray-400 text-xs mb-1">粗利益率改善</p>
+<div class="flex items-baseline">
+<i class="fas fa-arrow-up text-green-400 mr-2 text-sm"></i>
+<span class="text-3xl font-bold text-white font-mono">3.2</span>
+<span class="text-sm text-white ml-1">pt</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="impact-metric flex flex-col justify-center items-center">
+<p class="text-gray-400 text-xs mb-1">CSコスト削減</p>
+<div class="flex items-baseline">
+<i class="fas fa-arrow-down text-green-400 mr-2 text-sm"></i>
+<span class="text-3xl font-bold text-white font-mono">18</span>
+<span class="text-sm text-white ml-1">%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex items-center justify-between px-12 border-t border-gray-800 z-20 bg-gray-900 bg-opacity-80">
+<div class="flex items-center">
+<p class="text-gray-500 text-xs">Strategic Corporate Digital Business Report</p>
+</div>
+<div class="flex items-center">
+<span class="text-gold font-bold mr-2">6</span>
+<span class="text-gray-600 text-xs">/ 11</span>
+</div>
+</div>
+</div>
+</body>
+</html>

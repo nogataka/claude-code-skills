@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Corporate Marketing Research - Revenue Growth</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f4f6;
+    }
+    .slide-container {
+        width: 1280px;
+        height: 720px;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Custom pattern background for the right panel */
+    .pattern-bg {
+        background-color: #f8fafc;
+        background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+        background-size: 20px 20px;
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="z-10 px-16 pt-12 pb-6 flex justify-between items-end border-b border-gray-100 bg-white">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="h-1 w-8 bg-blue-600"></div>
+<p class="text-blue-600 font-bold tracking-widest text-xs uppercase">Financial Growth</p>
+</div>
+<h1 class="text-4xl font-black text-gray-900 tracking-tight">売上推移 <span class="text-2xl font-normal text-gray-400 ml-2">実績と予測</span></h1>
+</div>
+<div class="text-right">
+<p class="text-gray-400 text-sm font-medium">Research Report 2026</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Chart Area (Left, Larger) -->
+<div class="w-3/4 p-12 flex flex-col relative">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-gray-700 flex items-center gap-2">
+<i class="fa-solid fa-chart-line text-blue-500"></i>
+                    年次売上高推移 (単位: 百万円)
+                </h3>
+<!-- Legend Customization -->
+<div class="flex gap-4 text-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-1 bg-blue-600 rounded-full"></div>
+<span class="text-gray-600 font-medium">実績 (Actual)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-1 border-t-2 border-dashed border-blue-400"></div>
+<span class="text-gray-600 font-medium">予測 (Forecast)</span>
+</div>
+</div>
+</div>
+<!-- Chart Container -->
+<div class="flex-1 w-full h-full relative">
+<canvas id="revenueChart"></canvas>
+<!-- Annotation for 2024 -->
+<div class="absolute top-1/2 left-2/3 transform -translate-x-4 -translate-y-12 bg-white border border-blue-100 shadow-lg rounded-lg p-3 hidden" id="chartAnnotation">
+<p class="text-xs text-blue-600 font-bold">現在地点</p>
+<p class="text-sm font-bold text-gray-800">2024年 実績確定</p>
+</div>
+</div>
+<p class="text-xs text-gray-400 mt-4 text-right">* 2025年以降は事業計画に基づく予測値</p>
+</div>
+<!-- Metrics & Insights Panel (Right, Smaller) -->
+<div class="w-1/4 pattern-bg border-l border-gray-100 p-8 flex flex-col justify-center relative">
+<!-- Decorative Top Element -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
+<!-- Metric 1: CAGR -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 mb-6">
+<div class="flex items-center justify-between mb-2">
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">CAGR (年平均成長率)</p>
+<div class="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-green-500 text-xs">
+<i class="fa-solid fa-arrow-trend-up"></i>
+</div>
+</div>
+<p class="text-4xl font-black text-gray-800 tracking-tight">9.6<span class="text-lg text-gray-500 ml-1">%</span></p>
+<p class="text-xs text-gray-500 mt-1">2021-2026期間</p>
+</div>
+<!-- Metric 2: 2026 Target -->
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 mb-8">
+<div class="flex items-center justify-between mb-2">
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">2026年 売上目標</p>
+<div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 text-xs">
+<i class="fa-solid fa-flag-checkered"></i>
+</div>
+</div>
+<p class="text-4xl font-black text-blue-600 tracking-tight">13.0<span class="text-lg text-gray-500 ml-1">億円</span></p>
+<div class="w-full bg-gray-100 rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-blue-600 h-1.5 rounded-full" style="width: 80%"></div>
+</div>
+<p class="text-xs text-right text-blue-500 mt-1 font-bold">達成率 80% (現在比)</p>
+</div>
+<!-- Insight Text -->
+<div>
+<h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2 text-sm">
+<i class="fa-solid fa-lightbulb text-yellow-500"></i>
+                    成長要因インサイト
+                </h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+<p class="text-sm text-gray-600 leading-snug">
+<span class="font-bold text-gray-700">新機能リリース効果</span><br/>
+                        2024年Q3のAI機能実装により、エンタープライズ顧客の単価が向上。
+                    </p>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+<p class="text-sm text-gray-600 leading-snug">
+<span class="font-bold text-gray-700">海外展開の加速</span><br/>
+                        北米市場でのシェア拡大が2025年以降の成長を牽引する見込み。
+                    </p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script>
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    
+    // Gradient for Actual Data
+    const gradientActual = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientActual.addColorStop(0, 'rgba(37, 99, 235, 0.2)'); // blue-600
+    gradientActual.addColorStop(1, 'rgba(37, 99, 235, 0.0)');
+    
+    // Gradient for Forecast Data
+    const gradientForecast = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientForecast.addColorStop(0, 'rgba(96, 165, 250, 0.1)'); // blue-400
+    gradientForecast.addColorStop(1, 'rgba(96, 165, 250, 0.0)');
+    
+    const revenueChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2021', '2022', '2023', '2024', '2025 (予)', '2026 (予)'],
+            datasets: [
+                {
+                    label: '実績 (Actual)',
+                    data: [820, 910, 980, 1050, null, null],
+                    borderColor: '#2563eb', // blue-600
+                    backgroundColor: gradientActual,
+                    borderWidth: 3,
+                    pointBackgroundColor: '#ffffff',
+                    pointBorderColor: '#2563eb',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    fill: true,
+                    tension: 0.3
+                },
+                {
+                    label: '予測 (Forecast)',
+                    data: [null, null, null, 1050, 1160, 1300], // Start from 2024 to connect lines
+                    borderColor: '#60a5fa', // blue-400
+                    backgroundColor: gradientForecast,
+                    borderWidth: 3,
+                    borderDash: [8, 6],
+                    pointBackgroundColor: '#ffffff',
+                    pointBorderColor: '#60a5fa',
+                    pointBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHoverRadius: 7,
+                    fill: true,
+                    tension: 0.3
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false // Using custom legend
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    titleFont: { family: "'Noto Sans JP', sans-serif", size: 14 },
+                    bodyFont: { family: "'Noto Sans JP', sans-serif", size: 14, weight: 'bold' },
+                    padding: 12,
+                    cornerRadius: 8,
+                    displayColors: false,
+                    callbacks: {
+                        label: function(context) {
+                            return context.raw + ' 百万円';
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    min: 700,
+                    grid: {
+                        color: '#f1f5f9',
+                        drawBorder: false
+                    },
+                    ticks: {
+                        font: { family: "'Noto Sans JP', sans-serif" },
+                        color: '#94a3b8',
+                        callback: function(value) {
+                            return value.toLocaleString();
+                        }
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        font: { family: "'Noto Sans JP', sans-serif", weight: '500' },
+                        color: '#64748b'
+                    }
+                }
+            },
+            interaction: {
+                mode: 'index',
+                intersect: false,
+            }
+        }
+    });
+</script>
+</body>
+</html>

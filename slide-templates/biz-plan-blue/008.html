@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>差別化＆プロダクトロードマップ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .diff-card { background-color: #F8F9FA; border-left: 4px solid #007BFF; padding: 10px 14px; border-radius: 0 4px 4px 0; }
+        .phase-box { border-radius: 8px; padding: 16px; height: 100%; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .phase-box.primary { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; }
+        .phase-box.outline { background-color: #FFFFFF; border: 2px solid #007BFF; color: #333333; }
+        .phase-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 2px; }
+        .phase-title { font-size: 1rem; font-weight: 900; margin-bottom: 8px; padding-bottom: 6px; }
+        .phase-box.primary .phase-title { border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        .phase-box.outline .phase-title { border-bottom: 1px solid rgba(0, 123, 255, 0.3); color: #007BFF; }
+        .phase-item { display: flex; align-items: flex-start; margin-bottom: 4px; font-size: 0.75rem; line-height: 1.4; }
+        .phase-box.primary .phase-icon { color: rgba(255, 255, 255, 0.9); margin-right: 8px; margin-top: 2px; }
+        .phase-box.outline .phase-icon { color: #007BFF; margin-right: 8px; margin-top: 2px; }
+        .timeline-bar { display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+        .timeline-dot { width: 12px; height: 12px; border-radius: 50%; background-color: #007BFF; flex-shrink: 0; }
+        .timeline-line { height: 3px; background-color: #007BFF; flex-grow: 1; opacity: 0.3; }
+        .timeline-text { font-size: 0.7rem; color: #666; text-align: center; margin-top: 2px; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-3">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">差別化＆プロダクトロードマップ</h1>
+
+            <!-- Differentiation Cards -->
+            <div class="grid grid-cols-4 gap-3 mb-4">
+                <div class="diff-card">
+                    <p class="text-xs font-bold body-text"><i class="fas fa-map-marked-alt text-blue-500 mr-1"></i> プランニング力</p>
+                    <p class="text-xs" style="color: #666;">ペット同伴可スポットDB蓄積とAI提案で他社に真似しづらい地域密着の提案力</p>
+                </div>
+                <div class="diff-card">
+                    <p class="text-xs font-bold body-text"><i class="fas fa-laptop text-blue-500 mr-1"></i> フルデジタルUX</p>
+                    <p class="text-xs" style="color: #666;">予約〜サポートまで一貫したオンライン体験と、明確な運営責任</p>
+                </div>
+                <div class="diff-card">
+                    <p class="text-xs font-bold body-text"><i class="fas fa-paw text-blue-500 mr-1"></i> ペットファースト</p>
+                    <p class="text-xs" style="color: #666;">ペット同乗前提の車両仕様と地域ペットスポットとの送客連携</p>
+                </div>
+                <div class="diff-card">
+                    <p class="text-xs font-bold body-text"><i class="fas fa-car text-blue-500 mr-1"></i> 試乗体験価値</p>
+                    <p class="text-xs" style="color: #666;">300〜600万の購入前に複数回・複数シーズンで実際の使い勝手を確認</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-bar">
+                <div class="flex flex-col items-center" style="width: 60px;">
+                    <div class="flex items-center"><div class="timeline-dot"></div><div class="timeline-line" style="width: 30px;"></div></div>
+                    <p class="timeline-text">開業前</p>
+                </div>
+                <div class="flex flex-col items-center" style="flex: 1;">
+                    <div class="flex items-center w-full"><div class="timeline-line" style="flex: 1;"></div></div>
+                    <p class="timeline-text">〜2ヶ月</p>
+                </div>
+                <div class="flex flex-col items-center" style="width: 80px;">
+                    <div class="flex items-center"><div class="timeline-line" style="width: 20px;"></div><div class="timeline-dot"></div><div class="timeline-line" style="width: 20px;"></div></div>
+                    <p class="timeline-text">2ヶ月〜1年</p>
+                </div>
+                <div class="flex flex-col items-center" style="flex: 1;">
+                    <div class="flex items-center w-full"><div class="timeline-line" style="flex: 1;"></div></div>
+                    <p class="timeline-text"></p>
+                </div>
+                <div class="flex flex-col items-center" style="width: 60px;">
+                    <div class="flex items-center"><div class="timeline-line" style="width: 20px;"></div><div class="timeline-dot"></div></div>
+                    <p class="timeline-text">1〜3年</p>
+                </div>
+            </div>
+
+            <!-- Phase Cards -->
+            <div class="grid grid-cols-3 gap-4 flex-grow">
+                <div class="phase-box primary">
+                    <p class="phase-label">PHASE 1</p>
+                    <h3 class="phase-title">ソフトオープン</h3>
+                    <div class="flex-grow">
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>1台セットアップ＋カスタマイズ</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>Webサイト（サービス紹介・料金・問い合わせ）</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>外部SaaS予約・決済導入</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>定番ルート5〜10本作成</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>操作動画＋車内QRマニュアル</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>24hサポートワークフロー構築</span></div>
+                    </div>
+                </div>
+                <div class="phase-box outline">
+                    <p class="phase-label" style="color: #007BFF;">PHASE 2</p>
+                    <h3 class="phase-title">本格オープン</h3>
+                    <div class="flex-grow">
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>AIコンシェルジュ稼働（テンプレベース）</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>プラン商品化（初心者体験・近場ペット旅等）</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>チャネル強化（GBP・OTA・Instagram）</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>自動レビューリクエストフロー</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>利用実績をコンテンツ化</span></div>
+                    </div>
+                </div>
+                <div class="phase-box primary">
+                    <p class="phase-label">PHASE 3</p>
+                    <h3 class="phase-title">高度化・スケール準備</h3>
+                    <div class="flex-grow">
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>利用データによるAI提案精度向上</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>リピーターへのパーソナライズ</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>オプション拡充（BBQ・アウトドアギア）</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>2台体制への移行準備</span></div>
+                        <div class="phase-item"><i class="fas fa-check phase-icon"></i><span>パートナー拡充・年間キャンペーン</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

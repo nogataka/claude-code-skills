@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>目次</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .text-navy-900 { color: #0F172A; }
+        .text-navy-800 { color: #1E293B; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+        .border-navy-700 { border-color: #334155; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex">
+        <!-- Left Accent Panel -->
+        <div class="w-80 bg-navy-800 flex flex-col justify-center px-12 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-accent-orange"></div>
+            <div class="absolute -right-20 -bottom-20 w-48 h-48 rounded-full border border-blue-800 opacity-20"></div>
+            <div class="relative z-10">
+                <div class="text-accent-orange text-4xl mb-6">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <p class="text-xs text-accent-orange font-inter tracking-widest uppercase mb-2">Agenda</p>
+                <h1 class="text-5xl font-black text-white tracking-tight mb-4">目次</h1>
+                <div class="w-10 h-1 bg-accent-orange mb-6"></div>
+                <p class="text-sm text-gray-500">本提案の構成</p>
+            </div>
+        </div>
+
+        <!-- Right: TOC Items -->
+        <div class="flex-1 flex flex-col justify-center px-16 relative">
+            <div class="absolute top-0 right-0 w-64 h-1 bg-navy-800"></div>
+            <div class="space-y-2">
+                <!-- Item 1 -->
+                <div class="flex items-center p-5 rounded-xl bg-navy-800 border border-blue-900 group">
+                    <span class="text-3xl font-black text-accent-orange mr-6 w-10 text-right font-inter">01</span>
+                    <div class="flex-1">
+                        <p class="text-lg font-bold text-white">課題の整理</p>
+                        <p class="text-xs text-gray-500 mt-0.5">現状の問題点と解決すべきテーマ</p>
+                    </div>
+                    <i class="fas fa-exclamation-triangle text-gray-700 text-lg"></i>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex items-center p-5 rounded-xl bg-navy-800 border border-blue-900 group">
+                    <span class="text-3xl font-black text-accent-orange mr-6 w-10 text-right font-inter">02</span>
+                    <div class="flex-1">
+                        <p class="text-lg font-bold text-white">ソリューション概要</p>
+                        <p class="text-xs text-gray-500 mt-0.5">提案するプロダクトの全体像</p>
+                    </div>
+                    <i class="fas fa-lightbulb text-gray-700 text-lg"></i>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex items-center p-5 rounded-xl bg-navy-800 border border-blue-900 group">
+                    <span class="text-3xl font-black text-accent-orange mr-6 w-10 text-right font-inter">03</span>
+                    <div class="flex-1">
+                        <p class="text-lg font-bold text-white">市場規模</p>
+                        <p class="text-xs text-gray-500 mt-0.5">対象市場の分析とポテンシャル</p>
+                    </div>
+                    <i class="fas fa-chart-pie text-gray-700 text-lg"></i>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex items-center p-5 rounded-xl bg-navy-800 border border-blue-900 group">
+                    <span class="text-3xl font-black text-accent-orange mr-6 w-10 text-right font-inter">04</span>
+                    <div class="flex-1">
+                        <p class="text-lg font-bold text-white">競合比較</p>
+                        <p class="text-xs text-gray-500 mt-0.5">主要プレイヤーとのポジショニング</p>
+                    </div>
+                    <i class="fas fa-users text-gray-700 text-lg"></i>
+                </div>
+                <!-- Item 5 -->
+                <div class="flex items-center p-5 rounded-xl bg-navy-800 border border-blue-900 group">
+                    <span class="text-3xl font-black text-accent-orange mr-6 w-10 text-right font-inter">05</span>
+                    <div class="flex-1">
+                        <p class="text-lg font-bold text-white">収益モデル</p>
+                        <p class="text-xs text-gray-500 mt-0.5">マネタイズ戦略と事業計画</p>
+                    </div>
+                    <i class="fas fa-coins text-gray-700 text-lg"></i>
+                </div>
+                <!-- Item 6 -->
+                <div class="flex items-center p-5 rounded-xl border-2 border-accent-orange bg-navy-800 group">
+                    <span class="text-3xl font-black text-accent-orange mr-6 w-10 text-right font-inter">06</span>
+                    <div class="flex-1">
+                        <p class="text-lg font-bold text-white">まとめ・次のアクション</p>
+                        <p class="text-xs text-gray-500 mt-0.5">結論とネクストステップ</p>
+                    </div>
+                    <i class="fas fa-flag-checkered text-accent-orange text-lg"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>主要タッチポイントとエンゲージメント戦略</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Roboto+Mono:wght@400;700&amp;family=Noto+Serif+JP:wght@400;700&amp;family=M+PLUS+1p:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS 1p', 'Roboto Mono', monospace;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 15px 40px;
+            color: #1E3A8A;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+            font-family: 'M PLUS 1p', 'Roboto Mono', monospace;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 60px);
+            padding: 40px;
+        }
+        
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-right: 40px;
+        }
+        
+        .right-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .title {
+            font-size: 4.5rem;
+            font-weight: bold;
+            line-height: 1.1;
+            color: #1E3A8A;
+            margin-bottom: 60px;
+            font-family: 'Noto Serif JP', 'DM Serif Display', serif;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: #1E3A8A;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-family: 'Noto Serif JP', 'DM Serif Display', serif;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 500px;
+            font-family: 'M PLUS 1p', 'Roboto Mono', monospace;
+        }
+        
+        .strategy-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            margin-top: 20px;
+        }
+        
+        .strategy-row {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .strategy-box {
+            border-radius: 30px;
+            padding: 25px 20px;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            position: relative;
+            font-family: 'M PLUS 1p', 'Roboto Mono', monospace;
+            font-weight: bold;
+        }
+        
+        .strategy-box-1 {
+            background-color: #1E40AF;
+            width: 100%;
+            height: 80px; /* 日本語テキスト用に少し高さを確保 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .strategy-box-2 {
+            background-color: #1E3A8A;
+            width: calc(50% - 10px);
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .strategy-box-3 {
+            background-color: #3B82F6;
+            width: calc(50% - 10px);
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .number-circle {
+            width: 36px;
+            height: 36px;
+            background-color: white;
+            color: #1E3A8A;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1rem;
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid #FFFFFF;
+            font-family: 'M PLUS 1p', 'Roboto Mono', monospace;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(191, 219, 254, 0.3);
+            z-index: -1;
+        }
+        
+        .circle-1 {
+            width: 800px;
+            height: 800px;
+            top: -200px;
+            right: -200px;
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">主要タッチポイントと<br/>エンゲージメント戦略</h1>
+<h2 class="subtitle">エンゲージメントの<br/>ベストプラクティス：</h2>
+<p class="description">
+                    強固な顧客エンゲージメント戦略は、あらゆる接点での満足度を保証します。主要なタッチポイントには、ウェブサイト体験、ソーシャルメディア、カスタマーサービスなどが含まれます。
+                </p>
+</div>
+<div class="right-content">
+<div class="strategy-container">
+<div class="strategy-row">
+<div class="strategy-box strategy-box-1">
+                            先回りのカスタマーサポート
+                            <div class="number-circle">01</div>
+</div>
+</div>
+<div class="strategy-row">
+<div class="strategy-box strategy-box-2">
+<p>パーソナライズされた<br/>コミュニケーション</p>
+<div class="number-circle">02</div>
+</div>
+<div class="strategy-box strategy-box-3">
+                            オムニチャネルの一貫性
+                            <div class="number-circle">03</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

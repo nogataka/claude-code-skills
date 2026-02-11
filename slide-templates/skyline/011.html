@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>実行計画</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex">
+        <!-- Left Panel -->
+        <div class="w-1/3 bg-brand-dark text-white p-10 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-brand-accent rounded-bl-full opacity-20"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center">
+                        <i class="fas fa-tasks text-white"></i>
+                    </div>
+                    <span class="text-brand-accent font-bold uppercase text-sm tracking-widest font-inter">Section 05</span>
+                </div>
+                <h1 class="text-4xl font-black leading-tight mb-6">実行計画</h1>
+                <p class="text-sm text-gray-300 leading-relaxed">具体的なアクションプランとマイルストーン。</p>
+            </div>
+            <p class="relative z-10 text-xs text-gray-500">Confidential</p>
+        </div>
+
+        <!-- Right Panel: Process Flow -->
+        <div class="w-2/3 bg-white p-10 flex flex-col justify-center">
+            <div class="grid grid-cols-4 gap-4">
+                <!-- Phase 1 -->
+                <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col relative">
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded font-inter">Phase 1</span>
+                    </div>
+                    <h3 class="text-base font-bold text-brand-dark mb-2">調査・分析</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">市場調査、顧客ヒアリング、競合ベンチマーク</p>
+                    <p class="text-xs text-gray-400 mt-3 font-inter">Q1 2026</p>
+                    <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col relative">
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded font-inter">Phase 2</span>
+                    </div>
+                    <h3 class="text-base font-bold text-brand-dark mb-2">設計・開発</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">プロダクト設計、MVP開発、パートナー交渉</p>
+                    <p class="text-xs text-gray-400 mt-3 font-inter">Q2 2026</p>
+                    <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-warm p-5 flex flex-col relative">
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-brand-warm">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-brand-warm text-white px-2 py-0.5 rounded font-inter">Phase 3</span>
+                    </div>
+                    <h3 class="text-base font-bold text-brand-dark mb-2">ローンチ</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">β版リリース、アーリーアダプター獲得、改善</p>
+                    <p class="text-xs text-gray-400 mt-3 font-inter">Q3 2026</p>
+                    <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-warm p-5 flex flex-col">
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-brand-warm">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="text-xs font-bold bg-brand-warm text-white px-2 py-0.5 rounded font-inter">Phase 4</span>
+                    </div>
+                    <h3 class="text-base font-bold text-brand-dark mb-2">スケール</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">本格展開、海外進出、組織拡大</p>
+                    <p class="text-xs text-gray-400 mt-3 font-inter">Q4 2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Solution Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .step-card {
+            position: relative;
+        }
+
+        .step-card:not(:last-child)::before {
+            content: '\f061';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: -20px;
+            top: 35%;
+            /* Adjusted for icon alignment */
+            transform: translateY(-50%);
+            color: #D1D5DB;
+            z-index: 10;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Left Panel: Concept & Header -->
+        <div class="w-1/3 bg-gray-900 text-white p-10 flex flex-col justify-between relative overflow-hidden">
+            <!-- Background accents -->
+            <div class="absolute top-0 right-0 w-40 h-40 bg-green-500 rounded-bl-full opacity-20"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-orange-500 rounded-tr-full opacity-20"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <span class="text-orange-400 font-bold tracking-widest uppercase text-sm">Solution</span>
+                </div>
+                <h1 class="text-4xl font-black leading-tight mb-6">
+                    ソリューション<br />概要
+                </h1>
+                <div class="border-l-4 border-green-500 pl-4 mb-8">
+                    <p class="text-lg font-bold text-white mb-2">OUTDOOR+ が解決すること</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        「ペット連れ・子連れでも気兼ねなく楽しめる家族旅行」をテーマに、
+                        移動と宿泊が一体となった新しい旅のスタイルを提供。
+                    </p>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <div class="bg-gray-800 rounded-xl p-5 border border-gray-700">
+                    <p class="text-xs text-gray-400 uppercase mb-2 font-bold">Core Concept</p>
+                    <p class="text-base font-medium text-green-400">
+                        <i class="fa-solid fa-quote-left mr-2"></i>
+                        借りる前から返却まで、<br />
+                        デジタル完結のストレスフリー体験
+                    </p>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-10 text-xs text-gray-500">
+                <p>Confidential - OUTDOOR+ Business Plan</p>
+            </div>
+        </div>
+        <!-- Right Panel: Solutions & Flow -->
+        <div class="w-2/3 bg-gray-50 p-10 flex flex-col">
+            <!-- Section 1: 3 Major Needs Solved -->
+            <div class="mb-10">
+                <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span
+                        class="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">01</span>
+                    3つの課題を同時に解決
+                </h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- Card 1: Family -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-blue-500 h-full flex flex-col">
+                        <div class="text-blue-500 text-3xl mb-3">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2 text-sm">ファミリー層</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed flex-grow">
+                            宿泊費高騰の中でも、同じ予算で「より特別な体験」を実現。移動宿泊一体でコスパ向上。
+                        </p>
+                    </div>
+                    <!-- Card 2: Pet -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-orange-500 h-full flex flex-col">
+                        <div class="text-orange-500 text-3xl mb-3">
+                            <i class="fa-solid fa-dog"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2 text-sm">ペット連れ層</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed flex-grow">
+                            「受け入れ先不足」と「周囲への気遣い」を解消。ケージ固定などペットファースト仕様。
+                        </p>
+                    </div>
+                    <!-- Card 3: Beginner -->
+                    <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-green-500 h-full flex flex-col">
+                        <div class="text-green-500 text-3xl mb-3">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2 text-sm">購入検討・初心者</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed flex-grow">
+                            購入前の「失敗しない試乗体験」。動画マニュアルとサポートで初心者の不安を払拭。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2: Experience Flow -->
+            <div class="flex-grow flex flex-col">
+                <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span
+                        class="bg-purple-100 text-purple-600 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">02</span>
+                    シームレスな体験フロー
+                </h2>
+                <div
+                    class="flex-grow bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex items-center justify-between relative">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center text-center w-1/5 step-card group">
+                        <div
+                            class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 mb-3 group-hover:bg-purple-100 group-hover:text-purple-600 transition-colors duration-300">
+                            <i class="fa-solid fa-calendar-check text-xl"></i>
+                        </div>
+                        <p class="text-xs font-bold text-gray-700">予約</p>
+                        <p class="text-[10px] text-gray-400 mt-1">オンライン完結</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center text-center w-1/5 step-card group">
+                        <div
+                            class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 mb-3 group-hover:bg-purple-100 group-hover:text-purple-600 transition-colors duration-300">
+                            <i class="fa-solid fa-credit-card text-xl"></i>
+                        </div>
+                        <p class="text-xs font-bold text-gray-700">決済</p>
+                        <p class="text-[10px] text-gray-400 mt-1">キャッシュレス</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center text-center w-1/5 step-card group">
+                        <div
+                            class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 mb-3 group-hover:bg-purple-100 group-hover:text-purple-600 transition-colors duration-300">
+                            <i class="fa-solid fa-map-location-dot text-xl"></i>
+                        </div>
+                        <p class="text-xs font-bold text-gray-700">旅程提案</p>
+                        <p class="text-[10px] text-gray-400 mt-1">AIコンシェルジュ</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flex flex-col items-center text-center w-1/5 step-card group">
+                        <div
+                            class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 mb-3 group-hover:bg-purple-100 group-hover:text-purple-600 transition-colors duration-300">
+                            <i class="fa-solid fa-circle-play text-xl"></i>
+                        </div>
+                        <p class="text-xs font-bold text-gray-700">出発・案内</p>
+                        <p class="text-[10px] text-gray-400 mt-1">動画/QR解説</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="flex flex-col items-center text-center w-1/5 group">
+                        <div
+                            class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 mb-3 group-hover:bg-purple-100 group-hover:text-purple-600 transition-colors duration-300">
+                            <i class="fa-solid fa-headset text-xl"></i>
+                        </div>
+                        <p class="text-xs font-bold text-gray-700">安心サポート</p>
+                        <p class="text-[10px] text-gray-400 mt-1">緊急24h対応</p>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-end">
+                    <span
+                        class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        <i class="fa-solid fa-check mr-1"></i> フルデジタル運用による効率化
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

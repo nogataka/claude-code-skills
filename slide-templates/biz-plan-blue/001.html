@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>OUTDOOR+ - 表紙</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'BIZ UDGothic', sans-serif;
+        }
+
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accent-shape {
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.05);
+        }
+
+        .accent-shape-2 {
+            position: absolute;
+            bottom: -300px;
+            left: -200px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.03);
+        }
+
+        .brand-name {
+            font-family: 'BIZ UDGothic', sans-serif;
+            font-size: 6rem;
+            font-weight: 900;
+            color: #007BFF;
+            letter-spacing: 8px;
+            line-height: 1;
+        }
+
+        .brand-plus {
+            color: #F59E0B;
+        }
+
+        .tagline {
+            font-family: 'BIZ UDGothic', sans-serif;
+            font-size: 1.5rem;
+            color: #333333;
+            font-weight: 700;
+            letter-spacing: 2px;
+            line-height: 1.6;
+        }
+
+        .sub-info {
+            font-family: 'BIZ UDGothic', sans-serif;
+            color: #666666;
+            font-size: 1rem;
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: #007BFF;
+            border-radius: 2px;
+        }
+
+        .plan-label {
+            font-family: 'BIZ UDGothic', sans-serif;
+            font-size: 1.1rem;
+            color: #007BFF;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: rgba(0, 123, 255, 0.1);
+            color: #007BFF;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col items-center justify-center">
+        <div class="accent-shape"></div>
+        <div class="accent-shape-2"></div>
+
+        <div class="text-center z-10 relative">
+            <p class="plan-label mb-4">BUSINESS PLAN 2026</p>
+            <span class="version-badge mb-6">改善版 v3 - 総投資1,150万円ベース</span>
+
+            <h1 class="brand-name mt-6 mb-4">OUTDOOR<span class="brand-plus">+</span></h1>
+
+            <p class="sub-info mb-8">アウトドアプラス ― キャンピングカーレンタル事業計画書</p>
+
+            <div class="divider mx-auto mb-8"></div>
+
+            <p class="tagline">「家族とペットが気兼ねなく、<br>マイペースな旅を楽しめる新しいスタンダード」</p>
+
+            <div class="mt-12 flex items-center justify-center gap-8 sub-info">
+                <div class="flex items-center">
+                    <i class="fas fa-calendar-alt mr-2 text-blue-500"></i>
+                    <span>作成日: 2026/2/6</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>
+                    <span>首都圏近郊</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-yen-sign mr-2 text-blue-500"></i>
+                    <span>総投資 1,150万円</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

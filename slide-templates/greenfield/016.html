@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>売上予測 - Revenue Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-forest-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Revenue Forecast</p>
+                    <h1 class="text-3xl font-bold text-forest-900 tracking-tight">売上予測</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-forest-900 opacity-50">
+                <i class="fas fa-seedling text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-5 flex flex-col gap-4">
+            <!-- KPI Metric Boxes -->
+            <div class="grid grid-cols-3 gap-5">
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-chart-bar text-forest-accent text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-inter tracking-wider uppercase mb-1">Year 1 MRR</p>
+                        <p class="text-3xl font-black text-forest-900 font-inter">¥2,400<span class="text-sm font-normal text-gray-400 ml-1">万</span></p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-chart-line text-forest-light text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-inter tracking-wider uppercase mb-1">Year 2 MRR</p>
+                        <p class="text-3xl font-black text-forest-900 font-inter">¥8,400<span class="text-sm font-normal text-gray-400 ml-1">万</span></p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex items-center space-x-4">
+                    <div class="w-14 h-14 bg-forest-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-rocket text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-inter tracking-wider uppercase mb-1">Year 3 MRR</p>
+                        <p class="text-3xl font-black text-forest-900 font-inter">¥1.8<span class="text-sm font-normal text-gray-400 ml-1">億</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="flex-1 bg-white rounded-xl border border-gray-100 shadow-sm p-5 relative">
+                <div class="flex items-center justify-between mb-2">
+                    <p class="text-sm font-bold text-gray-700">四半期別MRR推移 × 顧客数</p>
+                    <div class="flex items-center space-x-5 text-xs text-gray-400">
+                        <div class="flex items-center space-x-1.5">
+                            <div class="w-3 h-3 rounded" style="background-color: #40916C;"></div>
+                            <span>売上（万円）</span>
+                        </div>
+                        <div class="flex items-center space-x-1.5">
+                            <div class="w-3 h-3 rounded-full" style="background-color: #52B788;"></div>
+                            <span>顧客数（社）</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 280px;">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">GreenField株式会社 - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-forest-accent font-inter">16</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10', 'Q11', 'Q12'],
+                datasets: [
+                    {
+                        type: 'bar',
+                        label: '売上（万円）',
+                        data: [200, 400, 800, 1200, 1600, 2200, 3000, 3600, 4200, 4800, 5400, 6000],
+                        backgroundColor: 'rgba(64, 145, 108, 0.75)',
+                        borderColor: '#40916C',
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        yAxisID: 'y',
+                        order: 2
+                    },
+                    {
+                        type: 'line',
+                        label: '顧客数（社）',
+                        data: [5, 12, 25, 40, 55, 75, 100, 120, 140, 160, 175, 190],
+                        borderColor: '#52B788',
+                        backgroundColor: 'rgba(82, 183, 136, 0.1)',
+                        borderWidth: 2.5,
+                        pointBackgroundColor: '#52B788',
+                        pointBorderColor: '#FFFFFF',
+                        pointBorderWidth: 2,
+                        pointRadius: 4,
+                        tension: 0.3,
+                        fill: true,
+                        yAxisID: 'y1',
+                        order: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1B4332',
+                        titleFont: { family: 'Noto Sans JP', size: 12 },
+                        bodyFont: { family: 'Noto Sans JP', size: 11 },
+                        padding: 10,
+                        cornerRadius: 8
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            font: { family: 'Noto Sans JP', size: 11 },
+                            color: '#9CA3AF'
+                        }
+                    },
+                    y: {
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: '売上（万円）',
+                            font: { family: 'Noto Sans JP', size: 11 },
+                            color: '#6B7280'
+                        },
+                        grid: { color: 'rgba(0,0,0,0.04)' },
+                        ticks: {
+                            font: { family: 'Noto Sans JP', size: 10 },
+                            color: '#9CA3AF',
+                            callback: function(value) { return '¥' + value.toLocaleString(); }
+                        }
+                    },
+                    y1: {
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: '顧客数（社）',
+                            font: { family: 'Noto Sans JP', size: 11 },
+                            color: '#6B7280'
+                        },
+                        grid: { drawOnChartArea: false },
+                        ticks: {
+                            font: { family: 'Noto Sans JP', size: 10 },
+                            color: '#9CA3AF'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>価格戦略</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .price-table { width: 100%; border-collapse: collapse; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); }
+        .price-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: center; padding: 8px 10px; font-size: 0.85rem; }
+        .price-table td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.85rem; color: #333; text-align: center; }
+        .price-table tr:nth-child(even) td { background-color: #f8f9fa; }
+        .case-card { background-color: #F8F9FA; border-radius: 8px; padding: 12px 14px; border-left: 4px solid #007BFF; }
+        .discount-tag { display: inline-block; background-color: rgba(245, 158, 11, 0.15); color: #D97706; font-weight: 700; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; margin-right: 6px; margin-bottom: 4px; }
+        .rationale-card { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 12px 16px; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-2">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">価格戦略</h1>
+
+            <div class="flex gap-6 mb-3">
+                <!-- Left: Price Table -->
+                <div class="w-1/2">
+                    <h3 class="font-bold text-sm body-text mb-2"><i class="fas fa-tags text-blue-500 mr-2"></i>基本料金表</h3>
+                    <table class="price-table mb-3">
+                        <thead>
+                            <tr>
+                                <th>シーズン</th>
+                                <th>1泊</th>
+                                <th>2泊</th>
+                                <th>3泊</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold text-left">平日</td>
+                                <td>¥20,000</td>
+                                <td>¥40,000</td>
+                                <td>¥60,000</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-left">週末・祝日</td>
+                                <td>¥27,000</td>
+                                <td>¥54,000</td>
+                                <td>¥81,000</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-left">ハイシーズン</td>
+                                <td>¥33,000</td>
+                                <td>¥66,000</td>
+                                <td>¥99,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="bg-gray-50 p-3 rounded text-xs mb-3">
+                        <p class="font-bold body-text mb-1">オプション</p>
+                        <div class="flex gap-4">
+                            <div><span class="highlight">安心補償パック:</span> ¥3,000/日</div>
+                            <div><span class="highlight">ペット同乗料:</span> 合計の10%</div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-xs body-text mb-1"><i class="fas fa-percent text-yellow-500 mr-1"></i> 割引戦略</h3>
+                    <div class="flex flex-wrap">
+                        <span class="discount-tag">3泊以上 10%OFF</span>
+                        <span class="discount-tag">リピーター 5%OFF</span>
+                        <span class="discount-tag">オフシーズン平日 30%OFF</span>
+                        <span class="discount-tag">近場1泊プラン ¥14,000〜</span>
+                        <span class="discount-tag">初回レビュー投稿で次回10%OFF</span>
+                    </div>
+                </div>
+
+                <!-- Right: Use Cases + Rationale -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <h3 class="font-bold text-sm body-text mb-1"><i class="fas fa-receipt text-blue-500 mr-2"></i>利用ケース別シミュレーション</h3>
+
+                    <div class="case-card">
+                        <p class="text-xs font-bold body-text">Case 1: 平日2泊（ペットなし・補償あり）</p>
+                        <p class="text-xs" style="color: #666;">基本¥40,000 + 補償¥6,000 = <span class="highlight">¥46,000</span></p>
+                    </div>
+
+                    <div class="case-card">
+                        <p class="text-xs font-bold body-text">Case 2: 週末2泊（ペットあり・補償あり）</p>
+                        <p class="text-xs" style="color: #666;">基本¥54,000 + 補償¥6,000 + ペット¥6,000 = <span class="highlight">¥66,000</span></p>
+                    </div>
+
+                    <div class="case-card">
+                        <p class="text-xs font-bold body-text">Case 3: ハイシーズン3泊（ペットあり・補償あり）</p>
+                        <p class="text-xs" style="color: #666;">基本¥99,000 + 補償¥9,000 + ペット¥10,800 = <span class="highlight">¥118,800</span></p>
+                    </div>
+
+                    <div class="rationale-card mt-auto">
+                        <h3 class="font-bold text-sm mb-2"><i class="fas fa-balance-scale mr-2"></i>価格設定の根拠</h3>
+                        <div class="flex gap-4">
+                            <div class="flex-1">
+                                <p class="text-xs font-bold">価値ベース</p>
+                                <p class="text-xs opacity-80">ホテル4人2泊=8〜12万 vs OUTDOOR+ ~7万で移動+宿泊一体</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs font-bold">競合比較</p>
+                                <p class="text-xs opacity-80">専門店相場¥15k-35k/日の中間帯。体験プレミアムで差別化</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs font-bold">コストプラス</p>
+                                <p class="text-xs opacity-80">固定費¥11万/月 ÷ 粗利¥5.7万 = BEP 1.9件で成立</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

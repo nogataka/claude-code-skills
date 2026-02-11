@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>推進体制</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Project Team</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">推進体制</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 3 Columns -->
+        <div class="flex-1 px-16 py-6 grid grid-cols-3 gap-6">
+            <!-- Client Side -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-accent shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-brand-accent mr-3">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-dark">貴社側体制</h3>
+                        <p class="text-xs text-gray-400 font-lato">Client Team</p>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-user-tie text-brand-accent mr-2 text-xs"></i>
+                        <p class="text-gray-600"><span class="font-bold text-brand-dark">プロジェクトオーナー</span></p>
+                    </div>
+                    <p class="text-xs text-gray-500 ml-5">DX推進部長（意思決定・承認）</p>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-user text-brand-accent mr-2 text-xs"></i>
+                        <p class="text-gray-600"><span class="font-bold text-brand-dark">業務担当者</span></p>
+                    </div>
+                    <p class="text-xs text-gray-500 ml-5">各部門から2名ずつ選出</p>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-user-cog text-brand-accent mr-2 text-xs"></i>
+                        <p class="text-gray-600"><span class="font-bold text-brand-dark">IT担当者</span></p>
+                    </div>
+                    <p class="text-xs text-gray-500 ml-5">システム連携・セキュリティ担当</p>
+                </div>
+            </div>
+
+            <!-- NexTech Side -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-sub shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-sub mr-3">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-dark">NexTech体制</h3>
+                        <p class="text-xs text-gray-400 font-lato">NexTech Team</p>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-user-tie text-brand-sub mr-2 text-xs"></i>
+                        <p class="text-gray-600"><span class="font-bold text-brand-dark">プロジェクトマネージャー</span></p>
+                    </div>
+                    <p class="text-xs text-gray-500 ml-5">全体統括・進捗管理・品質管理</p>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-laptop-code text-brand-sub mr-2 text-xs"></i>
+                        <p class="text-gray-600"><span class="font-bold text-brand-dark">AIエンジニア</span></p>
+                    </div>
+                    <p class="text-xs text-gray-500 ml-5">モデル開発・チューニング（3名）</p>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-database text-brand-sub mr-2 text-xs"></i>
+                        <p class="text-gray-600"><span class="font-bold text-brand-dark">データエンジニア</span></p>
+                    </div>
+                    <p class="text-xs text-gray-500 ml-5">データ基盤構築・ETL設計（2名）</p>
+                </div>
+            </div>
+
+            <!-- Governance -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-gray-400 shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 mr-3">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-dark">ガバナンス</h3>
+                        <p class="text-xs text-gray-400 font-lato">Governance</p>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="bg-gray-50 rounded-lg p-3">
+                        <p class="text-sm font-bold text-brand-dark mb-1">週次定例会</p>
+                        <p class="text-xs text-gray-500">進捗確認・課題解決（毎週火曜）</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3">
+                        <p class="text-sm font-bold text-brand-dark mb-1">月次ステコミ</p>
+                        <p class="text-xs text-gray-500">経営層への成果報告・方針確認</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3">
+                        <p class="text-sm font-bold text-brand-dark mb-1">Phase Gate審査</p>
+                        <p class="text-xs text-gray-500">各フェーズ移行時のGo/No-Go判定</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">15</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

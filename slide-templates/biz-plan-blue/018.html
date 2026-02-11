@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>損益分岐点分析</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.03); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .bep-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 14px 18px; box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); text-align: center; }
+        .bep-value { font-size: 2.5rem; font-weight: 900; line-height: 1; }
+        .pl-table { width: 100%; border-collapse: collapse; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); }
+        .pl-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: left; padding: 6px 10px; font-size: 0.8rem; }
+        .pl-table td { padding: 5px 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.8rem; color: #333; }
+        .pl-table .total-row td { background-color: rgba(0, 123, 255, 0.08); font-weight: 700; }
+        .sens-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; }
+        .sens-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: center; padding: 4px 6px; }
+        .sens-table td { padding: 4px 6px; border-bottom: 1px solid #e2e8f0; text-align: center; color: #333; }
+        .chart-wrapper { width: 100%; height: 180px; }
+    </style>
+</head>
+
+<body>
+    <div class="slide p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-2 relative z-10">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">損益分岐点分析</h1>
+
+            <div class="flex gap-6 mb-3">
+                <!-- Left: Costs + BEP -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <div class="flex gap-3">
+                        <div class="bep-box flex-1">
+                            <p class="text-xs opacity-80 mb-1">損益分岐点</p>
+                            <p class="bep-value">月1.9件</p>
+                            <p class="text-xs mt-1 opacity-80">= 月売上 約¥13.3万</p>
+                        </div>
+                        <div class="bep-box flex-1" style="background: linear-gradient(135deg, #0056b3, #003d80);">
+                            <p class="text-xs opacity-80 mb-1">到達予測</p>
+                            <p class="bep-value">2ヶ月目</p>
+                            <p class="text-xs mt-1 opacity-80">月3件で黒字化</p>
+                        </div>
+                    </div>
+
+                    <table class="pl-table">
+                        <thead><tr><th>固定費（月間）</th><th style="text-align: right;">金額</th></tr></thead>
+                        <tbody>
+                            <tr><td>ローン返済</td><td style="text-align: right;">¥70,000</td></tr>
+                            <tr><td>自動車保険</td><td style="text-align: right;">¥15,000</td></tr>
+                            <tr><td>税金・車検・メンテ</td><td style="text-align: right;">¥10,000</td></tr>
+                            <tr><td>駐車場</td><td style="text-align: right;">¥15,000</td></tr>
+                            <tr class="total-row"><td>合計</td><td style="text-align: right;" class="highlight">¥110,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Right: Profit by Volume + Sensitivity -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <p class="text-xs font-bold body-text"><i class="fas fa-chart-bar text-blue-500 mr-1"></i> 予約件数別 月間損益</p>
+                    <table class="sens-table" style="border-radius: 4px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+                        <thead>
+                            <tr><th>月間件数</th><th>売上</th><th>変動費</th><th>粗利</th><th>固定費</th><th>損益</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1件</td><td>¥7万</td><td>¥1.3万</td><td>¥5.7万</td><td>¥11万</td><td style="color: #EF4444; font-weight: 700;">-¥5.3万</td></tr>
+                            <tr style="background: rgba(0,123,255,0.06);"><td class="font-bold">2件</td><td class="font-bold">¥14万</td><td>¥2.6万</td><td class="font-bold">¥11.4万</td><td>¥11万</td><td class="highlight font-bold">+¥0.4万</td></tr>
+                            <tr><td>3件</td><td>¥21万</td><td>¥3.9万</td><td>¥17.1万</td><td>¥11万</td><td class="highlight font-bold">+¥6.1万</td></tr>
+                            <tr><td>4件</td><td>¥28万</td><td>¥5.2万</td><td>¥22.8万</td><td>¥11万</td><td class="highlight font-bold">+¥11.8万</td></tr>
+                            <tr><td>5件</td><td>¥35万</td><td>¥6.5万</td><td>¥28.5万</td><td>¥11万</td><td class="highlight font-bold">+¥17.5万</td></tr>
+                        </tbody>
+                    </table>
+
+                    <p class="text-xs font-bold body-text"><i class="fas fa-sliders-h text-blue-500 mr-1"></i> 感度分析</p>
+                    <table class="sens-table" style="border-radius: 4px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+                        <thead>
+                            <tr><th>変動要因</th><th>-10%</th><th>基準</th><th>+10%</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-bold text-left">単価変動</td><td>BEP 2.2件</td><td class="highlight">BEP 1.9件</td><td>BEP 1.7件</td></tr>
+                            <tr><td class="font-bold text-left">固定費変動</td><td>BEP 1.7件</td><td class="highlight">BEP 1.9件</td><td>BEP 2.1件</td></tr>
+                            <tr><td class="font-bold text-left">変動費変動</td><td>BEP 1.9件</td><td class="highlight">BEP 1.9件</td><td>BEP 2.0件</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-wrapper">
+                <canvas id="bepChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('bepChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['1件/月', '2件/月(>BEP)', '3件/月', '4件/月', '5件/月'],
+                    datasets: [
+                        {
+                            label: '固定費＋変動費',
+                            data: [12.3, 13.6, 14.9, 16.2, 17.5],
+                            backgroundColor: 'rgba(200, 200, 200, 0.5)',
+                            borderColor: 'rgba(200, 200, 200, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: '売上',
+                            data: [7, 14, 21, 28, 35],
+                            type: 'line',
+                            borderColor: '#007BFF',
+                            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#007BFF',
+                            pointRadius: 5,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '月間予約件数 vs コスト・売上（万円）', font: { family: 'BIZ UDGothic', size: 13, weight: 'bold' }, color: '#333', padding: { bottom: 6 } },
+                        legend: { labels: { font: { family: 'BIZ UDGothic', size: 10 } } }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: '万円', font: { size: 10 } } },
+                        x: { ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

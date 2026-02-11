@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Agenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .agenda-item {
+            transition: all 0.3s ease;
+        }
+
+        .agenda-number {
+            font-feature-settings: "tnum";
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Left Panel: Title -->
+        <div class="w-1/4 bg-gray-900 text-white flex flex-col justify-center p-12 relative overflow-hidden">
+            <!-- Background accents -->
+            <div class="absolute top-0 left-0 w-2 h-full bg-green-500"></div>
+            <div class="absolute -right-16 top-20 w-32 h-32 rounded-full border-4 border-gray-700 opacity-20"></div>
+            <div class="absolute -left-10 bottom-20 w-40 h-40 rounded-full border-4 border-gray-700 opacity-20"></div>
+            <div class="relative z-10">
+                <div class="text-orange-500 text-6xl mb-6">
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <h1 class="text-5xl font-black tracking-tight mb-4">目次</h1>
+                <p class="text-gray-400 text-sm font-light tracking-widest uppercase mb-8">Table of Contents</p>
+                <div class="w-12 h-1 bg-orange-500 mb-8"></div>
+                <div class="text-gray-400 text-xs">
+                    <p class="mb-2">OUTDOOR+ Business Plan</p>
+                    <p>Ver 3.0</p>
+                </div>
+            </div>
+        </div>
+        <!-- Right Panel: List -->
+        <div class="w-3/4 bg-white p-12 flex flex-col justify-center relative">
+            <!-- Header accent -->
+            <div class="absolute top-0 right-0 w-64 h-4 bg-gray-100"></div>
+            <div class="grid grid-cols-2 gap-x-12 gap-y-3 h-full content-center">
+                <!-- Column 1 -->
+                <div class="space-y-3">
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">01</span>
+                        <span class="text-lg font-bold text-gray-800">エグゼクティブサマリー</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">02</span>
+                        <span class="text-lg font-bold text-gray-800">課題設定</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">03</span>
+                        <span class="text-lg font-bold text-gray-800">ソリューション</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">04</span>
+                        <span class="text-lg font-bold text-gray-800">ターゲット市場</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">05</span>
+                        <span class="text-lg font-bold text-gray-800">市場規模</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">06</span>
+                        <span class="text-lg font-bold text-gray-800">競合分析</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">07</span>
+                        <span class="text-lg font-bold text-gray-800">収益モデル</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">08</span>
+                        <span class="text-lg font-bold text-gray-800">価格戦略</span>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="space-y-3">
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">09</span>
+                        <span class="text-lg font-bold text-gray-800">マーケティング戦略</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">10</span>
+                        <span class="text-lg font-bold text-gray-800">販売チャネル</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">11</span>
+                        <span class="text-lg font-bold text-gray-800">初期投資</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">12</span>
+                        <span class="text-lg font-bold text-gray-800">売上予測・損益分岐点</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">13</span>
+                        <span class="text-lg font-bold text-gray-800">リスク分析</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-orange-500 bg-gray-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right agenda-number">14</span>
+                        <span class="text-lg font-bold text-gray-800">リスク軽減戦略</span>
+                    </div>
+                    <div
+                        class="flex items-center p-3 border-l-4 border-gray-200 hover:border-green-500 bg-green-50 hover:bg-white hover:shadow-md agenda-item rounded-r">
+                        <span class="text-2xl font-bold text-green-300 mr-4 w-8 text-right agenda-number">15</span>
+                        <span class="text-lg font-bold text-gray-800">まとめ</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="absolute bottom-6 right-12 text-gray-400 text-xs">
+                <p>Confidential</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

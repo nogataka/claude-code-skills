@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gathering &amp; Analyzing Customer Feedback</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 15px 40px;
+            color: #1E3A8A;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+            font-family: 'Noto Sans JP', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .content {
+            padding: 40px;
+            height: calc(100% - 60px);
+            position: relative;
+        }
+        
+        .title {
+            font-size: 5rem;
+            font-weight: bold;
+            line-height: 1.1;
+            color: #1E3A8A;
+            margin-bottom: 30px;
+            max-width: 1000px;
+            font-family: 'Noto Serif JP', serif;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .description {
+            font-size: 1.2rem;
+            color: #6B7280;
+            line-height: 1.5;
+            margin-bottom: 50px;
+            max-width: 800px;
+            font-family: 'Noto Sans JP', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .feedback-methods {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .feedback-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .feedback-circle:hover {
+            transform: scale(1.05);
+        }
+        
+        .feedback-circle-1 {
+            background-color: #1E40AF;
+        }
+        
+        .feedback-circle-2 {
+            background-color: #1E3A8A;
+        }
+        
+        .feedback-circle-3 {
+            background-color: #3B82F6;
+        }
+        
+        .feedback-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .feedback-text {
+            font-size: 1rem;
+            line-height: 1.3;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: bold;
+        }
+        
+        .stat-container {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .arrow-container {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #1E3A8A;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 30px;
+        }
+        
+        .arrow-container i {
+            color: #1E3A8A;
+            font-size: 1.5rem;
+        }
+        
+        .stat-percentage {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-right: 30px;
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        .stat-description {
+            font-size: 1.1rem;
+            color: #6B7280;
+            line-height: 1.5;
+            max-width: 500px;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(191, 219, 254, 0.2);
+            z-index: -1;
+        }
+        
+        .circle-1 {
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: 10%;
+        }
+        
+        .circle-3 {
+            width: 300px;
+            height: 300px;
+            top: 30%;
+            right: 40%;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<div class="circle circle-3"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<h1 class="title">顧客フィードバックの<br/>収集と分析</h1>
+<p class="description">
+            継続的なフィードバック収集は、改善領域の特定と顧客満足度レベルの把握に不可欠です。
+        </p>
+<div class="feedback-methods">
+<div class="feedback-circle feedback-circle-1">
+<i class="fas fa-chart-bar feedback-icon"></i>
+<div class="feedback-text">
+                    アンケート<br/>NPS
+                </div>
+</div>
+<div class="feedback-circle feedback-circle-2">
+<i class="fas fa-share-alt feedback-icon"></i>
+<div class="feedback-text">
+                    ソーシャル<br/>リスニング
+                </div>
+</div>
+<div class="feedback-circle feedback-circle-3">
+<i class="fas fa-comments feedback-icon"></i>
+<div class="feedback-text">
+                    顧客<br/>インタビュー
+                </div>
+</div>
+</div>
+<div class="stat-container">
+<div class="arrow-container">
+<i class="fas fa-arrow-right"></i>
+</div>
+<div class="stat-percentage">15%</div>
+<div class="stat-description">
+                NPSスコアが10ポイント改善したことで、顧客維持率（リテンション）が向上しました。
+            </div>
+</div>
+</div>
+</div>
+</body>
+</html>

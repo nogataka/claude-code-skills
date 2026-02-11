@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KPIダッシュボード</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">KPI Dashboard</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">重要指標一覧</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-5">
+            <!-- Top Row: 4 KPI Cards -->
+            <div class="grid grid-cols-4 gap-4">
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-accent"></div>
+                    <div class="pl-2">
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">ARR</p>
+                        <p class="text-2xl font-black text-brand-dark font-inter">¥40<span class="text-sm font-normal text-gray-500 ml-1">億</span></p>
+                        <span class="text-xs font-bold text-green-500 font-inter"><i class="fas fa-arrow-up mr-0.5"></i>+54%</span>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-accent"></div>
+                    <div class="pl-2">
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">NRR</p>
+                        <p class="text-2xl font-black text-brand-dark font-inter">128<span class="text-sm font-normal text-gray-500 ml-1">%</span></p>
+                        <span class="text-xs font-bold text-green-500 font-inter"><i class="fas fa-arrow-up mr-0.5"></i>+5pt</span>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-warm"></div>
+                    <div class="pl-2">
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">Churn Rate</p>
+                        <p class="text-2xl font-black text-brand-dark font-inter">1.2<span class="text-sm font-normal text-gray-500 ml-1">%</span></p>
+                        <span class="text-xs font-bold text-green-500 font-inter"><i class="fas fa-arrow-down mr-0.5"></i>-0.3pt</span>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-warm"></div>
+                    <div class="pl-2">
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1 font-inter">Customers</p>
+                        <p class="text-2xl font-black text-brand-dark font-inter">415<span class="text-sm font-normal text-gray-500 ml-1">社</span></p>
+                        <span class="text-xs font-bold text-green-500 font-inter"><i class="fas fa-arrow-up mr-0.5"></i>+87社</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Progress Bars -->
+            <div class="bg-gray-50 rounded-xl p-6 flex-1">
+                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider font-inter mb-4">FY2026 Target Progress</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-brand-dark">売上高 ¥65億</p>
+                            <p class="text-sm font-bold text-brand-accent font-inter">74%</p>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div class="bg-brand-accent h-3 rounded-full" style="width: 74%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-brand-dark">SaaS比率 65%</p>
+                            <p class="text-sm font-bold text-brand-accent font-inter">85%</p>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div class="bg-brand-accent h-3 rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-brand-dark">従業員数 420名</p>
+                            <p class="text-sm font-bold text-brand-warm font-inter">76%</p>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div class="bg-brand-warm h-3 rounded-full" style="width: 76%;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-1">
+                            <p class="text-sm font-bold text-brand-dark">海外売上比率 15%</p>
+                            <p class="text-sm font-bold text-brand-warm font-inter">40%</p>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div class="bg-brand-warm h-3 rounded-full" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">17</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

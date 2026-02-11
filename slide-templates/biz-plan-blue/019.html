@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>リスク分析＆軽減戦略</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .risk-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); }
+        .risk-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: center; padding: 5px 6px; }
+        .risk-table td { padding: 4px 6px; border-bottom: 1px solid #e2e8f0; text-align: center; color: #333; }
+        .risk-table .high { background-color: rgba(239, 68, 68, 0.1); color: #DC2626; font-weight: 700; }
+        .risk-table .vhigh { background-color: rgba(239, 68, 68, 0.2); color: #B91C1C; font-weight: 900; }
+        .risk-table .mid { background-color: rgba(245, 158, 11, 0.1); color: #D97706; font-weight: 600; }
+        .mitigation-card { background-color: #F8F9FA; border-left: 4px solid #007BFF; padding: 8px 12px; border-radius: 0 4px 4px 0; }
+        .monitor-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 12px 16px; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-2">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">リスク分析＆軽減戦略</h1>
+
+            <div class="flex gap-6 mb-3">
+                <!-- Left: Risk Matrix -->
+                <div class="w-3/5">
+                    <p class="text-xs font-bold body-text mb-1"><i class="fas fa-exclamation-triangle text-red-400 mr-1"></i> リスク評価マトリックス（影響度×発生確率）</p>
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left;">リスク</th>
+                                <th>カテゴリ</th>
+                                <th>影響度</th>
+                                <th>発生確率</th>
+                                <th>優先度</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;">シーズン偏重・需要変動</td>
+                                <td>市場</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td class="vhigh">最高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">少人数体制の過負荷</td>
+                                <td>運営</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td class="vhigh">最高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">需要が想定より伸びない</td>
+                                <td>市場</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td class="high">高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">売上未達（キャッシュフロー）</td>
+                                <td>財務</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td class="high">高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">競合強化・価格競争</td>
+                                <td>市場</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td class="high">高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">車両操作ミス（利用者）</td>
+                                <td>技術</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td class="high">高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">故障・事故（緊急修理）</td>
+                                <td>財務</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td class="high">高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">品質ばらつき</td>
+                                <td>運営</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td class="high">高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">AIコンシェルジュ品質</td>
+                                <td>技術</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td class="mid">中高</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">災害・感染症</td>
+                                <td>外部</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td class="mid">中高</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Right: Mitigation -->
+                <div class="w-2/5 flex flex-col gap-2">
+                    <p class="text-xs font-bold body-text"><i class="fas fa-shield-alt text-blue-500 mr-1"></i> 主要リスクへの対策</p>
+
+                    <div class="mitigation-card">
+                        <p class="text-xs font-bold body-text">シーズン偏重</p>
+                        <p class="text-xs" style="color: #666;">オフシーズン30%割引、近場1泊プラン、冬の「ぬくぬくプラン」で平準化</p>
+                    </div>
+
+                    <div class="mitigation-card">
+                        <p class="text-xs font-bold body-text">人員過負荷</p>
+                        <p class="text-xs" style="color: #666;">清掃/点検を外注化。月5件超が続けばPTスタッフ採用。オーナー週50h超→即アクション</p>
+                    </div>
+
+                    <div class="mitigation-card">
+                        <p class="text-xs font-bold body-text">キャッシュフロー</p>
+                        <p class="text-xs" style="color: #666;">固定費¥11万/月上限厳守。月次P&L＋3ヶ月ローリング予測。現金残高3ヶ月分割れ→緊急対応</p>
+                    </div>
+
+                    <div class="mitigation-card">
+                        <p class="text-xs font-bold body-text">車両トラブル</p>
+                        <p class="text-xs" style="color: #666;">営業用保険＋ペット特約。売上10%→修繕積立。チェックリスト標準化＋動画必修</p>
+                    </div>
+
+                    <div class="mitigation-card">
+                        <p class="text-xs font-bold body-text">品質管理</p>
+                        <p class="text-xs" style="color: #666;">レビュー★4.5割れ→品質監査。低評価には48h以内に「謝罪＋対策＋予防」で返信</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monitor KRIs -->
+            <div class="monitor-box">
+                <p class="text-xs font-bold mb-1"><i class="fas fa-chart-line mr-2"></i>リスクモニタリング指標（月次チェック）</p>
+                <div class="flex gap-4 text-xs opacity-90">
+                    <div>月間予約<2件が3ヶ月→エスカレーション</div>
+                    <div>レビュー★<4.5＋低評価2件→メッセージ見直し</div>
+                    <div>月間売上<¥20万持続→コスト削減/価格見直し</div>
+                    <div>修繕費>売上20%→保険・整備見直し</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

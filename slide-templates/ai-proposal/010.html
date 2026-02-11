@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>実行計画</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex">
+        <!-- Left Panel -->
+        <div class="w-1/3 bg-brand-dark text-white p-10 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-brand-accent rounded-bl-full opacity-15"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center">
+                        <i class="fas fa-tasks text-brand-dark"></i>
+                    </div>
+                    <span class="text-brand-accent font-bold uppercase text-sm tracking-widest font-lato">Section 03</span>
+                </div>
+                <h1 class="text-4xl font-black leading-tight mb-6">実行計画</h1>
+                <p class="text-sm text-gray-300 leading-relaxed">タイムライン、投資計画、KPI管理を含む具体的な実行計画です。</p>
+            </div>
+            <p class="relative z-10 text-xs text-gray-500">Confidential</p>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="w-2/3 bg-white p-10 flex flex-col justify-center">
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-brand-accent mr-4">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">6ヶ月ロードマップ</h3>
+                        <p class="text-sm text-gray-600">PoC開始から全社展開までのスケジュール</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-brand-accent mr-4">
+                        <i class="fas fa-yen-sign"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">投資計画・ROI</h3>
+                        <p class="text-sm text-gray-600">初期投資と期待リターンの詳細分析</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-sub mr-4">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-brand-dark text-lg mb-1">KPIダッシュボード</h3>
+                        <p class="text-sm text-gray-600">導入効果を測定する重要指標</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

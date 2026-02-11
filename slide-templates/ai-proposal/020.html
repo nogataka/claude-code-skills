@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Thank You</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide relative flex flex-col overflow-hidden">
+        <!-- Gradient Background -->
+        <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, #0F1B2D, #1C3D5A);"></div>
+        <!-- Accent Bar -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-brand-accent z-20"></div>
+        <!-- Decorative -->
+        <div class="absolute -bottom-20 -right-20 w-64 h-64 rounded-full border-2 border-white opacity-5 z-10"></div>
+        <div class="absolute top-24 right-40 w-40 h-40 rounded-full border border-brand-accent opacity-10 z-10"></div>
+        <div class="absolute bottom-40 left-20 w-24 h-24 rounded-full border border-brand-accent opacity-8 z-10"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 w-full h-full flex flex-col items-center justify-center px-24">
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="w-14 h-14 bg-brand-accent rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-brand-dark text-2xl"></i>
+                </div>
+                <p class="text-lg font-bold text-brand-accent tracking-widest uppercase font-lato">NexTech Solutions</p>
+            </div>
+
+            <h1 class="text-5xl font-black text-white leading-tight mb-6 text-center">ありがとうございました</h1>
+            <div class="w-24 h-1 bg-brand-accent mx-auto mb-6"></div>
+            <p class="text-xl text-gray-300 font-light text-center mb-12">AIの力で、貴社のビジネスを次のステージへ</p>
+
+            <!-- Contact Info -->
+            <div class="flex items-center gap-10 text-sm text-gray-400">
+                <div class="flex items-center">
+                    <i class="fas fa-envelope mr-2 text-brand-accent"></i>
+                    <span>contact@nextech-sol.co.jp</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-globe mr-2 text-brand-accent"></i>
+                    <span>www.nextech-sol.co.jp</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-phone-alt mr-2 text-brand-accent"></i>
+                    <span class="font-lato">03-XXXX-XXXX</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="absolute bottom-0 left-0 right-0 h-12 flex justify-between items-center px-16 z-20">
+            <p class="text-xs text-gray-600 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">20</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

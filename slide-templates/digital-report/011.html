@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>Next Steps &amp; Contact</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1a2332; /* Navy Blue */
+        color: #ffffff;
+    }
+    .slide-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .text-gold {
+        color: #d4af37;
+    }
+    .bg-gold {
+        background-color: #d4af37;
+    }
+    .border-gold {
+        border-color: #d4af37;
+    }
+    .serif-font {
+        font-family: 'Noto Serif JP', serif;
+    }
+    
+    /* Background Pattern */
+    .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.03;
+        background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M0 40L40 0H20L0 20M40 40V20L20 40" stroke="white" stroke-width="1"/></svg>');
+        background-size: 40px 40px;
+        z-index: 0;
+    }
+
+    /* Action Plan Cards */
+    .plan-card {
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        position: relative;
+        transition: transform 0.3s ease;
+        margin-left: 2rem;
+    }
+    .plan-card:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+        transform: translateX(5px);
+    }
+    
+    /* Timeline connecting line */
+    .timeline-vertical {
+        position: absolute;
+        left: 1rem;
+        top: 2rem;
+        bottom: 2rem;
+        width: 2px;
+        background: linear-gradient(to bottom, #d4af37 0%, rgba(212, 175, 55, 0.2) 100%);
+    }
+
+    /* Days Badge */
+    .days-badge {
+        position: absolute;
+        left: -2rem; /* Positioning relative to card, but visually on the timeline */
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #1a2332;
+        border: 2px solid #d4af37;
+        color: #d4af37;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        z-index: 2;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .days-number {
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+    .days-text {
+        font-size: 0.6rem;
+        text-transform: uppercase;
+    }
+
+    /* Contact Area */
+    .contact-card {
+        background-color: rgba(212, 175, 55, 0.05);
+        border-left: 4px solid #d4af37;
+        padding: 2rem;
+        border-radius: 0 1rem 1rem 0;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(212, 175, 55, 0.2);
+        color: #d4af37;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+
+    /* Thank you text */
+    .thank-you-text {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        background: linear-gradient(to right, #ffffff, #a0aec0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 2rem;
+    }
+
+    /* Decorative circles */
+    .decor-circle {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        z-index: 0;
+        pointer-events: none;
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background -->
+<div class="bg-pattern"></div>
+<div class="decor-circle" style="width: 400px; height: 400px; top: -100px; right: -100px;"></div>
+<div class="decor-circle" style="width: 600px; height: 600px; top: -200px; right: -200px;"></div>
+<!-- Header -->
+<div class="pt-8 px-12 mb-4 z-10 flex justify-between items-end">
+<div>
+<div class="flex items-center mb-1">
+<div class="w-8 h-1 bg-gold mr-3"></div>
+<p class="text-gold text-xs font-bold tracking-widest uppercase">Action Plan &amp; Next Steps</p>
+</div>
+<h1 class="text-4xl font-bold text-white mb-2">次の一手</h1>
+<p class="text-gray-400 text-sm">30/60/90日アクションプランと今後の進め方</p>
+</div>
+<div class="text-right">
+<!-- Optional Logo or mark -->
+<i class="fas fa-forward text-gold opacity-50 text-2xl"></i>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 pb-8 flex z-10 items-center">
+<!-- Left Column: Action Plan -->
+<div class="w-1/2 pr-8 relative h-full flex flex-col justify-center">
+<h2 class="text-xl font-bold text-gray-200 mb-8 pl-8 flex items-center">
+<i class="fas fa-calendar-alt text-gray-500 mr-3"></i>
+                Recommended Actions
+            </h2>
+<div class="relative pl-4 py-4">
+<!-- Vertical Line -->
+<div class="timeline-vertical"></div>
+<!-- 30 Days -->
+<div class="mb-6 relative">
+<div class="plan-card">
+<div class="days-badge">
+<span class="days-number">30</span>
+<span class="days-text">Days</span>
+</div>
+<h3 class="text-gold font-bold text-lg mb-1">KPI再定義・ユースケース選定</h3>
+<p class="text-gray-300 text-sm">現状分析に基づき、事業インパクトが最大となる最重要ユースケースを特定し、測定可能なKPIを設定。</p>
+</div>
+</div>
+<!-- 60 Days -->
+<div class="mb-6 relative">
+<div class="plan-card">
+<div class="days-badge">
+<span class="days-number">60</span>
+<span class="days-text">Days</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-1">データ統合PoC・MVP要件確定</h3>
+<p class="text-gray-300 text-sm">主要データソースの統合実証実験(PoC)を行い、技術的フィージビリティを確認した上でMVP要件を確定。</p>
+</div>
+</div>
+<!-- 90 Days -->
+<div class="relative">
+<div class="plan-card">
+<div class="days-badge bg-gold text-gray-900 border-white">
+<span class="days-number">90</span>
+<span class="days-text">Days</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-1">MVP開発開始・運用体制整備</h3>
+<p class="text-gray-300 text-sm">アジャイル開発チームを組成し、MVPの開発に着手。並行してデータガバナンスと運用体制を構築。</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Thank You & Contact -->
+<div class="w-1/2 pl-8 flex flex-col justify-center items-start">
+<div class="mb-10">
+<h2 class="thank-you-text serif-font">
+                    Thank You<br/>
+                    for your attention.
+                </h2>
+<p class="text-xl text-gray-300 font-light border-l-4 border-gray-600 pl-4">
+                    ご清聴ありがとうございました。
+                </p>
+</div>
+<div class="contact-card w-full">
+<h3 class="text-gray-400 text-xs font-bold tracking-widest uppercase mb-6">Contact Information</h3>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-envelope"></i>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase">Email</p>
+<p class="text-lg text-white font-mono">dx-office@example.co.jp</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-phone-alt"></i>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase">Phone</p>
+<p class="text-lg text-white font-mono">03-1234-5678</p>
+</div>
+</div>
+<div class="contact-item mb-0">
+<div class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase">Address</p>
+<p class="text-base text-white">東京都千代田区〇〇 1-2-3</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex items-center justify-between px-12 border-t border-gray-800 z-20 bg-gray-900 bg-opacity-80">
+<div class="flex items-center">
+<p class="text-gray-500 text-xs">Strategic Corporate Digital Business Report</p>
+</div>
+<div class="flex items-center">
+<span class="text-gold font-bold mr-2">11</span>
+<span class="text-gray-600 text-xs">/ 11</span>
+</div>
+</div>
+</div>
+</body>
+</html>

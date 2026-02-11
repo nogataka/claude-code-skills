@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Unit Economics</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .math-symbol {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #9CA3AF;
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container p-12">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
+            <div>
+                <div class="flex items-center space-x-2 text-indigo-600 mb-1">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Business Model</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900">収益モデル・ユニットエコノミクス</h1>
+                <p class="text-sm text-gray-500 mt-1">1予約あたりの高収益性と、健全なLTV/CACバランス</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full">09</span>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col space-y-6">
+            <!-- Top Section: Unit Profitability (1 Transaction) -->
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <div class="flex items-center mb-4">
+                    <span class="bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded mr-2">Single Unit</span>
+                    <h3 class="text-lg font-bold text-gray-800">1予約あたりの収益構造 <span
+                            class="text-sm font-normal text-gray-500 ml-2">(平均2泊3日想定)</span></h3>
+                </div>
+                <div class="flex items-stretch justify-between items-center">
+                    <!-- Revenue -->
+                    <div class="flex-1 bg-white rounded-xl p-5 border-l-4 border-indigo-500 card-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold text-gray-400 uppercase">Average Revenue</span>
+                            <i class="fa-solid fa-file-invoice-dollar text-indigo-200 text-xl"></i>
+                        </div>
+                        <p class="text-3xl font-black text-gray-800">¥70,000</p>
+                        <p class="text-xs text-indigo-600 font-bold mt-1">平均客単価</p>
+                        <div class="mt-3 pt-3 border-t border-gray-100 space-y-1">
+                            <p class="text-[10px] text-gray-500 flex justify-between"><span>基本料金</span>
+                                <span>¥55,000</span></p>
+                            <p class="text-[10px] text-gray-500 flex justify-between"><span>補償パック</span>
+                                <span>¥9,000</span></p>
+                            <p class="text-[10px] text-gray-500 flex justify-between"><span>ペット/OP</span>
+                                <span>¥6,000</span></p>
+                        </div>
+                    </div>
+                    <!-- Minus Symbol -->
+                    <div class="px-4 text-3xl math-symbol text-gray-300"><i class="fa-solid fa-minus"></i></div>
+                    <!-- Variable Cost -->
+                    <div class="flex-1 bg-white rounded-xl p-5 border-l-4 border-red-400 card-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-xs font-bold text-gray-400 uppercase">Variable Cost</span>
+                            <i class="fa-solid fa-scissors text-red-200 text-xl"></i>
+                        </div>
+                        <p class="text-3xl font-black text-gray-800">¥20,000</p>
+                        <p class="text-xs text-red-500 font-bold mt-1">変動費</p>
+                        <div class="mt-3 pt-3 border-t border-gray-100 space-y-1">
+                            <p class="text-[10px] text-gray-500 flex justify-between"><span>清掃/リネン外注</span>
+                                <span>¥8,000</span></p>
+                            <p class="text-[10px] text-gray-500 flex justify-between"><span>消耗品/燃料</span>
+                                <span>¥5,000</span></p>
+                            <p class="text-[10px] text-gray-500 flex justify-between"><span>システム/決済</span>
+                                <span>¥7,000</span></p>
+                        </div>
+                    </div>
+                    <!-- Equal Symbol -->
+                    <div class="px-4 text-3xl math-symbol text-gray-300"><i class="fa-solid fa-equals"></i></div>
+                    <!-- Gross Profit -->
+                    <div
+                        class="flex-1 bg-green-50 rounded-xl p-5 border-l-4 border-green-500 card-shadow relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-20 h-20 bg-green-100 rounded-bl-full -mr-4 -mt-4 opacity-50">
+                        </div>
+                        <div class="flex justify-between items-start mb-2 relative z-10">
+                            <span class="text-xs font-bold text-green-700 uppercase">Gross Profit</span>
+                            <i class="fa-solid fa-hand-holding-dollar text-green-500 text-xl"></i>
+                        </div>
+                        <p class="text-4xl font-black text-green-700 relative z-10">¥50,000</p>
+                        <p class="text-sm text-green-600 font-bold mt-1 relative z-10">粗利益 <span
+                                class="text-xs bg-green-200 px-2 py-0.5 rounded text-green-800 ml-2">利益率 71%</span></p>
+                        <p class="text-[10px] text-green-600 mt-3 relative z-10 leading-tight">
+                            高い利益率により、月3件で損益分岐点（固定費回収）に到達</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Section: LTV & CAC -->
+            <div class="grid grid-cols-2 gap-6 flex-1">
+                <!-- LTV Calculation -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 mr-3">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">LTV (顧客生涯価値)</h3>
+                    </div>
+                    <div class="flex items-end space-x-2 mb-2">
+                        <span class="text-5xl font-black text-gray-800">¥150,000</span>
+                        <span class="text-sm text-gray-500 mb-2 font-medium">/ ユーザー</span>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-6">初回利用 + リピート利用 (約2回想定)</p>
+                    <!-- LTV Visual Bar -->
+                    <div class="w-full bg-gray-100 rounded-full h-8 flex overflow-hidden mb-4 relative">
+                        <div
+                            class="h-full bg-indigo-500 flex items-center justify-center text-[10px] font-bold text-white w-1/2">
+                            初回 ¥70k
+                        </div>
+                        <div
+                            class="h-full bg-indigo-300 flex items-center justify-center text-[10px] font-bold text-white w-1/4 border-l border-indigo-400">
+                            2回目
+                        </div>
+                        <div
+                            class="h-full bg-indigo-200 flex items-center justify-center text-[10px] font-bold text-white w-1/4 border-l border-indigo-300">
+                            紹介/他
+                        </div>
+                    </div>
+                    <div class="mt-auto bg-orange-50 rounded-lg p-3 border border-orange-100 flex items-center">
+                        <i class="fa-solid fa-bullseye text-orange-500 mr-3"></i>
+                        <p class="text-xs text-orange-800 font-bold">リピート率目標: 初年度 20% → 3年後 30%超</p>
+                    </div>
+                </div>
+                <!-- CAC & Efficiency -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 mr-3">
+                            <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">CAC &amp; 効率性</h3>
+                    </div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase mb-1">許容 CAC (獲得コスト)</p>
+                            <p class="text-3xl font-black text-gray-800">¥15,000 <span
+                                    class="text-sm font-normal text-gray-400">以下</span></p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500 font-bold uppercase mb-1">ユニットエコノミクス</p>
+                            <div
+                                class="inline-flex items-center bg-green-100 text-green-700 px-3 py-1 rounded-full border border-green-200">
+                                <span class="font-black text-lg mr-1">10.0</span>
+                                <span class="text-xs font-bold">x (LTV/CAC)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Efficiency Visualization -->
+                    <div class="relative pt-4 px-2">
+                        <div class="h-2 bg-gray-200 rounded-full w-full mb-1"></div>
+                        <div class="absolute top-4 left-0 h-2 bg-red-400 rounded-l-full w-[10%]"></div> <!-- CAC -->
+                        <div class="absolute top-4 left-0 h-2 bg-transparent border-r-2 border-black h-4 -mt-1 w-[10%]">
+                        </div>
+                        <div class="flex justify-between text-[10px] text-gray-400 mt-2 font-mono">
+                            <span>CAC</span>
+                            <span>LTV (10x CAC)</span>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-4 leading-relaxed">
+                            <i class="fa-solid fa-check text-green-500 mr-1"></i>
+                            一般的に健全とされるライン(3x)を大きく上回る効率性。<br />
+                            初期は広告費をかけても十分に回収可能なモデル。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="mt-4 flex justify-between items-center text-xs text-gray-400 border-t border-gray-200 pt-2">
+            <p>OUTDOOR+ Business Plan v3</p>
+            <p>※変動費には人件費（パート・外注）を含むが、オーナー自身の固定給は含まない</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>市場規模 TAM/SAM/SOM</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-forest-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Market Size</p>
+                    <h1 class="text-3xl font-bold text-forest-900 tracking-tight">市場規模（TAM / SAM / SOM）</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-forest-900 opacity-50">
+                <i class="fas fa-seedling text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-8 flex gap-8">
+            <!-- Left: Descriptions -->
+            <div class="w-1/2 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div class="relative pl-6 border-l-4" style="border-color: rgba(64,145,108,0.3);">
+                        <h3 class="text-sm font-bold text-gray-500 uppercase mb-1 font-inter">TAM (Total Addressable Market)</h3>
+                        <p class="text-2xl font-bold text-gray-800 font-inter">500 <span class="text-sm font-normal text-gray-500">億円/年</span></p>
+                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">国内のESG関連ソフトウェア・サービス市場。サステナビリティ報告、排出量管理、グリーン調達を含む。</p>
+                    </div>
+                    <div class="relative pl-6 border-l-4 border-forest-accent">
+                        <h3 class="text-sm font-bold text-gray-500 uppercase mb-1 font-inter">SAM (Serviceable Available Market)</h3>
+                        <p class="text-2xl font-bold text-gray-800 font-inter">80 <span class="text-sm font-normal text-gray-500">億円/年</span></p>
+                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">サプライチェーン可視化・グリーン調達プラットフォーム市場。中堅〜大企業のデジタル調達ニーズ。</p>
+                    </div>
+                    <div class="relative pl-6 border-l-4 border-forest-light">
+                        <h3 class="text-sm font-bold text-forest-accent uppercase mb-1 font-inter">SOM (Serviceable Obtainable Market)</h3>
+                        <p class="text-3xl font-bold text-forest-accent font-inter">5 <span class="text-lg font-normal text-forest-light">億円/年</span></p>
+                        <p class="text-xs text-gray-600 mt-2 leading-relaxed">首都圏の中堅企業200社 + スタートアップ500社を初期ターゲットに、3年間で獲得可能な市場規模。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm mt-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-gray-500 uppercase font-inter">Market Trend</span>
+                        <span class="bg-green-100 text-forest-accent text-xs font-bold px-2 py-0.5 rounded-full flex items-center">
+                            <i class="fas fa-arrow-trend-up mr-1"></i> CAGR +15%
+                        </span>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-snug">
+                        規制強化（EU CSRD、ISSB基準）とESG投資拡大が市場成長を牽引。国内でも2027年までにサステナビリティ情報開示が義務化見込み。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Visual bars -->
+            <div class="w-1/2 flex flex-col justify-center items-center relative">
+                <div class="absolute top-10 right-10 text-8xl text-gray-50 opacity-50">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="w-full space-y-8 relative z-10">
+                    <!-- TAM Bar -->
+                    <div>
+                        <div class="flex items-end justify-between mb-2">
+                            <p class="text-sm font-bold text-gray-800 font-inter">TAM</p>
+                            <p class="text-2xl font-black text-gray-800 font-inter">¥500億</p>
+                        </div>
+                        <div class="w-full h-12 rounded-lg flex items-center justify-center" style="background: rgba(64,145,108,0.15);">
+                            <p class="text-sm text-forest-primary font-bold">国内ESG関連ソフトウェア・サービス</p>
+                        </div>
+                    </div>
+                    <!-- SAM Bar -->
+                    <div>
+                        <div class="flex items-end justify-between mb-2">
+                            <p class="text-sm font-bold text-gray-800 font-inter">SAM</p>
+                            <p class="text-2xl font-black text-gray-800 font-inter">¥80億</p>
+                        </div>
+                        <div class="w-3/5 h-12 bg-forest-accent rounded-lg flex items-center justify-center">
+                            <p class="text-sm text-white font-bold">グリーン調達プラットフォーム</p>
+                        </div>
+                    </div>
+                    <!-- SOM Bar -->
+                    <div>
+                        <div class="flex items-end justify-between mb-2">
+                            <p class="text-sm font-bold text-forest-accent font-inter">SOM (TARGET)</p>
+                            <p class="text-3xl font-black text-forest-accent font-inter">¥5億</p>
+                        </div>
+                        <div class="w-1/4 h-12 bg-forest-900 rounded-lg flex items-center justify-center shadow-lg">
+                            <p class="text-sm text-white font-bold">初期獲得可能</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">GreenField株式会社 - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-forest-accent font-inter">08</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

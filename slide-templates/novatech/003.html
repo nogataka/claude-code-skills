@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>課題の整理</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .text-navy-900 { color: #0F172A; }
+        .text-navy-800 { color: #1E293B; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+        .border-navy-700 { border-color: #334155; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">Problem Statement</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">課題の整理</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 3 Columns -->
+        <div class="flex-1 px-16 py-8 grid grid-cols-3 gap-6">
+            <!-- Card 1: 業務課題 -->
+            <div class="bg-navy-800 rounded-2xl p-6 border border-blue-900 flex flex-col relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-accent-orange"></div>
+                <div class="flex items-center mb-5">
+                    <div class="w-12 h-12 rounded-xl bg-accent-orange flex items-center justify-center text-white text-xl mr-4 shadow-lg">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-accent-orange font-inter uppercase tracking-wider font-bold">Operations</p>
+                        <h3 class="text-xl font-bold text-white">業務の非効率性</h3>
+                    </div>
+                </div>
+                <div class="space-y-4 flex-1">
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">手作業中心のワークフロー</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">データ入力・集計に月間120時間を消費。ヒューマンエラー率が3.2%に達している。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">部門間データの分断</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">営業・マーケ・CSで異なるツールを使用。統合レポート作成に毎週5時間。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">意思決定の遅延</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">リアルタイムデータ不足により、施策判断まで平均2週間のラグ。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-blue-900">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500">影響度</span>
+                        <div class="flex gap-1">
+                            <div class="w-6 h-2 rounded-full bg-accent-orange"></div>
+                            <div class="w-6 h-2 rounded-full bg-accent-orange"></div>
+                            <div class="w-6 h-2 rounded-full bg-accent-orange"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: 顧客課題 -->
+            <div class="bg-navy-800 rounded-2xl p-6 border border-blue-900 flex flex-col relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-accent-blue"></div>
+                <div class="flex items-center mb-5">
+                    <div class="w-12 h-12 rounded-xl bg-accent-blue flex items-center justify-center text-white text-xl mr-4 shadow-lg">
+                        <i class="fas fa-user-slash"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-accent-blue font-inter uppercase tracking-wider font-bold">Customer</p>
+                        <h3 class="text-xl font-bold text-white">顧客体験の低下</h3>
+                    </div>
+                </div>
+                <div class="space-y-4 flex-1">
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">対応速度の遅さ</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">問い合わせ初回応答に平均8時間。顧客満足度が前年比12%低下。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">パーソナライズ不足</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">全顧客に同一のコミュニケーション。セグメント別施策の実行率わずか15%。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">高い解約率</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">月次チャーン率4.2%（業界平均2.5%）。解約予兆の検知が不可能な状態。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-blue-900">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500">影響度</span>
+                        <div class="flex gap-1">
+                            <div class="w-6 h-2 rounded-full bg-accent-blue"></div>
+                            <div class="w-6 h-2 rounded-full bg-accent-blue"></div>
+                            <div class="w-6 h-2 rounded-full bg-navy-700"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: 成長課題 -->
+            <div class="bg-navy-800 rounded-2xl p-6 border border-blue-900 flex flex-col relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-accent-orange"></div>
+                <div class="flex items-center mb-5">
+                    <div class="w-12 h-12 rounded-xl bg-accent-orange flex items-center justify-center text-white text-xl mr-4 shadow-lg">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-accent-orange font-inter uppercase tracking-wider font-bold">Growth</p>
+                        <h3 class="text-xl font-bold text-white">スケーラビリティ</h3>
+                    </div>
+                </div>
+                <div class="space-y-4 flex-1">
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">属人的なオペレーション</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">特定メンバーに依存した業務フロー。退職時のナレッジロスが大きい。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">新規市場への展開障壁</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">現行システムのカスタマイズ性が低く、海外・新セグメント対応に6ヶ月以上。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-times-circle text-red-400 mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-white mb-0.5">データ活用の遅れ</p>
+                            <p class="text-xs text-gray-400 leading-relaxed">蓄積データの分析活用率はわずか8%。AIの導入が競合に2年遅れ。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-blue-900">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs text-gray-500">影響度</span>
+                        <div class="flex gap-1">
+                            <div class="w-6 h-2 rounded-full bg-accent-orange"></div>
+                            <div class="w-6 h-2 rounded-full bg-accent-orange"></div>
+                            <div class="w-6 h-2 rounded-full bg-navy-700"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">03</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

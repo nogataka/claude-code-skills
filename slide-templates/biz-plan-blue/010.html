@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>市場規模（TAM/SAM/SOM）</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        .accent-shape { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); z-index: 0; }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .trend-tag { display: inline-block; background-color: rgba(0, 123, 255, 0.1); color: #007BFF; font-weight: 700; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; margin-right: 6px; margin-bottom: 4px; }
+        .data-point { background-color: #F8F9FA; border-left: 5px solid #007BFF; padding: 10px 16px; border-radius: 0 4px 4px 0; }
+        .chart-container { width: 100%; overflow: hidden; border: 1px solid rgba(0, 123, 255, 0.3); border-radius: 8px; padding: 12px; background-color: #FFFFFF; height: 240px; display: flex; align-items: center; justify-content: center; }
+        .calc-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+        .calc-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: left; padding: 6px 10px; }
+        .calc-table td { padding: 5px 10px; border-bottom: 1px solid #e2e8f0; color: #333; }
+        .calc-table tr:nth-child(even) td { background-color: #f8f9fa; }
+    </style>
+</head>
+
+<body>
+    <div class="slide p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-3 relative z-10">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">市場規模（TAM / SAM / SOM）</h1>
+
+            <div class="flex gap-6 mb-3">
+                <!-- Left: TAM/SAM/SOM Chart -->
+                <div class="w-1/2">
+                    <div class="chart-container shadow-sm">
+                        <canvas id="tamChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Right: Calculation Basis -->
+                <div class="w-1/2">
+                    <table class="calc-table shadow-sm" style="border-radius: 4px; overflow: hidden;">
+                        <thead>
+                            <tr>
+                                <th>指標</th>
+                                <th>金額</th>
+                                <th>算出根拠</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">TAM</td>
+                                <td class="highlight">250億円</td>
+                                <td>国内観光消費20兆 × アウトドア5% × キャンピングカー10% × レンタル25%</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">SAM</td>
+                                <td class="highlight">50億円</td>
+                                <td>首都圏子育て145万世帯 → アウトドア関心25万 → レンタル利用3万 → 首都圏1.3万世帯</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">SOM</td>
+                                <td class="highlight">2.5億円</td>
+                                <td>ファミリー+ペット+初心者特化ニッチ。OUTDOOR+は3年で¥800-1,000万到達を目標</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">成長率</td>
+                                <td class="highlight">年率5%</td>
+                                <td>JRVAデータ: 保有台数3-5%/年成長、アウトドア市場4-6%/年</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="data-point shadow-sm mt-3">
+                        <p class="body-text text-xs font-bold"><i class="fas fa-key text-blue-500 mr-2"></i>宿泊費高騰＋「所有から利用へ」のシフトがレンタル市場の成長を後押し</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trends -->
+            <div>
+                <h3 class="font-bold text-xs body-text mb-2"><i class="fas fa-chart-line text-blue-500 mr-1"></i> 市場トレンド（7つの追い風）</h3>
+                <div class="flex flex-wrap">
+                    <span class="trend-tag"><i class="fas fa-campground mr-1"></i>アウトドア・キャンプ人気定着</span>
+                    <span class="trend-tag"><i class="fas fa-paw mr-1"></i>ペット同伴ニーズ拡大</span>
+                    <span class="trend-tag"><i class="fas fa-lock mr-1"></i>プライベート空間重視</span>
+                    <span class="trend-tag"><i class="fas fa-sync-alt mr-1"></i>所有から利用へ</span>
+                    <span class="trend-tag"><i class="fas fa-mobile-alt mr-1"></i>デジタル化・カスタマイズ</span>
+                    <span class="trend-tag"><i class="fas fa-question-circle mr-1"></i>初心者の不安が未解決</span>
+                    <span class="trend-tag"><i class="fas fa-arrow-up mr-1"></i>宿泊費高騰で代替需要</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('tamChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['TAM（250億円）', 'SAM（50億円）', 'SOM（2.5億円）'],
+                    datasets: [{
+                        data: [200, 47.5, 2.5],
+                        backgroundColor: ['rgba(0, 123, 255, 0.15)', 'rgba(0, 123, 255, 0.4)', '#007BFF'],
+                        borderWidth: 2,
+                        borderColor: '#FFFFFF'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '45%',
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'TAM / SAM / SOM 市場規模',
+                            font: { family: 'BIZ UDGothic', size: 14, weight: 'bold' },
+                            color: '#333333',
+                            padding: { bottom: 8 }
+                        },
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: { family: 'BIZ UDGothic', size: 11 },
+                                color: '#333333',
+                                boxWidth: 15,
+                                padding: 12
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const labels = ['250億円', '50億円', '2.5億円'];
+                                    return context.label + ': ' + labels[context.dataIndex];
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

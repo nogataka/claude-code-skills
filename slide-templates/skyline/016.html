@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>組織体制</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Organization</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">組織体制</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body: 3 Columns -->
+        <div class="flex-1 px-16 py-6 grid grid-cols-3 gap-6">
+            <!-- Engineering -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-accent shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent mr-3">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-dark">エンジニアリング</h3>
+                        <p class="text-xs text-gray-400 font-inter">Engineering</p>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="flex items-center justify-between text-sm">
+                        <p class="text-gray-600">現在</p>
+                        <p class="font-bold text-brand-dark font-inter">145名</p>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <p class="text-gray-600">FY2026目標</p>
+                        <p class="font-bold text-brand-accent font-inter">200名</p>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-brand-accent h-2 rounded-full" style="width: 72%;"></div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500"><i class="fas fa-bullseye text-brand-accent mr-1"></i>AI/ML専任チーム30名体制へ</p>
+                </div>
+            </div>
+
+            <!-- Sales & Marketing -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-warm shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-brand-warm mr-3">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-dark">セールス&マーケ</h3>
+                        <p class="text-xs text-gray-400 font-inter">Sales & Marketing</p>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="flex items-center justify-between text-sm">
+                        <p class="text-gray-600">現在</p>
+                        <p class="font-bold text-brand-dark font-inter">95名</p>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <p class="text-gray-600">FY2026目標</p>
+                        <p class="font-bold text-brand-warm font-inter">130名</p>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-brand-warm h-2 rounded-full" style="width: 73%;"></div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500"><i class="fas fa-bullseye text-brand-warm mr-1"></i>アジア拠点に15名配置</p>
+                </div>
+            </div>
+
+            <!-- Corporate -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-gray-400 shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 mr-3">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-dark">コーポレート</h3>
+                        <p class="text-xs text-gray-400 font-inter">Corporate</p>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="flex items-center justify-between text-sm">
+                        <p class="text-gray-600">現在</p>
+                        <p class="font-bold text-brand-dark font-inter">80名</p>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <p class="text-gray-600">FY2026目標</p>
+                        <p class="font-bold text-gray-500 font-inter">90名</p>
+                    </div>
+                    <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-gray-400 h-2 rounded-full" style="width: 89%;"></div>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500"><i class="fas fa-bullseye text-gray-400 mr-1"></i>HR/法務強化でIPO準備</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">16</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

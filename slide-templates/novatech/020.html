@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Thank You</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 overflow-hidden" style="z-index: 0;">
+            <!-- Large faded bolt icon -->
+            <i class="fas fa-bolt absolute text-accent-orange" style="font-size: 400px; opacity: 0.03; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+            <!-- Accent circles -->
+            <div class="absolute rounded-full bg-accent-orange" style="width: 300px; height: 300px; opacity: 0.04; top: -80px; right: -60px;"></div>
+            <div class="absolute rounded-full bg-accent-blue" style="width: 200px; height: 200px; opacity: 0.04; bottom: -40px; left: -40px;"></div>
+            <div class="absolute rounded-full bg-accent-orange" style="width: 120px; height: 120px; opacity: 0.06; top: 40%; left: 10%;"></div>
+            <div class="absolute rounded-full bg-accent-blue" style="width: 80px; height: 80px; opacity: 0.05; top: 25%; right: 15%;"></div>
+            <!-- Gradient line accents -->
+            <div class="absolute bg-accent-orange" style="width: 200px; height: 2px; opacity: 0.15; top: 30%; left: 0;"></div>
+            <div class="absolute bg-accent-blue" style="width: 160px; height: 2px; opacity: 0.1; bottom: 35%; right: 0;"></div>
+        </div>
+
+        <!-- Main Content: Centered -->
+        <div class="flex-1 flex flex-col items-center justify-center relative" style="z-index: 1;">
+            <!-- Icon -->
+            <div class="w-20 h-20 rounded-2xl bg-accent-orange bg-opacity-10 flex items-center justify-center mb-6 border border-accent-orange border-opacity-20">
+                <i class="fas fa-bolt text-accent-orange text-3xl"></i>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="text-5xl font-black text-white tracking-tight mb-3">ありがとうございました</h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl text-gray-400 mb-10">次のステップへ進みましょう</p>
+
+            <!-- Divider -->
+            <div class="w-24 h-1 bg-accent-orange rounded-full mb-10 opacity-60"></div>
+
+            <!-- Contact Block -->
+            <div class="flex items-center gap-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center border border-blue-900">
+                        <i class="fas fa-envelope text-accent-orange text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Email</p>
+                        <p class="text-sm font-bold text-white font-inter">contact@novatech.jp</p>
+                    </div>
+                </div>
+                <div class="w-px h-10 bg-blue-900"></div>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center border border-blue-900">
+                        <i class="fas fa-globe text-accent-blue text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Website</p>
+                        <p class="text-sm font-bold text-white font-inter">novatech.jp</p>
+                    </div>
+                </div>
+                <div class="w-px h-10 bg-blue-900"></div>
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-navy-800 flex items-center justify-center border border-blue-900">
+                        <i class="fas fa-phone-alt text-accent-orange text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Phone</p>
+                        <p class="text-sm font-bold text-white font-inter">03-1234-5678</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logo + Tagline -->
+            <div class="mt-12 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-accent-orange flex items-center justify-center">
+                    <i class="fas fa-bolt text-white text-sm"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-white tracking-wide">NovaTech Solutions</p>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase">Data-Driven Future</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900 relative" style="z-index: 1;">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">20</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

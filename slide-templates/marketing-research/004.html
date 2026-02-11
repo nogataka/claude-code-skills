@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Corporate Marketing Research - Market Analysis</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f4f6;
+    }
+    .slide-container {
+        width: 1280px;
+        height: 720px;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .stat-card {
+        border-left: 4px solid #2563eb;
+        transition: transform 0.2s ease;
+    }
+    .stat-card:hover {
+        transform: translateY(-2px);
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="z-10 px-16 pt-12 pb-6 flex justify-between items-end border-b border-gray-100 bg-white">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="h-1 w-8 bg-blue-600"></div>
+<p class="text-blue-600 font-bold tracking-widest text-xs uppercase">Market Insight</p>
+</div>
+<h1 class="text-4xl font-black text-gray-900 tracking-tight">市場分析（サマリー）</h1>
+</div>
+<div class="text-right">
+<p class="text-gray-400 text-sm font-medium">Research Report 2026</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 flex p-12 gap-12 overflow-hidden bg-gray-50">
+<!-- Left Column: Insights & Stats -->
+<div class="w-1/2 flex flex-col justify-between">
+<!-- Top Stats Row -->
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 stat-card">
+<p class="text-gray-500 text-sm font-bold uppercase tracking-wider mb-2">市場規模 (2026予測)</p>
+<p class="text-4xl font-black text-gray-800">3,200<span class="text-xl font-medium text-gray-500 ml-1">億円</span></p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 stat-card" style="border-left-color: #4f46e5;">
+<p class="text-gray-500 text-sm font-bold uppercase tracking-wider mb-2">CAGR (2024-2028)</p>
+<p class="text-4xl font-black text-indigo-600">8.5<span class="text-xl font-medium text-gray-500 ml-1">%</span></p>
+<div class="flex items-center gap-1 mt-1 text-green-500 text-xs font-bold">
+<i class="fa-solid fa-arrow-trend-up"></i>
+<span>堅調な成長</span>
+</div>
+</div>
+</div>
+<!-- Insights List -->
+<div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-6 flex items-center gap-2">
+<i class="fa-solid fa-lightbulb text-yellow-500"></i>
+                    市場インサイト
+                </h3>
+<div class="space-y-6">
+<div>
+<p class="text-sm font-bold text-blue-800 mb-1">主要セグメント</p>
+<p class="text-gray-600 text-sm leading-relaxed pl-4 border-l-2 border-blue-100">
+                            マーケティング自動化、CDP（Customer Data Platform）、計測・アトリビューション分析が市場の6割以上を占める。
+                        </p>
+</div>
+<div>
+<p class="text-sm font-bold text-blue-800 mb-1">成長ドライバー</p>
+<ul class="space-y-2 mt-2">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-green-500 mt-1"></i>
+<span>1stパーティデータの戦略的活用へのシフト</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-green-500 mt-1"></i>
+<span>AI・機械学習による予測モデルの最適化</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-green-500 mt-1"></i>
+<span>プライバシー規制強化に伴う信頼性の高いツール需要</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Chart -->
+<div class="w-1/2 flex flex-col">
+<div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex-1 flex flex-col relative">
+<h3 class="text-lg font-bold text-gray-800 mb-2">セグメント別市場シェア構成比</h3>
+<p class="text-xs text-gray-400 mb-6">2025年実績ベースの構成比率</p>
+<div class="flex-1 relative w-full h-full flex items-center justify-center">
+<canvas id="marketChart"></canvas>
+</div>
+<!-- Source Footnote -->
+<div class="mt-6 pt-4 border-t border-gray-100 flex justify-between items-end">
+<div>
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">出典</p>
+<p class="text-xs text-gray-500">eMarketer, Gartner, 総務省統計 (2025)</p>
+</div>
+<div class="flex gap-2 text-gray-300 text-xl">
+<i class="fa-solid fa-chart-pie"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Chart.js Configuration
+    const ctx = document.getElementById('marketChart').getContext('2d');
+    const marketChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['マーケティング自動化', 'CDP', '計測/分析', 'その他'],
+            datasets: [{
+                data: [40, 30, 20, 10],
+                backgroundColor: [
+                    '#2563eb', // blue-600
+                    '#60a5fa', // blue-400
+                    '#93c5fd', // blue-300
+                    '#e5e7eb'  // gray-200
+                ],
+                borderWidth: 0,
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '65%',
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: {
+                        font: {
+                            family: "'Noto Sans JP', sans-serif",
+                            size: 12
+                        },
+                        boxWidth: 15,
+                        padding: 20,
+                        usePointStyle: true,
+                        pointStyle: 'circle'
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(30, 58, 138, 0.9)',
+                    padding: 12,
+                    titleFont: {
+                        family: "'Noto Sans JP', sans-serif",
+                        size: 14
+                    },
+                    bodyFont: {
+                        family: "'Noto Sans JP', sans-serif",
+                        size: 13
+                    },
+                    callbacks: {
+                        label: function(context) {
+                            return ' ' + context.label + ': ' + context.raw + '%';
+                        }
+                    }
+                }
+            },
+            layout: {
+                padding: {
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

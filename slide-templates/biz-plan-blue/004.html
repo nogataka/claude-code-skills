@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>課題設定：ファミリー層の課題</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .pain-card { background-color: #F8F9FA; border-radius: 8px; padding: 14px 16px; border-left: 4px solid #EF4444; }
+        .persona-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 14px 18px; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-3">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">課題設定：ファミリー層の課題</h1>
+            <p class="body-text text-sm mb-4" style="color: #666;">小学生〜中学生の子どもを持つ30〜40代ファミリー層が直面する問題</p>
+
+            <div class="flex gap-6 flex-grow">
+                <!-- Left: 4 Pain Points -->
+                <div class="w-3/5 flex flex-col gap-3">
+                    <div class="pain-card">
+                        <div class="flex items-start">
+                            <i class="fas fa-yen-sign text-red-400 mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-sm font-bold body-text">宿泊費の高騰</p>
+                                <p class="text-xs" style="color: #666;">インバウンド需要・物価高で宿泊費が約<span class="highlight">1.5倍</span>に上昇。家族4人で1泊あたり<span class="highlight">3〜5万円</span>規模になり、2泊以上の旅行が計画しづらい。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pain-card">
+                        <div class="flex items-start">
+                            <i class="fas fa-volume-up text-red-400 mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-sm font-bold body-text">周囲への気遣いストレス</p>
+                                <p class="text-xs" style="color: #666;">子どもの夜泣きや騒ぎ声に対する他の宿泊客への迷惑を気にし続け、「リラックスしに行ったはずの旅行が気疲れの場」に。特に夜間は隣室への音漏れで親自身が十分に眠れない。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pain-card">
+                        <div class="flex items-start">
+                            <i class="fas fa-wheelchair text-red-400 mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-sm font-bold body-text">三世代旅行時の負担</p>
+                                <p class="text-xs" style="color: #666;">高齢の親を伴う三世代旅行では、バリアフリー・移動距離・トイレ休憩等の配慮事項が増え、プランニングの負担が大きい。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pain-card">
+                        <div class="flex items-start">
+                            <i class="fas fa-star text-red-400 mr-3 mt-1"></i>
+                            <div>
+                                <p class="text-sm font-bold body-text">「特別な体験」とのギャップ</p>
+                                <p class="text-xs" style="color: #666;">年収500〜700万円のファミリー層で、「予算は1.5倍になったが体験の質は変わらない」「もっと"非日常感"のある特別な体験がしたい」という不満が蓄積。子どもと旅行に行ける期間は限られているという焦りも。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Persona + Impact -->
+                <div class="w-2/5 flex flex-col gap-3">
+                    <div class="persona-box">
+                        <h3 class="font-bold text-sm mb-2"><i class="fas fa-user mr-2"></i>メインペルソナ</h3>
+                        <div class="space-y-1 text-xs">
+                            <p><span class="opacity-70">年齢/性別:</span> <strong>35歳 男性</strong></p>
+                            <p><span class="opacity-70">職業:</span> IT企業勤務</p>
+                            <p><span class="opacity-70">世帯年収:</span> <strong>600万円</strong></p>
+                            <p><span class="opacity-70">居住地:</span> 首都圏在住</p>
+                            <p><span class="opacity-70">家族:</span> 妻（パート）、子2人（小2＋年中）</p>
+                            <p><span class="opacity-70">旅行:</span> 年2回（夏・春/冬）</p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-white border-opacity-20 text-xs opacity-90">
+                            <p>「宿泊費が上がって内容はあまり変わらない」「子どものぐずり・騒ぎへの気遣いで、親が休まらない」という不満が積み重なっている。</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <h3 class="font-bold text-xs body-text mb-2"><i class="fas fa-users text-blue-500 mr-1"></i> 影響範囲</h3>
+                        <p class="text-xs" style="color: #666;">首都圏の30〜40代子育て世帯（世帯年収500〜800万円）。推定で<span class="highlight">数万人規模</span>、うちキャンピングカー・車中泊への関心層は<span class="highlight">数千〜1万人</span>規模。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

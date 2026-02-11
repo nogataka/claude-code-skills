@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIとは何か - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f5f5f5; /* Fallback */
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-gradient {
+            height: 180px;
+            background: #ececec;
+            clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 0;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.4;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .company-pill {
+            background-color: white;
+            border: 2px solid #000000;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+            font-family: 'Noto Sans JP', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .nav-arrow {
+            background-color: #000000;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .section-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 4.5rem;
+            line-height: 1.1;
+            letter-spacing: 0.05em;
+        }
+        
+        .body-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex: 1;
+            padding-top: 6rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+        
+        .editable-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header gradient -->
+<div class="header-gradient"></div>
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- Company branding -->
+<div class="absolute top-8 right-10 z-20">
+<div class="company-pill">
+            TECHVANTAGE
+        </div>
+</div>
+<!-- Main content -->
+<div class="content-wrapper">
+<!-- Left side with text -->
+<div class="w-1/2 pr-10 flex flex-col justify-center">
+<h2 class="section-title mb-8">AIとは何か<br/><span style="font-size: 0.5em; font-weight: 700; letter-spacing: 0.1em; color: #333;">INTRODUCTION TO AI</span></h2>
+<div class="space-y-6">
+<div>
+<p class="body-text font-bold mb-1 text-lg">定義</p>
+<p class="body-text">
+                        人間の知的タスクを機械が学習・推論・判断で実行する技術群です。
+                    </p>
+</div>
+<div>
+<p class="body-text font-bold mb-1 text-lg">主要要素</p>
+<p class="body-text">
+                        機械学習、深層学習、自然言語処理、知識表現、強化学習などが含まれます。
+                    </p>
+</div>
+<div>
+<p class="body-text font-bold mb-1 text-lg">価値仮説</p>
+<p class="body-text">
+                        データから洞察を得て、意思決定を行い、成果につなげるという一連の連鎖を高速化・高精度化します。
+                    </p>
+</div>
+</div>
+</div>
+<!-- Right side with illustration -->
+<div class="w-1/2 flex items-center justify-center">
+<div class="relative flex items-center justify-center p-8 bg-white bg-opacity-50 rounded-full border border-gray-100 shadow-sm">
+<!-- Placeholder for AI illustration - using a brain/network style icon concept -->
+<img alt="AI Network Illustration" class="editable-image" src="https://page.gensparksite.com/slides_images/46c007a61bdc9c9c3565bb5c204eaee6.webp"/>
+</div>
+</div>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-10 z-20">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-white text-xl"></i>
+</div>
+</div>
+</div>
+</body>
+</html>

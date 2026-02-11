@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ソリューション詳細比較</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Solution Comparison</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">ソリューション詳細比較</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: Flex Table -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-4">
+            <!-- Table -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 flex-1 flex flex-col">
+                <!-- Header Row -->
+                <div class="flex bg-brand-dark text-white text-xs font-bold">
+                    <div class="w-1/4 px-5 py-3">項目</div>
+                    <div class="w-1/4 px-5 py-3 text-center">AIチャットボット</div>
+                    <div class="w-1/4 px-5 py-3 text-center">データ分析基盤</div>
+                    <div class="w-1/4 px-5 py-3 text-center">ドキュメント生成</div>
+                </div>
+                <!-- Row 1 -->
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">対象業務</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">CS・社内問い合わせ</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">経営企画・営業</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">全部門</div>
+                </div>
+                <!-- Row 2 -->
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">導入難易度</div>
+                    <div class="w-1/4 px-5 py-3 text-center"><span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">低</span></div>
+                    <div class="w-1/4 px-5 py-3 text-center"><span class="inline-block bg-yellow-100 text-yellow-700 text-xs font-bold px-2 py-0.5 rounded">中</span></div>
+                    <div class="w-1/4 px-5 py-3 text-center"><span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded">低</span></div>
+                </div>
+                <!-- Row 3 -->
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">期待効果</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">応答時間<span class="font-bold text-brand-dark font-lato"> 90%</span>削減</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">分析速度<span class="font-bold text-brand-dark font-lato"> 10x</span>向上</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">作成時間<span class="font-bold text-brand-dark font-lato"> 80%</span>削減</div>
+                </div>
+                <!-- Row 4 -->
+                <div class="flex text-sm border-b border-gray-100">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">投資額</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center font-lato">¥1,500万</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center font-lato">¥2,000万</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center font-lato">¥1,300万</div>
+                </div>
+                <!-- Row 5 -->
+                <div class="flex text-sm">
+                    <div class="w-1/4 px-5 py-3 font-bold text-brand-dark bg-gray-50">導入時期</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">Phase 1-2（M1-M3）</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">Phase 2-3（M2-M4）</div>
+                    <div class="w-1/4 px-5 py-3 text-gray-600 text-center">Phase 3-4（M3-M6）</div>
+                </div>
+            </div>
+
+            <!-- Priority Note -->
+            <div class="bg-yellow-50 rounded-xl p-4 flex items-center">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white mr-4">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-bold text-brand-dark">推奨導入順序</p>
+                    <p class="text-xs text-gray-500">チャットボット（即効性が高い）→ データ分析基盤（経営判断を加速）→ ドキュメント生成（全社横展開）</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">09</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

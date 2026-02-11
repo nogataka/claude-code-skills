@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ソリューション概要</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-forest-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Solution Overview</p>
+                    <h1 class="text-3xl font-bold text-forest-900 tracking-tight">ソリューション概要</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-forest-900 opacity-50">
+                <i class="fas fa-seedling text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-6">
+            <!-- Top: 3 Service Pillars -->
+            <div class="grid grid-cols-3 gap-5">
+                <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-forest-accent flex flex-col">
+                    <div class="text-forest-accent text-3xl mb-3"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-2">グリーン調達マーケットプレイス</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed flex-grow">環境認証取得済みの商品・サービスを一元検索・比較・発注。サプライヤーの環境スコアを自動算出。</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-forest-light flex flex-col">
+                    <div class="text-forest-light text-3xl mb-3"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-2">CO2可視化ダッシュボード</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed flex-grow">Scope1〜3の排出量をリアルタイム可視化。ESGレポートの自動生成機能で報告業務を80%削減。</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-forest-900 flex flex-col">
+                    <div class="text-forest-900 text-3xl mb-3"><i class="fas fa-robot"></i></div>
+                    <h3 class="font-bold text-gray-800 mb-2">AIサプライチェーン最適化</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed flex-grow">AIが最適な調達先を提案。コスト削減と環境負荷低減の両立シミュレーションを提供。</p>
+                </div>
+            </div>
+
+            <!-- Bottom: User Flow -->
+            <div class="bg-forest-900 rounded-xl p-6 flex items-center relative overflow-hidden flex-1">
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-forest-accent rounded-full opacity-10" style="filter: blur(40px);"></div>
+                <div class="w-1/4 relative z-10 border-r border-green-800 pr-6">
+                    <h3 class="text-forest-light font-bold text-lg mb-1 font-inter">User Flow</h3>
+                    <p class="text-gray-400 text-sm">導入から効果実感までのシームレスな体験フロー</p>
+                </div>
+                <div class="w-3/4 flex justify-around items-center relative z-10 pl-6">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-forest-light mb-2 border border-green-700">
+                            <i class="fas fa-user-plus text-lg"></i>
+                        </div>
+                        <p class="text-xs font-bold text-white">登録</p>
+                        <p class="text-xs text-gray-400 mt-1">フリーミアム開始</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-green-700"></i>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-forest-light mb-2 border border-green-700">
+                            <i class="fas fa-link text-lg"></i>
+                        </div>
+                        <p class="text-xs font-bold text-white">連携</p>
+                        <p class="text-xs text-gray-400 mt-1">調達データ接続</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-green-700"></i>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-forest-light mb-2 border border-green-700">
+                            <i class="fas fa-eye text-lg"></i>
+                        </div>
+                        <p class="text-xs font-bold text-white">可視化</p>
+                        <p class="text-xs text-gray-400 mt-1">排出量レポート</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-green-700"></i>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-forest-light mb-2 border border-green-700">
+                            <i class="fas fa-lightbulb text-lg"></i>
+                        </div>
+                        <p class="text-xs font-bold text-white">最適化</p>
+                        <p class="text-xs text-gray-400 mt-1">AI提案</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-green-700"></i>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-forest-light bg-opacity-30 rounded-full flex items-center justify-center text-white mb-2 border border-forest-light">
+                            <i class="fas fa-trophy text-lg"></i>
+                        </div>
+                        <p class="text-xs font-bold text-white">成果</p>
+                        <p class="text-xs text-gray-400 mt-1">削減達成</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">GreenField株式会社 - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-forest-accent font-inter">10</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

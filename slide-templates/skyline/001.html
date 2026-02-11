@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>カバー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col items-center justify-center bg-white">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-brand-accent"></div>
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand-accent opacity-5 -z-10"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-brand-warm opacity-5 -z-10"></div>
+        <div class="absolute bottom-20 right-20 w-48 h-48 rounded-full border-2 border-brand-accent opacity-10"></div>
+
+        <div class="text-center z-10 relative">
+            <!-- Brand -->
+            <div class="flex items-center justify-center space-x-3 mb-10">
+                <div class="w-10 h-10 bg-brand-accent rounded-lg flex items-center justify-center">
+                    <i class="fas fa-cubes text-white text-lg"></i>
+                </div>
+                <p class="text-sm font-bold text-brand-dark tracking-widest uppercase font-inter">SkyLine Corp.</p>
+            </div>
+
+            <p class="text-sm uppercase tracking-widest text-brand-accent mb-4 font-inter font-bold">Business Strategy 2026</p>
+            <h1 class="text-6xl font-black text-brand-dark mb-6 tracking-tight">次世代ビジネス戦略</h1>
+            <div class="w-24 h-1 bg-brand-accent mx-auto mb-6"></div>
+            <p class="text-xl text-gray-500 font-light">データドリブン経営による持続的成長の実現</p>
+
+            <div class="mt-14 flex items-center justify-center gap-10 text-sm text-gray-400">
+                <div class="flex items-center">
+                    <i class="fas fa-calendar-alt mr-2 text-brand-accent"></i>
+                    <span>2026 / 02 / 09</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-user mr-2 text-brand-accent"></i>
+                    <span>山田 太郎</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-building mr-2 text-brand-accent"></i>
+                    <span>SkyLine Corp.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

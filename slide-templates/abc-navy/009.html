@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .text-navy-900 { color: #0F2027; }
+        .text-navy-primary { color: #203A43; }
+        .bg-navy-accent { background-color: #2C5364; }
+        .text-navy-accent { color: #2C5364; }
+        .text-accent-gold { color: #C5A065; }
+        .bg-accent-gold { background-color: #C5A065; }
+        .border-navy-accent { border-color: #2C5364; }
+        
+        .mockup-shadow {
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Product Overview</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">製品概要</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 overflow-hidden">
+<div class="flex h-full items-center">
+<!-- Left Column: Text Content (40%) -->
+<div class="w-2/5 pr-12 flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-navy-primary mb-4">統合型ビジネスプラットフォーム</h2>
+<p class="text-gray-600 leading-relaxed">
+                            断片化した業務データを一元管理し、意思決定のスピードと質を劇的に向上させる次世代のSaaSソリューションです。
+                        </p>
+</div>
+<div class="space-y-6">
+<!-- Feature 1 -->
+<div class="flex items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-navy-accent mr-4">
+<i class="fas fa-cubes text-xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-navy-900 mb-1">オールインワン構成</h3>
+<p class="text-sm text-gray-500 leading-relaxed">
+                                    CRM、MA、BI機能を単一プラットフォームで提供。データ連携の手間をゼロに。
+                                </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-accent-gold mr-4">
+<i class="fas fa-puzzle-piece text-xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-navy-900 mb-1">柔軟な拡張性</h3>
+<p class="text-sm text-gray-500 leading-relaxed">
+                                    ノーコードでの機能追加や、豊富なAPIによる外部ツール連携が可能。
+                                </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center text-green-600 mr-4">
+<i class="fas fa-shield-alt text-xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-navy-900 mb-1">エンタープライズ品質</h3>
+<p class="text-sm text-gray-500 leading-relaxed">
+                                    ISO27001準拠の堅牢なセキュリティと、SLA 99.9%の安定稼働を保証。
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Image (60%) -->
+<div class="w-3/5 h-full flex items-center justify-center relative pl-4">
+<!-- Background Decoration -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-5/6 bg-gray-100 rounded-2xl -z-10 rotate-3"></div>
+<!-- Main Image Container -->
+<div class="relative w-full rounded-xl overflow-hidden mockup-shadow bg-white border border-gray-200">
+<!-- Browser Header Mockup -->
+<div class="h-8 bg-gray-100 border-b border-gray-200 flex items-center px-4 space-x-2">
+<div class="w-3 h-3 rounded-full bg-red-400"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+<div class="w-3 h-3 rounded-full bg-green-400"></div>
+<div class="ml-4 flex-1 h-5 bg-white rounded-md border border-gray-200"></div>
+</div>
+<!-- Image -->
+<div class="relative h-96 w-full bg-gray-50 overflow-hidden">
+<img alt="Dashboard UI" class="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-700" src="https://page.gensparksite.com/slides_images/bb616ec00ac240da61689286e6709fc5.webp"/>
+</div>
+<!-- Floating Badge -->
+<div class="absolute bottom-6 left-6 bg-white px-4 py-2 rounded-lg shadow-lg border-l-4 border-accent-gold flex items-center">
+<div class="text-center mr-3">
+<p class="text-xs text-gray-400 uppercase font-bold">User Rating</p>
+<p class="text-lg font-bold text-navy-900">4.8<span class="text-xs text-gray-400">/5.0</span></p>
+</div>
+<div class="flex text-yellow-400 text-xs">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">09</span>
+</div>
+</div>
+</div>
+</body>
+</html>

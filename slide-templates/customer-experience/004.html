@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Understanding Customer Expectations</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=M+PLUS+1p:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 15px 40px;
+            color: #1E3A8A;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+            font-family: 'M PLUS 1p', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 60px);
+            padding: 40px;
+        }
+        
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-right: 40px;
+        }
+        
+        .right-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 4.8rem;
+            line-height: 1.1;
+            color: #1E3A8A;
+            margin-bottom: 40px;
+        }
+        
+        .subtitle {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.8rem;
+            color: #1E3A8A;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .description {
+            font-family: 'M PLUS 1p', sans-serif;
+            font-size: 1rem;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        
+        .priority-circle {
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: absolute;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .priority-number {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .priority-text {
+            font-family: 'M PLUS 1p', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            max-width: 80%;
+            font-weight: bold;
+        }
+        
+        .priority-1 {
+            width: 180px;
+            height: 180px;
+            background-color: #1E3A8A;
+            top: 5%;
+            right: 20%;
+        }
+        
+        .priority-2 {
+            width: 200px;
+            height: 200px;
+            background-color: #1E40AF;
+            bottom: 15%;
+            left: 5%;
+        }
+        
+        .priority-3 {
+            width: 180px;
+            height: 180px;
+            background-color: #3B82F6;
+            bottom: 10%;
+            right: 5%;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(191, 219, 254, 0.3);
+            z-index: 0;
+        }
+        
+        .circle-1 {
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">顧客期待の<br/>理解</h1>
+<h2 class="subtitle">トップ3の<br/>顧客優先事項</h2>
+<p class="description">
+                    顧客はシームレスな対話、パーソナライズされたサービス、そして迅速な解決を期待しています。これらの期待を特定することで、企業はアプローチを最適化できます。
+                </p>
+</div>
+<div class="right-content">
+<div class="priority-circle priority-1">
+<div class="priority-number">01.</div>
+<div class="priority-text">スピードと<br/>利便性</div>
+</div>
+<div class="priority-circle priority-2">
+<div class="priority-number">02.</div>
+<div class="priority-text">パーソナライ<br/>ゼーション</div>
+</div>
+<div class="priority-circle priority-3">
+<div class="priority-number">03.</div>
+<div class="priority-text">チャネル横断の<br/>一貫性</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

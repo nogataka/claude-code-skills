@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>まとめ・Next Steps</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .accent-shape-2 { position: absolute; bottom: -300px; left: -200px; width: 600px; height: 600px; border-radius: 50%; background: rgba(0, 123, 255, 0.03); }
+        .slide-title { font-size: 2.8rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 12px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .summary-card { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 16px 20px; box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); }
+        .action-card { background-color: #F8F9FA; border-left: 4px solid #F59E0B; padding: 10px 14px; border-radius: 0 4px 4px 0; }
+        .funding-ask { background-color: #FEF3C7; border: 2px solid #F59E0B; border-radius: 8px; padding: 14px 18px; }
+        .metric-pill { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 12px; font-size: 0.8rem; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="accent-shape-2"></div>
+        <div class="mb-3">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">まとめ・Next Steps</h1>
+
+            <div class="flex gap-6 flex-grow">
+                <!-- Left: Summary -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <div class="summary-card">
+                        <h3 class="font-bold text-base mb-3"><i class="fas fa-bullseye mr-2"></i>事業の要約</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-start">
+                                <span class="metric-pill mr-2"><i class="fas fa-eye"></i> ビジョン</span>
+                                <span class="text-xs opacity-90">家族とペットの「マイペースな旅」の新しいスタンダードを創る</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="metric-pill mr-2"><i class="fas fa-chart-pie"></i> 市場</span>
+                                <span class="text-xs opacity-90">TAM 250億円、SOM 2.5億円、年5%成長の追い風市場</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="metric-pill mr-2"><i class="fas fa-trophy"></i> 優位性</span>
+                                <span class="text-xs opacity-90">ペットファースト×AIコンシェルジュ×フルデジタルUX</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="metric-pill mr-2"><i class="fas fa-coins"></i> 財務</span>
+                                <span class="text-xs opacity-90">BEP月1.9件、粗利率81.4%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-card" style="background: linear-gradient(135deg, #0056b3, #003d80);">
+                        <h3 class="font-bold text-sm mb-2"><i class="fas fa-chart-line mr-2"></i>3年後の姿</h3>
+                        <div class="flex gap-4 text-center">
+                            <div class="flex-1">
+                                <p class="text-xs opacity-70">車両</p>
+                                <p class="text-2xl font-black">2台</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs opacity-70">年間予約</p>
+                                <p class="text-2xl font-black">120-150件</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs opacity-70">年間売上</p>
+                                <p class="text-2xl font-black">800-1,200万</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-xs opacity-70">リピート率</p>
+                                <p class="text-2xl font-black">30%+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Actions + Funding -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <h3 class="font-bold text-sm body-text"><i class="fas fa-tasks text-blue-500 mr-2"></i>1年目の重点アクション</h3>
+
+                    <div class="action-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-check text-yellow-500 mr-1"></i> 車両取得＆ペット装備完了</p>
+                        <p class="text-xs" style="color: #666;">中古キャンピングカー購入、ペットファースト仕様にカスタマイズ</p>
+                    </div>
+
+                    <div class="action-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-check text-yellow-500 mr-1"></i> デジタル基盤構築</p>
+                        <p class="text-xs" style="color: #666;">Webサイト＋予約/決済SaaS＋AIコンシェルジュ（半手動）＋動画マニュアル</p>
+                    </div>
+
+                    <div class="action-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-check text-yellow-500 mr-1"></i> チャネル3本で集客開始</p>
+                        <p class="text-xs" style="color: #666;">Googleマップ＋OTA（1-2サイト）＋Instagram。月3件以上の予約を安定化</p>
+                    </div>
+
+                    <div class="action-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-check text-yellow-500 mr-1"></i> レビュー＆実績の蓄積</p>
+                        <p class="text-xs" style="color: #666;">年間15件以上のGoogleレビュー（★4.6+）、リピート率20%以上を達成</p>
+                    </div>
+
+                    <div class="funding-ask mt-auto">
+                        <h3 class="font-bold text-sm body-text mb-2"><i class="fas fa-hand-holding-usd text-yellow-600 mr-2"></i>資金調達のお願い</h3>
+                        <div class="flex gap-4 text-xs">
+                            <div class="flex-1">
+                                <p style="color: #666;">調達額</p>
+                                <p class="text-lg font-black highlight">1,000万円</p>
+                            </div>
+                            <div class="flex-1">
+                                <p style="color: #666;">用途</p>
+                                <p class="font-bold body-text">車両取得＋運転資金</p>
+                            </div>
+                            <div class="flex-1">
+                                <p style="color: #666;">返済</p>
+                                <p class="font-bold body-text">月7万円 / 15年</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

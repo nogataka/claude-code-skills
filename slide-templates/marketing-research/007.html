@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Corporate Marketing Research - Competitor Analysis</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f4f6;
+    }
+    .slide-container {
+        width: 1280px;
+        height: 720px;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .competitor-card {
+        transition: all 0.3s ease;
+    }
+    .our-card {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border: 2px solid #2563eb;
+        transform: scale(1.02);
+        z-index: 10;
+    }
+    .competitor-x-card {
+        border: 1px solid #e5e7eb;
+        background-color: #f9fafb;
+    }
+    /* Pattern background for visual interest */
+    .bg-grid-pattern {
+        background-image: linear-gradient(to right, #f3f4f6 1px, transparent 1px),
+                          linear-gradient(to bottom, #f3f4f6 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="z-10 px-16 pt-12 pb-6 flex justify-between items-end border-b border-gray-100 bg-white shadow-sm">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="h-1 w-8 bg-blue-600"></div>
+<p class="text-blue-600 font-bold tracking-widest text-xs uppercase">Competitive Landscape</p>
+</div>
+<h1 class="text-4xl font-black text-gray-900 tracking-tight">競合分析（比較）</h1>
+</div>
+<div class="text-right">
+<p class="text-gray-400 text-sm font-medium">Research Report 2026</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 p-12 bg-white bg-grid-pattern flex items-center justify-center overflow-hidden relative">
+<!-- Center Divider & VS Badge -->
+<div class="absolute top-12 bottom-12 left-1/2 w-px bg-gray-200 z-0 border-l border-dashed border-gray-300"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-white rounded-full border-2 border-gray-100 flex items-center justify-center z-20 text-gray-400 font-black text-sm shadow-md">VS</div>
+<div class="w-full max-w-6xl grid grid-cols-2 gap-16 relative z-10 h-full">
+<!-- Our Company Column -->
+<div class="competitor-card our-card bg-white rounded-2xl flex flex-col h-full overflow-hidden">
+<!-- Card Header -->
+<div class="p-5 bg-blue-600 text-white text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-white opacity-10 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
+<div class="relative z-10">
+<p class="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">Our Solution</p>
+<h2 class="text-2xl font-black tracking-tight">ACME株式会社</h2>
+</div>
+<div class="absolute top-3 left-3 bg-yellow-400 text-blue-900 text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">RECOMMENDED</div>
+</div>
+<!-- Comparison Items Container -->
+<div class="flex-1 flex flex-col p-6 space-y-3">
+<!-- Item 1: Price -->
+<div class="flex-1 bg-blue-50 rounded-lg px-5 py-3 border border-blue-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-blue-500 uppercase mb-1 tracking-wider">価格帯</p>
+<div class="flex items-center justify-between">
+<span class="text-lg font-bold text-gray-800">中 〜 高</span>
+<div class="flex text-blue-500 text-xs gap-0.5">
+<i class="fa-solid fa-dollar-sign"></i><i class="fa-solid fa-dollar-sign"></i><i class="fa-solid fa-dollar-sign"></i>
+</div>
+</div>
+</div>
+<!-- Item 2: Features -->
+<div class="flex-1 bg-blue-50 rounded-lg px-5 py-3 border border-blue-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-blue-500 uppercase mb-1 tracking-wider">機能幅</p>
+<div class="flex justify-between items-center">
+<p class="text-lg font-bold text-gray-800">広い <span class="text-xs font-normal text-gray-500">(All-in-One)</span></p>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="px-2 py-0.5 bg-white rounded text-[10px] font-bold text-blue-700 shadow-sm border border-blue-100">CDP</span>
+<span class="px-2 py-0.5 bg-white rounded text-[10px] font-bold text-blue-700 shadow-sm border border-blue-100">分析</span>
+<span class="px-2 py-0.5 bg-white rounded text-[10px] font-bold text-blue-700 shadow-sm border border-blue-100">自動配信</span>
+</div>
+</div>
+<!-- Item 3: Implementation -->
+<div class="flex-1 bg-blue-50 rounded-lg px-5 py-3 border border-blue-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-blue-500 uppercase mb-1 tracking-wider">導入期間</p>
+<div class="flex items-center gap-2">
+<i class="fa-regular fa-clock text-blue-500"></i>
+<span class="text-lg font-bold text-gray-800">4-8週間</span>
+</div>
+</div>
+<!-- Item 4: Strengths -->
+<div class="flex-[1.5] bg-blue-50 rounded-lg px-5 py-3 border border-blue-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-blue-500 uppercase mb-1 tracking-wider"><i class="fa-solid fa-thumbs-up mr-1"></i> 強み</p>
+<p class="text-sm font-bold text-gray-800 leading-snug mb-1">統合度とサポート体制</p>
+<p class="text-xs text-gray-600 leading-relaxed">
+                            データ連携から活用までシームレスに完結。専任CSによる手厚いオンボーディング支援あり。
+                        </p>
+</div>
+<!-- Item 5: Weaknesses -->
+<div class="flex-1 bg-gray-50 rounded-lg px-5 py-3 border border-gray-200 opacity-80 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-gray-500 uppercase mb-1 tracking-wider"><i class="fa-solid fa-triangle-exclamation mr-1"></i> 課題点</p>
+<p class="text-sm font-bold text-gray-700">初期設定の複雑さ</p>
+</div>
+</div>
+</div>
+<!-- Competitor Column -->
+<div class="competitor-card competitor-x-card rounded-2xl flex flex-col h-full transform scale-95 origin-center">
+<!-- Card Header -->
+<div class="p-5 bg-gray-100 text-gray-600 text-center border-b border-gray-200">
+<p class="text-xs font-bold uppercase tracking-widest mb-1 opacity-70">Competitor</p>
+<h2 class="text-2xl font-bold tracking-tight">競合 X社</h2>
+</div>
+<!-- Comparison Items Container -->
+<div class="flex-1 flex flex-col p-6 space-y-3">
+<!-- Item 1: Price -->
+<div class="flex-1 bg-white rounded-lg px-5 py-3 border border-gray-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-gray-400 uppercase mb-1 tracking-wider">価格帯</p>
+<div class="flex items-center justify-between">
+<span class="text-lg font-medium text-gray-700">中</span>
+<div class="flex text-gray-300 text-xs gap-0.5">
+<i class="fa-solid fa-dollar-sign text-gray-400"></i><i class="fa-solid fa-dollar-sign text-gray-400"></i><i class="fa-solid fa-dollar-sign"></i>
+</div>
+</div>
+</div>
+<!-- Item 2: Features -->
+<div class="flex-1 bg-white rounded-lg px-5 py-3 border border-gray-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-gray-400 uppercase mb-1 tracking-wider">機能幅</p>
+<div class="flex justify-between items-center">
+<p class="text-lg font-medium text-gray-700">分析特化</p>
+</div>
+<div class="flex gap-2 mt-2">
+<span class="px-2 py-0.5 bg-gray-50 rounded text-[10px] font-medium text-gray-500 border border-gray-100">高度分析</span>
+<span class="px-2 py-0.5 bg-gray-50 rounded text-[10px] font-medium text-gray-500 border border-gray-100">レポート</span>
+</div>
+</div>
+<!-- Item 3: Implementation -->
+<div class="flex-1 bg-white rounded-lg px-5 py-3 border border-gray-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-gray-400 uppercase mb-1 tracking-wider">導入期間</p>
+<div class="flex items-center gap-2">
+<i class="fa-regular fa-clock text-gray-400"></i>
+<span class="text-lg font-medium text-gray-700">6-10週間</span>
+</div>
+</div>
+<!-- Item 4: Strengths -->
+<div class="flex-[1.5] bg-white rounded-lg px-5 py-3 border border-gray-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-gray-400 uppercase mb-1 tracking-wider"><i class="fa-solid fa-thumbs-up mr-1"></i> 強み</p>
+<p class="text-sm font-bold text-gray-700 leading-snug mb-1">特定業界での深さ</p>
+<p class="text-xs text-gray-500 leading-relaxed">
+                            製造業向けのアナリティクス機能に強みを持つ。
+                        </p>
+</div>
+<!-- Item 5: Weaknesses -->
+<div class="flex-1 bg-white rounded-lg px-5 py-3 border border-gray-100 flex flex-col justify-center">
+<p class="text-[10px] font-bold text-gray-400 uppercase mb-1 tracking-wider"><i class="fa-solid fa-triangle-exclamation mr-1"></i> 課題点</p>
+<p class="text-sm font-bold text-gray-700">拡張性（他ツール連携）</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

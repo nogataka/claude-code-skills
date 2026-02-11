@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Challenges and Ethical Issues in AI - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Saira+Condensed:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background-color: #ececec;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.07) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.4;
+        }
+        
+        .circle-overlay {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(220,220,220,0.7);
+        }
+        
+        .header-text {
+            font-family: 'Saira Condensed', 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 1.1;
+            font-size: 5rem; /* Adjusted for Japanese text fitting */
+            color: #000000;
+        }
+        
+        .body-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #000000;
+        }
+        
+        .borcelle-pill {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #000000;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .nav-arrow {
+            background-color: #ffffff;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+        
+        .challenge-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        
+        .challenge-icon {
+            margin-right: 0.75rem;
+            color: #444;
+            padding-top: 0.25rem;
+        }
+
+        .challenge-title {
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- Circle overlays for depth -->
+<div class="circle-overlay" style="width: 500px; height: 500px; top: 50px; right: 50px; opacity: 0.7;"></div>
+<div class="circle-overlay" style="width: 400px; height: 400px; bottom: -150px; left: -100px; opacity: 0.5;"></div>
+<!-- TechVantage branding -->
+<div class="absolute top-8 left-10">
+<div class="borcelle-pill">
+                TECHVANTAGE
+            </div>
+</div>
+<!-- Main content -->
+<div class="z-10 px-20 pt-20 flex-1 flex flex-col justify-center">
+<h1 class="header-text mb-4">課題と倫理<br/>(RESPONSIBLE AI)</h1>
+<div class="max-w-4xl">
+<p class="body-text mb-2">
+                    AIの社会実装が進む中、技術的な課題だけでなく、倫理的な配慮が不可欠となっています。TechVantage Solutionsは、「Responsible AI（責任あるAI）」の原則に基づき、革新と信頼の両立を目指します。
+                </p>
+<ul class="challenge-list body-text">
+<li class="challenge-item">
+<div class="challenge-icon"><i class="fas fa-user-shield"></i></div>
+<div>
+<span class="challenge-title">プライバシー:</span>
+                        データの最小化、匿名化、同意管理、および監査ログによる個人情報の保護徹底。
+                    </div>
+</li>
+<li class="challenge-item">
+<div class="challenge-icon"><i class="fas fa-balance-scale"></i></div>
+<div>
+<span class="challenge-title">バイアス/公平性:</span>
+                        学習データの偏りを監査し、特定の属性に対する不当な差別を防ぐための是正ループの構築。
+                    </div>
+</li>
+<li class="challenge-item">
+<div class="challenge-icon"><i class="fas fa-search"></i></div>
+<div>
+<span class="challenge-title">説明可能性 (XAI):</span>
+                        ブラックボックス化を防ぎ、AIの判断根拠を可視化・提示することで信頼性を担保。
+                    </div>
+</li>
+<li class="challenge-item">
+<div class="challenge-icon"><i class="fas fa-shield-alt"></i></div>
+<div>
+<span class="challenge-title">セキュリティ:</span>
+                        モデルへの敵対的攻撃や推論時の脆弱性を防御し、サプライチェーン全体での安全性確保。
+                    </div>
+</li>
+<li class="challenge-item">
+<div class="challenge-icon"><i class="fas fa-users-cog"></i></div>
+<div>
+<span class="challenge-title">人材/文化:</span>
+                        AIリテラシー教育によるスキル転換支援と、人とAIが協働する組織文化への変革管理。
+                    </div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-10">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-black text-xl"></i>
+</div>
+</div>
+</div>
+</body>
+</html>

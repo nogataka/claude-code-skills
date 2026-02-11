@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ユーザーペルソナ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .text-navy-900 { color: #0F172A; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">User Persona</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">ユーザーペルソナ</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 3 Persona Cards -->
+        <div class="flex-1 px-16 py-6 grid grid-cols-3 gap-5">
+            <!-- Persona 1: 大企業経営企画 -->
+            <div class="bg-navy-800 rounded-2xl border border-blue-900 flex flex-col overflow-hidden">
+                <div class="bg-accent-orange p-4 flex items-center">
+                    <div class="w-14 h-14 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-white text-2xl mr-4">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">鈴木 部長</h3>
+                        <p class="text-xs text-white opacity-80">大企業 / 経営企画部</p>
+                    </div>
+                </div>
+                <div class="p-5 flex-1 flex flex-col gap-3">
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-navy-700 rounded-lg p-2 text-center">
+                            <p class="text-gray-500 mb-0.5">年齢</p>
+                            <p class="text-white font-bold font-inter">48歳</p>
+                        </div>
+                        <div class="bg-navy-700 rounded-lg p-2 text-center">
+                            <p class="text-gray-500 mb-0.5">従業員数</p>
+                            <p class="text-white font-bold font-inter">3,000名</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-xs text-accent-orange font-bold mb-1"><i class="fas fa-crosshairs mr-1"></i>目標</p>
+                        <p class="text-xs text-gray-400">全社DX推進のKPI達成。経営層へデータに基づいた意思決定を提供する。</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-red-400 font-bold mb-1"><i class="fas fa-frown mr-1"></i>課題</p>
+                        <p class="text-xs text-gray-400">部門間データの分断。BIツールが複数乱立し統合コストが膨大。</p>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-blue-900">
+                        <p class="text-xs text-gray-500 mb-1">予算感</p>
+                        <p class="text-sm font-bold text-accent-orange font-inter">¥20-60万/月</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Persona 2: SaaS企業CTO -->
+            <div class="bg-navy-800 rounded-2xl border border-blue-900 flex flex-col overflow-hidden">
+                <div class="bg-accent-blue p-4 flex items-center">
+                    <div class="w-14 h-14 rounded-full bg-white bg-opacity-20 flex items-center justify-center text-white text-2xl mr-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">田中 CTO</h3>
+                        <p class="text-xs text-white opacity-80">SaaS企業 / 技術責任者</p>
+                    </div>
+                </div>
+                <div class="p-5 flex-1 flex flex-col gap-3">
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-navy-700 rounded-lg p-2 text-center">
+                            <p class="text-gray-500 mb-0.5">年齢</p>
+                            <p class="text-white font-bold font-inter">35歳</p>
+                        </div>
+                        <div class="bg-navy-700 rounded-lg p-2 text-center">
+                            <p class="text-gray-500 mb-0.5">従業員数</p>
+                            <p class="text-white font-bold font-inter">80名</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-xs text-accent-blue font-bold mb-1"><i class="fas fa-crosshairs mr-1"></i>目標</p>
+                        <p class="text-xs text-gray-400">少人数でスケーラブルな基盤構築。エンジニアリソースを機能開発に集中させたい。</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-red-400 font-bold mb-1"><i class="fas fa-frown mr-1"></i>課題</p>
+                        <p class="text-xs text-gray-400">自社でデータ基盤を構築・運用するリソースが不足。技術的負債の蓄積。</p>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-blue-900">
+                        <p class="text-xs text-gray-500 mb-1">予算感</p>
+                        <p class="text-sm font-bold text-accent-blue font-inter">¥5-20万/月</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Persona 3: マーケ責任者 -->
+            <div class="bg-navy-800 rounded-2xl border border-blue-900 flex flex-col overflow-hidden">
+                <div class="bg-navy-700 p-4 flex items-center">
+                    <div class="w-14 h-14 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-white text-2xl mr-4">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">佐藤 マネージャー</h3>
+                        <p class="text-xs text-gray-400">中堅企業 / マーケティング部</p>
+                    </div>
+                </div>
+                <div class="p-5 flex-1 flex flex-col gap-3">
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-navy-700 rounded-lg p-2 text-center">
+                            <p class="text-gray-500 mb-0.5">年齢</p>
+                            <p class="text-white font-bold font-inter">32歳</p>
+                        </div>
+                        <div class="bg-navy-700 rounded-lg p-2 text-center">
+                            <p class="text-gray-500 mb-0.5">従業員数</p>
+                            <p class="text-white font-bold font-inter">200名</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-300 font-bold mb-1"><i class="fas fa-crosshairs mr-1"></i>目標</p>
+                        <p class="text-xs text-gray-400">マーケ施策のROI可視化。チャーン率低減と顧客エンゲージメント強化。</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-red-400 font-bold mb-1"><i class="fas fa-frown mr-1"></i>課題</p>
+                        <p class="text-xs text-gray-400">施策の効果測定が属人的。顧客データがCRM・MAツールに分散している。</p>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-blue-900">
+                        <p class="text-xs text-gray-500 mb-1">予算感</p>
+                        <p class="text-sm font-bold text-gray-300 font-inter">¥5-10万/月</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">09</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Impact of Technology on CX</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&amp;family=M+PLUS+1p:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 15px 40px;
+            color: #1E3A8A;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 60px);
+            padding: 40px;
+        }
+        
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+        }
+        
+        .right-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 4.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #1E3A8A;
+            margin-bottom: 40px;
+        }
+        
+        .subtitle {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.8rem;
+            color: #1E3A8A;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #6B7280;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 580px;
+        }
+        
+        .tech-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            display: flex;
+            width: 32%;
+            flex-direction: column;
+            padding-left: 15px;
+            border-left: 3px solid #1E3A8A;
+        }
+        
+        .tech-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        
+        .arch-visual {
+            width: 550px;
+            height: 300px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .arch {
+            position: absolute;
+            border-radius: 300px 300px 0 0;
+            transform: rotate(180deg);
+        }
+        
+        .arch-1 {
+            width: 180px;
+            height: 300px;
+            background-color: #1E40AF;
+            left: 0;
+            z-index: 3;
+        }
+        
+        .arch-2 {
+            width: 200px;
+            height: 300px;
+            background-color: #3B82F6;
+            left: 175px;
+            z-index: 2;
+        }
+        
+        .arch-3 {
+            width: 220px;
+            height: 300px;
+            background-color: #BFDBFE;
+            left: 350px;
+            z-index: 1;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(30, 58, 138, 0.1);
+            z-index: -1;
+        }
+        
+        .circle-1 {
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">テクノロジーが<br/>CXに与える影響</h1>
+<h2 class="subtitle">CXテクノロジーの活用例:</h2>
+<p class="description">
+                    AI、チャットボット、および自動化技術は、業務効率を大幅に向上させると同時に、顧客サポート体験をより迅速で豊かなものへと変革します。
+                </p>
+<div class="tech-container">
+<div class="tech-item">
+<div class="tech-title">24時間365日対応の<br/>AIチャットボット</div>
+</div>
+<div class="tech-item">
+<div class="tech-title">個別化を実現する<br/>CRMシステム</div>
+</div>
+<div class="tech-item">
+<div class="tech-title">行動インサイトを導く<br/>データ分析</div>
+</div>
+</div>
+</div>
+<div class="right-content">
+<div class="arch-visual">
+<div class="arch arch-1"></div>
+<div class="arch arch-2"></div>
+<div class="arch arch-3"></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

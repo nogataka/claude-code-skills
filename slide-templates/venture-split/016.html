@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Investment Breakdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container p-10">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
+            <div>
+                <div class="flex items-center space-x-2 text-indigo-600 mb-1">
+                    <i class="fa-solid fa-coins"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Financial Plan</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900">初期投資と資金調達</h1>
+                <p class="text-sm text-gray-500 mt-1">堅実な資金計画と無理のない返済スケジュール</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">13</span>
+            </div>
+        </div>
+        <!-- Main Content Grid -->
+        <div class="flex-1 grid grid-cols-12 gap-8">
+            <!-- Left Column: Total Investment & Funding Sources (5 cols) -->
+            <div class="col-span-5 flex flex-col space-y-6">
+                <!-- Total Investment Card -->
+                <div class="bg-indigo-900 rounded-2xl p-6 text-white relative overflow-hidden card-shadow">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full -mr-10 -mt-10"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 opacity-20 rounded-full -ml-10 -mb-10">
+                    </div>
+                    <p class="text-indigo-200 text-xs font-bold uppercase tracking-wider mb-2">Total Initial Investment
+                    </p>
+                    <div class="flex items-baseline space-x-2 mb-4">
+                        <span class="text-5xl font-black">995</span>
+                        <span class="text-xl font-medium">万円</span>
+                    </div>
+                    <div class="w-full bg-indigo-800 rounded-full h-2 mb-4 overflow-hidden">
+                        <div class="bg-green-400 h-full w-[20%] float-left"></div>
+                        <div class="bg-indigo-400 h-full w-[80%] float-left"></div>
+                    </div>
+                    <p class="text-xs text-indigo-200 leading-relaxed">
+                        中古キャンピングカー車両取得を主軸とした投資計画。<br />Web/システム構築は内製化によりコストゼロを実現。
+                    </p>
+                </div>
+                <!-- Funding Sources Chart -->
+                <div class="bg-white rounded-2xl border border-gray-200 p-6 flex-1 flex flex-col card-shadow">
+                    <h3 class="text-sm font-bold text-gray-700 mb-4 border-l-4 border-indigo-500 pl-3">資金調達内訳 (Sources)
+                    </h3>
+                    <div class="flex-1 relative">
+                        <div class="w-full h-full" id="fundingChart"></div>
+                        <!-- Center Text Overlay -->
+                        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                            <span class="text-xs text-gray-400 font-bold">調達合計</span>
+                            <span class="text-xl font-bold text-gray-800">995万</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 space-y-3">
+                        <div class="flex justify-between items-center text-sm">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-indigo-500 mr-2"></span>
+                                <span class="text-gray-600">創業融資 (公庫等)</span>
+                            </div>
+                            <span class="font-bold text-indigo-700">795万円</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-green-400 mr-2"></span>
+                                <span class="text-gray-600">自己資金</span>
+                            </div>
+                            <span class="font-bold text-green-600">200万円</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Use of Funds & Monthly Cost (7 cols) -->
+            <div class="col-span-7 flex flex-col space-y-6">
+                <!-- Use of Funds Breakdown -->
+                <div class="bg-white rounded-2xl border border-gray-200 p-6 card-shadow flex-1">
+                    <h3 class="text-sm font-bold text-gray-700 mb-6 border-l-4 border-teal-500 pl-3">投資使途内訳 (Uses)</h3>
+                    <div class="space-y-5">
+                        <!-- Item 1 -->
+                        <div class="relative">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-bold text-gray-700">車両取得・改装費</span>
+                                <span class="text-sm font-bold text-gray-900">850万円</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-3">
+                                <div class="bg-teal-500 h-3 rounded-full" style="width: 85.4%"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-400 mt-1">車両本体、ペット仕様への内装カスタム、基本整備費</p>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="relative">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-bold text-gray-700">諸経費・保険初期</span>
+                                <span class="text-sm font-bold text-gray-900">85万円</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-3">
+                                <div class="bg-teal-400 h-3 rounded-full" style="width: 8.5%"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-400 mt-1">登録諸費用、自賠責・任意保険初期費用、税金</p>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="relative">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-bold text-gray-700">予備運転資金・その他</span>
+                                <span class="text-sm font-bold text-gray-900">60万円</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-3">
+                                <div class="bg-teal-300 h-3 rounded-full" style="width: 6.1%"></div>
+                            </div>
+                            <p class="text-[10px] text-gray-400 mt-1">初期備品購入、緊急予備費（マーケティングは内製により0円）</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Monthly Running Cost -->
+                <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 flex items-center justify-between">
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-700 mb-1 flex items-center">
+                            <i class="fa-solid fa-chart-line text-orange-500 mr-2"></i>
+                            月間固定費 (Burn Rate)
+                        </h3>
+                        <p class="text-xs text-gray-500">損益分岐点を低く抑えるための設計</p>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-right">
+                            <p class="text-[10px] text-gray-400 uppercase font-bold">上限設定</p>
+                            <p class="text-3xl font-black text-gray-800">14.5<span
+                                    class="text-sm font-normal text-gray-500 ml-1">万円/月</span></p>
+                        </div>
+                        <div class="h-10 w-px bg-gray-300"></div>
+                        <div class="space-y-1">
+                            <div class="flex items-center text-xs">
+                                <span class="w-2 h-2 rounded-full bg-orange-500 mr-2"></span>
+                                <span class="text-gray-600 w-16">返済</span>
+                                <span class="font-bold text-gray-800">9.5万円</span>
+                            </div>
+                            <div class="flex items-center text-xs">
+                                <span class="w-2 h-2 rounded-full bg-gray-400 mr-2"></span>
+                                <span class="text-gray-600 w-16">運営費</span>
+                                <span class="font-bold text-gray-800">5.0万円</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Note -->
+                <div class="flex items-start space-x-2 bg-yellow-50 p-3 rounded-lg border border-yellow-100">
+                    <i class="fa-solid fa-lightbulb text-yellow-500 mt-0.5 text-xs"></i>
+                    <p class="text-[10px] text-yellow-800 leading-snug">
+                        <strong>返済計画:</strong> 期間7〜8年を想定し、月々のキャッシュアウトを10万円以下に抑制。<br />
+                        運営費には駐車場・保険・システム利用料を含み、変動費（清掃等）は別途売上連動とする。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Funding Sources Pie Chart
+        const chartDom = document.getElementById('fundingChart');
+        const myChart = echarts.init(chartDom);
+        const option = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                show: false
+            },
+            color: ['#6366f1', '#4ade80'], // indigo-500, green-400
+            series: [
+                {
+                    name: 'Funding Source',
+                    type: 'pie',
+                    radius: ['60%', '80%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 5,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                            show: false
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        { value: 795, name: '創業融資' },
+                        { value: 200, name: '自己資金' }
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+
+        // Resize handler
+        window.addEventListener('resize', function () {
+            myChart.resize();
+        });
+    </script>
+</body>
+
+</html>

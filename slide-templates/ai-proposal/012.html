@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>投資計画・ROI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Investment & ROI</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">投資計画・ROI</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 2 Columns -->
+        <div class="flex-1 px-16 py-6 flex gap-8">
+            <!-- Left: Cost Breakdown Bar Chart -->
+            <div class="w-1/2 flex flex-col">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-lato mb-4">Investment Breakdown</h3>
+                <!-- Total -->
+                <div class="bg-brand-dark rounded-xl p-5 text-white text-center shadow-md mb-4">
+                    <p class="text-xs opacity-80 mb-1">初期投資総額</p>
+                    <p class="text-4xl font-black font-lato">¥4,800<span class="text-lg font-normal ml-1">万</span></p>
+                </div>
+                <!-- Bar Chart -->
+                <div class="space-y-3 flex-1">
+                    <div class="flex items-center gap-3">
+                        <p class="text-xs text-gray-500 w-20 text-right font-lato">AI開発</p>
+                        <div class="flex-1 bg-gray-100 rounded-full h-7 relative overflow-hidden">
+                            <div class="bg-brand-accent h-7 rounded-full flex items-center justify-end pr-3" style="width: 42%;">
+                                <span class="text-xs font-bold text-white font-lato">¥2,000万</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p class="text-xs text-gray-500 w-20 text-right font-lato">インフラ</p>
+                        <div class="flex-1 bg-gray-100 rounded-full h-7 relative overflow-hidden">
+                            <div class="bg-brand-sub h-7 rounded-full flex items-center justify-end pr-3" style="width: 25%;">
+                                <span class="text-xs font-bold text-white font-lato">¥1,200万</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p class="text-xs text-gray-500 w-20 text-right font-lato">導入支援</p>
+                        <div class="flex-1 bg-gray-100 rounded-full h-7 relative overflow-hidden">
+                            <div class="bg-brand-sub h-7 rounded-full flex items-center justify-end pr-3" style="width: 21%;">
+                                <span class="text-xs font-bold text-white font-lato">¥1,000万</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <p class="text-xs text-gray-500 w-20 text-right font-lato">教育</p>
+                        <div class="flex-1 bg-gray-100 rounded-full h-7 relative overflow-hidden">
+                            <div class="bg-gray-400 h-7 rounded-full flex items-center justify-end pr-3" style="width: 13%;">
+                                <span class="text-xs font-bold text-white font-lato">¥600万</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: ROI -->
+            <div class="w-1/2 flex flex-col">
+                <h3 class="text-sm font-bold text-brand-sub uppercase tracking-wider font-lato mb-4">Expected ROI</h3>
+                <!-- Donut -->
+                <div class="flex items-center gap-6 mb-5">
+                    <div class="w-32 h-32 rounded-full relative flex-shrink-0" style="background: conic-gradient(#C9A961 0% 35%, #1C3D5A 35% 60%, #94A3B8 60% 100%);">
+                        <div class="absolute inset-4 bg-white rounded-full flex items-center justify-center">
+                            <p class="text-sm font-black text-brand-dark font-lato">¥8,000<span class="text-xs font-normal block">万/年</span></p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-brand-accent"></div>
+                            <p class="text-sm text-gray-600">人件費削減 <span class="font-bold font-lato">35%</span></p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-brand-sub"></div>
+                            <p class="text-sm text-gray-600">売上向上 <span class="font-bold font-lato">25%</span></p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-gray-400"></div>
+                            <p class="text-sm text-gray-600">その他効率化 <span class="font-bold font-lato">40%</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Key Metrics -->
+                <div class="space-y-3">
+                    <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm relative overflow-hidden">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-accent"></div>
+                        <div class="flex items-center justify-between pl-3">
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider font-lato">投資回収期間</p>
+                                <p class="text-lg font-bold text-brand-dark font-lato">7.2<span class="text-xs font-normal text-gray-500 ml-1">ヶ月</span></p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-brand-accent">
+                                <i class="fas fa-hourglass-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm relative overflow-hidden">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-brand-sub"></div>
+                        <div class="flex items-center justify-between pl-3">
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider font-lato">3年間ROI</p>
+                                <p class="text-lg font-bold text-brand-dark font-lato">340<span class="text-xs font-normal text-gray-500 ml-1">%</span></p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-brand-sub">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">12</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

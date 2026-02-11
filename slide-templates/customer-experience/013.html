@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>お問い合わせ</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #1E3A8A;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: 'Noto Sans JP', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .subtitle {
+            padding: 10px 40px;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: 'Noto Sans JP', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 112px);
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .right-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 4.5rem;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .description {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-section {
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 10;
+            text-align: right;
+        }
+        
+        .contact-label {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #BFDBFE;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-info {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(30, 64, 175, 0.5);
+            z-index: -1;
+        }
+        
+        .circle-1 {
+            width: 700px;
+            height: 700px;
+            top: -200px;
+            right: -200px;
+        }
+        
+        .circle-2 {
+            width: 500px;
+            height: 500px;
+            bottom: -200px;
+            left: 10%;
+            background-color: rgba(191, 219, 254, 0.5);
+        }
+        
+        .circle-3 {
+            width: 400px;
+            height: 400px;
+            top: 200px;
+            right: 25%;
+            background-color: rgba(107, 114, 128, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<div class="circle circle-3"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Subtitle -->
+<div class="subtitle">
+            Let's Create Exceptional Customer Experiences.
+        </div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">ありがとうございます＆<br/>お問い合わせ</h1>
+<p class="description">
+                    ご清聴ありがとうございました。<br/>
+                    より良い顧客体験の構築に向けて、ご質問やご相談がございましたらお気軽にご連絡ください。
+                </p>
+</div>
+<div class="right-content">
+<div class="contact-section">
+<div class="contact-label">Mobile</div>
+<div class="contact-info">+1-555-849-2750</div>
+</div>
+<div class="contact-section">
+<div class="contact-label">Email</div>
+<div class="contact-info">contact@sterlingcx.com</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

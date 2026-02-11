@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>目次</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Agenda</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">目次</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-8 flex flex-col justify-center gap-5">
+            <!-- Item 01 -->
+            <div class="flex items-center space-x-6 p-5 rounded-xl border border-gray-100 bg-blue-50">
+                <p class="text-4xl font-black text-brand-accent font-inter">01</p>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-brand-dark">会社概要</h3>
+                    <p class="text-sm text-gray-500">Company Overview</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-file-alt text-brand-accent text-xs"></i>
+                    <p class="text-xs text-gray-400 font-inter">Slides 03-05</p>
+                </div>
+            </div>
+            <!-- Item 02 -->
+            <div class="flex items-center space-x-6 p-5 rounded-xl border border-gray-100">
+                <p class="text-4xl font-black text-brand-accent font-inter">02</p>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-brand-dark">市場環境分析</h3>
+                    <p class="text-sm text-gray-500">Market Analysis</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-file-alt text-brand-accent text-xs"></i>
+                    <p class="text-xs text-gray-400 font-inter">Slides 06-09</p>
+                </div>
+            </div>
+            <!-- Item 03 -->
+            <div class="flex items-center space-x-6 p-5 rounded-xl border border-gray-100">
+                <p class="text-4xl font-black text-brand-accent font-inter">03</p>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-brand-dark">戦略方針</h3>
+                    <p class="text-sm text-gray-500">Strategic Direction</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-file-alt text-brand-accent text-xs"></i>
+                    <p class="text-xs text-gray-400 font-inter">Slides 10-13</p>
+                </div>
+            </div>
+            <!-- Item 04 -->
+            <div class="flex items-center space-x-6 p-5 rounded-xl border border-gray-100">
+                <p class="text-4xl font-black text-brand-accent font-inter">04</p>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-brand-dark">実行計画</h3>
+                    <p class="text-sm text-gray-500">Action Plan</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <i class="fas fa-file-alt text-brand-accent text-xs"></i>
+                    <p class="text-xs text-gray-400 font-inter">Slides 14-18</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">02</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

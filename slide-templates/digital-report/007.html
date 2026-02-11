@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>Roadmap Timeline</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1a2332; /* Navy Blue */
+        color: #ffffff;
+    }
+    .slide-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .text-gold {
+        color: #d4af37;
+    }
+    .bg-gold {
+        background-color: #d4af37;
+    }
+    .border-gold {
+        border-color: #d4af37;
+    }
+    
+    /* Background Pattern */
+    .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.03;
+        background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h60v60H0z" fill="none"/><path d="M0 60L60 0" stroke="white" stroke-width="0.5"/></svg>');
+        background-size: 60px 60px;
+        z-index: 0;
+    }
+
+    /* Timeline Specifics */
+    .timeline-track {
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        right: 60px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: 1;
+    }
+    .timeline-track-progress {
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        width: 0; /* Animated later or static for template */
+        width: 85%; /* Simulating progress */
+        height: 2px;
+        background-color: #d4af37;
+        z-index: 2;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .step-container {
+        position: relative;
+        z-index: 10;
+        height: 420px; /* Area for content */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 60px;
+        margin-top: 20px;
+    }
+
+    .step-item {
+        position: relative;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Node on the line */
+    .step-node {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1a2332;
+        border: 2px solid #d4af37;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        margin: 20px 0;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        color: #d4af37;
+        font-size: 0.9rem;
+    }
+    
+    .step-item.active .step-node {
+        background-color: #d4af37;
+        color: #1a2332;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Card Styling */
+    .step-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        width: 100%;
+        min-height: 140px;
+        transition: transform 0.3s ease;
+        position: relative;
+    }
+    
+    .step-card::after {
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgba(255, 255, 255, 0.1); /* Matches border color essentially */
+    }
+    
+    /* Layout: Top Card */
+    .step-item.top-card .step-card {
+        order: 1;
+        margin-bottom: 0;
+    }
+    .step-item.top-card .step-node {
+        order: 2;
+    }
+    .step-item.top-card .step-date {
+        order: 3;
+        margin-top: 0.5rem;
+    }
+    .step-item.top-card .step-card::after {
+        bottom: -9px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 8px solid rgba(255, 255, 255, 0.05); /* Match bg */
+        border-bottom: none;
+    }
+
+    /* Layout: Bottom Card (Alternating) */
+    .step-item.bottom-card .step-date {
+        order: 1;
+        margin-bottom: 0.5rem;
+    }
+    .step-item.bottom-card .step-node {
+        order: 2;
+    }
+    .step-item.bottom-card .step-card {
+        order: 3;
+        margin-top: 0;
+    }
+    .step-item.bottom-card .step-card::after {
+        top: -9px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 8px solid rgba(255, 255, 255, 0.05); /* Match bg */
+        border-top: none;
+    }
+
+    .step-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .step-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .step-list li {
+        font-size: 0.75rem;
+        color: #a0aec0;
+        margin-bottom: 0.25rem;
+        padding-left: 0.75rem;
+        position: relative;
+        line-height: 1.4;
+    }
+    .step-list li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #d4af37;
+    }
+
+    .step-date {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 600;
+        color: #d4af37;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+    }
+
+    .milestone-badge {
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(212, 175, 55, 0.2);
+        color: #d4af37;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 0.65rem;
+        white-space: nowrap;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background -->
+<div class="bg-pattern"></div>
+<!-- Header -->
+<div class="pt-8 px-12 mb-2 z-10 flex justify-between items-end">
+<div>
+<div class="flex items-center mb-1">
+<div class="w-8 h-1 bg-gold mr-3"></div>
+<p class="text-gold text-xs font-bold tracking-widest uppercase">Roadmap 2026-2028</p>
+</div>
+<h1 class="text-4xl font-bold text-white mb-2">戦略実行タイムライン</h1>
+<p class="text-gray-400 text-sm">デジタルトランスフォーメーション実現に向けた5段階のフェーズ</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-3 py-1 bg-gray-700 rounded text-xs text-gray-300 font-mono mb-1">VERSION 2.0</span>
+<span class="text-gold text-xs font-bold"><i class="fas fa-check-circle mr-1"></i> APPROVED</span>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-4 relative flex flex-col justify-center">
+<!-- Timeline Track Lines -->
+<div class="timeline-track"></div>
+<div class="timeline-track-progress"></div>
+<!-- Steps Container -->
+<div class="step-container">
+<!-- Step 1: 発見 (Top) -->
+<div class="step-item top-card active">
+<div class="step-card">
+<h3 class="step-title">
+<i class="fas fa-search text-gold mr-2 text-sm"></i> 発見
+                        </h3>
+<ul class="step-list">
+<li><p>現状のデジタル成熟度診断</p></li>
+<li><p>全社データ監査と整理</p></li>
+<li><p>優先解決課題の定義</p></li>
+</ul>
+</div>
+<div class="step-node">01</div>
+<div class="step-date">2026 Q1</div>
+<div class="milestone-badge">KICKOFF</div>
+</div>
+<!-- Step 2: 設計 (Bottom) -->
+<div class="step-item bottom-card active">
+<div class="step-date">2026 Q2–Q3</div>
+<div class="step-node">02</div>
+<div class="step-card">
+<h3 class="step-title">
+<i class="fas fa-compass text-gold mr-2 text-sm"></i> 設計
+                        </h3>
+<ul class="step-list">
+<li><p>ターゲットCX/UX設計</p></li>
+<li><p>新評価指標(KPI)策定</p></li>
+<li><p>システムアーキテクチャ設計</p></li>
+</ul>
+</div>
+</div>
+<!-- Step 3: 構築 (Top) -->
+<div class="step-item top-card active">
+<div class="step-card">
+<h3 class="step-title">
+<i class="fas fa-tools text-gold mr-2 text-sm"></i> 構築
+                        </h3>
+<ul class="step-list">
+<li><p>統合CDPの導入・連携</p></li>
+<li><p>Eコマース基盤の刷新</p></li>
+<li><p>モバイルアプリUI改修</p></li>
+</ul>
+</div>
+<div class="step-node">03</div>
+<div class="step-date">2026 Q4 – 2027 Q2</div>
+<div class="milestone-badge">MVP RELEASE</div>
+</div>
+<!-- Step 4: 拡大 (Bottom) -->
+<div class="step-item bottom-card active">
+<div class="step-date">2027 Q3–Q4</div>
+<div class="step-node">04</div>
+<div class="step-card">
+<h3 class="step-title">
+<i class="fas fa-rocket text-gold mr-2 text-sm"></i> 拡大
+                        </h3>
+<ul class="step-list">
+<li><p>AIパーソナライズ実装</p></li>
+<li><p>A/Bテスト基盤の稼働</p></li>
+<li><p>全店舗在庫の最適化連携</p></li>
+</ul>
+</div>
+</div>
+<!-- Step 5: 最適化 (Top) -->
+<div class="step-item top-card">
+<div class="step-card border-gray-600 bg-opacity-5">
+<h3 class="step-title text-gray-300">
+<i class="fas fa-gem text-gray-400 mr-2 text-sm"></i> 最適化
+                        </h3>
+<ul class="step-list">
+<li><p>収益モデルの最大化</p></li>
+<li><p>マーケティング運用自動化</p></li>
+<li><p>国際展開への準備開始</p></li>
+</ul>
+</div>
+<div class="step-node border-gray-500 text-gray-400 bg-gray-800" style="box-shadow: none;">05</div>
+<div class="step-date text-gray-400">2028</div>
+</div>
+</div>
+<!-- Legend / Additional Info -->
+<div class="absolute bottom-10 right-16 flex space-x-6 text-xs text-gray-500">
+<div class="flex items-center">
+<div class="w-3 h-3 rounded-full bg-gold mr-2"></div>
+<span>確定フェーズ</span>
+</div>
+<div class="flex items-center">
+<div class="w-3 h-3 rounded-full bg-gray-700 border border-gray-500 mr-2"></div>
+<span>計画フェーズ</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex items-center justify-between px-12 border-t border-gray-800 z-20 bg-gray-900 bg-opacity-80">
+<div class="flex items-center">
+<p class="text-gray-500 text-xs">Strategic Corporate Digital Business Report</p>
+</div>
+<div class="flex items-center">
+<span class="text-gold font-bold mr-2">7</span>
+<span class="text-gray-600 text-xs">/ 11</span>
+</div>
+</div>
+</div>
+</body>
+</html>

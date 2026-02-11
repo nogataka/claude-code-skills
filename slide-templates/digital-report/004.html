@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>Objectives and Success Metrics</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1a2332; /* Navy Blue */
+        color: #ffffff;
+    }
+    .slide-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .text-gold {
+        color: #d4af37;
+    }
+    .bg-gold {
+        background-color: #d4af37;
+    }
+    .border-gold {
+        border-color: #d4af37;
+    }
+    .serif-font {
+        font-family: 'Noto Serif JP', serif;
+    }
+    
+    /* Background Pattern */
+    .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.03;
+        background-image: radial-gradient(#ffffff 1px, transparent 1px);
+        background-size: 30px 30px;
+        z-index: 0;
+    }
+    
+    .section-title {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background-color: #d4af37;
+    }
+
+    .list-item {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .list-item::before {
+        content: '\f00c'; /* FontAwesome check icon */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 0.25rem;
+        color: #d4af37;
+        font-size: 0.8rem;
+    }
+
+    .metric-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform 0.2s;
+    }
+    
+    .metric-value-container {
+        text-align: right;
+    }
+    .metric-arrow {
+        color: #d4af37;
+        margin: 0 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 35, 50, 0.2); /* Slight tint */
+    }
+
+    /* Decorative Elements */
+    .corner-accent {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-top: 2px solid rgba(212, 175, 55, 0.5);
+        border-left: 2px solid rgba(212, 175, 55, 0.5);
+        top: 20px;
+        left: 20px;
+        z-index: 0;
+        opacity: 0.5;
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-pattern"></div>
+<!-- Header -->
+<div class="pt-10 px-16 mb-2 z-10 flex justify-between items-end">
+<div>
+<p class="text-gold text-sm font-bold tracking-widest uppercase mb-1">Chapter 01 - Strategy</p>
+<h1 class="text-4xl font-bold text-white">目的と成功指標</h1>
+</div>
+<div class="w-1/3 h-px bg-gray-700 mb-4"></div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 flex z-10">
+<!-- Left Column: Text Content -->
+<div class="w-5/12 pr-10 flex flex-col justify-center">
+<!-- Section 1: Objectives -->
+<div class="mb-10">
+<h3 class="text-xl font-bold text-white mb-4 flex items-center">
+<span class="bg-gold text-gray-900 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">
+<i class="fas fa-bullseye"></i>
+</span>
+                        戦略的目的
+                    </h3>
+<div class="space-y-4">
+<div class="list-item">
+<p class="text-lg font-medium text-white">顧客生涯価値（CLV）の向上</p>
+<p class="text-sm text-gray-400 mt-1">ロイヤルティプログラム刷新とパーソナライズによるLTV最大化</p>
+</div>
+<div class="list-item">
+<p class="text-lg font-medium text-white">オムニチャネル体験の統合</p>
+<p class="text-sm text-gray-400 mt-1">オンラインと実店舗のデータを統合し、一貫したブランド体験を提供</p>
+</div>
+<div class="list-item">
+<p class="text-lg font-medium text-white">データ活用による意思決定の高速化</p>
+<p class="text-sm text-gray-400 mt-1">リアルタイム分析基盤の構築による市場変化への即応</p>
+</div>
+</div>
+</div>
+<!-- Section 2: Metrics -->
+<div>
+<h3 class="text-xl font-bold text-white mb-4 flex items-center">
+<span class="bg-gold text-gray-900 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">
+<i class="fas fa-chart-line"></i>
+</span>
+                        成功指標 (KPIs)
+                    </h3>
+<div class="space-y-3">
+<div class="metric-card">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400 uppercase">デジタル売上比率</span>
+<span class="text-sm font-medium">チャネルシフト</span>
+</div>
+<div class="metric-value-container">
+<p class="text-white font-bold font-mono text-lg">
+                                18% <i class="fas fa-arrow-right metric-arrow"></i> <span class="text-gold text-xl">45%</span>
+</p>
+</div>
+</div>
+<div class="metric-card">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400 uppercase">NPS (推奨度)</span>
+<span class="text-sm font-medium">顧客満足度</span>
+</div>
+<div class="metric-value-container">
+<p class="text-white font-bold font-mono text-lg">
+<span class="text-gold text-xl">+12pt</span> <span class="text-xs text-gray-400 ml-1">向上</span>
+</p>
+</div>
+</div>
+<div class="metric-card">
+<div class="flex flex-col">
+<span class="text-xs text-gray-400 uppercase">フルフィルメントコスト</span>
+<span class="text-sm font-medium">運用効率</span>
+</div>
+<div class="metric-value-container">
+<p class="text-white font-bold font-mono text-lg">
+<span class="text-gold text-xl">−15%</span> <span class="text-xs text-gray-400 ml-1">削減</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Image -->
+<div class="w-7/12 h-full pl-6 relative">
+<div class="corner-accent" style="top: -10px; left: 14px; width: 60px; height: 60px;"></div>
+<div class="image-container">
+<img alt="Customer Journey Map Dashboard" class="w-full h-full object-cover" src="https://page.gensparksite.com/slides_images/52ac111220cc0215a6a5e936d389e9b8.webp"/>
+<div class="image-overlay"></div>
+<!-- Image Caption Overlay -->
+<div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 backdrop-filter backdrop-blur-sm p-4 border-t border-gray-700">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-white font-bold text-sm">Customer Journey Analytics</p>
+<p class="text-gray-400 text-xs">可視化された顧客接点とデータフローのイメージ</p>
+</div>
+<div class="bg-gold text-gray-900 text-xs font-bold px-2 py-1 rounded">
+                                TO-BE MODEL
+                            </div>
+</div>
+</div>
+</div>
+<div class="corner-accent" style="top: auto; bottom: -10px; left: auto; right: -10px; border: none; border-bottom: 2px solid rgba(212, 175, 55, 0.5); border-right: 2px solid rgba(212, 175, 55, 0.5); width: 60px; height: 60px;"></div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-14 w-full flex items-center justify-between px-16 border-t border-gray-800 z-20 bg-gray-900 bg-opacity-50">
+<div class="flex items-center">
+<p class="text-gray-500 text-xs">Strategic Corporate Digital Business Report</p>
+</div>
+<div class="flex items-center">
+<span class="text-gold font-bold mr-2">4</span>
+<span class="text-gray-600 text-xs">/ 11</span>
+</div>
+</div>
+</div>
+</body>
+</html>

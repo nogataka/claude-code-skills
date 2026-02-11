@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Table of Contents</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&amp;family=Noto+Serif+JP:wght@700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #1E3A8A;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-left, .header-center, .header-right {
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 61px);
+            padding: 40px;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .right-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+            padding-left: 20px;
+        }
+        
+        .title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 6rem;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 10;
+            letter-spacing: 0.05em;
+        }
+        
+        .toc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.15rem; /* 日本語に合わせて少し調整 */
+            position: relative;
+            z-index: 10;
+            border-bottom: 1px solid rgba(255,255,255,0.1); /* 区切り線を追加して読みやすく */
+            padding-bottom: 4px;
+        }
+        
+        .toc-number {
+            font-weight: bold;
+            margin-left: 20px;
+            color: #BFDBFE;
+            position: relative;
+            z-index: 10;
+            font-family: 'M PLUS 1p', sans-serif; /* 数字も見やすく */
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(30, 64, 175, 0.5);
+            z-index: 0;
+        }
+        
+        .circle-1 {
+            width: 700px;
+            height: 700px;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            right: -100px;
+            background-color: rgba(191, 219, 254, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">目次</h1>
+</div>
+<div class="right-content">
+<div class="toc-list">
+<div class="toc-item">
+<p>はじめに（カスタマーエクスペリエンス）</p>
+<div class="toc-number">01</div>
+</div>
+<div class="toc-item">
+<p>顧客期待の理解</p>
+<div class="toc-number">02</div>
+</div>
+<div class="toc-item">
+<p>パーソナライゼーションの役割</p>
+<div class="toc-number">03</div>
+</div>
+<div class="toc-item">
+<p>カスタマージャーニーマップ</p>
+<div class="toc-number">04</div>
+</div>
+<div class="toc-item">
+<p>主要タッチポイントと戦略</p>
+<div class="toc-number">05</div>
+</div>
+<div class="toc-item">
+<p>テクノロジーがCXに与える影響</p>
+<div class="toc-number">06</div>
+</div>
+<div class="toc-item">
+<p>顧客フィードバックの収集と分析</p>
+<div class="toc-number">07</div>
+</div>
+<div class="toc-item">
+<p>顧客のペインポイント解消</p>
+<div class="toc-number">08</div>
+</div>
+<div class="toc-item">
+<p>事例：CXの実践</p>
+<div class="toc-number">09</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

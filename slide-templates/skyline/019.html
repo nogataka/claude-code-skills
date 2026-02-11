@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>まとめ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Summary & Next Steps</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">まとめ・次のアクション</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-6">
+            <!-- Key Takeaways -->
+            <div class="flex-1">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-inter mb-4">Key Takeaways</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">急成長の継続</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">FY2027E売上¥85億（CAGR +24%）。SaaS比率65%への引き上げ。</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">AI×データの差別化</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">生成AI統合・リアルタイム分析で業界をリード。</p>
+                        </div>
+                    </div>
+                    <div class="bg-red-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-warm flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">アジア市場進出</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">シンガポール・タイを起点に海外売上比率15%を目指す。</p>
+                        </div>
+                    </div>
+                    <div class="bg-red-50 rounded-xl p-5 flex items-start">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-warm flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">組織基盤の強化</p>
+                            <p class="text-xs text-gray-500 leading-relaxed">420名体制構築。IPO準備・ガバナンス整備の推進。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Actions -->
+            <div class="bg-brand-dark rounded-xl p-6 text-white">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-inter mb-3">Next Actions</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs font-bold mr-3 font-inter">1</div>
+                        <p class="text-sm">取締役会での<br />戦略承認</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs font-bold mr-3 font-inter">2</div>
+                        <p class="text-sm">FY2026予算の<br />確定・配分</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs font-bold mr-3 font-inter">3</div>
+                        <p class="text-sm">Q1採用計画の<br />即時開始</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">19</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

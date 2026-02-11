@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-lato { font-family: 'Lato', sans-serif; }
+    .text-navy-900 { color: #0F2027; }
+    .bg-navy-900 { background-color: #0F2027; }
+    .text-navy-primary { color: #203A43; }
+    .bg-navy-primary { background-color: #203A43; }
+    .bg-navy-accent { background-color: #2C5364; }
+    .text-navy-accent { color: #2C5364; }
+    .text-accent-gold { color: #C5A065; }
+    .bg-accent-gold { background-color: #C5A065; }
+    .border-accent-gold { border-color: #C5A065; }
+</style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex relative overflow-hidden bg-white">
+<!-- Left Section: Chapter Number (25%) -->
+<div class="w-1/4 h-full bg-navy-900 flex flex-col justify-center items-center relative overflow-hidden">
+<!-- Decorative Background Pattern -->
+<div class="absolute inset-0 opacity-10">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Chapter Number -->
+<div class="z-10 flex flex-col items-center">
+<p class="text-accent-gold text-lg tracking-[0.3em] font-lato uppercase mb-2">Chapter</p>
+<h2 class="text-9xl font-lato font-light text-white leading-none">01</h2>
+<div class="w-12 h-1 bg-accent-gold mt-6"></div>
+</div>
+<!-- Vertical Text Decoration -->
+<div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-gray-500 text-xs tracking-widest uppercase opacity-50">
+<p>Market Opportunity</p>
+</div>
+</div>
+<!-- Right Section: Content (75%) -->
+<div class="w-3/4 h-full flex flex-col justify-center px-24 relative">
+<!-- Header / Breadcrumb -->
+<div class="absolute top-12 right-16 flex items-center space-x-2 text-gray-400 text-sm tracking-wide">
+<span class="uppercase">Project Proposal</span>
+<i class="fas fa-chevron-right text-xs"></i>
+<span class="text-navy-accent font-bold uppercase">Section 01</span>
+</div>
+<!-- Main Title Area -->
+<div class="mb-12">
+<h1 class="text-6xl font-bold text-navy-900 tracking-tight leading-tight mb-6">
+                市場機会
+            </h1>
+<p class="text-3xl text-navy-primary font-light border-l-4 border-navy-accent pl-6 py-1">
+                成長ドライバーと参入余地
+            </p>
+</div>
+<!-- Description / Lead Text -->
+<div class="max-w-3xl">
+<div class="flex items-start">
+<i class="fas fa-quote-left text-3xl text-gray-200 mr-4 -mt-2"></i>
+<p class="text-xl text-gray-600 leading-relaxed font-medium">
+                    市場規模はCAGR 12%で拡大見込み。<br/>
+<span class="text-base text-gray-400 font-normal mt-2 block">
+                        デジタル需要の急増に伴い、既存プレイヤーがカバーしきれていない領域に大きなホワイトスペースが存在します。
+                    </span>
+</p>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute bottom-0 right-0 w-48 h-48 bg-gray-50 rounded-tl-full -z-10"></div>
+<!-- Footer Info -->
+<div class="absolute bottom-12 right-16 text-right">
+<div class="flex items-center justify-end space-x-3 text-navy-900 mb-1">
+<i class="fas fa-layer-group text-lg text-navy-accent"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

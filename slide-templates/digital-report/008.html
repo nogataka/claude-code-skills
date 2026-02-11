@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>Core Team Introduction</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1a2332; /* Navy Blue */
+        color: #ffffff;
+    }
+    .slide-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .text-gold {
+        color: #d4af37;
+    }
+    .bg-gold {
+        background-color: #d4af37;
+    }
+    .border-gold {
+        border-color: #d4af37;
+    }
+    .serif-font {
+        font-family: 'Noto Serif JP', serif;
+    }
+    
+    /* Background Pattern */
+    .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.05;
+        background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M10 10h80v80H10z" fill="none" stroke="white" stroke-width="0.5"/><path d="M30 30h40v40H30z" fill="none" stroke="white" stroke-width="0.5"/></svg>');
+        background-size: 100px 100px;
+        z-index: 0;
+    }
+
+    /* Card Styling */
+    .member-card {
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .member-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #d4af37;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+    
+    .member-card:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border-color: rgba(212, 175, 55, 0.3);
+    }
+    
+    .member-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .avatar-container {
+        width: 100px;
+        height: 100px;
+        margin: 2rem auto 1.5rem;
+        position: relative;
+    }
+    
+    .avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid rgba(212, 175, 55, 0.5);
+        padding: 4px;
+        background-clip: content-box;
+    }
+
+    .role-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: rgba(212, 175, 55, 0.15);
+        color: #d4af37;
+        font-size: 0.7rem;
+        font-weight: 700;
+        border-radius: 9999px;
+        margin-bottom: 0.5rem;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .info-row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .info-icon {
+        width: 24px;
+        color: #718096;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+    
+    .info-label {
+        color: #a0aec0;
+        font-size: 0.75rem;
+        margin-bottom: 0.1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .info-value {
+        color: #e2e8f0;
+        font-weight: 500;
+    }
+
+    /* Decorative Element */
+    .bg-glow {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-color: rgba(212, 175, 55, 0.03);
+        border-radius: 50%;
+        filter: blur(80px);
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-pattern"></div>
+<div class="bg-glow"></div>
+<!-- Header -->
+<div class="pt-8 px-12 mb-6 z-10 flex justify-between items-end">
+<div>
+<div class="flex items-center mb-1">
+<div class="w-8 h-1 bg-gold mr-3"></div>
+<p class="text-gold text-xs font-bold tracking-widest uppercase">Chapter 01 - Team Structure</p>
+</div>
+<h1 class="text-4xl font-bold text-white mb-2">コアチーム紹介</h1>
+<p class="text-gray-400 text-sm">デジタル変革を牽引するリーダーシップチームと役割定義</p>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-xs text-gray-500 mb-1">CONTACT</p>
+<p class="text-sm font-mono text-gold"><i class="fas fa-envelope mr-2"></i>dx-office@example.co.jp</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-12 pb-12 z-10 flex flex-col justify-center">
+<div class="grid grid-cols-4 gap-6 h-full max-h-[500px]">
+<!-- Member 1: CDO -->
+<div class="member-card">
+<div class="avatar-container">
+<img alt="CDO Portrait" class="avatar-img" src="https://page.gensparksite.com/slides_images/ae8ba31e5cd1f98166e7ea9ede2e1379.webp"/>
+</div>
+<div class="text-center px-4 mb-6">
+<span class="role-badge">LEADER</span>
+<h3 class="text-xl font-bold text-white mb-1">佐藤 純</h3>
+<p class="text-sm text-gray-400">Chief Digital Officer (CDO)</p>
+</div>
+<div class="border-t border-gray-700 mx-6 mb-6"></div>
+<div class="px-6 flex-1">
+<div class="mb-5">
+<p class="info-label">PRIMARY RESPONSIBILITY</p>
+<div class="info-row">
+<i class="fas fa-chess-king info-icon text-gold"></i>
+<p class="info-value">戦略統括・投資判断</p>
+</div>
+</div>
+<div>
+<p class="info-label">KEY STRENGTH</p>
+<div class="info-row">
+<i class="fas fa-balance-scale info-icon text-gold"></i>
+<p class="info-value">DXガバナンス構築</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Member 2: Data Platform -->
+<div class="member-card">
+<div class="avatar-container">
+<img alt="Data Lead Portrait" class="avatar-img" src="https://www.genspark.ai/image_placeholder.png"/>
+</div>
+<div class="text-center px-4 mb-6">
+<span class="role-badge">DATA &amp; AI</span>
+<h3 class="text-xl font-bold text-white mb-1">田中 美咲</h3>
+<p class="text-sm text-gray-400">データプラットフォーム責任者</p>
+</div>
+<div class="border-t border-gray-700 mx-6 mb-6"></div>
+<div class="px-6 flex-1">
+<div class="mb-5">
+<p class="info-label">PRIMARY RESPONSIBILITY</p>
+<div class="info-row">
+<i class="fas fa-database info-icon text-blue-400"></i>
+<p class="info-value">CDP構築 / 高度分析</p>
+</div>
+</div>
+<div>
+<p class="info-label">KEY STRENGTH</p>
+<div class="info-row">
+<i class="fas fa-brain info-icon text-blue-400"></i>
+<p class="info-value">データ品質管理・AI活用</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Member 3: Product Manager -->
+<div class="member-card">
+<div class="avatar-container">
+<img alt="PM Portrait" class="avatar-img" src="https://page.gensparksite.com/slides_images/c0ebe287508d04e59b3b43eeea4be71e.webp"/>
+</div>
+<div class="text-center px-4 mb-6">
+<span class="role-badge">COMMERCE</span>
+<h3 class="text-xl font-bold text-white mb-1">鈴木 翔</h3>
+<p class="text-sm text-gray-400">プロダクトマネージャー</p>
+</div>
+<div class="border-t border-gray-700 mx-6 mb-6"></div>
+<div class="px-6 flex-1">
+<div class="mb-5">
+<p class="info-label">PRIMARY RESPONSIBILITY</p>
+<div class="info-row">
+<i class="fas fa-laptop-code info-icon text-green-400"></i>
+<p class="info-value">ロードマップ策定・実行</p>
+</div>
+</div>
+<div>
+<p class="info-label">KEY STRENGTH</p>
+<div class="info-row">
+<i class="fas fa-flask info-icon text-green-400"></i>
+<p class="info-value">グロース実験・UX設計</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Member 4: Operations -->
+<div class="member-card">
+<div class="avatar-container">
+<img alt="Ops Lead Portrait" class="avatar-img" src="https://page.gensparksite.com/slides_images/87ae577a9bfd4d9a2ec58ed648269b17.webp"/>
+</div>
+<div class="text-center px-4 mb-6">
+<span class="role-badge">OPERATIONS</span>
+<h3 class="text-xl font-bold text-white mb-1">山本 玲</h3>
+<p class="text-sm text-gray-400">オペレーション変革リード</p>
+</div>
+<div class="border-t border-gray-700 mx-6 mb-6"></div>
+<div class="px-6 flex-1">
+<div class="mb-5">
+<p class="info-label">PRIMARY RESPONSIBILITY</p>
+<div class="info-row">
+<i class="fas fa-cogs info-icon text-purple-400"></i>
+<p class="info-value">サプライチェーン最適化</p>
+</div>
+</div>
+<div>
+<p class="info-label">KEY STRENGTH</p>
+<div class="info-row">
+<i class="fas fa-clipboard-check info-icon text-purple-400"></i>
+<p class="info-value">現場標準化・プロセス改善</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex items-center justify-between px-12 border-t border-gray-800 z-20 bg-gray-900 bg-opacity-80">
+<div class="flex items-center">
+<p class="text-gray-500 text-xs">Strategic Corporate Digital Business Report</p>
+</div>
+<div class="flex items-center">
+<span class="text-gold font-bold mr-2">8</span>
+<span class="text-gray-600 text-xs">/ 11</span>
+</div>
+</div>
+</div>
+</body>
+</html>

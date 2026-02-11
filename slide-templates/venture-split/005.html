@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Problem Statement</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container p-10">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-8 border-b-2 border-gray-100 pb-4">
+            <div>
+                <h1 class="text-4xl font-black text-gray-900 mb-2">課題設定</h1>
+                <p class="text-lg text-gray-500">顧客が直面している「旅行のジレンマ」と具体的なペインポイント</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-sm text-gray-400 font-medium tracking-wider">PROBLEM STATEMENT</span>
+                <span class="bg-gray-900 text-white text-xl font-bold px-4 py-2 rounded">02</span>
+            </div>
+        </div>
+        <!-- 3 Columns Content -->
+        <div class="flex-1 grid grid-cols-3 gap-8">
+            <!-- Column 1: General Family -->
+            <div
+                class="bg-blue-50 rounded-xl p-6 relative overflow-hidden flex flex-col h-full border-t-8 border-blue-600 shadow-sm">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full -z-0 opacity-50"></div>
+                <div class="mb-6 relative z-10">
+                    <div
+                        class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">一般ファミリー層の課題</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase tracking-wider">コスト増と心理的疲労</p>
+                </div>
+                <div class="space-y-4 flex-1 relative z-10">
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><i
+                                class="fa-solid fa-arrow-trend-up text-red-500 mr-2"></i>宿泊費の高騰</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">インバウンド影響等で約1.5倍に上昇。「同じ予算で質が下がる」体験への不満。</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><i
+                                class="fa-solid fa-bell-slash text-blue-500 mr-2"></i>周囲への「気遣い」</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">子供の夜泣きや騒ぎ声による迷惑を懸念し、親が常に緊張して休まらない。</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-blue-100">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><i
+                                class="fa-solid fa-star-half-stroke text-yellow-500 mr-2"></i>体験のマンネリ化</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">「高いお金を払ったのに、普通のホテルに泊まるだけ」というコスパの悪さ。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 2: Pet Owners -->
+            <div
+                class="bg-orange-50 rounded-xl p-6 relative overflow-hidden flex flex-col h-full border-t-8 border-orange-500 shadow-sm">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-bl-full -z-0 opacity-50"></div>
+                <div class="mb-6 relative z-10">
+                    <div
+                        class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">ペット連れ層の課題</h3>
+                    <p class="text-xs text-orange-600 font-bold uppercase tracking-wider">旅行自体の諦めと制限</p>
+                </div>
+                <div class="space-y-4 flex-1 relative z-10">
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-orange-100">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><i
+                                class="fa-solid fa-ban text-red-500 mr-2"></i>選択肢の少なさと高価格</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">ペット可施設は絶対数が少なく予約困難。価格も割高で追加料金も発生。</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-orange-100">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><i
+                                class="fa-solid fa-heart-crack text-orange-500 mr-2"></i>預ける罪悪感</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">ペットホテル等への預け入れは「寂しい思いをさせる」心理的抵抗感が強い。</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-orange-100">
+                        <h4 class="font-bold text-gray-800 text-sm mb-1 flex items-center"><i
+                                class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i>移動中の不安</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">公共交通機関や通常の車移動では、吠えや排泄のタイミングに常に気を配る必要。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Column 3: Impact & Pain -->
+            <div
+                class="bg-gray-100 rounded-xl p-6 relative overflow-hidden flex flex-col h-full border-t-8 border-gray-600 shadow-sm">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gray-200 rounded-bl-full -z-0 opacity-50"></div>
+                <div class="mb-6 relative z-10">
+                    <div
+                        class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center text-white text-2xl mb-4 shadow-lg">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">影響範囲とペイン</h3>
+                    <p class="text-xs text-gray-600 font-bold uppercase tracking-wider">深刻度とターゲット</p>
+                </div>
+                <div class="space-y-4 flex-1 relative z-10">
+                    <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-gray-400">
+                        <h4 class="font-bold text-gray-800 text-sm mb-2">ターゲット属性</h4>
+                        <div class="grid grid-cols-1 gap-2">
+                            <p class="text-xs text-gray-600 flex items-center"><i
+                                    class="fa-solid fa-location-dot text-gray-400 w-5 text-center mr-1"></i>
+                                首都圏エリア</p>
+                            <p class="text-xs text-gray-600 flex items-center"><i
+                                    class="fa-solid fa-users text-gray-400 w-5 text-center mr-1"></i> 30〜40代子育て世帯</p>
+                            <p class="text-xs text-gray-600 flex items-center"><i
+                                    class="fa-solid fa-yen-sign text-gray-400 w-5 text-center mr-1"></i> 世帯年収500〜800万円
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-gray-800 text-sm mb-2 text-red-600"><i
+                                class="fa-solid fa-circle-exclamation mr-1"></i>3つの主要ペイン</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-red-100 text-red-600 text-xs font-bold px-1.5 py-0.5 rounded mr-2 mt-0.5">金</span>
+                                <p class="text-xs text-gray-600">2泊3日で総額10〜15万円の出費</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-red-100 text-red-600 text-xs font-bold px-1.5 py-0.5 rounded mr-2 mt-0.5">時</span>
+                                <p class="text-xs text-gray-600">条件に合う宿探しの膨大な手間</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span
+                                    class="bg-red-100 text-red-600 text-xs font-bold px-1.5 py-0.5 rounded mr-2 mt-0.5">心</span>
+                                <p class="text-xs text-gray-600">「気兼ね」でリラックスできない矛盾</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="mt-8 flex justify-between items-center text-xs text-gray-400 border-t border-gray-200 pt-4">
+            <p>OUTDOOR+ Business Plan v3</p>
+            <p>Confidential</p>
+        </div>
+    </div>
+</body>
+
+</html>

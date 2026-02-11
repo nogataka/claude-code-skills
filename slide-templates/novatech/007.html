@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>収益モデル</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .text-navy-900 { color: #0F172A; }
+        .text-navy-800 { color: #1E293B; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+        .border-navy-700 { border-color: #334155; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">Revenue Model</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">収益モデル</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-6">
+            <!-- Top: KPI Metric Boxes -->
+            <div class="grid grid-cols-4 gap-4">
+                <!-- ARR -->
+                <div class="bg-navy-800 rounded-xl p-5 border border-blue-900 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-accent-orange opacity-5 rounded-bl-full"></div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs text-gray-500 font-inter uppercase tracking-wider font-bold">Target ARR</span>
+                        <div class="w-8 h-8 rounded-lg bg-accent-orange bg-opacity-20 flex items-center justify-center text-accent-orange text-sm">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-black text-white font-inter leading-none mb-1">¥18<span class="text-lg text-accent-orange ml-1">億</span></p>
+                    <p class="text-xs text-gray-500">3年目目標 年間経常収益</p>
+                    <div class="mt-3 flex items-center">
+                        <span class="bg-green-900 text-green-400 text-xs font-bold px-2 py-0.5 rounded-full font-inter flex items-center">
+                            <i class="fas fa-arrow-up mr-1 text-xs"></i>+150%
+                        </span>
+                        <span class="text-xs text-gray-600 ml-2">YoY成長</span>
+                    </div>
+                </div>
+                <!-- LTV -->
+                <div class="bg-navy-800 rounded-xl p-5 border border-blue-900 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-accent-blue opacity-5 rounded-bl-full"></div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs text-gray-500 font-inter uppercase tracking-wider font-bold">Avg. LTV</span>
+                        <div class="w-8 h-8 rounded-lg bg-accent-blue bg-opacity-20 flex items-center justify-center text-accent-blue text-sm">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-black text-white font-inter leading-none mb-1">¥720<span class="text-lg text-accent-blue ml-1">万</span></p>
+                    <p class="text-xs text-gray-500">顧客生涯価値</p>
+                    <div class="mt-3 flex items-center">
+                        <span class="text-xs text-gray-600">契約期間: 平均 3年</span>
+                    </div>
+                </div>
+                <!-- CAC -->
+                <div class="bg-navy-800 rounded-xl p-5 border border-blue-900 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-accent-orange opacity-5 rounded-bl-full"></div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs text-gray-500 font-inter uppercase tracking-wider font-bold">CAC</span>
+                        <div class="w-8 h-8 rounded-lg bg-accent-orange bg-opacity-20 flex items-center justify-center text-accent-orange text-sm">
+                            <i class="fas fa-funnel-dollar"></i>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-black text-white font-inter leading-none mb-1">¥36<span class="text-lg text-accent-orange ml-1">万</span></p>
+                    <p class="text-xs text-gray-500">顧客獲得単価</p>
+                    <div class="mt-3 flex items-center">
+                        <span class="text-xs text-gray-600">LTV/CAC = <span class="text-accent-orange font-bold font-inter">20x</span></span>
+                    </div>
+                </div>
+                <!-- Payback -->
+                <div class="bg-accent-orange rounded-xl p-5 relative overflow-hidden shadow-lg">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-yellow-400 opacity-10 rounded-bl-full"></div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs text-white font-inter uppercase tracking-wider font-bold opacity-80">Payback</span>
+                        <div class="w-8 h-8 rounded-lg bg-white bg-opacity-20 flex items-center justify-center text-white text-sm">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-black text-white font-inter leading-none mb-1">4<span class="text-lg ml-1">ヶ月</span></p>
+                    <p class="text-xs text-white opacity-80">投資回収期間</p>
+                    <div class="mt-3 flex items-center">
+                        <span class="text-xs text-white opacity-70">業界平均: 12ヶ月</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Pricing & Revenue Split -->
+            <div class="flex gap-6 flex-1">
+                <!-- Pricing Tiers -->
+                <div class="w-3/5 flex flex-col">
+                    <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider font-inter mb-3">Pricing Plans</h3>
+                    <div class="grid grid-cols-3 gap-3 flex-1">
+                        <!-- Starter -->
+                        <div class="bg-navy-800 rounded-xl p-5 border border-blue-900 flex flex-col">
+                            <p class="text-xs font-bold text-accent-blue font-inter uppercase tracking-wider mb-2">Starter</p>
+                            <p class="text-3xl font-black text-white font-inter">¥5<span class="text-sm font-normal text-gray-400 ml-1">万/月</span></p>
+                            <div class="w-full h-px bg-blue-900 my-3"></div>
+                            <div class="space-y-2 flex-1 text-xs text-gray-400">
+                                <p class="flex items-center"><i class="fas fa-check text-accent-blue mr-2 text-xs"></i>データ連携 5件</p>
+                                <p class="flex items-center"><i class="fas fa-check text-accent-blue mr-2 text-xs"></i>基本ダッシュボード</p>
+                                <p class="flex items-center"><i class="fas fa-check text-accent-blue mr-2 text-xs"></i>メールサポート</p>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-3">〜50名規模</p>
+                        </div>
+                        <!-- Professional -->
+                        <div class="bg-navy-800 rounded-xl p-5 border-2 border-accent-orange flex flex-col relative">
+                            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent-orange text-white text-xs font-bold px-3 py-0.5 rounded-full font-inter">Popular</div>
+                            <p class="text-xs font-bold text-accent-orange font-inter uppercase tracking-wider mb-2">Professional</p>
+                            <p class="text-3xl font-black text-white font-inter">¥20<span class="text-sm font-normal text-gray-400 ml-1">万/月</span></p>
+                            <div class="w-full h-px bg-blue-900 my-3"></div>
+                            <div class="space-y-2 flex-1 text-xs text-gray-400">
+                                <p class="flex items-center"><i class="fas fa-check text-accent-orange mr-2 text-xs"></i>データ連携 無制限</p>
+                                <p class="flex items-center"><i class="fas fa-check text-accent-orange mr-2 text-xs"></i>AI予測・自動化</p>
+                                <p class="flex items-center"><i class="fas fa-check text-accent-orange mr-2 text-xs"></i>専任サポート</p>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-3">〜300名規模</p>
+                        </div>
+                        <!-- Enterprise -->
+                        <div class="bg-navy-800 rounded-xl p-5 border border-blue-900 flex flex-col">
+                            <p class="text-xs font-bold text-gray-400 font-inter uppercase tracking-wider mb-2">Enterprise</p>
+                            <p class="text-3xl font-black text-white font-inter">¥60<span class="text-sm font-normal text-gray-400 ml-1">万/月</span></p>
+                            <div class="w-full h-px bg-blue-900 my-3"></div>
+                            <div class="space-y-2 flex-1 text-xs text-gray-400">
+                                <p class="flex items-center"><i class="fas fa-check text-gray-500 mr-2 text-xs"></i>カスタムML モデル</p>
+                                <p class="flex items-center"><i class="fas fa-check text-gray-500 mr-2 text-xs"></i>オンプレ対応可</p>
+                                <p class="flex items-center"><i class="fas fa-check text-gray-500 mr-2 text-xs"></i>SLA 99.99%</p>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-3">300名規模〜</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Split -->
+                <div class="w-2/5 flex flex-col">
+                    <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider font-inter mb-3">Revenue Mix (Year 3)</h3>
+                    <div class="bg-navy-800 rounded-xl p-5 border border-blue-900 flex-1 flex flex-col justify-center gap-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <p class="text-sm text-white font-bold">SaaS サブスクリプション</p>
+                                <p class="text-sm font-black text-accent-orange font-inter">75%</p>
+                            </div>
+                            <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-accent-orange rounded-full" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <p class="text-sm text-white font-bold">導入コンサルティング</p>
+                                <p class="text-sm font-black text-accent-blue font-inter">15%</p>
+                            </div>
+                            <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-accent-blue rounded-full" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <p class="text-sm text-white font-bold">API 従量課金</p>
+                                <p class="text-sm font-black text-gray-400 font-inter">10%</p>
+                            </div>
+                            <div class="w-full h-3 bg-navy-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-gray-500 rounded-full" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-blue-900">
+                            <div class="flex justify-between items-center">
+                                <p class="text-sm text-gray-400">粗利率</p>
+                                <p class="text-2xl font-black text-accent-orange font-inter">82%</p>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-1">SaaS主体のため高い粗利率を維持</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">07</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

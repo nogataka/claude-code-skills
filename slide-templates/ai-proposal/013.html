@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KPIダッシュボード</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">KPI Dashboard</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">KPIダッシュボード</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-6 flex flex-col gap-5">
+            <!-- Top: 4 KPI Cards -->
+            <div class="grid grid-cols-4 gap-4">
+                <div class="bg-brand-dark rounded-xl p-5 text-white text-center shadow-md">
+                    <p class="text-xs opacity-80 mb-1">問い合わせ自動応答率</p>
+                    <p class="text-3xl font-black font-lato">70<span class="text-sm font-normal ml-1">%</span></p>
+                    <p class="text-xs mt-1 opacity-70">目標: M3で達成</p>
+                </div>
+                <div class="bg-brand-dark rounded-xl p-5 text-white text-center shadow-md">
+                    <p class="text-xs opacity-80 mb-1">レポート作成時間</p>
+                    <p class="text-3xl font-black font-lato">-80<span class="text-sm font-normal ml-1">%</span></p>
+                    <p class="text-xs mt-1 opacity-70">5日 → 1日</p>
+                </div>
+                <div class="bg-brand-dark rounded-xl p-5 text-white text-center shadow-md">
+                    <p class="text-xs opacity-80 mb-1">年間コスト削減</p>
+                    <p class="text-3xl font-black font-lato">¥8,000<span class="text-sm font-normal ml-1">万</span></p>
+                    <p class="text-xs mt-1 opacity-70">人件費+業務効率化</p>
+                </div>
+                <div class="bg-brand-dark rounded-xl p-5 text-white text-center shadow-md">
+                    <p class="text-xs opacity-80 mb-1">従業員満足度</p>
+                    <p class="text-3xl font-black font-lato">+25<span class="text-sm font-normal ml-1">pt</span></p>
+                    <p class="text-xs mt-1 opacity-70">定型業務からの解放</p>
+                </div>
+            </div>
+
+            <!-- Bottom: Progress Bars -->
+            <div class="flex-1 flex gap-6">
+                <!-- Left: Phase Progress -->
+                <div class="w-1/2 bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-lato mb-4">Phase Progress</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <p class="text-sm font-bold text-brand-dark">Phase 1: 要件定義</p>
+                                <p class="text-sm font-bold text-brand-accent font-lato">100%</p>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2.5">
+                                <div class="bg-brand-accent h-2.5 rounded-full" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <p class="text-sm font-bold text-brand-dark">Phase 2: PoC実施</p>
+                                <p class="text-sm font-bold text-brand-accent font-lato">72%</p>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2.5">
+                                <div class="bg-brand-accent h-2.5 rounded-full" style="width: 72%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <p class="text-sm font-bold text-brand-dark">Phase 3: パイロット展開</p>
+                                <p class="text-sm font-bold text-brand-sub font-lato">30%</p>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2.5">
+                                <div class="bg-brand-sub h-2.5 rounded-full" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <p class="text-sm font-bold text-brand-dark">Phase 4: 全社展開</p>
+                                <p class="text-sm font-bold text-gray-400 font-lato">0%</p>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2.5">
+                                <div class="bg-gray-300 h-2.5 rounded-full" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Effect Metrics -->
+                <div class="w-1/2 bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-brand-sub uppercase tracking-wider font-lato mb-4">Effect Metrics</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <p class="text-xs text-gray-500 w-28 text-right">手作業工数削減</p>
+                            <div class="flex-1 bg-gray-100 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-brand-accent h-6 rounded-full flex items-center justify-end pr-3" style="width: 58%;">
+                                    <span class="text-xs font-bold text-white font-lato">1,400h/年</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <p class="text-xs text-gray-500 w-28 text-right">エラー率改善</p>
+                            <div class="flex-1 bg-gray-100 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-brand-sub h-6 rounded-full flex items-center justify-end pr-3" style="width: 75%;">
+                                    <span class="text-xs font-bold text-white font-lato">4.8%→1.2%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <p class="text-xs text-gray-500 w-28 text-right">意思決定速度</p>
+                            <div class="flex-1 bg-gray-100 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-brand-sub h-6 rounded-full flex items-center justify-end pr-3" style="width: 71%;">
+                                    <span class="text-xs font-bold text-white font-lato">5日→1.5日</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <p class="text-xs text-gray-500 w-28 text-right">顧客満足度</p>
+                            <div class="flex-1 bg-gray-100 rounded-full h-6 relative overflow-hidden">
+                                <div class="bg-brand-accent h-6 rounded-full flex items-center justify-end pr-3" style="width: 65%;">
+                                    <span class="text-xs font-bold text-white font-lato">+30pt向上</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">13</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

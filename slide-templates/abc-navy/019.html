@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-lato { font-family: 'Lato', sans-serif; }
+    .text-navy-900 { color: #0F2027; }
+    .text-navy-primary { color: #203A43; }
+    .bg-navy-accent { background-color: #2C5364; }
+    .text-navy-accent { color: #2C5364; }
+    .text-accent-gold { color: #C5A065; }
+    .bg-accent-gold { background-color: #C5A065; }
+    .border-navy-accent { border-color: #2C5364; }
+    .border-accent-gold { border-color: #C5A065; }
+    
+    /* Process Flow Specific Styles */
+    .step-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .arrow-connector {
+        position: absolute;
+        top: 2.5rem; /* Adjust based on icon center */
+        right: -1.25rem;
+        z-index: 10;
+        color: #CBD5E1;
+    }
+
+    /* RACI Badge Styles */
+    .raci-badge {
+        font-size: 0.65rem;
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.25rem;
+        font-weight: bold;
+        display: inline-block;
+        min-width: 1.2rem;
+        text-align: center;
+    }
+    .bg-raci-r { background-color: #2C5364; color: white; } /* Responsible */
+    .bg-raci-a { background-color: #C5A065; color: white; } /* Accountable */
+    .bg-raci-c { background-color: #E2E8F0; color: #475569; } /* Consulted */
+    .bg-raci-i { background-color: #F1F5F9; color: #94A3B8; } /* Informed */
+
+</style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Implementation Process</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">導入プロセス</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-6 flex flex-col justify-center bg-gray-50">
+<!-- Intro Text -->
+<div class="mb-6 mx-4">
+<p class="text-gray-600 text-sm">
+                プロジェクトの開始から運用定着まで、標準で約3〜4ヶ月の導入期間を想定しています。<br/>
+                各フェーズにおける当社（ベンダー）と貴社（クライアント）の役割分担は以下の通りです。
+            </p>
+</div>
+<!-- Process Flow Container -->
+<div class="grid grid-cols-5 gap-4 relative">
+<!-- Step 1: Current Assessment -->
+<div class="step-card bg-white rounded-lg shadow-sm border-t-4 border-navy-accent p-5 flex flex-col h-full relative z-10">
+<!-- Number & Icon -->
+<div class="flex justify-between items-start mb-3">
+<span class="text-4xl font-lato font-bold text-gray-100 absolute top-2 right-4 -z-10">01</span>
+<div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-navy-accent mb-2">
+<i class="fas fa-search"></i>
+</div>
+<div class="bg-navy-accent text-white text-xs font-bold px-2 py-0.5 rounded">
+                    Week 1-2
+                </div>
+</div>
+<!-- Content -->
+<h3 class="text-lg font-bold text-navy-900 mb-2">現状調査</h3>
+<p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">
+                    現行業務フローのヒアリングと課題の抽出、システム要件の定義を行います。
+                </p>
+<!-- RACI Box -->
+<div class="mt-auto bg-gray-50 rounded p-2 text-xs border border-gray-100">
+<div class="flex justify-between items-center mb-1 border-b border-gray-200 pb-1">
+<span class="text-gray-400 font-bold">Role</span>
+<span class="text-gray-400 font-bold">ABC</span>
+<span class="text-gray-400 font-bold">Client</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-navy-900 font-medium">主導</span>
+<span class="raci-badge bg-raci-r" title="Responsible">R</span>
+<span class="raci-badge bg-raci-i" title="Informed">I</span>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-navy-900 font-medium">承認</span>
+<span class="raci-badge bg-raci-i" title="Informed">I</span>
+<span class="raci-badge bg-raci-a" title="Accountable">A</span>
+</div>
+</div>
+<!-- Arrow -->
+<div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+<i class="fas fa-chevron-right"></i>
+</div>
+</div>
+<!-- Step 2: Design -->
+<div class="step-card bg-white rounded-lg shadow-sm border-t-4 border-navy-accent p-5 flex flex-col h-full relative z-10">
+<!-- Number & Icon -->
+<div class="flex justify-between items-start mb-3">
+<span class="text-4xl font-lato font-bold text-gray-100 absolute top-2 right-4 -z-10">02</span>
+<div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-navy-accent mb-2">
+<i class="fas fa-pencil-ruler"></i>
+</div>
+<div class="bg-navy-accent text-white text-xs font-bold px-2 py-0.5 rounded">
+                    Week 3-5
+                </div>
+</div>
+<!-- Content -->
+<h3 class="text-lg font-bold text-navy-900 mb-2">設計</h3>
+<p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">
+                    新業務フローの策定およびシステム設定パラメータの設計書を作成します。
+                </p>
+<!-- RACI Box -->
+<div class="mt-auto bg-gray-50 rounded p-2 text-xs border border-gray-100">
+<div class="flex justify-between items-center mb-1 border-b border-gray-200 pb-1">
+<span class="text-gray-400 font-bold">Role</span>
+<span class="text-gray-400 font-bold">ABC</span>
+<span class="text-gray-400 font-bold">Client</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-navy-900 font-medium">主導</span>
+<span class="raci-badge bg-raci-r">R</span>
+<span class="raci-badge bg-raci-c" title="Consulted">C</span>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-navy-900 font-medium">承認</span>
+<span class="raci-badge bg-raci-i">I</span>
+<span class="raci-badge bg-raci-a">A</span>
+</div>
+</div>
+<!-- Arrow -->
+<div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+<i class="fas fa-chevron-right"></i>
+</div>
+</div>
+<!-- Step 3: Construction -->
+<div class="step-card bg-white rounded-lg shadow-sm border-t-4 border-navy-primary p-5 flex flex-col h-full relative z-10">
+<!-- Number & Icon -->
+<div class="flex justify-between items-start mb-3">
+<span class="text-4xl font-lato font-bold text-gray-100 absolute top-2 right-4 -z-10">03</span>
+<div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-navy-primary mb-2">
+<i class="fas fa-cogs"></i>
+</div>
+<div class="bg-navy-primary text-white text-xs font-bold px-2 py-0.5 rounded">
+                    Week 6-9
+                </div>
+</div>
+<!-- Content -->
+<h3 class="text-lg font-bold text-navy-900 mb-2">構築</h3>
+<p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">
+                    環境セットアップ、データ移行、および個別アドオン機能の開発・実装を行います。
+                </p>
+<!-- RACI Box -->
+<div class="mt-auto bg-gray-50 rounded p-2 text-xs border border-gray-100">
+<div class="flex justify-between items-center mb-1 border-b border-gray-200 pb-1">
+<span class="text-gray-400 font-bold">Role</span>
+<span class="text-gray-400 font-bold">ABC</span>
+<span class="text-gray-400 font-bold">Client</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-navy-900 font-medium">主導</span>
+<span class="raci-badge bg-raci-r">R</span>
+<span class="raci-badge bg-raci-i">I</span>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-navy-900 font-medium">提供</span>
+<span class="raci-badge bg-raci-i">I</span>
+<span class="raci-badge bg-raci-c">C</span>
+</div>
+</div>
+<!-- Arrow -->
+<div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+<i class="fas fa-chevron-right"></i>
+</div>
+</div>
+<!-- Step 4: Testing -->
+<div class="step-card bg-white rounded-lg shadow-sm border-t-4 border-navy-primary p-5 flex flex-col h-full relative z-10">
+<!-- Number & Icon -->
+<div class="flex justify-between items-start mb-3">
+<span class="text-4xl font-lato font-bold text-gray-100 absolute top-2 right-4 -z-10">04</span>
+<div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-navy-primary mb-2">
+<i class="fas fa-vial"></i>
+</div>
+<div class="bg-navy-primary text-white text-xs font-bold px-2 py-0.5 rounded">
+                    Week 10-11
+                </div>
+</div>
+<!-- Content -->
+<h3 class="text-lg font-bold text-navy-900 mb-2">テスト</h3>
+<p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">
+                    ユーザー受入テスト（UAT）を実施し、動作確認とマニュアルとの整合性を検証します。
+                </p>
+<!-- RACI Box -->
+<div class="mt-auto bg-gray-50 rounded p-2 text-xs border border-gray-100">
+<div class="flex justify-between items-center mb-1 border-b border-gray-200 pb-1">
+<span class="text-gray-400 font-bold">Role</span>
+<span class="text-gray-400 font-bold">ABC</span>
+<span class="text-gray-400 font-bold">Client</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-navy-900 font-medium">支援</span>
+<span class="raci-badge bg-raci-c">C</span>
+<span class="raci-badge bg-raci-r">R</span>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-navy-900 font-medium">判定</span>
+<span class="raci-badge bg-raci-i">I</span>
+<span class="raci-badge bg-raci-a">A</span>
+</div>
+</div>
+<!-- Arrow -->
+<div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+<i class="fas fa-chevron-right"></i>
+</div>
+</div>
+<!-- Step 5: Training & Deploy -->
+<div class="step-card bg-white rounded-lg shadow-md border-t-4 border-accent-gold p-5 flex flex-col h-full relative z-10 ring-2 ring-yellow-50">
+<!-- Number & Icon -->
+<div class="flex justify-between items-start mb-3">
+<span class="text-4xl font-lato font-bold text-gray-100 absolute top-2 right-4 -z-10">05</span>
+<div class="w-10 h-10 rounded-full bg-yellow-50 flex items-center justify-center text-accent-gold mb-2">
+<i class="fas fa-rocket"></i>
+</div>
+<div class="bg-accent-gold text-white text-xs font-bold px-2 py-0.5 rounded">
+                    Week 12~
+                </div>
+</div>
+<!-- Content -->
+<h3 class="text-lg font-bold text-navy-900 mb-2">トレーニング／展開</h3>
+<p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">
+                    操作説明会の実施および本番環境への切り替えを行い、運用サポートを開始します。
+                </p>
+<!-- RACI Box -->
+<div class="mt-auto bg-gray-50 rounded p-2 text-xs border border-gray-100">
+<div class="flex justify-between items-center mb-1 border-b border-gray-200 pb-1">
+<span class="text-gray-400 font-bold">Role</span>
+<span class="text-gray-400 font-bold">ABC</span>
+<span class="text-gray-400 font-bold">Client</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-navy-900 font-medium">実施</span>
+<span class="raci-badge bg-raci-r">R</span>
+<span class="raci-badge bg-raci-i">I</span>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="text-navy-900 font-medium">受講</span>
+<span class="raci-badge bg-raci-i">I</span>
+<span class="raci-badge bg-raci-r">R</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RACI Legend -->
+<div class="mt-6 border-t border-gray-200 pt-3 flex justify-end">
+<div class="flex items-center space-x-6 text-xs text-gray-500 bg-white px-4 py-2 rounded-full shadow-sm">
+<span class="font-bold text-navy-900 mr-2">RACI定義:</span>
+<div class="flex items-center space-x-2">
+<span class="raci-badge bg-raci-r">R</span>
+<span>Responsible (実行)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="raci-badge bg-raci-a">A</span>
+<span>Accountable (責任)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="raci-badge bg-raci-c">C</span>
+<span>Consulted (相談)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="raci-badge bg-raci-i">I</span>
+<span>Informed (報告)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">19</span>
+</div>
+</div>
+</div>
+</body>
+</html>

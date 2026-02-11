@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AI活用の可能性</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">As-Is vs To-Be</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">AI活用の可能性</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 2 Columns -->
+        <div class="flex-1 px-16 py-6 flex gap-6">
+            <!-- Left: As-Is -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <div class="flex items-center gap-2 mb-1">
+                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-times text-gray-500 text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider font-lato">As-Is（現状）</h3>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-clock text-gray-400 mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">手動データ集計</p>
+                            <p class="text-xs text-gray-500">Excel中心の手作業。月次レポートに5日間</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-headset text-gray-400 mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">有人カスタマーサポート</p>
+                            <p class="text-xs text-gray-500">全件を人が対応。平均応答4時間</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-file-alt text-gray-400 mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">属人的なドキュメント作成</p>
+                            <p class="text-xs text-gray-500">個人スキルに依存。品質にバラつき</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-search text-gray-400 mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">経験則ベースの判断</p>
+                            <p class="text-xs text-gray-500">データ分析なしの意思決定</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: To-Be -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <div class="flex items-center gap-2 mb-1">
+                    <div class="w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center">
+                        <i class="fas fa-check text-white text-sm"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-lato">To-Be（AI導入後）</h3>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-5 border border-brand-accent" style="border-color: rgba(201, 169, 97, 0.3);">
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-bolt text-brand-accent mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">自動データ分析・レポート</p>
+                            <p class="text-xs text-gray-500">リアルタイムダッシュボード。即座にレポート生成</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-robot text-brand-accent mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">AIチャットボット対応</p>
+                            <p class="text-xs text-gray-500">70%を自動対応。応答時間30秒以内</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start mb-3">
+                        <i class="fas fa-magic text-brand-accent mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">生成AIによるドキュメント支援</p>
+                            <p class="text-xs text-gray-500">テンプレート＋AI生成で品質均一化</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-chart-bar text-brand-accent mr-3 mt-0.5"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark">データドリブンな意思決定</p>
+                            <p class="text-xs text-gray-500">予測分析に基づく迅速な経営判断</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrow indicator -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center shadow-md">
+                <i class="fas fa-arrow-right text-white"></i>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">05</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

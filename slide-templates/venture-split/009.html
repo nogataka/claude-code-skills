@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Target Market &amp; Persona</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .persona-card {
+            transition: all 0.3s ease;
+        }
+
+        .persona-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container p-12">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
+            <div>
+                <div class="flex items-center space-x-2 text-orange-500 mb-1">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Target Market</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900">ターゲット市場・ペルソナ</h1>
+                <p class="text-sm text-gray-500 mt-1">「家族旅行を諦めたくない」30〜40代子育て世帯へのフォーカス</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">06</span>
+            </div>
+        </div>
+        <!-- Target Overview Section -->
+        <div
+            class="bg-gray-50 rounded-xl p-6 mb-8 border-l-4 border-gray-800 flex items-center justify-between shadow-sm">
+            <div class="flex-1 pr-8">
+                <h3 class="text-sm font-bold text-gray-500 uppercase mb-2">メイン・ターゲットセグメント</h3>
+                <p class="text-xl font-bold text-gray-800 leading-snug">
+                    首都圏エリア居住の<br />
+                    <span class="text-blue-600">30〜40代 子育て世帯</span>
+                    <span class="text-base font-normal text-gray-600 ml-2">（世帯年収500〜800万円）</span>
+                </p>
+                <p class="text-sm text-gray-600 mt-2">
+                    <i class="fa-solid fa-location-dot text-gray-400 mr-1"></i> 市川・船橋・浦安・城東エリア
+                    <span class="mx-2 text-gray-300">|</span>
+                    <i class="fa-solid fa- suitcase-rolling text-gray-400 mr-1"></i> 年1〜2回の宿泊旅行意向あり
+                </p>
+            </div>
+            <div class="flex-shrink-0 w-1/3 border-l border-gray-200 pl-8">
+                <h3 class="text-xs font-bold text-gray-400 uppercase mb-3">サブターゲット &amp; 拡張層</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span
+                        class="bg-white border border-green-200 text-green-700 px-3 py-1 rounded-full text-xs font-medium shadow-sm">
+                        <i class="fa-solid fa-paw mr-1"></i>ペット連れファミリー
+                    </span>
+                    <span
+                        class="bg-white border border-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-medium shadow-sm">
+                        キャンピングカー購入検討層
+                    </span>
+                    <span
+                        class="bg-white border border-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-medium shadow-sm">
+                        アクティブシニア夫婦
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Persona Cards Grid -->
+        <div class="grid grid-cols-2 gap-8 flex-1">
+            <!-- Persona A: General Family -->
+            <div
+                class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm relative overflow-hidden persona-card flex flex-col">
+                <div class="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+                <!-- Persona Header -->
+                <div class="flex items-start space-x-4 mb-5">
+                    <div
+                        class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 text-2xl border-2 border-white shadow-sm flex-shrink-0">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <div class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded inline-block mb-1">
+                            メインペルソナ</div>
+                        <h3 class="text-lg font-bold text-gray-900">「コスパと体験の両立」模索パパ</h3>
+                        <p class="text-sm text-gray-600">35歳・IT企業勤務・市川市在住</p>
+                        <p class="text-xs text-gray-400 mt-1">家族: 妻、小学生の子供2人</p>
+                    </div>
+                </div>
+                <!-- Issues / Needs -->
+                <div class="space-y-4 flex-1">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <h4 class="text-xs font-bold text-gray-500 mb-2 flex items-center">
+                            <i class="fa-solid fa-circle-exclamation text-red-400 mr-2"></i>現状の悩み (Pains)
+                        </h4>
+                        <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside pl-1">
+                            <li>宿泊費高騰で予算1.5倍、でも内容は変わらず不満</li>
+                            <li>ホテルの壁が薄く、子供の騒ぎ声で親が疲弊</li>
+                            <li>「せっかくなら特別な体験をさせたい」焦り</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded-lg mt-auto">
+                        <h4 class="text-xs font-bold text-blue-600 mb-2 flex items-center">
+                            <i class="fa-solid fa-lightbulb text-blue-500 mr-2"></i>OUTDOOR+ への期待
+                        </h4>
+                        <p class="text-sm text-gray-800 font-medium">
+                            「同じ予算なら、子供が冒険できて親も気楽な旅がいい」
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Persona B: Pet Family -->
+            <div
+                class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm relative overflow-hidden persona-card flex flex-col">
+                <div class="absolute top-0 left-0 w-full h-1 bg-green-500"></div>
+                <!-- Persona Header -->
+                <div class="flex items-start space-x-4 mb-5">
+                    <div
+                        class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-500 text-2xl border-2 border-white shadow-sm flex-shrink-0">
+                        <i class="fa-solid fa-user-nurse"></i>
+                    </div>
+                    <div>
+                        <div
+                            class="bg-green-100 text-green-800 text-xs font-bold px-2 py-0.5 rounded inline-block mb-1">
+                            サブペルソナ</div>
+                        <h3 class="text-lg font-bold text-gray-900">「ペットと一緒に」諦めママ</h3>
+                        <p class="text-sm text-gray-600">38歳・メーカー勤務・船橋市在住</p>
+                        <p class="text-xs text-gray-400 mt-1">家族: 夫、中学生の子供、小型犬1匹</p>
+                    </div>
+                </div>
+                <!-- Issues / Needs -->
+                <div class="space-y-4 flex-1">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <h4 class="text-xs font-bold text-gray-500 mb-2 flex items-center">
+                            <i class="fa-solid fa-circle-exclamation text-red-400 mr-2"></i>現状の悩み (Pains)
+                        </h4>
+                        <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside pl-1">
+                            <li>ペット可の宿は高額＆予約困難で予定が立たない</li>
+                            <li>ペットホテルに預けるのは罪悪感があり避けたい</li>
+                            <li>移動中の吠えや排泄が心配で遠出が怖い</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded-lg mt-auto">
+                        <h4 class="text-xs font-bold text-green-600 mb-2 flex items-center">
+                            <i class="fa-solid fa-lightbulb text-green-500 mr-2"></i>OUTDOOR+ への期待
+                        </h4>
+                        <p class="text-sm text-gray-800 font-medium">
+                            「家族全員（犬含む）が一緒に、安心して過ごせる空間が欲しい」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

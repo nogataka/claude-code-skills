@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ソリューション概要</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .mission-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 16px 20px; box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); }
+        .feature-card { background-color: #F8F9FA; border-left: 4px solid #007BFF; padding: 12px 14px; border-radius: 0 4px 4px 0; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-3">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">ソリューション概要</h1>
+
+            <div class="mission-box mb-4">
+                <p class="text-sm leading-relaxed">
+                    OUTDOOR+は、ペット連れ・ファミリー向けの<strong>「プライベートな移動する客室」</strong>をレンタルで提供。
+                    移動＋宿泊を一体化することで、宿泊費高騰と子ども・ペット同伴時のストレスを同時に解決する。
+                </p>
+            </div>
+
+            <div class="flex gap-6 flex-grow">
+                <!-- Left Column -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <div class="feature-card">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-3" style="background: rgba(0,123,255,0.1);">
+                                <i class="fas fa-shuttle-van text-blue-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold body-text">1. ペットファーストのキャンピングカー</p>
+                                <p class="text-xs" style="color: #666;">防水・洗えるシート、ケージフック、換気・温度管理、バックカメラ・ドラレコ標準装備。初心者でも運転しやすい車種を選定。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-3" style="background: rgba(0,123,255,0.1);">
+                                <i class="fas fa-robot text-blue-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold body-text">2. AIトラベルコンシェルジュ</p>
+                                <p class="text-xs" style="color: #666;">首都圏近郊の定番ルート5〜10本をベースに、家族構成・ペット有無・予算に応じたモデルコースを提案。初年度はChatGPT等＋スプレッドシートの半手動運用。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-3" style="background: rgba(0,123,255,0.1);">
+                                <i class="fas fa-laptop text-blue-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold body-text">3. フルデジタル予約・利用フロー</p>
+                                <p class="text-xs" style="color: #666;">空き確認→見積→予約→決済→事前案内→当日操作説明までをオンラインで完結。外部SaaSで安定・セキュリティを担保。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <div class="feature-card">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-3" style="background: rgba(0,123,255,0.1);">
+                                <i class="fas fa-headset text-blue-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold body-text">4. 初心者サポート＆24時間ヘルプ</p>
+                                <p class="text-xs" style="color: #666;">出発前チェックリスト確認＋車内QRコード動画マニュアル。緊急時（事故・故障）は24時間電話対応、通常質問は翌朝対応。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-3" style="background: rgba(0,123,255,0.1);">
+                                <i class="fas fa-paw text-blue-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold body-text">5. ペット連れ・初心者向け特化プラン</p>
+                                <p class="text-xs" style="color: #666;">「はじめてのキャンピングカー体験プラン」（1泊2日＋30分レクチャー付き）、「近場1泊ペット旅プラン」（近郊エリア限定）等のパッケージ。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 rounded-lg mt-1">
+                        <h3 class="font-bold text-xs body-text mb-2"><i class="fas fa-check-double text-blue-500 mr-1"></i> 顧客価値サマリー</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="text-xs" style="color: #666;"><span class="highlight">コスト最適化:</span> ホテル4人2泊6〜10万 → OUTDOOR+ 約7万円で移動+宿泊一体</div>
+                            <div class="text-xs" style="color: #666;"><span class="highlight">ストレス低減:</span> 子どもの騒音・ペットの吠え声を気にしないプライベート空間</div>
+                            <div class="text-xs" style="color: #666;"><span class="highlight">初心者安心:</span> AIルート提案＋動画＋チェックリスト＋24hサポート</div>
+                            <div class="text-xs" style="color: #666;"><span class="highlight">購入前体験:</span> 3〜6百万の購入前に実際のキャンピングカー生活を体験</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

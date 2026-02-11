@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Introduction to Customer Experience</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&amp;family=Noto+Serif+JP:wght@700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 15px 40px;
+            color: #1E3A8A;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 60px);
+            padding: 40px;
+        }
+        
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-right: 40px;
+        }
+        
+        .right-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 4.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #1E3A8A;
+            margin-bottom: 40px;
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #6B7280;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 500px;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .stat-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .stat-arrow {
+            width: 40px;
+            height: 40px;
+            background-color: #1E40AF;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .stat-arrow i {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .stat-number {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-right: 20px;
+            font-family: 'Noto Serif JP', serif;
+            line-height: 1;
+        }
+        
+        .stat-text {
+            font-size: 1rem;
+            color: #6B7280;
+            line-height: 1.6;
+            max-width: 300px;
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(191, 219, 254, 0.3);
+            z-index: -1;
+        }
+        
+        .circle-1 {
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: 10%;
+        }
+        
+        .header-left, .header-center, .header-right {
+            font-family: 'M PLUS 1p', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">カスタマー<br/>エクスペリエンス<br/>の導入</h1>
+<p class="description">
+                    カスタマーエクスペリエンス（CX）とは、顧客がブランドと持つあらゆる接点の総和です。優れたCXは信頼を築き、顧客維持率を高め、収益の成長を促進します。
+                </p>
+</div>
+<div class="right-content">
+<div class="stat-container">
+<div class="stat-item">
+<div class="stat-arrow">
+<i class="fas fa-arrow-up"></i>
+</div>
+<div class="stat-number">86%</div>
+<div class="stat-text">
+                            の顧客は、より良い体験のためになら追加料金を支払うことを厭いません。
+                        </div>
+</div>
+<div class="stat-item">
+<div class="stat-arrow">
+<i class="fas fa-arrow-up"></i>
+</div>
+<div class="stat-number">32%</div>
+<div class="stat-text">
+                            の顧客は、たった一度の不満足な体験で競合他社に乗り換えてしまいます。
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-lato { font-family: 'Lato', sans-serif; }
+    .text-navy-900 { color: #0F2027; }
+    .text-navy-primary { color: #203A43; }
+    .bg-navy-accent { background-color: #2C5364; }
+    .text-navy-accent { color: #2C5364; }
+    .text-accent-gold { color: #C5A065; }
+    .bg-accent-gold { background-color: #C5A065; }
+    .border-navy-accent { border-color: #2C5364; }
+    .border-accent-gold { border-color: #C5A065; }
+    
+    /* Animation for CTA */
+    .cta-button {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    }
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(197, 160, 101, 0.4);
+    }
+</style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Conclusion</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">まとめと次のアクション</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 flex items-center justify-center bg-gray-50">
+<div class="w-full max-w-6xl h-full flex gap-8">
+<!-- Left Column: Summary (Key Takeaways) -->
+<div class="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 p-8 flex flex-col relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-navy-accent"></div>
+<h2 class="text-2xl font-bold text-navy-900 mb-6 flex items-center">
+<span class="w-10 h-10 rounded-full bg-blue-50 text-navy-accent flex items-center justify-center mr-3 text-lg shadow-sm border border-blue-100">
+<i class="fas fa-clipboard-list"></i>
+</span>
+                        Summary
+                        <span class="text-sm text-gray-400 font-normal ml-3 mt-1 font-lato">本提案の要点</span>
+</h2>
+<!-- Content Blocks -->
+<div class="flex-1 flex flex-col justify-center space-y-6">
+<!-- Benefit Block -->
+<div class="bg-blue-50 rounded-xl p-6 border-l-4 border-navy-accent shadow-sm">
+<h3 class="font-bold text-navy-900 mb-3 flex items-center text-lg">
+<i class="fas fa-chart-line text-navy-accent mr-3"></i> 期待効果
+                            </h3>
+<ul class="space-y-3">
+<li class="flex items-start text-gray-700">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+<p class="font-medium">SaaS導入と運用高度化による<span class="font-bold text-navy-accent border-b border-navy-accent border-dashed">売上成長（+8〜12%）</span></p>
+</li>
+<li class="flex items-start text-gray-700">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+<p class="font-medium">業務自動化による効率化と<span class="font-bold text-navy-accent border-b border-navy-accent border-dashed">工数削減</span></p>
+</li>
+</ul>
+</div>
+<!-- Risk Block -->
+<div class="bg-gray-50 rounded-xl p-6 border-l-4 border-gray-400 shadow-sm">
+<h3 class="font-bold text-gray-700 mb-3 flex items-center text-lg">
+<i class="fas fa-exclamation-triangle text-gray-500 mr-3"></i> 留意点・リスク
+                            </h3>
+<ul class="space-y-3">
+<li class="flex items-start text-gray-600">
+<i class="fas fa-caret-right text-gray-400 mt-1 mr-3 flex-shrink-0"></i>
+<p>プロジェクトスコープの拡大防止とコントロール</p>
+</li>
+<li class="flex items-start text-gray-600">
+<i class="fas fa-caret-right text-gray-400 mt-1 mr-3 flex-shrink-0"></i>
+<p>現場への定着化支援とチェンジマネジメントの徹底</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Right Column: Next Steps (Dark Theme) -->
+<div class="flex-1 bg-navy-900 rounded-xl shadow-xl text-white p-8 flex flex-col relative overflow-hidden">
+<!-- Background decoration -->
+<div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+<i class="fas fa-forward text-9xl text-white transform rotate-0"></i>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black opacity-30 pointer-events-none"></div>
+<h2 class="text-2xl font-bold text-white mb-8 flex items-center relative z-10">
+<span class="w-10 h-10 rounded-full bg-white bg-opacity-10 text-accent-gold flex items-center justify-center mr-3 text-lg border border-gray-600">
+<i class="far fa-calendar-check"></i>
+</span>
+                        Next Actions
+                        <span class="text-sm text-gray-400 font-normal ml-3 mt-1 font-lato">次のステップ</span>
+</h2>
+<div class="flex-1 relative z-10">
+<div class="space-y-0 pl-2">
+<!-- Timeline Item 1 -->
+<div class="flex gap-4 group">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 rounded-full bg-accent-gold border-4 border-navy-900 shadow-[0_0_0_2px_#C5A065] z-10"></div>
+<div class="w-0.5 h-full bg-gray-700 my-1 group-last:hidden"></div>
+</div>
+<div class="pb-8 pt-0.5">
+<p class="text-xs font-bold text-accent-gold uppercase tracking-wider mb-1 flex items-center">
+<i class="far fa-clock mr-1"></i> Next Week
+                                    </p>
+<h3 class="text-xl font-bold mb-2 text-white">詳細要件ワークショップ</h3>
+<p class="text-sm text-gray-300 leading-relaxed opacity-90">
+                                        現場担当者を交えた具体的な業務フローのすり合わせを実施し、要件定義の精度を高めます。
+                                    </p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="flex gap-4 group">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 rounded-full bg-gray-600 border-4 border-navy-900 shadow-[0_0_0_2px_#4B5563] z-10"></div>
+</div>
+<div class="pt-0.5">
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 flex items-center">
+<i class="far fa-calendar mr-1"></i> This Month
+                                    </p>
+<h3 class="text-xl font-bold mb-2 text-gray-200">見積・契約締結</h3>
+<p class="text-sm text-gray-400 leading-relaxed opacity-80">
+                                        最終的なスコープに基づいたお見積りの提示と、契約手続きの完了を目指します。
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Button -->
+<div class="mt-auto pt-8 border-t border-gray-700 relative z-10">
+<div class="cta-button bg-accent-gold text-navy-900 rounded-lg py-4 px-6 text-center font-bold text-lg shadow-lg cursor-pointer flex items-center justify-center space-x-2">
+<span>プロジェクトを開始する</span>
+<i class="fas fa-arrow-right ml-2 text-sm"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">20</span>
+</div>
+</div>
+</div>
+</body>
+</html>

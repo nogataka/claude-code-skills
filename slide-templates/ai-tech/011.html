@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Implementation Roadmap - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            display: flex;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.4;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .techvantage-pill {
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+            font-family: 'Noto Sans JP', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        
+        .nav-arrow {
+            background-color: white;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+        }
+        
+        .body-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .presenter-info {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.2);
+        }
+        
+        .gray-section {
+            background-color: #ececec;
+            color: #000000;
+            padding: 2.5rem 2.5rem 2.5rem 4rem;
+            height: 100%;
+            clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .agenda-title {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+        
+        .roadmap-item {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 500;
+            color: #000000;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .roadmap-phase {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            opacity: 0.8;
+            min-width: 5rem;
+            color: #333;
+        }
+        
+        .roadmap-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .roadmap-desc {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- TechVantage branding -->
+<div class="absolute top-8 left-10 z-10">
+<div class="techvantage-pill">
+            TECHVANTAGE
+        </div>
+</div>
+<!-- Main content - Left side -->
+<div class="w-1/2 flex flex-col justify-center pl-20 pr-10 z-10">
+<h2 class="section-title mb-6">導入ロードマップ<br/>(90日プラン)</h2>
+<p class="body-text mt-2">
+            最初の90日間で確実な価値実証を行いながら、将来的な全社展開を見据えた基盤構築を並行して進める段階的アプローチを提案します。
+        </p>
+<div class="presenter-info">
+<p><strong>Next Steps:</strong> 初期フェーズの実行計画策定</p>
+<p class="mt-2">成功のカギは「小さく始めて、学び、速く広げる」ことです。まずは特定ユースケースでのPoCから開始します。</p>
+</div>
+</div>
+<!-- Right side with gray background -->
+<div class="w-1/2 relative h-full">
+<div class="gray-section">
+<h3 class="agenda-title">90-DAY PLAN</h3>
+<div class="roadmap-item">
+<span class="roadmap-phase">0-30日</span>
+<div class="roadmap-content">
+<span class="font-bold text-xl">ディスカバリー &amp; PoC計画</span>
+<span class="roadmap-desc">データの棚卸し、成功基準(KPI)の定義、ユースケース要件の確定</span>
+</div>
+</div>
+<div class="roadmap-item">
+<span class="roadmap-phase">31-60日</span>
+<div class="roadmap-content">
+<span class="font-bold text-xl">パイロット実装</span>
+<span class="roadmap-desc">小規模環境での本番稼働、実ユーザーによる評価フィードバック、運用要件の洗い出し</span>
+</div>
+</div>
+<div class="roadmap-item">
+<span class="roadmap-phase">61-90日</span>
+<div class="roadmap-content">
+<span class="font-bold text-xl">スケール設計 &amp; 体制構築</span>
+<span class="roadmap-desc">SLA/SLO策定、セキュリティ監視の実装、運用チーム教育、全社展開計画</span>
+</div>
+</div>
+<div class="w-full border-t border-black border-opacity-20 my-2"></div>
+<div class="roadmap-item mt-4">
+<span class="roadmap-phase">成果物</span>
+<div class="roadmap-content">
+<span class="font-bold">KEY DELIVERABLES</span>
+<span class="roadmap-desc">ユースケース要件定義書、PoC評価レポート、AI運用Runbook、ROI試算表</span>
+</div>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-8">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-black text-xl"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

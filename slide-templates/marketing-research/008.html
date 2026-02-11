@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modern Corporate Marketing Research - Project Timeline</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f4f6;
+    }
+    .slide-container {
+        width: 1280px;
+        height: 720px;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Timeline specific styles */
+    .timeline-node {
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+    .timeline-card {
+        transition: all 0.3s ease;
+        border-top: 4px solid transparent;
+    }
+    .timeline-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    /* Q1 Color: Blue */
+    .q1-theme .timeline-node { background-color: #2563eb; border-color: #dbeafe; }
+    .q1-theme .timeline-card { border-top-color: #2563eb; }
+    .q1-theme .text-accent { color: #2563eb; }
+    .q1-theme .bg-accent-soft { background-color: #eff6ff; }
+    
+    /* Q2 Color: Cyan */
+    .q2-theme .timeline-node { background-color: #0891b2; border-color: #cffafe; }
+    .q2-theme .timeline-card { border-top-color: #0891b2; }
+    .q2-theme .text-accent { color: #0891b2; }
+    .q2-theme .bg-accent-soft { background-color: #ecfeff; }
+
+    /* Q3 Color: Violet */
+    .q3-theme .timeline-node { background-color: #7c3aed; border-color: #ede9fe; }
+    .q3-theme .timeline-card { border-top-color: #7c3aed; }
+    .q3-theme .text-accent { color: #7c3aed; }
+    .q3-theme .bg-accent-soft { background-color: #f5f3ff; }
+
+    /* Q4 Color: Rose */
+    .q4-theme .timeline-node { background-color: #e11d48; border-color: #ffe4e6; }
+    .q4-theme .timeline-card { border-top-color: #e11d48; }
+    .q4-theme .text-accent { color: #e11d48; }
+    .q4-theme .bg-accent-soft { background-color: #fff1f2; }
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Header -->
+<div class="z-10 px-16 pt-12 pb-6 flex justify-between items-end border-b border-gray-100 bg-white">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="h-1 w-8 bg-blue-600"></div>
+<p class="text-blue-600 font-bold tracking-widest text-xs uppercase">Implementation Plan</p>
+</div>
+<h1 class="text-4xl font-black text-gray-900 tracking-tight">プロジェクトスケジュール</h1>
+</div>
+<div class="text-right">
+<p class="text-gray-400 text-sm font-medium">Research Report 2026</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-12 flex flex-col justify-center relative bg-gray-50">
+<!-- Connecting Line -->
+<div class="absolute top-1/2 left-16 right-16 h-1 bg-gray-200 transform -translate-y-8 z-0"></div>
+<!-- Timeline Items Container -->
+<div class="grid grid-cols-4 gap-8 w-full z-10">
+<!-- Q1 Item -->
+<div class="flex flex-col h-full q1-theme group">
+<!-- Top: Quarter Label & Milestone -->
+<div class="pb-8 flex flex-col items-center justify-end h-32 relative">
+<div class="absolute bottom-0 w-4 h-4 rounded-full bg-white border-4 border-blue-600 transform translate-y-2 timeline-node z-20 group-hover:scale-125"></div>
+<div class="mb-4 text-center">
+<span class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full mb-2 shadow-sm">Milestone</span>
+<p class="text-sm font-bold text-gray-800">契約締結</p>
+</div>
+</div>
+<!-- Bottom: Card -->
+<div class="pt-8 h-64">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full timeline-card flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black text-gray-200">Q1</h3>
+<div class="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center text-accent text-lg">
+<i class="fa-solid fa-flag-checkered"></i>
+</div>
+</div>
+<h4 class="text-lg font-bold text-gray-800 mb-2">企画・要件定義</h4>
+<ul class="space-y-2 flex-1">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>プロジェクトキックオフ</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>KPI・目標設定</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>要件定義書の作成</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Q2 Item -->
+<div class="flex flex-col h-full q2-theme group">
+<!-- Top: Quarter Label & Milestone -->
+<div class="pb-8 flex flex-col items-center justify-end h-32 relative">
+<div class="absolute bottom-0 w-4 h-4 rounded-full bg-white border-4 border-cyan-600 transform translate-y-2 timeline-node z-20 group-hover:scale-125"></div>
+<div class="mb-4 text-center">
+<span class="inline-block px-3 py-1 bg-cyan-600 text-white text-xs font-bold rounded-full mb-2 shadow-sm">Milestone</span>
+<p class="text-sm font-bold text-gray-800">接続完了</p>
+</div>
+</div>
+<!-- Bottom: Card -->
+<div class="pt-8 h-64">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full timeline-card flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black text-gray-200">Q2</h3>
+<div class="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center text-accent text-lg">
+<i class="fa-solid fa-network-wired"></i>
+</div>
+</div>
+<h4 class="text-lg font-bold text-gray-800 mb-2">データ連携・構築</h4>
+<ul class="space-y-2 flex-1">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>データコネクタ構築</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>初期セットアップ</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>データ品質検証</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Q3 Item -->
+<div class="flex flex-col h-full q3-theme group">
+<!-- Top: Quarter Label & Milestone -->
+<div class="pb-8 flex flex-col items-center justify-end h-32 relative">
+<div class="absolute bottom-0 w-4 h-4 rounded-full bg-white border-4 border-violet-600 transform translate-y-2 timeline-node z-20 group-hover:scale-125"></div>
+<div class="mb-4 text-center">
+<span class="inline-block px-3 py-1 bg-violet-600 text-white text-xs font-bold rounded-full mb-2 shadow-sm">Milestone</span>
+<p class="text-sm font-bold text-gray-800">パイロット評価</p>
+</div>
+</div>
+<!-- Bottom: Card -->
+<div class="pt-8 h-64">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full timeline-card flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black text-gray-200">Q3</h3>
+<div class="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center text-accent text-lg">
+<i class="fa-solid fa-vial-circle-check"></i>
+</div>
+</div>
+<h4 class="text-lg font-bold text-gray-800 mb-2">パイロット運用</h4>
+<ul class="space-y-2 flex-1">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>A/Bテスト実施</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>運用フロー最適化</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>中間レビュー</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Q4 Item -->
+<div class="flex flex-col h-full q4-theme group">
+<!-- Top: Quarter Label & Milestone -->
+<div class="pb-8 flex flex-col items-center justify-end h-32 relative">
+<div class="absolute bottom-0 w-4 h-4 rounded-full bg-white border-4 border-rose-600 transform translate-y-2 timeline-node z-20 group-hover:scale-125"></div>
+<div class="mb-4 text-center">
+<span class="inline-block px-3 py-1 bg-rose-600 text-white text-xs font-bold rounded-full mb-2 shadow-sm">Completion</span>
+<p class="text-sm font-bold text-gray-800">全面導入・定着</p>
+</div>
+</div>
+<!-- Bottom: Card -->
+<div class="pt-8 h-64">
+<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full timeline-card flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black text-gray-200">Q4</h3>
+<div class="w-10 h-10 rounded-lg bg-accent-soft flex items-center justify-center text-accent text-lg">
+<i class="fa-solid fa-rocket"></i>
+</div>
+</div>
+<h4 class="text-lg font-bold text-gray-800 mb-2">本番展開・スケール</h4>
+<ul class="space-y-2 flex-1">
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>全社ロールアウト</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>自動化シナリオ稼働</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-gray-600">
+<i class="fa-solid fa-check text-accent mt-1 text-xs"></i>
+<span>効果測定レポート</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Start/End Indicators -->
+<div class="absolute top-1/2 left-10 w-3 h-3 bg-gray-300 rounded-full transform -translate-y-9"></div>
+<div class="absolute top-1/2 right-10 w-3 h-3 bg-gray-300 rounded-full transform -translate-y-9"></div>
+</div>
+</div>
+</body>
+</html>

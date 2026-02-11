@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Executive Summary 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        /* Custom scrollbar for content if needed, though we aim for no scroll */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Left Panel: Vision (Dark Theme) -->
+        <div class="w-1/3 bg-gray-900 text-white flex flex-col p-10 relative overflow-hidden">
+            <!-- Background Accents -->
+            <div class="absolute top-0 left-0 w-full h-2 bg-orange-500"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-gray-800 rounded-tl-full opacity-20 -z-0"></div>
+            <!-- Header -->
+            <div class="relative z-10 mb-12">
+                <div class="flex items-center space-x-3 text-orange-500 mb-2">
+                    <i class="fa-solid fa-eye text-2xl"></i>
+                    <span class="font-bold tracking-widest uppercase text-sm">Vision</span>
+                </div>
+                <h2 class="text-3xl font-black leading-tight">
+                    新しい旅の<br />
+                    スタンダードを<br />
+                    創る
+                </h2>
+            </div>
+            <!-- Vision Content -->
+            <div class="relative z-10 flex-1 flex flex-col justify-center">
+                <div class="mb-8">
+                    <i class="fa-solid fa-quote-left text-4xl text-gray-700 mb-4 block"></i>
+                    <p class="text-xl font-medium leading-relaxed text-gray-100">
+                        家族とペットが<br />
+                        <span class="text-orange-400">周囲に気兼ねなく</span>、<br />
+                        移動も宿泊も一体となった<br />
+                        <span class="text-orange-400">“マイペースな旅”</span>を<br />
+                        楽しめる社会へ
+                    </p>
+                </div>
+                <div class="mt-auto pt-8 border-t border-gray-700">
+                    <p class="text-sm text-gray-400">
+                        高額なキャンピングカー購入に頼らず、<br />
+                        必要なときだけ高品質な体験を提供
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Right Panel: Key Highlights (Light Theme) -->
+        <div class="w-2/3 bg-gray-50 p-10 flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">エグゼクティブサマリー</h1>
+                    <p class="text-sm text-gray-500 mt-1">事業概要・提供価値・運用モデルの全体像</p>
+                </div>
+                <div class="text-right">
+                    <span class="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded">01</span>
+                </div>
+            </div>
+            <!-- Grid Content -->
+            <div class="grid grid-cols-2 gap-6 flex-1">
+                <!-- Card 1: Business Overview -->
+                <div
+                    class="col-span-2 bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500 flex items-start space-x-5">
+                    <div
+                        class="bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-600 text-2xl">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">事業概要</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-bold mb-1">商圏エリア</p>
+                                <p class="text-sm font-medium text-gray-700">首都圏近郊</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 uppercase font-bold mb-1">メインターゲット</p>
+                                <p class="text-sm font-medium text-gray-700">30〜40代ファミリー<br /><span
+                                        class="text-xs text-gray-500">（特にペット連れ）</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Value Proposition -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500 flex flex-col justify-between">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="bg-green-50 w-10 h-10 rounded-full flex items-center justify-center text-green-600">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">提供価値</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                            <p class="text-sm text-gray-600">宿泊費高騰・予約難の解消</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                            <p class="text-sm text-gray-600">子供・ペットの騒音/気遣いストレスゼロ</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-check text-green-500 mt-1 mr-2 text-xs"></i>
+                            <p class="text-sm text-gray-600">移動＋宿泊一体の効率的旅程</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Operation Model -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500 flex flex-col justify-between">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="bg-purple-50 w-10 h-10 rounded-full flex items-center justify-center text-purple-600">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">運用モデル</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-laptop-code text-purple-500 mt-1 mr-2 text-xs"></i>
+                            <p class="text-sm text-gray-600">フルデジタルUX（予約〜決済）</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-route text-purple-500 mt-1 mr-2 text-xs"></i>
+                            <p class="text-sm text-gray-600">AIコンシェルジュ<span
+                                    class="text-xs text-gray-400 block">（初年度は半手動運用で品質担保）</span></p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-headset text-purple-500 mt-1 mr-2 text-xs"></i>
+                            <p class="text-sm text-gray-600">24時間サポート<span
+                                    class="text-xs text-gray-400 block">（緊急時のみ電話・通常翌朝）</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Note -->
+            <div class="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center text-xs text-gray-400">
+                <p>OUTDOOR+ Business Plan v3</p>
+                <p>Confidential</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

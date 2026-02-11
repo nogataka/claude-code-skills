@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ターゲット市場＆ペルソナ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .profile-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 14px 16px; box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); }
+        .segment-card { background-color: #F8F9FA; border-left: 4px solid #007BFF; padding: 10px 14px; border-radius: 0 4px 4px 0; }
+        .adopter-tag { display: inline-block; background-color: rgba(0, 123, 255, 0.1); color: #007BFF; font-weight: 700; padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; margin-right: 4px; margin-bottom: 4px; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-3">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">ターゲット市場＆ペルソナ</h1>
+
+            <div class="flex gap-6 flex-grow">
+                <!-- Left: Segments + Adopters -->
+                <div class="w-2/5 flex flex-col gap-2">
+                    <h3 class="font-bold text-sm body-text mb-1"><i class="fas fa-crosshairs text-blue-500 mr-2"></i>ターゲットセグメント</h3>
+
+                    <div class="segment-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-star text-yellow-400 mr-1"></i> 主要ターゲット：ファミリー層</p>
+                        <p class="text-xs" style="color: #666;">30〜40代、子ども2〜3人（小〜中学生）、首都圏、年1〜2回旅行、予算10〜20万円/回</p>
+                    </div>
+
+                    <div class="segment-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-paw text-yellow-500 mr-1"></i> サブ①：ペット連れファミリー</p>
+                        <p class="text-xs" style="color: #666;">30〜50代、室内犬飼育、ペットを家族と認識、ペットホテルへの心理的抵抗</p>
+                    </div>
+
+                    <div class="segment-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-heart text-pink-400 mr-1"></i> サブ②：アクティブシニア夫婦</p>
+                        <p class="text-xs" style="color: #666;">50〜70代、運転経験豊富、自由時間・可処分所得多め、平日利用中心</p>
+                    </div>
+
+                    <div class="segment-card">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-car text-gray-400 mr-1"></i> サブ③：購入検討者</p>
+                        <p class="text-xs" style="color: #666;">30〜60代、300〜600万円の購入に慎重、複数回の試乗体験ニーズ</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 rounded-lg mt-1">
+                        <h3 class="font-bold text-xs body-text mb-2"><i class="fas fa-bolt text-yellow-500 mr-1"></i> アーリーアダプター</h3>
+                        <div class="flex flex-wrap">
+                            <span class="adopter-tag">アウトドア志向ファミリー</span>
+                            <span class="adopter-tag">ペットサービス利用経験者</span>
+                            <span class="adopter-tag">キャンピングカー購入検討者</span>
+                        </div>
+                        <p class="text-xs mt-2" style="color: #666;">エリア: 首都圏ベッドタウン</p>
+                    </div>
+                </div>
+
+                <!-- Right: Personas -->
+                <div class="w-3/5 flex flex-col gap-3">
+                    <div class="profile-box">
+                        <h3 class="font-bold text-sm mb-2"><i class="fas fa-user mr-2"></i>メインペルソナ：ファミリー層</h3>
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
+                            <p><span class="opacity-70">年齢:</span> <strong>35歳 男性</strong></p>
+                            <p><span class="opacity-70">職業:</span> IT企業勤務</p>
+                            <p><span class="opacity-70">年収:</span> <strong>600万円</strong></p>
+                            <p><span class="opacity-70">居住:</span> 首都圏在住</p>
+                            <p><span class="opacity-70">家族:</span> 妻(パート)、子2人</p>
+                            <p><span class="opacity-70">旅行:</span> 年2回</p>
+                        </div>
+                        <div class="mt-2 pt-2 border-t border-white border-opacity-20 text-xs">
+                            <p class="opacity-90"><strong>課題:</strong> 宿泊費高騰で満足度低下、子どもの騒音への気遣い、ホテルのマンネリ化</p>
+                            <p class="opacity-90 mt-1"><strong>動機:</strong> 予算内で「特別な体験」、家族だけのプライベート空間、キャンピングカーへの興味</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-box" style="background: linear-gradient(135deg, #F59E0B, #D97706);">
+                        <h3 class="font-bold text-sm mb-2"><i class="fas fa-paw mr-2"></i>サブペルソナ：ペット連れファミリー</h3>
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
+                            <p><span class="opacity-70">年齢:</span> <strong>38歳 男性</strong></p>
+                            <p><span class="opacity-70">職業:</span> メーカー勤務</p>
+                            <p><span class="opacity-70">年収:</span> <strong>550万円</strong></p>
+                            <p><span class="opacity-70">居住:</span> 首都圏在住</p>
+                            <p><span class="opacity-70">家族:</span> 妻、子1人(小3)、犬1匹</p>
+                            <p><span class="opacity-70">旅行:</span> 年1回(希望)</p>
+                        </div>
+                        <div class="mt-2 pt-2 border-t border-white border-opacity-20 text-xs">
+                            <p class="opacity-90"><strong>課題:</strong> ペット可宿の高額・空室不足、ペットホテルへの罪悪感、「吠え」への不安</p>
+                            <p class="opacity-90 mt-1"><strong>動機:</strong> 家族＋ペット全員で旅行、ペットのペースで移動・休憩・宿泊</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <h3 class="font-bold text-xs body-text mb-1"><i class="fas fa-chart-line text-blue-500 mr-1"></i> 市場拡大フェーズ</h3>
+                        <div class="flex gap-3 text-xs" style="color: #666;">
+                            <div class="flex-1"><span class="highlight">1年目:</span> コア（ファミリー＋ペット）に集中、首都圏限定</div>
+                            <div class="flex-1"><span class="highlight">2〜3年:</span> シニア層・平日利用拡大、パートナー連携強化</div>
+                            <div class="flex-1"><span class="highlight">3年〜:</span> 2台体制、広域・グループ需要対応</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

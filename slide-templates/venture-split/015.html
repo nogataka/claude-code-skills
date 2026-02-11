@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sales Channels &amp; Operations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .operation-step {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .operation-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #CBD5E1;
+        }
+
+        .highlight-step::before {
+            background-color: #4F46E5;
+            /* Indigo-600 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container p-10">
+        <!-- Header -->
+        <div class="flex justify-between items-end mb-6 border-b border-gray-200 pb-3">
+            <div>
+                <div class="flex items-center space-x-2 text-indigo-600 mb-1">
+                    <i class="fa-solid fa-store"></i>
+                    <span class="text-xs font-bold tracking-widest uppercase">Sales Channels &amp; Operations</span>
+                </div>
+                <h1 class="text-3xl font-bold text-gray-900">販売チャネル・オペレーション</h1>
+                <p class="text-sm text-gray-500 mt-1">直販主体の高収益構造と、効率化された運営フロー</p>
+            </div>
+            <div class="text-right">
+                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">12</span>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex flex-1 gap-8">
+            <!-- Left Column: Channel Mix Chart (40%) -->
+            <div class="w-2/5 flex flex-col">
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 flex-1 flex flex-col">
+                    <h3 class="font-bold text-gray-800 mb-2 border-l-4 border-indigo-500 pl-3">目標チャネル構成比</h3>
+                    <p class="text-xs text-gray-500 mb-6 pl-4">手数料を抑え、顧客資産を自社に蓄積する構成を目指す</p>
+                    <!-- Chart Container -->
+                    <div class="relative flex-1 flex items-center justify-center">
+                        <canvas id="channelChart"></canvas>
+                        <!-- Center Text -->
+                        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                            <p class="text-xs text-gray-400 font-bold uppercase">Target</p>
+                            <p class="text-3xl font-black text-gray-800">Mix</p>
+                        </div>
+                    </div>
+                    <!-- Legend / Details -->
+                    <div class="mt-6 space-y-3">
+                        <!-- Direct -->
+                        <div
+                            class="flex items-center justify-between p-2 rounded bg-white shadow-sm border border-gray-100">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-indigo-600 mr-2"></span>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-700">自社直販 (Web/Map)</p>
+                                    <p class="text-[10px] text-gray-400">SEO, MEO, SNS経由</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-indigo-600">60-70<span class="text-xs">%</span></p>
+                            </div>
+                        </div>
+                        <!-- OTA -->
+                        <div
+                            class="flex items-center justify-between p-2 rounded bg-white shadow-sm border border-gray-100">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-orange-400 mr-2"></span>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-700">OTA (予約サイト)</p>
+                                    <p class="text-[10px] text-gray-400">認知獲得・新規流入</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-orange-400">20-30<span class="text-xs">%</span></p>
+                            </div>
+                        </div>
+                        <!-- Local -->
+                        <div
+                            class="flex items-center justify-between p-2 rounded bg-white shadow-sm border border-gray-100">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-teal-400 mr-2"></span>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-700">地域連携</p>
+                                    <p class="text-[10px] text-gray-400">提携店・リピーター紹介</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-teal-400">10<span class="text-xs">%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Operation Details (60%) -->
+            <div class="w-3/5 flex flex-col gap-4">
+                <!-- 1. Handoff & UX -->
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="flex items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mr-3">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">引渡し・デジタルUX</h3>
+                                <p class="text-xs text-blue-500 font-bold">説明時間短縮と安心感の両立</p>
+                            </div>
+                        </div>
+                        <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded">20min
+                            Target</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <p class="text-xs font-bold text-gray-700 mb-1"><i
+                                    class="fa-solid fa-video mr-1 text-blue-400"></i> 事前・動画学習</p>
+                            <p class="text-[10px] text-gray-500 leading-tight">予約確定後に操作説明動画を送付。当日は「確認」のみに留める。</p>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg">
+                            <p class="text-xs font-bold text-gray-700 mb-1"><i
+                                    class="fa-solid fa-qrcode mr-1 text-blue-400"></i> 車内QRコード</p>
+                            <p class="text-[10px] text-gray-500 leading-tight">装備の使い方、トラブルシューティングFAQに即時アクセス可能。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. Support System -->
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="flex items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-red-50 text-red-600 flex items-center justify-center mr-3">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">サポート体制</h3>
+                                <p class="text-xs text-red-500 font-bold">オーナーの生活を守る現実的運用</p>
+                            </div>
+                        </div>
+                        <span class="bg-red-100 text-red-700 text-[10px] font-bold px-2 py-1 rounded">Hybrid
+                            Model</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <div class="flex-1 border-r border-gray-100 pr-4">
+                            <p class="text-xs font-bold text-gray-800 mb-1"><i
+                                    class="fa-solid fa-bell text-red-500 mr-1"></i> 緊急時 (事故・故障)</p>
+                            <p class="text-sm font-black text-gray-800">24時間 電話対応</p>
+                            <p class="text-[10px] text-gray-500 mt-1">※ 提携ロードサービス・保険会社と連携</p>
+                        </div>
+                        <div class="flex-1 pl-2">
+                            <p class="text-xs font-bold text-gray-800 mb-1"><i
+                                    class="fa-solid fa-comment-dots text-gray-400 mr-1"></i> 通常の質問</p>
+                            <p class="text-sm font-black text-gray-800">翌朝対応 (LINE/Chat)</p>
+                            <p class="text-[10px] text-gray-500 mt-1">※ 深夜の操作質問等はFAQで自己解決を促す</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3. Outsourcing -->
+                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative overflow-hidden flex-1">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-green-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="flex items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center mr-3">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">業務効率化・外注</h3>
+                                <p class="text-xs text-green-500 font-bold">コア業務への集中</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 h-full">
+                        <div class="bg-gray-50 p-3 rounded-lg flex flex-col justify-center">
+                            <p class="text-xs font-bold text-gray-700 mb-1">
+                                <span
+                                    class="bg-gray-200 text-gray-600 text-[9px] px-1.5 py-0.5 rounded mr-1">パート/副業</span>
+                                清掃・簡易点検
+                            </p>
+                            <p class="text-[10px] text-gray-500">車両返却後の清掃・リネン交換は近隣スタッフに外注（時給/固定給）。</p>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-lg flex flex-col justify-center">
+                            <p class="text-xs font-bold text-gray-700 mb-1">
+                                <span
+                                    class="bg-gray-200 text-gray-600 text-[9px] px-1.5 py-0.5 rounded mr-1">外部委託</span>
+                                クリエイティブ
+                            </p>
+                            <p class="text-[10px] text-gray-500">Instagram投稿画像作成、動画編集はココナラ等で外注し品質担保。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('channelChart').getContext('2d');
+        const channelChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['自社直販', 'OTA', '地域連携'],
+                datasets: [{
+                    data: [65, 25, 10], // Representative values: 60-70 -> 65, 20-30 -> 25
+                    backgroundColor: [
+                        '#4F46E5', // Indigo-600 (Direct)
+                        '#FB923C', // Orange-400 (OTA)
+                        '#2DD4BF'  // Teal-400 (Local)
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        display: false // Using custom legend
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed === 65) return label + '60-70%';
+                                if (context.parsed === 25) return label + '20-30%';
+                                return label + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

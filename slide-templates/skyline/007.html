@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>課題と機会</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex">
+        <!-- Left Panel -->
+        <div class="w-1/3 bg-brand-dark text-white p-10 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-brand-warm rounded-bl-full opacity-20"></div>
+            <div class="relative z-10">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-brand-warm rounded-lg flex items-center justify-center">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                    <span class="text-brand-warm font-bold uppercase text-sm tracking-widest font-inter">Section 03</span>
+                </div>
+                <h1 class="text-4xl font-black leading-tight mb-6">課題と<br />機会</h1>
+                <p class="text-sm text-gray-300 leading-relaxed">現状の課題と成長機会を整理します。</p>
+            </div>
+            <p class="relative z-10 text-xs text-gray-500">Confidential</p>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="w-2/3 bg-white p-10 flex flex-col justify-center gap-6">
+            <!-- Challenges -->
+            <div>
+                <h3 class="text-sm font-bold text-brand-warm uppercase tracking-wider font-inter mb-3"><i class="fas fa-times-circle mr-2"></i>Challenges</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="flex items-start bg-red-50 rounded-lg p-4">
+                        <i class="fas fa-times-circle text-brand-warm mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-0.5">人材採用の競争激化</p>
+                            <p class="text-xs text-gray-500">エンジニア採用コストが前年比40%増加</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-red-50 rounded-lg p-4">
+                        <i class="fas fa-times-circle text-brand-warm mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-0.5">大手企業の参入</p>
+                            <p class="text-xs text-gray-500">クラウドベンダーによる類似サービス展開</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opportunities -->
+            <div>
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-inter mb-3"><i class="fas fa-lightbulb mr-2"></i>Opportunities</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="flex items-start bg-blue-50 rounded-lg p-4">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-0.5">生成AIの業務統合</p>
+                            <p class="text-xs text-gray-500">LLM活用で差別化機能を迅速に提供可能</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-blue-50 rounded-lg p-4">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-0.5">中堅企業DX需要の本格化</p>
+                            <p class="text-xs text-gray-500">中堅セグメントのDX投資が前年比55%増</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-blue-50 rounded-lg p-4">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-0.5">アジア市場への展開</p>
+                            <p class="text-xs text-gray-500">東南アジアのSaaS市場がCAGR+30%で成長</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-blue-50 rounded-lg p-4">
+                        <i class="fas fa-check-circle text-brand-accent mr-3 mt-0.5 text-sm"></i>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-0.5">パートナーエコシステム拡大</p>
+                            <p class="text-xs text-gray-500">SI企業との連携でリーチを3倍に拡大</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>競合比較</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .text-navy-900 { color: #0F172A; }
+        .text-navy-800 { color: #1E293B; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+        .border-navy-700 { border-color: #334155; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">Competitive Analysis</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">競合比較</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body: Comparison Table -->
+        <div class="flex-1 px-16 py-6 flex flex-col">
+            <!-- Table Header -->
+            <div class="grid grid-cols-5 gap-3 mb-3">
+                <div class="p-3">
+                    <p class="text-xs text-gray-500 font-inter uppercase tracking-wider">Feature</p>
+                </div>
+                <div class="bg-accent-orange rounded-t-xl p-3 text-center relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent-orange text-white text-xs font-bold px-3 py-0.5 rounded-full shadow-md font-inter">Ours</div>
+                    <p class="text-sm font-black text-white mt-2">NovaTech</p>
+                </div>
+                <div class="bg-navy-800 rounded-t-xl p-3 text-center border border-blue-900 border-b-0">
+                    <p class="text-sm font-bold text-gray-400">Company A</p>
+                    <p class="text-xs text-gray-600">大手CRM</p>
+                </div>
+                <div class="bg-navy-800 rounded-t-xl p-3 text-center border border-blue-900 border-b-0">
+                    <p class="text-sm font-bold text-gray-400">Company B</p>
+                    <p class="text-xs text-gray-600">国内SaaS</p>
+                </div>
+                <div class="bg-navy-800 rounded-t-xl p-3 text-center border border-blue-900 border-b-0">
+                    <p class="text-sm font-bold text-gray-400">Company C</p>
+                    <p class="text-xs text-gray-600">海外BI</p>
+                </div>
+            </div>
+
+            <!-- Table Rows -->
+            <div class="space-y-1 flex-1 flex flex-col justify-center">
+                <!-- Row 1 -->
+                <div class="grid grid-cols-5 gap-3">
+                    <div class="bg-navy-800 p-4 rounded-l-lg flex items-center border-l-2 border-accent-orange">
+                        <i class="fas fa-database text-accent-orange mr-3"></i>
+                        <p class="text-sm font-bold text-white">データ統合</p>
+                    </div>
+                    <div class="bg-orange-900 bg-opacity-20 p-4 text-center border-l-2 border-r-2 border-accent-orange border-opacity-20">
+                        <i class="fas fa-circle text-accent-orange"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 rounded-r-lg text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="grid grid-cols-5 gap-3">
+                    <div class="bg-navy-800 p-4 rounded-l-lg flex items-center border-l-2 border-accent-orange">
+                        <i class="fas fa-brain text-accent-orange mr-3"></i>
+                        <p class="text-sm font-bold text-white">AI予測分析</p>
+                    </div>
+                    <div class="bg-orange-900 bg-opacity-20 p-4 text-center border-l-2 border-r-2 border-accent-orange border-opacity-20">
+                        <i class="fas fa-circle text-accent-orange"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 rounded-r-lg text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="grid grid-cols-5 gap-3">
+                    <div class="bg-navy-800 p-4 rounded-l-lg flex items-center border-l-2 border-accent-orange">
+                        <i class="fas fa-yen-sign text-accent-orange mr-3"></i>
+                        <p class="text-sm font-bold text-white">コスト効率</p>
+                    </div>
+                    <div class="bg-orange-900 bg-opacity-20 p-4 text-center border-l-2 border-r-2 border-accent-orange border-opacity-20">
+                        <i class="fas fa-circle text-accent-orange"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 rounded-r-lg text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="grid grid-cols-5 gap-3">
+                    <div class="bg-navy-800 p-4 rounded-l-lg flex items-center border-l-2 border-accent-orange">
+                        <i class="fas fa-plug text-accent-orange mr-3"></i>
+                        <p class="text-sm font-bold text-white">連携容易性</p>
+                    </div>
+                    <div class="bg-orange-900 bg-opacity-20 p-4 text-center border-l-2 border-r-2 border-accent-orange border-opacity-20">
+                        <i class="fas fa-circle text-accent-orange"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 rounded-r-lg text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="grid grid-cols-5 gap-3">
+                    <div class="bg-navy-800 p-4 rounded-l-lg flex items-center border-l-2 border-accent-orange">
+                        <i class="fas fa-headset text-accent-orange mr-3"></i>
+                        <p class="text-sm font-bold text-white">日本語サポート</p>
+                    </div>
+                    <div class="bg-orange-900 bg-opacity-20 p-4 text-center border-l-2 border-r-2 border-accent-orange border-opacity-20">
+                        <i class="fas fa-circle text-accent-orange"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-orange ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                        <i class="fas fa-circle text-accent-blue ml-0.5"></i>
+                    </div>
+                    <div class="bg-navy-800 p-4 rounded-r-lg text-center border border-blue-900">
+                        <i class="fas fa-circle text-accent-blue"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                        <i class="fas fa-circle text-gray-700 ml-0.5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Note -->
+            <div class="mt-4 flex items-center justify-between">
+                <div class="flex items-center gap-4 text-xs text-gray-500">
+                    <span class="flex items-center"><i class="fas fa-circle text-accent-orange mr-1 text-xs"></i><i class="fas fa-circle text-accent-orange mr-1 text-xs"></i><i class="fas fa-circle text-accent-orange mr-2 text-xs"></i>優秀</span>
+                    <span class="flex items-center"><i class="fas fa-circle text-accent-blue mr-1 text-xs"></i><i class="fas fa-circle text-accent-blue mr-1 text-xs"></i><i class="fas fa-circle text-gray-700 mr-2 text-xs"></i>良好</span>
+                    <span class="flex items-center"><i class="fas fa-circle text-accent-blue mr-1 text-xs"></i><i class="fas fa-circle text-gray-700 mr-1 text-xs"></i><i class="fas fa-circle text-gray-700 mr-2 text-xs"></i>標準</span>
+                </div>
+                <p class="text-xs text-gray-600">※ 2025年12月時点 社内調査に基づく</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">06</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-lato { font-family: 'Lato', sans-serif; }
+    .text-navy-900 { color: #0F2027; }
+    .text-navy-primary { color: #203A43; }
+    .bg-navy-accent { background-color: #2C5364; }
+    .text-navy-accent { color: #2C5364; }
+    .text-accent-gold { color: #C5A065; }
+    .bg-accent-gold { background-color: #C5A065; }
+    .border-navy-accent { border-color: #2C5364; }
+    .border-accent-gold { border-color: #C5A065; }
+    
+    /* Custom Card Styles */
+    .plan-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .plan-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .check-icon {
+        width: 1.25rem;
+        text-align: center;
+    }
+</style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Plan Comparison</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">プラン比較（Basic／Pro／Enterprise）</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-16 py-8 flex items-center justify-center bg-gray-50">
+<div class="grid grid-cols-3 gap-6 w-full max-w-6xl h-full max-h-[520px]">
+<!-- Basic Plan -->
+<div class="plan-card bg-white rounded-xl border border-gray-200 p-8 flex flex-col relative h-full shadow-sm">
+<div class="border-b border-gray-100 pb-6 mb-6">
+<h3 class="text-xl font-bold text-gray-500 mb-2">Basic</h3>
+<p class="text-sm text-gray-400 mb-4 h-10">スモールチームでの導入に最適な<br/>スタータープラン</p>
+<div class="flex items-baseline text-navy-900">
+<span class="text-3xl font-bold font-lato">¥</span>
+<span class="text-5xl font-extrabold font-lato tracking-tight">10,000</span>
+<span class="text-gray-400 ml-2">/ 月</span>
+</div>
+</div>
+<div class="flex-1">
+<ul class="space-y-4 text-sm text-gray-600">
+<li class="flex items-start">
+<i class="fas fa-check text-green-500 mt-1 mr-3 check-icon"></i>
+<p><strong>ユーザー数：</strong> 最大 5名</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-500 mt-1 mr-3 check-icon"></i>
+<p>基本機能へのアクセス</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-500 mt-1 mr-3 check-icon"></i>
+<p>メールサポート（48時間以内）</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-500 mt-1 mr-3 check-icon"></i>
+<p>標準セキュリティ設定</p>
+</li>
+<li class="flex items-start opacity-40">
+<i class="fas fa-minus text-gray-300 mt-1 mr-3 check-icon"></i>
+<p>API連携・拡張機能</p>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-6 border-t border-gray-100">
+<div class="w-full py-3 rounded-lg border-2 border-gray-200 text-gray-500 font-bold text-center text-sm">
+<p>現在のプラン</p>
+</div>
+</div>
+</div>
+<!-- Pro Plan (Highlighted) -->
+<div class="plan-card bg-white rounded-xl border-2 border-navy-accent p-8 flex flex-col relative h-full shadow-lg transform scale-105 z-10">
+<!-- Recommended Badge -->
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-navy-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                    Recommended
+                </div>
+<div class="border-b border-gray-100 pb-6 mb-6">
+<h3 class="text-xl font-bold text-navy-accent mb-2">Pro</h3>
+<p class="text-sm text-gray-500 mb-4 h-10">ビジネスの成長を加速させる<br/>標準的な機能を網羅</p>
+<div class="flex items-baseline text-navy-900">
+<span class="text-3xl font-bold font-lato">¥</span>
+<span class="text-5xl font-extrabold font-lato tracking-tight">50,000</span>
+<span class="text-gray-400 ml-2">/ 月</span>
+</div>
+</div>
+<div class="flex-1">
+<ul class="space-y-4 text-sm text-gray-700">
+<li class="flex items-start">
+<i class="fas fa-check text-navy-accent mt-1 mr-3 check-icon"></i>
+<p><strong>ユーザー数：</strong> 最大 50名</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-navy-accent mt-1 mr-3 check-icon"></i>
+<p><strong>全ての拡張機能</strong>を利用可能</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-navy-accent mt-1 mr-3 check-icon"></i>
+<p>チャットサポート（平日10-19時）</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-navy-accent mt-1 mr-3 check-icon"></i>
+<p>高度な分析レポート機能</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-navy-accent mt-1 mr-3 check-icon"></i>
+<p>APIアクセス権限</p>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-6 border-t border-gray-100">
+<div class="w-full py-3 rounded-lg bg-navy-accent text-white font-bold text-center text-sm shadow-md">
+<p>アップグレードを選択</p>
+</div>
+</div>
+</div>
+<!-- Enterprise Plan -->
+<div class="plan-card bg-navy-900 rounded-xl border border-navy-900 p-8 flex flex-col relative h-full shadow-md text-white">
+<div class="border-b border-gray-700 pb-6 mb-6">
+<h3 class="text-xl font-bold text-accent-gold mb-2">Enterprise</h3>
+<p class="text-sm text-gray-300 mb-4 h-10">全社導入・高度なセキュリティ要件に<br/>対応するフルカスタムプラン</p>
+<div class="flex items-baseline text-white">
+<span class="text-4xl font-bold font-lato">Contact Us</span>
+</div>
+<p class="text-xs text-gray-400 mt-2">※要件に応じた個別見積もり</p>
+</div>
+<div class="flex-1">
+<ul class="space-y-4 text-sm text-gray-200">
+<li class="flex items-start">
+<i class="fas fa-check text-accent-gold mt-1 mr-3 check-icon"></i>
+<p><strong>ユーザー数：</strong> 無制限</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-accent-gold mt-1 mr-3 check-icon"></i>
+<p>SLA（サービス品質保証） / SSO</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-accent-gold mt-1 mr-3 check-icon"></i>
+<p>専任カスタマーサクセス(CSM)</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-accent-gold mt-1 mr-3 check-icon"></i>
+<p>監査ログ・IP制限などの統制機能</p>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-accent-gold mt-1 mr-3 check-icon"></i>
+<p>オンプレミス連携オプション</p>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-6 border-t border-gray-700">
+<div class="w-full py-3 rounded-lg border border-accent-gold text-accent-gold font-bold text-center text-sm">
+<p>お問い合わせ</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">16</span>
+</div>
+</div>
+</div>
+</body>
+</html>

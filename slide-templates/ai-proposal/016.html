@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>リスクと対策</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Risk Management</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">リスクと対策</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 2 Columns -->
+        <div class="flex-1 px-16 py-6 flex gap-8">
+            <!-- Left: Risks -->
+            <div class="w-1/2 flex flex-col gap-3">
+                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider font-lato mb-1">Identified Risks</h3>
+                <div class="bg-red-50 rounded-xl p-4 border-l-4 border-red-400">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">データ品質の不足</p>
+                        <span class="inline-block bg-red-400 text-white text-xs font-bold px-2 py-0.5 rounded">高</span>
+                    </div>
+                    <p class="text-xs text-gray-500">学習データの不備がAI精度を低下させるリスク</p>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4 border-l-4 border-yellow-400">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">社内の変革抵抗</p>
+                        <span class="inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded">中</span>
+                    </div>
+                    <p class="text-xs text-gray-500">業務フロー変更に対する現場の抵抗感</p>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4 border-l-4 border-yellow-400">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">セキュリティ・コンプライアンス</p>
+                        <span class="inline-block bg-yellow-400 text-white text-xs font-bold px-2 py-0.5 rounded">中</span>
+                    </div>
+                    <p class="text-xs text-gray-500">個人情報・機密データのAI処理における安全性</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 border-l-4 border-gray-300">
+                    <div class="flex items-center justify-between mb-1">
+                        <p class="text-sm font-bold text-brand-dark">技術選定の陳腐化</p>
+                        <span class="inline-block bg-gray-400 text-white text-xs font-bold px-2 py-0.5 rounded">低</span>
+                    </div>
+                    <p class="text-xs text-gray-500">急速な技術進化による選定技術の旧式化</p>
+                </div>
+            </div>
+
+            <!-- Right: Mitigation -->
+            <div class="w-1/2 flex flex-col gap-3">
+                <h3 class="text-sm font-bold text-brand-accent uppercase tracking-wider font-lato mb-1">Mitigation Strategy</h3>
+                <div class="bg-yellow-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-database text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">データクレンジング先行</p>
+                            <p class="text-xs text-gray-500">Phase 1でデータ品質評価を実施し、クレンジング計画を策定。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-chalkboard-teacher text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">チェンジマネジメント</p>
+                            <p class="text-xs text-gray-500">部門チャンピオン制度と段階的な教育プログラムで浸透を図る。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-lock text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">セキュリティ・バイ・デザイン</p>
+                            <p class="text-xs text-gray-500">設計段階からプライバシー保護を組み込み。外部監査も実施。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-sync-alt text-xs"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-brand-dark mb-1">モジュラー設計</p>
+                            <p class="text-xs text-gray-500">技術交換が容易なアーキテクチャで将来の変更に備える。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">16</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>カスタマージャーニー・マッピング</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 15px 40px;
+            color: #1E3A8A;
+            border-bottom: 1px solid rgba(30, 58, 138, 0.2);
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 60px);
+            padding: 40px;
+        }
+        
+        .left-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 40px;
+        }
+        
+        .right-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 4.5rem;
+            font-weight: bold;
+            line-height: 1.1;
+            color: #1E3A8A;
+            margin-bottom: 30px;
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #6B7280;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .funnel-container {
+            position: relative;
+            width: 450px;
+            height: 450px;
+        }
+        
+        .funnel-level {
+            position: absolute;
+            width: 100%;
+            transform-origin: center;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+        }
+        
+        .funnel-segment {
+            width: 300px;
+            height: 80px;
+            background-color: #1E3A8A;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 30px;
+        }
+        
+        .level-1 {
+            top: 20%;
+            z-index: 5;
+        }
+        
+        .level-1 .funnel-segment {
+            background-color: #93C5FD;
+            height: 60px;
+        }
+        
+        .level-2 {
+            top: 35%;
+            z-index: 4;
+        }
+        
+        .level-2 .funnel-segment {
+            background-color: #60A5FA;
+            height: 70px;
+        }
+        
+        .level-3 {
+            top: 50%;
+            z-index: 3;
+        }
+        
+        .level-3 .funnel-segment {
+            background-color: #3B82F6;
+            height: 80px;
+        }
+        
+        .level-4 {
+            top: 65%;
+            z-index: 2;
+        }
+        
+        .level-4 .funnel-segment {
+            background-color: #2563EB;
+            height: 90px;
+            clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%);
+        }
+        
+        .level-5 {
+            top: 85%;
+            z-index: 1;
+        }
+        
+        .level-5 .funnel-segment {
+            background-color: #1E40AF;
+            height: 100px;
+            clip-path: polygon(5% 0%, 95% 0%, 75% 100%, 25% 100%);
+            border-radius: 0 0 50% 50%;
+        }
+        
+        .stage-label {
+            color: #1E3A8A;
+            font-weight: bold;
+            font-size: 1.2rem;
+            font-family: 'Noto Serif JP', serif;
+            white-space: nowrap;
+        }
+        
+        .funnel-line {
+            position: absolute;
+            height: 1px;
+            width: 100px;
+            background-color: #1E3A8A;
+            right: -70px;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(191, 219, 254, 0.3);
+            z-index: -1;
+        }
+        
+        .circle-1 {
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: 10%;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">カスタマー<br/>ジャーニー<br/>マッピング</h1>
+<p class="description">
+                    顧客ジャーニーの可視化は、摩擦点の特定とタッチポイントの最適化に役立ち、シームレスな体験を実現します。
+                </p>
+</div>
+<div class="right-content">
+<div class="funnel-container">
+<div class="funnel-level level-1">
+<div class="funnel-segment"></div>
+<div class="funnel-line"></div>
+<div class="stage-label">認知</div>
+</div>
+<div class="funnel-level level-2">
+<div class="funnel-segment"></div>
+<div class="funnel-line"></div>
+<div class="stage-label">検討</div>
+</div>
+<div class="funnel-level level-3">
+<div class="funnel-segment"></div>
+<div class="funnel-line"></div>
+<div class="stage-label">購入</div>
+</div>
+<div class="funnel-level level-4">
+<div class="funnel-segment"></div>
+<div class="funnel-line"></div>
+<div class="stage-label">購入後</div>
+</div>
+<div class="funnel-level level-5">
+<div class="funnel-segment"></div>
+<div class="funnel-line"></div>
+<div class="stage-label">推奨</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

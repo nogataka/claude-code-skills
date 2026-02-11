@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>エグゼクティブサマリー</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-forest-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Executive Summary</p>
+                    <h1 class="text-3xl font-bold text-forest-900 tracking-tight">エグゼクティブサマリー</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-forest-900 opacity-50">
+                <i class="fas fa-seedling text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField</p>
+            </div>
+        </div>
+
+        <!-- Body: 2 columns -->
+        <div class="flex-1 px-16 py-8 flex gap-8">
+            <!-- Left Column -->
+            <div class="w-1/2 flex flex-col gap-5">
+                <!-- Vision Box -->
+                <div class="bg-forest-accent rounded-xl p-6 text-white shadow-md">
+                    <h3 class="font-bold text-base mb-2"><i class="fas fa-bullseye mr-2"></i>ビジョン</h3>
+                    <p class="text-sm leading-relaxed opacity-95">
+                        環境に配慮した次世代型サービスプラットフォームを構築し、<strong>「持続可能な暮らし」</strong>を日常に届ける。企業のESG経営と個人のエシカル消費を同時に支援するエコシステムを目指す。
+                    </p>
+                </div>
+
+                <!-- Business Overview -->
+                <div>
+                    <h3 class="font-bold text-base mb-3 text-forest-900"><i class="fas fa-info-circle text-forest-accent mr-2"></i>事業概要</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg text-sm text-gray-700">
+                        <p class="mb-2">法人・個人向けの<span class="font-bold text-forest-accent">サステナブル調達プラットフォーム</span>を提供。</p>
+                        <ul class="space-y-2 text-xs">
+                            <li class="flex items-start"><i class="fas fa-check text-forest-light mr-2 mt-0.5"></i>環境配慮型商品のマーケットプレイス運営</li>
+                            <li class="flex items-start"><i class="fas fa-check text-forest-light mr-2 mt-0.5"></i>CO2排出量の可視化・レポーティング機能</li>
+                            <li class="flex items-start"><i class="fas fa-check text-forest-light mr-2 mt-0.5"></i>SaaS型のサブスクリプションモデル</li>
+                            <li class="flex items-start"><i class="fas fa-check text-forest-light mr-2 mt-0.5"></i>AIによるサプライチェーン最適化提案</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="w-1/2 flex flex-col gap-5">
+                <!-- Market Opportunity -->
+                <div>
+                    <h3 class="font-bold text-base mb-3 text-forest-900"><i class="fas fa-chart-pie text-forest-accent mr-2"></i>市場機会</h3>
+                    <div class="flex gap-3 mb-3">
+                        <div class="flex-1 text-center p-3 rounded-lg" style="background: rgba(64,145,108,0.1);">
+                            <p class="text-xs font-bold text-forest-accent">TAM</p>
+                            <p class="text-2xl font-black text-forest-accent font-inter">500億円</p>
+                            <p class="text-xs text-gray-500">国内ESG関連市場</p>
+                        </div>
+                        <div class="flex-1 text-center p-3 rounded-lg" style="background: rgba(64,145,108,0.15);">
+                            <p class="text-xs font-bold text-forest-primary">SAM</p>
+                            <p class="text-2xl font-black text-forest-primary font-inter">80億円</p>
+                            <p class="text-xs text-gray-500">調達プラットフォーム</p>
+                        </div>
+                        <div class="flex-1 text-center p-3 rounded-lg bg-forest-accent text-white">
+                            <p class="text-xs font-bold opacity-80">SOM</p>
+                            <p class="text-2xl font-black font-inter">5億円</p>
+                            <p class="text-xs opacity-80">初期獲得可能市場</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="border-l-4 border-forest-light pl-4 bg-gray-50 p-4 rounded-r-lg">
+                    <p class="text-sm text-gray-700"><i class="fas fa-arrow-trend-up text-forest-accent mr-2"></i><span class="font-bold text-forest-accent">年率 15%</span> の市場成長が見込まれる</p>
+                    <p class="text-xs mt-1 text-gray-500">ESG投資の急拡大と企業のサプライチェーン可視化義務化が追い風</p>
+                </div>
+
+                <div class="border-l-4 border-forest-light pl-4 bg-gray-50 p-4 rounded-r-lg">
+                    <p class="text-sm text-gray-700"><i class="fas fa-coins text-forest-accent mr-2"></i>必要資金: <span class="font-bold text-forest-accent">3,000万円</span></p>
+                    <p class="text-xs mt-1 text-gray-500">自己資金 500万円 + VC調達 2,500万円、シード〜シリーズA</p>
+                </div>
+
+                <div class="border-l-4 border-forest-light pl-4 bg-gray-50 p-4 rounded-r-lg">
+                    <p class="text-sm text-gray-700"><i class="fas fa-clock text-forest-accent mr-2"></i>黒字化目標: <span class="font-bold text-forest-accent">24ヶ月</span></p>
+                    <p class="text-xs mt-1 text-gray-500">月次MRR 400万円で損益分岐点に到達</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">GreenField株式会社 - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-forest-accent font-inter">04</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

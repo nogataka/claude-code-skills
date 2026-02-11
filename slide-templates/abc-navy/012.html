@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .text-navy-900 { color: #0F2027; }
+        .text-navy-primary { color: #203A43; }
+        .bg-navy-accent { background-color: #2C5364; }
+        .text-navy-accent { color: #2C5364; }
+        .text-accent-gold { color: #C5A065; }
+        .bg-accent-gold { background-color: #C5A065; }
+        .border-navy-accent { border-color: #2C5364; }
+        
+        .chart-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Custom Legend Styles */
+        .legend-item {
+            transition: all 0.3s ease;
+        }
+        .legend-item:hover {
+            background-color: #F9FAFB;
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class="m-0 p-0 overflow-hidden bg-white" style="width: 1280px; height: 720px;">
+<div class="w-full h-full flex flex-col relative overflow-hidden bg-white">
+<!-- Header Section -->
+<div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-10 bg-navy-accent"></div>
+<div>
+<p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">Sales Breakdown</p>
+<h1 class="text-3xl font-bold text-navy-900 tracking-tight">売上構成比（製品別）</h1>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-navy-900 opacity-50">
+<i class="fas fa-layer-group text-lg"></i>
+<p class="text-xs font-bold tracking-widest uppercase">ABC Corp.</p>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-24 py-10 flex items-center">
+<!-- Left Column: Insights & Legend -->
+<div class="w-5/12 pr-8 flex flex-col h-full justify-center">
+<div class="bg-blue-50 rounded-xl p-6 border-l-4 border-navy-accent mb-8 shadow-sm">
+<h3 class="text-lg font-bold text-navy-900 mb-2">主力製品が牽引</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                        「A製品」が全体の<span class="font-bold text-navy-primary">45%</span>を占め、収益の柱として機能しています。一方で、高成長率を示す「サービス」部門の比率拡大が来期の課題です。
+                    </p>
+</div>
+<!-- Custom Legend -->
+<div class="space-y-3">
+<!-- Item 1 -->
+<div class="legend-item flex items-center justify-between p-3 rounded-lg border border-gray-100 cursor-pointer">
+<div class="flex items-center">
+<div class="w-4 h-4 rounded-full bg-navy-accent mr-3"></div>
+<div>
+<p class="text-sm font-bold text-navy-900">A製品</p>
+<p class="text-xs text-gray-500">フラッグシップモデル</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-navy-900 font-lato">45%</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="legend-item flex items-center justify-between p-3 rounded-lg border border-gray-100 cursor-pointer">
+<div class="flex items-center">
+<div class="w-4 h-4 rounded-full bg-accent-gold mr-3"></div>
+<div>
+<p class="text-sm font-bold text-navy-900">B製品</p>
+<p class="text-xs text-gray-500">スタンダードモデル</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-navy-900 font-lato">30%</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="legend-item flex items-center justify-between p-3 rounded-lg border border-gray-100 cursor-pointer">
+<div class="flex items-center">
+<div class="w-4 h-4 rounded-full bg-gray-500 mr-3"></div>
+<div>
+<p class="text-sm font-bold text-navy-900">C製品</p>
+<p class="text-xs text-gray-500">エントリーモデル</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-navy-900 font-lato">15%</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="legend-item flex items-center justify-between p-3 rounded-lg border border-gray-100 cursor-pointer">
+<div class="flex items-center">
+<div class="w-4 h-4 rounded-full bg-gray-300 mr-3"></div>
+<div>
+<p class="text-sm font-bold text-navy-900">サービス</p>
+<p class="text-xs text-gray-500">保守・コンサルティング</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-navy-900 font-lato">10%</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pie Chart -->
+<div class="w-7/12 h-full flex flex-col justify-center items-center relative">
+<div class="chart-container relative" style="height: 450px; width: 450px;">
+<canvas id="productPieChart"></canvas>
+<!-- Center Text (Optional for Donut) -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<p class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Total Sales</p>
+<p class="text-3xl font-bold text-navy-900 font-lato">¥660M</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full flex justify-between items-center px-16 bg-white z-10 border-t border-gray-100">
+<p class="text-xs text-gray-400 tracking-wider">ABC株式会社 - Confidential</p>
+<div class="flex items-center space-x-2">
+<span class="text-xs text-gray-400">Page</span>
+<span class="text-sm font-bold text-navy-accent">12</span>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('productPieChart').getContext('2d');
+            
+            const productPieChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['A製品', 'B製品', 'C製品', 'サービス'],
+                    datasets: [{
+                        data: [45, 30, 15, 10],
+                        backgroundColor: [
+                            '#2C5364', // Navy Accent
+                            '#C5A065', // Gold
+                            '#6B7280', // Gray 500
+                            '#D1D5DB'  // Gray 300
+                        ],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            display: false // Using custom legend
+                        },
+                        tooltip: {
+                            backgroundColor: '#0F2027',
+                            titleFont: { family: "'Noto Sans JP', sans-serif", size: 14 },
+                            bodyFont: { family: "'Lato', sans-serif", size: 14, weight: 'bold' },
+                            padding: 16,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true,
+                        duration: 1500,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

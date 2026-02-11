@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Future Trends in AI - TechVantage Solutions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;family=Saira+Condensed:wght@700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: white;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dot-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* Simulating radial-gradient dots with SVG to avoid CSS gradient issues */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23e5e5e5'/%3E%3C/svg%3E");
+            background-size: 20px 20px;
+            opacity: 0.8;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .shape-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            background-color: #ececec;
+            clip-path: polygon(0 0, 100% 0, 0% 100%, 0 100%);
+            z-index: 1;
+        }
+        
+        .shape-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            background-color: #ececec;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+        
+        .company-pill {
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+            font-family: 'Saira Condensed', 'Noto Sans JP', sans-serif;
+        }
+        
+        .nav-arrow {
+            background-color: #000000;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-family: 'Saira Condensed', 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            color: #000000;
+            font-size: 5rem;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        .trend-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #e5e5e5;
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s;
+        }
+        
+        .trend-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        .trend-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Saira Condensed', 'Noto Sans JP', sans-serif;
+            letter-spacing: 0.5px;
+            color: #000;
+        }
+
+        .trend-desc {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #444;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Dot pattern background -->
+<div class="dot-pattern"></div>
+<!-- Geometric shapes on sides -->
+<div class="shape-left"></div>
+<div class="shape-right"></div>
+<!-- TechVantage branding -->
+<div class="absolute top-8 left-10 z-20">
+<div class="company-pill">
+            TECHVANTAGE
+        </div>
+</div>
+<!-- Main content -->
+<div class="z-10 px-24 pt-16 pb-12 flex-1 flex flex-col items-center justify-center w-full h-full">
+<h2 class="section-title mb-10">AIの将来トレンド</h2>
+<div class="w-full max-w-5xl mx-auto">
+<!-- Top Row: 3 Items -->
+<div class="grid grid-cols-3 gap-6 mb-6">
+<div class="trend-card">
+<i class="fas fa-layer-group trend-icon"></i>
+<p class="trend-title">マルチモーダル化</p>
+<p class="trend-desc">画像・音声・テキストなど多様なデータを統合的に処理し、より人間に近い認識能力を実現。</p>
+</div>
+<div class="trend-card">
+<i class="fas fa-robot trend-icon"></i>
+<p class="trend-title">エージェント化</p>
+<p class="trend-desc">指示を待つだけでなく、AIが自律的にタスクを分解・実行し、目標達成に向けた判断を行う。</p>
+</div>
+<div class="trend-card">
+<i class="fas fa-microchip trend-icon"></i>
+<p class="trend-title">エッジAI</p>
+<p class="trend-desc">クラウド依存を減らし、デバイス端末側での処理による高速化・低遅延・セキュリティ向上。</p>
+</div>
+</div>
+<!-- Bottom Row: 2 Items Centered -->
+<div class="flex justify-center gap-6">
+<div class="trend-card w-1/3">
+<i class="fas fa-database trend-icon"></i>
+<p class="trend-title">合成データ</p>
+<p class="trend-desc">人工的に生成された学習データにより、プライバシー保護と希少ケースへの対応力を強化。</p>
+</div>
+<div class="trend-card w-1/3">
+<i class="fas fa-scale-balanced trend-icon"></i>
+<p class="trend-title">規制と標準</p>
+<p class="trend-desc">AIの安全性、透明性、倫理的な利用を保証するための国際的な法的枠組みと技術標準の整備。</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation arrow -->
+<div class="absolute bottom-8 right-10 z-20">
+<div class="nav-arrow">
+<i class="fas fa-chevron-right text-white text-xl"></i>
+</div>
+</div>
+</div>
+</body>
+</html>

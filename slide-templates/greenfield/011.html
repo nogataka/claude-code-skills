@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>競合分析</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-forest-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Competitive Analysis</p>
+                    <h1 class="text-3xl font-bold text-forest-900 tracking-tight">競合分析</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-forest-900 opacity-50">
+                <i class="fas fa-seedling text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-5 flex gap-6">
+            <!-- Left Column: Competitor Cards -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <!-- Competitor A -->
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 flex-1">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-forest-900 rounded-lg flex items-center justify-center text-white text-xs font-bold font-inter mr-3">A</div>
+                        <div>
+                            <h3 class="font-bold text-forest-900 text-sm">大手ERPベンダー</h3>
+                            <p class="text-xs text-gray-400 font-inter">SAP, Oracle</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-forest-accent mb-1"><i class="fas fa-plus-circle mr-1"></i>強み</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">機能が豊富で大企業の実績多数。グローバル展開に対応。</p>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-red-400 mb-1"><i class="fas fa-minus-circle mr-1"></i>弱み</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">高コスト・導入期間が長い。中小企業には非現実的。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competitor B -->
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 flex-1">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-forest-accent rounded-lg flex items-center justify-center text-white text-xs font-bold font-inter mr-3">B</div>
+                        <div>
+                            <h3 class="font-bold text-forest-900 text-sm">国内ESG特化SaaS</h3>
+                            <p class="text-xs text-gray-400 font-inter">Sustana等</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-forest-accent mb-1"><i class="fas fa-plus-circle mr-1"></i>強み</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">ESGレポートに特化。日本市場の規制に精通。</p>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-red-400 mb-1"><i class="fas fa-minus-circle mr-1"></i>弱み</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">調達機能なし。可視化のみで実行支援が不足。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competitor C -->
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 flex-1">
+                    <div class="flex items-center mb-3">
+                        <div class="w-8 h-8 bg-forest-light rounded-lg flex items-center justify-center text-white text-xs font-bold font-inter mr-3">C</div>
+                        <div>
+                            <h3 class="font-bold text-forest-900 text-sm">汎用調達プラットフォーム</h3>
+                            <p class="text-xs text-gray-400 font-inter">Coupa等</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-forest-accent mb-1"><i class="fas fa-plus-circle mr-1"></i>強み</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">調達プロセスの効率化に強い。大規模サプライチェーン対応。</p>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs font-bold text-red-400 mb-1"><i class="fas fa-minus-circle mr-1"></i>弱み</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">ESG機能が弱い。環境負荷の可視化は未対応。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Positioning Map -->
+            <div class="w-1/2 flex flex-col">
+                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest font-inter mb-3">Positioning Map</p>
+                <div class="flex-1 bg-gray-50 rounded-xl border border-gray-100 p-6 relative">
+                    <!-- Axes -->
+                    <div class="absolute left-6 top-6 bottom-14 w-px bg-gray-300"></div>
+                    <div class="absolute left-6 bottom-14 right-6 h-px bg-gray-300"></div>
+                    <!-- Y-axis label -->
+                    <div class="absolute left-1 top-1/2 transform -translate-y-1/2 -rotate-90">
+                        <p class="text-xs text-gray-400 font-inter whitespace-nowrap">ESG対応力 →</p>
+                    </div>
+                    <!-- X-axis label -->
+                    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                        <p class="text-xs text-gray-400 font-inter">調達機能 →</p>
+                    </div>
+
+                    <!-- Competitor Positions -->
+                    <!-- A: High procurement, Low ESG -->
+                    <div class="absolute" style="right: 60px; bottom: 100px;">
+                        <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-xs font-bold font-inter opacity-70">A</div>
+                        <p class="text-xs text-gray-400 text-center mt-1">ERP</p>
+                    </div>
+                    <!-- B: Low procurement, High ESG -->
+                    <div class="absolute" style="left: 60px; top: 40px;">
+                        <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-xs font-bold font-inter opacity-70">B</div>
+                        <p class="text-xs text-gray-400 text-center mt-1">ESG SaaS</p>
+                    </div>
+                    <!-- C: High procurement, Mid ESG -->
+                    <div class="absolute" style="right: 50px; top: 100px;">
+                        <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 text-xs font-bold font-inter opacity-70">C</div>
+                        <p class="text-xs text-gray-400 text-center mt-1">調達PF</p>
+                    </div>
+                    <!-- GreenField: Top-right (high both) -->
+                    <div class="absolute" style="right: 80px; top: 30px;">
+                        <div class="w-20 h-20 bg-forest-accent rounded-full flex flex-col items-center justify-center text-white shadow-lg" style="box-shadow: 0 0 0 6px rgba(64,145,108,0.15);">
+                            <i class="fas fa-seedling text-sm mb-1"></i>
+                            <p class="text-xs font-bold font-inter">GF</p>
+                        </div>
+                        <p class="text-xs text-forest-accent text-center mt-1 font-bold">GreenField</p>
+                    </div>
+
+                    <!-- Highlight zone -->
+                    <div class="absolute border-2 border-dashed border-forest-light rounded-xl opacity-30" style="right: 30px; top: 16px; width: 170px; height: 140px;"></div>
+                    <div class="absolute text-xs text-forest-accent font-bold font-inter" style="right: 42px; top: 160px;">ESG×調達の統合</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">GreenField株式会社 - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-forest-accent font-inter">11</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

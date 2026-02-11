@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>リスク分析と対策 - Risk Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-forest-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Risk Analysis</p>
+                    <h1 class="text-3xl font-bold text-forest-900 tracking-tight">リスク分析と対策</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-forest-900 opacity-50">
+                <i class="fas fa-seedling text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-5 flex gap-6">
+            <!-- Left: Risk Cards 2x2 Grid -->
+            <div class="w-3/5 grid grid-cols-2 gap-4">
+                <!-- Market Risk -->
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex flex-col">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-9 h-9 bg-red-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-globe-asia text-red-500 text-sm"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-forest-900">市場リスク</h3>
+                        </div>
+                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded bg-red-100 text-red-600 font-inter">高</span>
+                    </div>
+                    <div class="border-l-4 border-red-200 pl-3 mb-3">
+                        <p class="text-xs text-gray-600 leading-relaxed">ESG規制の変更・後退リスク</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-forest-accent text-xs"></i>
+                            <p class="text-xs font-bold text-forest-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">マルチ規制対応設計</p>
+                    </div>
+                </div>
+
+                <!-- Technology Risk -->
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex flex-col">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-9 h-9 bg-yellow-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-microchip text-yellow-600 text-sm"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-forest-900">技術リスク</h3>
+                        </div>
+                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded bg-yellow-100 text-yellow-700 font-inter">中</span>
+                    </div>
+                    <div class="border-l-4 border-yellow-200 pl-3 mb-3">
+                        <p class="text-xs text-gray-600 leading-relaxed">AI精度不足の可能性</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-forest-accent text-xs"></i>
+                            <p class="text-xs font-bold text-forest-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">段階的導入、人力ハイブリッド</p>
+                    </div>
+                </div>
+
+                <!-- Competition Risk -->
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex flex-col">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-9 h-9 bg-yellow-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-chess text-yellow-600 text-sm"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-forest-900">競合リスク</h3>
+                        </div>
+                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded bg-yellow-100 text-yellow-700 font-inter">中</span>
+                    </div>
+                    <div class="border-l-4 border-yellow-200 pl-3 mb-3">
+                        <p class="text-xs text-gray-600 leading-relaxed">大手企業の参入リスク</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-forest-accent text-xs"></i>
+                            <p class="text-xs font-bold text-forest-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">ニッチ特化、スイッチングコスト構築</p>
+                    </div>
+                </div>
+
+                <!-- Funding Risk -->
+                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex flex-col">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-yen-sign text-blue-500 text-sm"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-forest-900">資金リスク</h3>
+                        </div>
+                        <span class="inline-block text-xs font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-600 font-inter">低</span>
+                    </div>
+                    <div class="border-l-4 border-blue-200 pl-3 mb-3">
+                        <p class="text-xs text-gray-600 leading-relaxed">資金調達の遅延リスク</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3 mt-auto">
+                        <div class="flex items-center space-x-1.5 mb-1">
+                            <i class="fas fa-shield-alt text-forest-accent text-xs"></i>
+                            <p class="text-xs font-bold text-forest-accent">軽減策</p>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">フリーミアムで早期収益化</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Exit Criteria & KPI Monitoring -->
+            <div class="w-2/5 flex flex-col gap-4">
+                <!-- Exit Criteria -->
+                <div class="bg-red-50 rounded-xl border border-red-200 p-5 flex flex-col">
+                    <div class="flex items-center space-x-2 mb-3">
+                        <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-exclamation-triangle text-red-500 text-sm"></i>
+                        </div>
+                        <h3 class="text-sm font-bold text-red-700">撤退基準</h3>
+                    </div>
+                    <ul class="space-y-2.5">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-times-circle text-red-400 text-xs mt-1 flex-shrink-0"></i>
+                            <span class="text-xs text-gray-700 leading-relaxed">Month 6時点でユーザー数 10社未満</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-times-circle text-red-400 text-xs mt-1 flex-shrink-0"></i>
+                            <span class="text-xs text-gray-700 leading-relaxed">Month 9時点でMRR ¥500万未達</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-times-circle text-red-400 text-xs mt-1 flex-shrink-0"></i>
+                            <span class="text-xs text-gray-700 leading-relaxed">NPS -20以下が2四半期連続</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- KPI Monitoring -->
+                <div class="bg-forest-900 rounded-xl p-5 flex-1 flex flex-col relative overflow-hidden">
+                    <div class="absolute bottom-0 right-0 w-28 h-28 bg-forest-light rounded-full opacity-10" style="filter: blur(30px);"></div>
+                    <div class="relative z-10 flex flex-col flex-1">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <i class="fas fa-tachometer-alt text-forest-light text-sm"></i>
+                            <h3 class="text-sm font-bold text-white">KPIモニタリング</h3>
+                        </div>
+                        <div class="space-y-3 flex-1">
+                            <div class="flex items-center justify-between bg-white bg-opacity-5 rounded-lg px-4 py-3">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-users text-forest-light text-xs"></i>
+                                    <p class="text-xs text-gray-300">顧客獲得数</p>
+                                </div>
+                                <p class="text-xs font-bold text-white font-inter">月次</p>
+                            </div>
+                            <div class="flex items-center justify-between bg-white bg-opacity-5 rounded-lg px-4 py-3">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-yen-sign text-forest-light text-xs"></i>
+                                    <p class="text-xs text-gray-300">MRR成長率</p>
+                                </div>
+                                <p class="text-xs font-bold text-white font-inter">月次</p>
+                            </div>
+                            <div class="flex items-center justify-between bg-white bg-opacity-5 rounded-lg px-4 py-3">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-sync text-forest-light text-xs"></i>
+                                    <p class="text-xs text-gray-300">チャーンレート</p>
+                                </div>
+                                <p class="text-xs font-bold text-white font-inter">月次</p>
+                            </div>
+                            <div class="flex items-center justify-between bg-white bg-opacity-5 rounded-lg px-4 py-3">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-smile text-forest-light text-xs"></i>
+                                    <p class="text-xs text-gray-300">NPS / 顧客満足度</p>
+                                </div>
+                                <p class="text-xs font-bold text-white font-inter">四半期</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-green-800">
+                            <p class="text-xs text-gray-400"><i class="fas fa-info-circle mr-1"></i>月次経営会議で進捗レビューを実施</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">GreenField株式会社 - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-forest-accent font-inter">19</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

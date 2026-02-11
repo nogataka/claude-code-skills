@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>3つのAIソリューション</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-lato { font-family: 'Lato', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0F1B2D; }
+        .text-brand-dark { color: #0F1B2D; }
+        .bg-brand-accent { background-color: #C9A961; }
+        .text-brand-accent { color: #C9A961; }
+        .border-brand-accent { border-color: #C9A961; }
+        .bg-brand-sub { background-color: #1C3D5A; }
+        .text-brand-sub { color: #1C3D5A; }
+        .border-brand-sub { border-color: #1C3D5A; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-lato tracking-widest uppercase mb-1">AI Solutions</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">3つのAIソリューション</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-brain text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-lato">NexTech</p>
+            </div>
+        </div>
+
+        <!-- Body: 3 Columns -->
+        <div class="flex-1 px-16 py-6 grid grid-cols-3 gap-6">
+            <!-- Solution 1 -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-accent shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center text-brand-accent mr-3">
+                        <i class="fas fa-robot text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-lato font-bold">SOLUTION 01</p>
+                        <h3 class="text-lg font-bold text-brand-dark">AIチャットボット</h3>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="border-l-4 border-brand-accent pl-3">
+                        <p class="text-sm text-gray-700 font-bold">問い合わせ自動応答</p>
+                        <p class="text-xs text-gray-500">FAQ・マニュアルからAIが即座に回答</p>
+                    </div>
+                    <div class="border-l-4 border-brand-accent pl-3">
+                        <p class="text-sm text-gray-700 font-bold">多言語対応</p>
+                        <p class="text-xs text-gray-500">日英中の3言語をリアルタイム翻訳</p>
+                    </div>
+                    <div class="border-l-4 border-brand-accent pl-3">
+                        <p class="text-sm text-gray-700 font-bold">エスカレーション連携</p>
+                        <p class="text-xs text-gray-500">複雑案件は自動で担当者へ転送</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500"><i class="fas fa-bullseye text-brand-accent mr-1"></i>応答時間 <span class="font-bold text-brand-dark font-lato">30秒以内</span></p>
+                </div>
+            </div>
+
+            <!-- Solution 2 -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-sub shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-brand-sub mr-3">
+                        <i class="fas fa-chart-pie text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-lato font-bold">SOLUTION 02</p>
+                        <h3 class="text-lg font-bold text-brand-dark">データ分析基盤</h3>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="border-l-4 border-brand-sub pl-3">
+                        <p class="text-sm text-gray-700 font-bold">予測分析エンジン</p>
+                        <p class="text-xs text-gray-500">売上・需要予測の精度向上</p>
+                    </div>
+                    <div class="border-l-4 border-brand-sub pl-3">
+                        <p class="text-sm text-gray-700 font-bold">自動レポーティング</p>
+                        <p class="text-xs text-gray-500">KPIダッシュボードの自動更新</p>
+                    </div>
+                    <div class="border-l-4 border-brand-sub pl-3">
+                        <p class="text-sm text-gray-700 font-bold">異常検知</p>
+                        <p class="text-xs text-gray-500">データ異常をリアルタイム通知</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500"><i class="fas fa-bullseye text-brand-sub mr-1"></i>分析速度 <span class="font-bold text-brand-dark font-lato">10x向上</span></p>
+                </div>
+            </div>
+
+            <!-- Solution 3 -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-gray-400 shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 mr-3">
+                        <i class="fas fa-file-signature text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-lato font-bold">SOLUTION 03</p>
+                        <h3 class="text-lg font-bold text-brand-dark">ドキュメント生成</h3>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="border-l-4 border-gray-400 pl-3">
+                        <p class="text-sm text-gray-700 font-bold">提案書自動ドラフト</p>
+                        <p class="text-xs text-gray-500">テンプレート×AIで高品質な文書生成</p>
+                    </div>
+                    <div class="border-l-4 border-gray-400 pl-3">
+                        <p class="text-sm text-gray-700 font-bold">議事録自動作成</p>
+                        <p class="text-xs text-gray-500">音声認識＋要約AIで即座に文書化</p>
+                    </div>
+                    <div class="border-l-4 border-gray-400 pl-3">
+                        <p class="text-sm text-gray-700 font-bold">契約書レビュー</p>
+                        <p class="text-xs text-gray-500">AIがリスク条項を自動チェック</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100">
+                    <p class="text-xs text-gray-500"><i class="fas fa-bullseye text-gray-400 mr-1"></i>作成時間 <span class="font-bold text-brand-dark font-lato">80%削減</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">NexTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400 font-lato">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-lato">07</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

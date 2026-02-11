@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>Quote Highlight</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;family=Noto+Serif+JP:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #1a2332; /* Navy Blue */
+        color: #ffffff;
+    }
+    .slide-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .text-gold {
+        color: #d4af37;
+    }
+    .bg-gold {
+        background-color: #d4af37;
+    }
+    .border-gold {
+        border-color: #d4af37;
+    }
+    .serif-font {
+        font-family: 'Noto Serif JP', serif;
+    }
+    
+    /* Background Pattern */
+    .bg-pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.03;
+        background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="white"/></svg>');
+        background-size: 40px 40px;
+        z-index: 0;
+    }
+
+    /* Giant Quote Mark Background */
+    .quote-bg-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 400px;
+        color: rgba(212, 175, 55, 0.05);
+        z-index: 0;
+        pointer-events: none;
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+    }
+
+    /* Quote Container */
+    .quote-container {
+        position: relative;
+        z-index: 10;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .quote-mark {
+        font-size: 3rem;
+        color: #d4af37;
+        margin-bottom: 2rem;
+        display: inline-block;
+    }
+
+    .quote-text {
+        font-size: 3rem;
+        line-height: 1.4;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin-bottom: 3rem;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    
+    .quote-highlight-word {
+        color: #d4af37;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .quote-highlight-word::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: rgba(212, 175, 55, 0.2);
+        z-index: -1;
+    }
+
+    .quote-author-line {
+        width: 60px;
+        height: 2px;
+        background-color: #d4af37;
+        margin: 0 auto 1.5rem;
+    }
+
+    .quote-author {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: #ffffff;
+    }
+
+    .quote-role {
+        font-size: 0.9rem;
+        color: #a0aec0;
+        margin-top: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+    }
+
+    /* Decorative corners */
+    .corner-decor {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        z-index: 1;
+    }
+    .top-left {
+        top: 40px;
+        left: 40px;
+        border-right: none;
+        border-bottom: none;
+    }
+    .bottom-right {
+        bottom: 40px;
+        right: 40px;
+        border-left: none;
+        border-top: none;
+    }
+
+</style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Elements -->
+<div class="bg-pattern"></div>
+<div class="quote-bg-icon">
+<i class="fas fa-quote-right"></i>
+</div>
+<!-- Decorative Corners -->
+<div class="corner-decor top-left"></div>
+<div class="corner-decor bottom-right"></div>
+<!-- Header (Minimal) -->
+<div class="absolute top-0 left-0 w-full pt-8 px-12 z-20 flex justify-between items-start">
+<div class="flex items-center">
+<div class="w-1 h-8 bg-gold mr-3"></div>
+<p class="text-gray-400 text-xs font-bold tracking-widest uppercase">CEO MESSAGE</p>
+</div>
+<div class="text-right">
+<i class="fas fa-bullhorn text-gold opacity-50 text-xl"></i>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 flex flex-col justify-center items-center px-16 relative z-10">
+<div class="quote-container">
+<div class="mb-6 text-gold opacity-80">
+<i class="fas fa-quote-left fa-3x"></i>
+</div>
+<p class="quote-text serif-font">
+                デジタルトランスフォーメーションは<br/>
+                ITの刷新ではなく、<br/>
+<span class="quote-highlight-word">顧客価値創出</span>と<span class="quote-highlight-word">収益モデル</span>を<br/>
+                再設計する経営課題である。
+            </p>
+<div class="flex flex-col items-center">
+<div class="quote-author-line"></div>
+<p class="quote-author">代表取締役 CEO</p>
+<p class="quote-role">Chief Executive Officer</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<div class="h-12 w-full absolute bottom-0 flex items-center justify-between px-12 border-t border-gray-800 z-20 bg-gray-900 bg-opacity-50">
+<div class="flex items-center">
+<p class="text-gray-500 text-xs">Strategic Corporate Digital Business Report</p>
+</div>
+<div class="flex items-center">
+<span class="text-gold font-bold mr-2">9</span>
+<span class="text-gray-600 text-xs">/ 11</span>
+</div>
+</div>
+</div>
+</body>
+</html>

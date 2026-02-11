@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>マーケティング戦略</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .channel-card { background-color: #F8F9FA; border-left: 4px solid #007BFF; padding: 10px 14px; border-radius: 0 4px 4px 0; }
+        .message-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 14px 18px; box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); }
+        .kpi-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+        .kpi-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: left; padding: 5px 8px; }
+        .kpi-table td { padding: 4px 8px; border-bottom: 1px solid #e2e8f0; color: #333; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-2">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">マーケティング戦略</h1>
+
+            <div class="flex gap-6 flex-grow">
+                <!-- Left Column -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <div class="message-box">
+                        <p class="text-xs opacity-80 mb-1">コアメッセージ</p>
+                        <p class="text-sm font-bold leading-relaxed">「家族とペットのプライベートな移動する客室。<br>はじめてでも安心のキャンピングカーレンタル、OUTDOOR+」</p>
+                    </div>
+
+                    <h3 class="font-bold text-sm body-text"><i class="fas fa-bullhorn text-blue-500 mr-2"></i>初年度チャネル（3本に集中）</h3>
+
+                    <div class="channel-card">
+                        <div class="flex items-start">
+                            <i class="fab fa-google text-blue-500 mr-3 mt-0.5"></i>
+                            <div>
+                                <p class="text-xs font-bold body-text">Googleマップ / GBP</p>
+                                <p class="text-xs" style="color: #666;">ローカル検索の最重要チャネル。写真10-20枚、月次投稿、レビュー★4.6+目標。月間KPI: レビュー1件/月蓄積。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="flex items-start">
+                            <i class="fas fa-globe text-blue-500 mr-3 mt-0.5"></i>
+                            <div>
+                                <p class="text-xs font-bold body-text">OTA / ポータルサイト（1〜2サイト）</p>
+                                <p class="text-xs" style="color: #666;">初期の認知・信頼構築チャネル。手数料10-15%を許容しレビュー蓄積後、自社サイト誘導にシフト。月間KPI: OTA経由1件/月。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="channel-card">
+                        <div class="flex items-start">
+                            <i class="fab fa-instagram text-pink-500 mr-3 mt-0.5"></i>
+                            <div>
+                                <p class="text-xs font-bold body-text">Instagram ＋ 自社サイト</p>
+                                <p class="text-xs" style="color: #666;">週2回投稿（家族/ペット旅シーン、ハウツー、裏側）。プロフィールリンクCTR重視。月間KPI: 自社サイト/IG経由1〜2件/月。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <h3 class="font-bold text-sm body-text"><i class="fas fa-pen text-blue-500 mr-2"></i>コンテンツ戦略 4本柱</h3>
+                    <div class="grid grid-cols-2 gap-2 mb-2">
+                        <div class="bg-gray-50 p-2 rounded text-xs">
+                            <p class="font-bold body-text"><i class="fas fa-blog text-blue-400 mr-1"></i> ブログ/ガイド</p>
+                            <p style="color: #666;">初心者ガイド、ペット旅注意点、コスト比較記事。年12-24本。</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded text-xs">
+                            <p class="font-bold body-text"><i class="fas fa-route text-blue-400 mr-1"></i> モデルコース</p>
+                            <p style="color: #666;">近郊エリア1-2泊コース。AIコンシェルジュと連動。実体験レポート。</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded text-xs">
+                            <p class="font-bold body-text"><i class="fas fa-video text-blue-400 mr-1"></i> 動画</p>
+                            <p style="color: #666;">操作ガイド5-10分。Instagram Reels用ショート動画。</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded text-xs">
+                            <p class="font-bold body-text"><i class="fas fa-envelope text-blue-400 mr-1"></i> メール/LINE</p>
+                            <p style="color: #666;">予約確認→出発前チェック→利用後レビュー依頼の自動フロー。</p>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-sm body-text"><i class="fas fa-chart-bar text-blue-500 mr-2"></i>集客方針＆KPI</h3>
+                    <div class="flex gap-3 mb-2">
+                        <div class="bg-gray-50 p-2 rounded text-xs flex-1 text-center">
+                            <p style="color: #666;">広告費</p>
+                            <p class="highlight text-lg font-black">¥0</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded text-xs flex-1 text-center">
+                            <p style="color: #666;">集客方針</p>
+                            <p class="highlight text-lg font-black">100% オーガニック</p>
+                        </div>
+                    </div>
+
+                    <table class="kpi-table" style="border-radius: 4px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+                        <thead>
+                            <tr><th>KPI</th><th>3ヶ月目</th><th>12ヶ月目</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>月間サイトセッション</td><td>500</td><td>2,000</td></tr>
+                            <tr><td>月間予約件数</td><td>3件</td><td>3件以上</td></tr>
+                            <tr><td>Googleレビュー</td><td>3件 ★4.5+</td><td>15件 ★4.6+</td></tr>
+                            <tr><td>リピート率</td><td>-</td><td>20%以上</td></tr>
+                            <tr><td>紹介経由比率</td><td>-</td><td>10-15%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

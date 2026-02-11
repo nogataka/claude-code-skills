@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Existing Solutions vs Limitations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .solution-item {
+            transition: transform 0.2s;
+        }
+
+        .limitation-card {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .arrow-divider {
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            background: white;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            color: #ef4444;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <!-- Header -->
+        <div class="h-20 bg-gray-900 flex items-center justify-between px-12 shrink-0">
+            <div class="flex items-center space-x-4">
+                <div
+                    class="w-10 h-10 bg-orange-500 rounded flex items-center justify-center text-white text-xl font-bold">
+                    <i class="fa-solid fa-scale-unbalanced"></i>
+                </div>
+                <h1 class="text-3xl font-bold text-white tracking-tight">既存解決策とその限界</h1>
+            </div>
+            <div class="text-gray-400 text-sm font-medium">
+                <span class="mr-4">02 課題設定</span>
+                <span class="bg-gray-800 px-3 py-1 rounded text-xs">Comparison</span>
+            </div>
+        </div>
+        <!-- Main Content Split -->
+        <div class="flex flex-1 relative bg-gray-50">
+            <!-- Center Divider Icon -->
+            <div class="arrow-divider border-2 border-red-100">
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+            <!-- Left Column: Existing Solutions -->
+            <div class="w-1/2 p-8 pr-12 border-r border-gray-200 flex flex-col">
+                <div class="flex items-center mb-6">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold mr-3">CURRENT</span>
+                    <h2 class="text-2xl font-bold text-gray-800">現状の対処法</h2>
+                </div>
+                <div class="space-y-3 flex-1 overflow-y-auto pr-2">
+                    <!-- Item 1 -->
+                    <div class="solution-item bg-white p-3 rounded-lg border border-gray-200 flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">ホテル・旅館 ＋ 自家用車</p>
+                            <p class="text-xs text-gray-500">最も一般的だが、移動と宿泊が分断</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="solution-item bg-white p-3 rounded-lg border border-gray-200 flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">民泊・貸別荘（Airbnb等）</p>
+                            <p class="text-xs text-gray-500">気兼ねは減るが、ペット可物件は希少</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="solution-item bg-white p-3 rounded-lg border border-gray-200 flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">ペット同伴専門宿</p>
+                            <p class="text-xs text-gray-500">環境は良いが、高価格で予約困難</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="solution-item bg-white p-3 rounded-lg border border-gray-200 flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-bus"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">パッケージツアー</p>
+                            <p class="text-xs text-gray-500">手軽だが、ペット連れの柔軟性なし</p>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="solution-item bg-white p-3 rounded-lg border border-gray-200 flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-van-shuttle"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">既存キャンピングカーレンタル</p>
+                            <p class="text-xs text-gray-500">車中泊はできるが、初心者には不親切</p>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="solution-item bg-white p-3 rounded-lg border border-gray-200 flex items-center">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">P2Pカーシェア（Anyca等）</p>
+                            <p class="text-xs text-gray-500">安価だが、品質・対応にばらつき</p>
+                        </div>
+                    </div>
+                    <!-- Item 7 -->
+                    <div
+                        class="solution-item bg-gray-100 p-3 rounded-lg border border-gray-200 border-dashed flex items-center opacity-75">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-ban"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-600 text-sm">旅行自体を諦める / 減らす</p>
+                            <p class="text-xs text-gray-500">課題解決ではなく、機会の放棄</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Limitations -->
+            <div class="w-1/2 p-8 pl-12 bg-white flex flex-col">
+                <div class="flex items-center mb-6">
+                    <span
+                        class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold mr-3">LIMITATIONS</span>
+                    <h2 class="text-2xl font-bold text-gray-800">構造的な限界（なぜ不十分か）</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-5 flex-1 content-start">
+                    <!-- Limitation 1 -->
+                    <div class="limitation-card bg-red-50 p-5 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-start mb-2">
+                            <div class="text-red-500 text-lg mr-3 mt-1"><i
+                                    class="fa-solid fa-arrows-split-up-and-left"></i></div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">「移動」と「宿泊」の分断</h3>
+                                <p class="text-sm text-gray-700 mt-1 leading-relaxed">
+                                    宿と移動手段を別々に手配する手間。チェックイン時間や場所の制約により、「好きな時に移動・休憩・宿泊する」自由が得られない。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Limitation 2 -->
+                    <div class="limitation-card bg-red-50 p-5 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-start mb-2">
+                            <div class="text-red-500 text-lg mr-3 mt-1"><i class="fa-solid fa-user-slash"></i></div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">宿側の制約による「気兼ね」と「コスト」</h3>
+                                <p class="text-sm text-gray-700 mt-1 leading-relaxed">
+                                    他の宿泊客への騒音配慮や、ペット同伴時の高額な追加料金・厳しいルールにより、心理的にも経済的にも負担が大きい。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Limitation 3 -->
+                    <div class="limitation-card bg-red-50 p-5 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-start mb-2">
+                            <div class="text-red-500 text-lg mr-3 mt-1"><i class="fa-solid fa-circle-question"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">既存レンタルの「不親切さ」</h3>
+                                <p class="text-sm text-gray-700 mt-1 leading-relaxed">
+                                    「車を貸す」ことに主眼が置かれ、初心者への運転サポートや旅程提案、ペット快適性の配慮が不足。DX遅れで手続きも煩雑。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Limitation 4 -->
+                    <div class="limitation-card bg-gray-100 p-5 rounded-xl border-l-4 border-gray-500">
+                        <div class="flex items-start mb-2">
+                            <div class="text-gray-600 text-lg mr-3 mt-1"><i class="fa-solid fa-puzzle-piece"></i></div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 text-lg">「特別体験」と「安心」の両立未達</h3>
+                                <p class="text-sm text-gray-700 mt-1 leading-relaxed">
+                                    従来の旅行は安心だが新鮮味に欠け、既存のアウトドア体験はハードルが高い。このギャップが埋まっていない。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Conclusion -->
+                <div class="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-lightbulb text-orange-500 mr-3 text-xl"></i>
+                    <p class="font-bold text-gray-800 text-sm">
+                        顧客は「費用対効果が高く、気兼ねのない、特別な体験」を求めているが、<br />既存手段ではどれかを犠牲にする必要がある。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

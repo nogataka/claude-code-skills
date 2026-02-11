@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>顧客関係の変革</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&amp;family=M+PLUS+1:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'M PLUS 1', sans-serif;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #1E3A8A;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 20px 40px;
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: 'M PLUS 1', sans-serif;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .content {
+            display: flex;
+            height: calc(100% - 70px);
+            padding: 0 40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .left-content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .right-content {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            text-align: right;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 5rem;
+            line-height: 1.2;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-family: 'M PLUS 1', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            line-height: 1.6;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(191, 219, 254, 0.5);
+            z-index: 1;
+        }
+        
+        .circle-1 {
+            width: 500px;
+            height: 500px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            right: 300px;
+        }
+        
+        .circle-3 {
+            width: 400px;
+            height: 400px;
+            top: 200px;
+            right: 100px;
+            background-color: rgba(30, 64, 175, 0.5);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Circles -->
+<div class="circle circle-1"></div>
+<div class="circle circle-2"></div>
+<div class="circle circle-3"></div>
+<!-- Header -->
+<div class="header">
+<div class="header-left">Sterling &amp; Partners</div>
+<div class="header-center text-center">03/15/2030</div>
+<div class="header-right text-right">@sterlingcx</div>
+</div>
+<!-- Content -->
+<div class="content">
+<div class="left-content">
+<h1 class="title">顧客関係の<br/>変革</h1>
+</div>
+<div class="right-content">
+<p class="subtitle">戦略的イノベーションと<br/>デジタルエクセレンスで<br/>卓越した体験を構築</p>
+</div>
+</div>
+</div>
+</body>
+</html>

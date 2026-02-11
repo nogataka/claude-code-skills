@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Agenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex">
+        <!-- Left Panel -->
+        <div class="w-1/4 bg-forest-900 text-white flex flex-col justify-center p-12 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-2 h-full bg-forest-light"></div>
+            <div class="absolute -right-16 top-20 w-32 h-32 rounded-full border-4 border-green-800 opacity-20"></div>
+            <div class="absolute -left-10 bottom-20 w-40 h-40 rounded-full border-4 border-green-800 opacity-20"></div>
+            <div class="relative z-10">
+                <div class="text-forest-light text-5xl mb-6">
+                    <i class="fas fa-list-ol"></i>
+                </div>
+                <h1 class="text-5xl font-black tracking-tight mb-4">目次</h1>
+                <p class="text-gray-400 text-sm font-inter tracking-widest uppercase mb-8">Table of Contents</p>
+                <div class="w-12 h-1 bg-forest-light mb-8"></div>
+                <p class="text-gray-400 text-xs">新規事業提案 FY2026</p>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="w-3/4 bg-white p-12 flex flex-col justify-center relative">
+            <div class="absolute top-0 right-0 w-64 h-4 bg-gray-50"></div>
+            <div class="grid grid-cols-2 gap-x-12 gap-y-3 content-center">
+                <!-- Column 1 -->
+                <div class="space-y-3">
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">01</span>
+                        <span class="text-lg font-bold text-gray-800">エグゼクティブサマリー</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">02</span>
+                        <span class="text-lg font-bold text-gray-800">市場環境・トレンド</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">03</span>
+                        <span class="text-lg font-bold text-gray-800">ターゲット顧客</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">04</span>
+                        <span class="text-lg font-bold text-gray-800">市場規模</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">05</span>
+                        <span class="text-lg font-bold text-gray-800">ソリューション概要</span>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="space-y-3">
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">06</span>
+                        <span class="text-lg font-bold text-gray-800">競合分析</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">07</span>
+                        <span class="text-lg font-bold text-gray-800">ビジネスモデル</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">08</span>
+                        <span class="text-lg font-bold text-gray-800">資金計画・売上予測</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-gray-200 hover:border-forest-light bg-gray-50 rounded-r">
+                        <span class="text-2xl font-bold text-gray-300 mr-4 w-8 text-right font-inter">09</span>
+                        <span class="text-lg font-bold text-gray-800">実行計画・体制</span>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-forest-light bg-green-50 rounded-r">
+                        <span class="text-2xl font-bold text-forest-light mr-4 w-8 text-right font-inter">10</span>
+                        <span class="text-lg font-bold text-gray-800">まとめ・Next Steps</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-6 right-12 text-gray-400 text-xs">
+                <p>Confidential</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

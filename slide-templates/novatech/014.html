@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>マーケティングファネル</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-blue-900 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-accent-orange"></div>
+                <div>
+                    <p class="text-xs text-gray-500 font-inter tracking-widest uppercase mb-1">Marketing Funnel</p>
+                    <h1 class="text-3xl font-bold text-white tracking-tight">マーケティングファネル</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 opacity-40">
+                <i class="fas fa-bolt text-lg text-accent-orange"></i>
+                <p class="text-xs font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech</p>
+            </div>
+        </div>
+
+        <!-- Body: Funnel Visualization -->
+        <div class="flex-1 px-16 py-6 flex flex-col items-center justify-center">
+            <div class="w-full flex flex-col items-center gap-2">
+                <!-- Level 1: 認知 (100%) -->
+                <div class="flex items-center w-full" style="max-width: 900px;">
+                    <div class="bg-accent-orange rounded-lg py-3 px-6 flex items-center justify-between" style="width: 100%;">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-bullhorn text-white text-lg"></i>
+                            <div>
+                                <p class="text-sm font-bold text-white">認知</p>
+                                <p class="text-xs text-white text-opacity-80">コンテンツ / SNS / 広告</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-lg font-bold text-white font-inter">10,000 <span class="text-xs font-normal">PV/月</span></p>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex-shrink-0 w-20 text-right">
+                        <p class="text-xs text-gray-500 font-inter">100%</p>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-chevron-down text-gray-600 text-xs"></i>
+                    <span class="text-xs text-gray-600 font-inter ml-2">12.0%</span>
+                </div>
+
+                <!-- Level 2: 関心 (60%) -->
+                <div class="flex items-center w-full" style="max-width: 900px;">
+                    <div class="flex justify-center" style="width: 100%;">
+                        <div class="bg-accent-blue rounded-lg py-3 px-6 flex items-center justify-between" style="width: 78%;">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-lightbulb text-white text-lg"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">関心</p>
+                                    <p class="text-xs text-white text-opacity-80">ホワイトペーパーDL / ウェビナー</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-white font-inter">1,200 <span class="text-xs font-normal">リード/月</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex-shrink-0 w-20 text-right">
+                        <p class="text-xs text-gray-500 font-inter">60%</p>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-chevron-down text-gray-600 text-xs"></i>
+                    <span class="text-xs text-gray-600 font-inter ml-2">15.0%</span>
+                </div>
+
+                <!-- Level 3: 検討 (30%) -->
+                <div class="flex items-center w-full" style="max-width: 900px;">
+                    <div class="flex justify-center" style="width: 100%;">
+                        <div class="bg-accent-orange bg-opacity-80 rounded-lg py-3 px-6 flex items-center justify-between" style="width: 56%;">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-clipboard-check text-white text-lg"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">検討</p>
+                                    <p class="text-xs text-white text-opacity-80">デモ申込 / トライアル</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-white font-inter">180 <span class="text-xs font-normal">MQL/月</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex-shrink-0 w-20 text-right">
+                        <p class="text-xs text-gray-500 font-inter">30%</p>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-chevron-down text-gray-600 text-xs"></i>
+                    <span class="text-xs text-gray-600 font-inter ml-2">25.0%</span>
+                </div>
+
+                <!-- Level 4: 商談 (15%) -->
+                <div class="flex items-center w-full" style="max-width: 900px;">
+                    <div class="flex justify-center" style="width: 100%;">
+                        <div class="bg-accent-blue bg-opacity-80 rounded-lg py-3 px-6 flex items-center justify-between" style="width: 36%;">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-comments text-white text-lg"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">商談</p>
+                                    <p class="text-xs text-white text-opacity-80">提案 / 見積もり</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-white font-inter">45 <span class="text-xs font-normal">SQL/月</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex-shrink-0 w-20 text-right">
+                        <p class="text-xs text-gray-500 font-inter">15%</p>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-chevron-down text-gray-600 text-xs"></i>
+                    <span class="text-xs text-gray-600 font-inter ml-2">33.3%</span>
+                </div>
+
+                <!-- Level 5: 成約 (5%) -->
+                <div class="flex items-center w-full" style="max-width: 900px;">
+                    <div class="flex justify-center" style="width: 100%;">
+                        <div class="bg-navy-700 rounded-lg py-3 px-6 flex items-center justify-between" style="width: 20%;">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-trophy text-accent-orange text-lg"></i>
+                                <div>
+                                    <p class="text-sm font-bold text-white">成約</p>
+                                    <p class="text-xs text-gray-400">クロージング</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-white font-inter">15 <span class="text-xs font-normal">件/月</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex-shrink-0 w-20 text-right">
+                        <p class="text-xs text-gray-500 font-inter">5%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Key Metrics -->
+            <div class="flex gap-6 mt-6">
+                <div class="bg-navy-800 rounded-xl border border-blue-900 px-6 py-3 text-center">
+                    <p class="text-xs text-gray-500 mb-1">CAC</p>
+                    <p class="text-xl font-bold text-accent-orange font-inter">¥36<span class="text-xs font-normal text-gray-400 ml-0.5">万</span></p>
+                </div>
+                <div class="bg-navy-800 rounded-xl border border-blue-900 px-6 py-3 text-center">
+                    <p class="text-xs text-gray-500 mb-1">CPL</p>
+                    <p class="text-xl font-bold text-accent-blue font-inter">¥3<span class="text-xs font-normal text-gray-400 ml-0.5">万</span></p>
+                </div>
+                <div class="bg-navy-800 rounded-xl border border-blue-900 px-6 py-3 text-center">
+                    <p class="text-xs text-gray-500 mb-1">CVR</p>
+                    <p class="text-xl font-bold text-accent-orange font-inter">1.25<span class="text-xs font-normal text-gray-400 ml-0.5">%</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-600">Page</span>
+                <span class="text-sm font-bold text-accent-orange font-inter">14</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>初期投資・資金計画</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-forest-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Investment & Funding</p>
+                    <h1 class="text-3xl font-bold text-forest-900 tracking-tight">初期投資・資金計画</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-forest-900 opacity-50">
+                <i class="fas fa-seedling text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="flex-1 px-16 py-5 flex gap-6">
+            <!-- Left Column: Investment Breakdown -->
+            <div class="w-1/2 flex flex-col">
+                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest font-inter mb-3">Initial Investment</p>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-100 overflow-hidden flex-1 flex flex-col">
+                    <!-- Investment Items -->
+                    <div class="flex-1">
+                        <!-- Item 1 -->
+                        <div class="flex items-center px-5 py-4 border-b border-gray-100">
+                            <div class="w-10 h-10 bg-forest-accent rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fas fa-code text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-forest-900 text-sm">開発費</h3>
+                                <p class="text-xs text-gray-400">プラットフォーム構築・AI開発</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-black text-forest-900 font-inter">1,500<span class="text-xs font-normal text-gray-400 ml-1">万円</span></p>
+                            </div>
+                            <!-- Bar -->
+                            <div class="w-20 h-2 bg-gray-200 rounded-full ml-4">
+                                <div class="h-2 bg-forest-accent rounded-full" style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex items-center px-5 py-4 border-b border-gray-100">
+                            <div class="w-10 h-10 bg-forest-light rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fas fa-bullhorn text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-forest-900 text-sm">マーケティング</h3>
+                                <p class="text-xs text-gray-400">広告・PR・展示会出展</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-black text-forest-900 font-inter">500<span class="text-xs font-normal text-gray-400 ml-1">万円</span></p>
+                            </div>
+                            <div class="w-20 h-2 bg-gray-200 rounded-full ml-4">
+                                <div class="h-2 bg-forest-light rounded-full" style="width: 16.7%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex items-center px-5 py-4 border-b border-gray-100">
+                            <div class="w-10 h-10 bg-forest-primary rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fas fa-users text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-forest-900 text-sm">人件費</h3>
+                                <p class="text-xs text-gray-400">コアメンバー採用・外注</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-black text-forest-900 font-inter">800<span class="text-xs font-normal text-gray-400 ml-1">万円</span></p>
+                            </div>
+                            <div class="w-20 h-2 bg-gray-200 rounded-full ml-4">
+                                <div class="h-2 bg-forest-primary rounded-full" style="width: 26.7%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="flex items-center px-5 py-4 border-b border-gray-100">
+                            <div class="w-10 h-10 bg-forest-900 rounded-lg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fas fa-wallet text-sm"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-forest-900 text-sm">運転資金</h3>
+                                <p class="text-xs text-gray-400">オフィス・ツール・予備費</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xl font-black text-forest-900 font-inter">200<span class="text-xs font-normal text-gray-400 ml-1">万円</span></p>
+                            </div>
+                            <div class="w-20 h-2 bg-gray-200 rounded-full ml-4">
+                                <div class="h-2 bg-forest-900 rounded-full" style="width: 6.7%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total -->
+                    <div class="bg-forest-900 px-5 py-4 flex items-center justify-between">
+                        <h3 class="text-white font-bold text-sm">合計 必要資金</h3>
+                        <p class="text-3xl font-black text-white font-inter">¥3,000<span class="text-sm font-normal text-forest-light ml-1">万円</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Funding & Metrics -->
+            <div class="w-1/2 flex flex-col gap-4">
+                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest font-inter mb-0">Funding & Runway</p>
+
+                <!-- Funding Sources -->
+                <div class="bg-gray-50 rounded-xl border border-gray-100 p-5">
+                    <h3 class="text-sm font-bold text-forest-900 mb-4"><i class="fas fa-hand-holding-usd text-forest-accent mr-2"></i>資金調達計画</h3>
+                    <div class="flex gap-4">
+                        <!-- 自己資金 -->
+                        <div class="flex-1 bg-white rounded-lg border border-gray-200 p-4 text-center">
+                            <div class="w-10 h-10 bg-forest-900 rounded-full flex items-center justify-center text-white mx-auto mb-2">
+                                <i class="fas fa-piggy-bank text-sm"></i>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-1">自己資金</p>
+                            <p class="text-2xl font-black text-forest-900 font-inter">500<span class="text-xs font-normal text-gray-400 ml-0.5">万</span></p>
+                            <!-- Proportion bar -->
+                            <div class="w-full h-1.5 bg-gray-200 rounded-full mt-3">
+                                <div class="h-1.5 bg-forest-900 rounded-full" style="width: 16.7%;"></div>
+                            </div>
+                            <p class="text-xs text-gray-400 font-inter mt-1">16.7%</p>
+                        </div>
+                        <!-- シードラウンド -->
+                        <div class="flex-1 bg-white rounded-lg border-2 border-forest-accent p-4 text-center relative">
+                            <span class="absolute -top-2 right-3 inline-block text-xs font-bold px-2 py-0.5 rounded-full bg-forest-accent text-white">Main</span>
+                            <div class="w-10 h-10 bg-forest-accent rounded-full flex items-center justify-center text-white mx-auto mb-2">
+                                <i class="fas fa-rocket text-sm"></i>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-1">シードラウンド</p>
+                            <p class="text-2xl font-black text-forest-900 font-inter">2,500<span class="text-xs font-normal text-gray-400 ml-0.5">万</span></p>
+                            <div class="w-full h-1.5 bg-gray-200 rounded-full mt-3">
+                                <div class="h-1.5 bg-forest-accent rounded-full" style="width: 83.3%;"></div>
+                            </div>
+                            <p class="text-xs text-gray-400 font-inter mt-1">83.3%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burn Rate & Runway -->
+                <div class="grid grid-cols-2 gap-4 flex-1">
+                    <div class="bg-forest-900 rounded-xl p-5 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-forest-accent rounded-full opacity-10" style="filter: blur(20px);"></div>
+                        <p class="text-xs text-forest-light font-inter uppercase tracking-widest mb-2 relative z-10">Monthly Burn Rate</p>
+                        <p class="text-4xl font-black text-white font-inter relative z-10">¥250<span class="text-sm font-normal text-forest-light ml-1">万/月</span></p>
+                        <p class="text-xs text-gray-400 mt-2 relative z-10">人件費+インフラ+マーケ含む</p>
+                    </div>
+                    <div class="bg-forest-accent rounded-xl p-5 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 bg-white rounded-full opacity-10" style="filter: blur(20px);"></div>
+                        <p class="text-xs text-green-200 font-inter uppercase tracking-widest mb-2 relative z-10">Runway</p>
+                        <p class="text-4xl font-black text-white font-inter relative z-10">12<span class="text-sm font-normal text-green-200 ml-1">ヶ月</span></p>
+                        <p class="text-xs text-green-200 mt-2 relative z-10">シリーズAまでの十分な滑走路</p>
+                    </div>
+                </div>
+
+                <!-- Milestone Note -->
+                <div class="bg-green-50 rounded-xl px-5 py-3 flex items-center border border-forest-light border-opacity-30">
+                    <i class="fas fa-info-circle text-forest-accent mr-3"></i>
+                    <p class="text-xs text-forest-900 leading-relaxed">
+                        <span class="font-bold">12ヶ月以内にARR ¥3,000万を達成</span>し、シリーズA（¥1〜2億）の調達を計画。バーンレート管理により柔軟な資金運用を実現。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">GreenField株式会社 - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-forest-accent font-inter">15</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

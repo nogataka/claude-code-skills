@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cover</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; }
+        .bg-navy-900 { background-color: #0F172A; }
+        .bg-navy-800 { background-color: #1E293B; }
+        .bg-navy-700 { background-color: #334155; }
+        .text-navy-900 { color: #0F172A; }
+        .text-navy-800 { color: #1E293B; }
+        .bg-accent-blue { background-color: #3B82F6; }
+        .text-accent-blue { color: #3B82F6; }
+        .bg-accent-orange { background-color: #F97316; }
+        .text-accent-orange { color: #F97316; }
+        .border-accent-orange { border-color: #F97316; }
+        .border-accent-blue { border-color: #3B82F6; }
+        .border-navy-700 { border-color: #334155; }
+    </style>
+</head>
+
+<body>
+    <div class="slide bg-navy-900 flex flex-col items-center justify-center text-center">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-accent-orange"></div>
+        <div class="absolute -top-32 -right-32 w-72 h-72 rounded-full border border-blue-900 opacity-20"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full border border-blue-900 opacity-15"></div>
+        <div class="absolute top-20 right-20 w-3 h-3 rounded-full bg-accent-orange opacity-40"></div>
+        <div class="absolute bottom-32 left-24 w-2 h-2 rounded-full bg-accent-blue opacity-30"></div>
+
+        <!-- Content -->
+        <div class="z-10 relative">
+            <!-- Brand -->
+            <div class="flex items-center justify-center space-x-3 mb-12">
+                <div class="w-10 h-10 bg-accent-orange rounded-lg flex items-center justify-center text-white text-lg">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <p class="text-lg font-bold text-gray-400 tracking-widest uppercase font-inter">NovaTech Solutions</p>
+            </div>
+
+            <!-- Subtitle EN -->
+            <p class="text-sm text-accent-orange font-inter font-semibold tracking-widest uppercase mb-4">
+                Business Strategy Deck 2026
+            </p>
+
+            <!-- Main Title -->
+            <h1 class="text-6xl font-black text-white leading-tight tracking-tight mb-6">
+                次世代プロダクト戦略
+            </h1>
+
+            <!-- Divider -->
+            <div class="flex items-center justify-center gap-3 mb-8">
+                <div class="w-12 h-0.5 bg-blue-800"></div>
+                <div class="w-3 h-3 rounded-full bg-accent-orange"></div>
+                <div class="w-12 h-0.5 bg-blue-800"></div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xl text-gray-400 font-light max-w-xl mx-auto leading-relaxed mb-14">
+                市場課題を解決し、持続的な成長を実現する<br />プロダクトロードマップのご提案
+            </p>
+
+            <!-- Info Bar -->
+            <div class="bg-navy-800 px-8 py-4 rounded-xl border border-blue-900 inline-flex items-center gap-8 text-sm">
+                <div class="flex items-center text-gray-400">
+                    <i class="fas fa-user mr-2 text-accent-orange text-xs"></i>
+                    <span><span class="text-white font-bold">山田 太郎</span></span>
+                </div>
+                <div class="w-px h-5 bg-blue-900"></div>
+                <div class="flex items-center text-gray-400">
+                    <i class="fas fa-briefcase mr-2 text-accent-orange text-xs"></i>
+                    <span>プロダクト戦略本部</span>
+                </div>
+                <div class="w-px h-5 bg-blue-900"></div>
+                <div class="flex items-center text-gray-400">
+                    <i class="fas fa-calendar mr-2 text-accent-orange text-xs"></i>
+                    <span>2026.02.09</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="absolute bottom-0 left-0 w-full h-12 flex justify-between items-center px-16 border-t border-blue-900">
+            <p class="text-xs text-gray-600 tracking-wider">NovaTech Solutions - Confidential</p>
+            <p class="text-xs text-gray-600 tracking-wider">© 2026 All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

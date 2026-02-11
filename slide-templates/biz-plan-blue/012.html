@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>収益モデル＆ユニットエコノミクス</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700;900&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'BIZ UDGothic', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .accent-shape { position: absolute; top: -200px; right: -200px; width: 800px; height: 800px; border-radius: 50%; background: rgba(0, 123, 255, 0.05); }
+        .slide-title { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #333333; margin-bottom: 8px; }
+        .body-text { color: #333333; line-height: 1.6; }
+        .highlight { color: #007BFF; font-weight: 700; }
+        .metric-box { background: linear-gradient(135deg, #007BFF, #0056b3); color: #FFFFFF; border-radius: 8px; padding: 14px 16px; text-align: center; box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); }
+        .metric-value { font-size: 2rem; font-weight: 900; line-height: 1; }
+        .rev-table { width: 100%; border-collapse: collapse; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); }
+        .rev-table th { background-color: #007BFF; color: #FFFFFF; font-weight: 700; text-align: left; padding: 6px 10px; font-size: 0.8rem; }
+        .rev-table td { padding: 5px 10px; border-bottom: 1px solid #e2e8f0; font-size: 0.8rem; color: #333; }
+        .rev-table .total-row td { background-color: rgba(0, 123, 255, 0.08); font-weight: 700; }
+        .data-point { background-color: #F8F9FA; border-left: 4px solid #007BFF; padding: 10px 14px; border-radius: 0 4px 4px 0; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex flex-col p-10">
+        <div class="accent-shape"></div>
+        <div class="mb-2">
+            <div class="flex items-center">
+                <i class="fas fa-shuttle-van mr-3" style="color: #007BFF;"></i>
+                <span class="text-xl font-bold" style="color: #007BFF;">OUTDOOR+</span>
+                <span class="text-xl ml-2" style="color: #333333;">キャンピングカーレンタル事業計画</span>
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col z-10 relative">
+            <h1 class="slide-title">収益モデル＆ユニットエコノミクス</h1>
+
+            <!-- KPI Metrics -->
+            <div class="grid grid-cols-5 gap-3 mb-4">
+                <div class="metric-box">
+                    <p class="text-xs opacity-80">平均客単価</p>
+                    <p class="metric-value">7万円</p>
+                    <p class="text-xs mt-1 opacity-70">2泊平均</p>
+                </div>
+                <div class="metric-box">
+                    <p class="text-xs opacity-80">LTV</p>
+                    <p class="metric-value">15万円</p>
+                    <p class="text-xs mt-1 opacity-70">リピート2回想定</p>
+                </div>
+                <div class="metric-box">
+                    <p class="text-xs opacity-80">変動費/予約</p>
+                    <p class="metric-value">1.3万</p>
+                    <p class="text-xs mt-1 opacity-70">広告費ゼロ</p>
+                </div>
+                <div class="metric-box">
+                    <p class="text-xs opacity-80">粗利/予約</p>
+                    <p class="metric-value">5.7万</p>
+                    <p class="text-xs mt-1 opacity-70">限界利益</p>
+                </div>
+                <div class="metric-box">
+                    <p class="text-xs opacity-80">粗利率</p>
+                    <p class="metric-value">81.4%</p>
+                    <p class="text-xs mt-1 opacity-70">変動費控除後</p>
+                </div>
+            </div>
+
+            <div class="flex gap-6 flex-grow">
+                <!-- Left: Revenue Sources -->
+                <div class="w-1/2">
+                    <h3 class="font-bold text-sm body-text mb-2"><i class="fas fa-coins text-yellow-500 mr-2"></i>収益源</h3>
+                    <table class="rev-table mb-3">
+                        <thead>
+                            <tr><th>収益源</th><th style="text-align: right;">金額</th><th>備考</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">車両レンタル基本料金</td>
+                                <td style="text-align: right;" class="highlight">¥20,000〜33,000/日</td>
+                                <td class="text-xs" style="color: #666;">平日/休日/ハイシーズンで変動</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">安心補償パック</td>
+                                <td style="text-align: right;" class="highlight">¥3,000/日</td>
+                                <td class="text-xs" style="color: #666;">オプション、採用率50-70%</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">ペット同乗料</td>
+                                <td style="text-align: right;" class="highlight">合計の10%</td>
+                                <td class="text-xs" style="color: #666;">利用者の約40%が対象</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 class="font-bold text-sm body-text mb-2"><i class="fas fa-calculator text-blue-500 mr-2"></i>変動費（1予約あたり）</h3>
+                    <table class="rev-table">
+                        <thead>
+                            <tr><th>項目</th><th style="text-align: right;">金額</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>走行燃料・消耗</td><td style="text-align: right;">¥6,000</td></tr>
+                            <tr><td>清掃・消毒等</td><td style="text-align: right;">¥2,000</td></tr>
+                            <tr><td>OTA・決済手数料</td><td style="text-align: right;">¥3,000</td></tr>
+                            <tr><td>修理・備品積立</td><td style="text-align: right;">¥2,000</td></tr>
+                            <tr class="total-row"><td class="font-bold">合計</td><td style="text-align: right;" class="highlight">¥13,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Right: Scale Strategy -->
+                <div class="w-1/2 flex flex-col gap-3">
+                    <h3 class="font-bold text-sm body-text mb-1"><i class="fas fa-rocket text-blue-500 mr-2"></i>スケール戦略</h3>
+
+                    <div class="data-point">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-chart-bar text-blue-500 mr-1"></i> Phase 1: 1台最適化</p>
+                        <p class="text-xs" style="color: #666;">オフシーズン割引で稼働率平準化。自社サイト比率を高めOTA手数料を圧縮。ペットプラン・補償パックのアップセルで単価向上。</p>
+                    </div>
+
+                    <div class="data-point">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-redo text-blue-500 mr-1"></i> Phase 2: リピート＆紹介</p>
+                        <p class="text-xs" style="color: #666;">利用後10%オフクーポン配布。紹介インセンティブ（Amazonギフト¥3,000）。1年目リピート率20% → 中期30%以上。</p>
+                    </div>
+
+                    <div class="data-point">
+                        <p class="text-xs font-bold body-text"><i class="fas fa-truck text-blue-500 mr-1"></i> Phase 3: 2台体制＋エコシステム</p>
+                        <p class="text-xs" style="color: #666;">2台目導入条件: 12ヶ月連続3件/月以上、30件以上レビュー★4.6+、ローン返済後キャッシュフロー黒字。車種差別化（ファミリー vs コンパクト）。</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-3 rounded-lg mt-auto">
+                        <h3 class="font-bold text-xs body-text mb-1"><i class="fas fa-info-circle text-blue-500 mr-1"></i> チャネル別粗利率</h3>
+                        <div class="flex gap-3 text-xs" style="color: #666;">
+                            <div><span class="highlight">自社+Maps:</span> 85-86%</div>
+                            <div><span class="highlight">OTA:</span> 81-82%</div>
+                            <div><span class="highlight">紹介:</span> 85-86%</div>
+                            <div><span class="highlight">加重平均:</span> 83-84%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chapter 03 - 事業コンセプト</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; background: #FFFFFF; position: relative; overflow: hidden; }
+        .text-forest-900 { color: #1B4332; }
+        .bg-forest-900 { background-color: #1B4332; }
+        .text-forest-primary { color: #2D6A4F; }
+        .bg-forest-primary { background-color: #2D6A4F; }
+        .bg-forest-accent { background-color: #40916C; }
+        .text-forest-accent { color: #40916C; }
+        .text-forest-light { color: #52B788; }
+        .bg-forest-light { background-color: #52B788; }
+        .border-forest-accent { border-color: #40916C; }
+        .border-forest-light { border-color: #52B788; }
+    </style>
+</head>
+
+<body>
+    <div class="slide flex">
+        <!-- Left Panel -->
+        <div class="w-1/4 bg-forest-900 flex flex-col justify-center items-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)"></rect>
+                </svg>
+            </div>
+            <div class="z-10 flex flex-col items-center">
+                <p class="text-forest-light text-lg tracking-widest font-inter uppercase mb-2">Chapter</p>
+                <h2 class="text-9xl font-inter font-light text-white leading-none">03</h2>
+                <div class="w-12 h-1 bg-forest-light mt-6"></div>
+            </div>
+            <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-gray-500 text-xs tracking-widest uppercase opacity-50">
+                <p>Business Concept</p>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="w-3/4 flex flex-col justify-center px-24 relative">
+            <div class="absolute top-12 right-16 flex items-center space-x-2 text-gray-400 text-sm tracking-wide">
+                <span class="uppercase font-inter">New Business Proposal</span>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-forest-accent font-bold uppercase font-inter">Section 03</span>
+            </div>
+
+            <div class="mb-12">
+                <h1 class="text-6xl font-bold text-forest-900 tracking-tight leading-tight mb-6">事業コンセプト</h1>
+                <p class="text-2xl text-forest-primary font-light border-l-4 border-forest-accent pl-6 py-1">
+                    ソリューション設計と競争優位性
+                </p>
+            </div>
+
+            <div class="max-w-3xl">
+                <div class="flex items-start">
+                    <i class="fas fa-quote-left text-3xl text-gray-200 mr-4 -mt-2"></i>
+                    <p class="text-xl text-gray-600 leading-relaxed font-medium">
+                        「調達を変えれば、ビジネスが変わる」<br />
+                        <span class="text-base text-gray-400 font-normal mt-2 block">
+                            サプライチェーンの透明性を高め、環境負荷の低減と調達コストの最適化を同時に実現するプラットフォームを提案します。
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-0 right-0 w-48 h-48 bg-green-50 rounded-tl-full -z-10"></div>
+            <div class="absolute bottom-12 right-16 text-right">
+                <div class="flex items-center justify-end space-x-3 text-forest-900">
+                    <i class="fas fa-seedling text-lg text-forest-accent"></i>
+                    <p class="text-xs font-bold tracking-widest uppercase font-inter">GreenField Inc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

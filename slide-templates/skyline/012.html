@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>成長戦略 3つの柱</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif; overflow: hidden; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #FFFFFF; }
+        .bg-brand-dark { background-color: #0D1B2A; }
+        .text-brand-dark { color: #0D1B2A; }
+        .bg-brand-accent { background-color: #00B4D8; }
+        .text-brand-accent { color: #00B4D8; }
+        .border-brand-accent { border-color: #00B4D8; }
+        .bg-brand-warm { background-color: #FF6B6B; }
+        .text-brand-warm { color: #FF6B6B; }
+        .border-brand-warm { border-color: #FF6B6B; }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col">
+        <!-- Header -->
+        <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+            <div class="flex items-center space-x-4">
+                <div class="w-1.5 h-10 bg-brand-accent"></div>
+                <div>
+                    <p class="text-xs text-gray-400 font-inter tracking-widest uppercase mb-1">Three Pillars</p>
+                    <h1 class="text-3xl font-bold text-brand-dark tracking-tight">成長戦略 3つの柱</h1>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+                <i class="fas fa-cubes text-lg"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-inter">SkyLine</p>
+            </div>
+        </div>
+
+        <!-- Body: 3 Columns -->
+        <div class="flex-1 px-16 py-6 grid grid-cols-3 gap-6">
+            <!-- Pillar 1: Product Innovation -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-accent shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-brand-accent mr-3">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-inter font-bold">PILLAR 01</p>
+                        <h3 class="text-lg font-bold text-brand-dark">プロダクト革新</h3>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="border-l-4 border-brand-accent pl-3">
+                        <p class="text-sm text-gray-700 font-bold">生成AI統合</p>
+                        <p class="text-xs text-gray-500">自然言語による分析・レポート自動生成</p>
+                    </div>
+                    <div class="border-l-4 border-brand-accent pl-3">
+                        <p class="text-sm text-gray-700 font-bold">マルチクラウド</p>
+                        <p class="text-xs text-gray-500">AWS/Azure/GCPシームレス統合</p>
+                    </div>
+                    <div class="border-l-4 border-brand-accent pl-3">
+                        <p class="text-sm text-gray-700 font-bold">リアルタイム処理</p>
+                        <p class="text-xs text-gray-500">ストリーミングデータの即座分析</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 text-center">
+                    <p class="text-2xl font-black text-brand-accent font-inter">¥18<span class="text-sm font-normal text-gray-500 ml-1">億 投資</span></p>
+                </div>
+            </div>
+
+            <!-- Pillar 2: Market Expansion -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-brand-warm shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-warm mr-3">
+                        <i class="fas fa-globe-asia text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-inter font-bold">PILLAR 02</p>
+                        <h3 class="text-lg font-bold text-brand-dark">市場拡大</h3>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="border-l-4 border-brand-warm pl-3">
+                        <p class="text-sm text-gray-700 font-bold">アジア展開</p>
+                        <p class="text-xs text-gray-500">シンガポール・タイ拠点の確立</p>
+                    </div>
+                    <div class="border-l-4 border-brand-warm pl-3">
+                        <p class="text-sm text-gray-700 font-bold">パートナー戦略</p>
+                        <p class="text-xs text-gray-500">現地SIer・コンサルとのアライアンス</p>
+                    </div>
+                    <div class="border-l-4 border-brand-warm pl-3">
+                        <p class="text-sm text-gray-700 font-bold">業種特化</p>
+                        <p class="text-xs text-gray-500">金融・製造業向けソリューション</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 text-center">
+                    <p class="text-2xl font-black text-brand-warm font-inter">¥8<span class="text-sm font-normal text-gray-500 ml-1">億 投資</span></p>
+                </div>
+            </div>
+
+            <!-- Pillar 3: Organization -->
+            <div class="bg-white rounded-xl p-6 border-t-4 border-gray-400 shadow-sm flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 mr-3">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-inter font-bold">PILLAR 03</p>
+                        <h3 class="text-lg font-bold text-brand-dark">組織基盤強化</h3>
+                    </div>
+                </div>
+                <div class="space-y-3 flex-1">
+                    <div class="border-l-4 border-gray-400 pl-3">
+                        <p class="text-sm text-gray-700 font-bold">人材獲得</p>
+                        <p class="text-xs text-gray-500">AI/MLエンジニア30名採用計画</p>
+                    </div>
+                    <div class="border-l-4 border-gray-400 pl-3">
+                        <p class="text-sm text-gray-700 font-bold">IPO準備</p>
+                        <p class="text-xs text-gray-500">ガバナンス・内部統制の整備</p>
+                    </div>
+                    <div class="border-l-4 border-gray-400 pl-3">
+                        <p class="text-sm text-gray-700 font-bold">文化醸成</p>
+                        <p class="text-xs text-gray-500">データドリブンな意思決定文化の定着</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-3 border-t border-gray-100 text-center">
+                    <p class="text-2xl font-black text-gray-500 font-inter">¥6<span class="text-sm font-normal text-gray-500 ml-1">億 投資</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="h-12 w-full flex justify-between items-center px-16 bg-white border-t border-gray-100">
+            <p class="text-xs text-gray-400 tracking-wider">SkyLine Corp. - Confidential</p>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs text-gray-400">Page</span>
+                <span class="text-sm font-bold text-brand-accent font-inter">12</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
