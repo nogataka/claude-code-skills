@@ -7,7 +7,7 @@ description: Generate HTML slide presentations (1 slide = 1 HTML file, 1280x720p
 
 **All communication with the user MUST be in Japanese.** Questions, confirmations, progress updates, and any other messages — always use Japanese.
 
-Generate HTML files forming a complete presentation deck. Each file is a self-contained HTML document rendered at **1280 x 720 px**. No JavaScript is used — all content is pure HTML + CSS.
+Generate HTML files forming a complete presentation deck. Each file is a self-contained HTML document rendered at **1280 x 720 px**. All content is pure HTML + CSS. Chart.js is used automatically when data visualizations require it (line charts, radar charts, etc.) — no other JavaScript is permitted.
 
 For DOM snippets and component patterns, see [references/patterns.md](references/patterns.md).
 For user-provided custom templates, see [references/templates/](references/templates/).
@@ -18,57 +18,159 @@ For user-provided custom templates, see [references/templates/](references/templ
 
 | Phase | Name | Description |
 |-------|------|-------------|
-| 1 | ヒアリング | ユーザーに質問してスライドの要件を確認 |
-| 2 | カスタムテンプレート読み込み | templates/ にHTMLがあればデザインを抽出 |
-| 3 | デザイン決定 | カラーパレット・フォント・アイコンを確定 |
-| 4 | スライド構成の設計 | 各スライドの役割・レイアウトパターンを計画 |
-| 5 | HTML生成 | 全スライドを 001.html 〜 NNN.html として出力 |
-| 6 | print.html 生成 | 全スライド一覧表示用ページを出力 |
-| 7 | チェックリスト確認 | 制約・品質基準への適合を検証 |
-| 8 | PPTX変換（任意） | /pptx スキルで PowerPoint に変換 |
+| 0 | テンプレート検出・読み込み | templates/ を確認し、テンプレートモード or 通常モードを決定 |
+| 1 | ヒアリング | モードに応じた質問でスライドの要件を確認 |
+| 2 | デザイン決定 | カラーパレット・フォント・アイコンを確定 |
+| 3 | スライド構成の設計 | 各スライドの役割・レイアウトパターンを計画 |
+| 4 | HTML生成 | 全スライドを 001.html 〜 NNN.html として出力 |
+| 5 | print.html 生成 | 全スライド一覧表示用ページを出力 |
+| 6 | チェックリスト確認 | 制約・品質基準への適合を検証 |
+| 7 | PPTX変換（任意） | /pptx スキルで PowerPoint に変換 |
+
+---
+
+## Phase 0: テンプレート検出・読み込み
+
+Before starting the hearing, check `references/templates/` for user-provided HTML template files.
+
+### 0-1. テンプレートの検出
+
+Scan `references/templates/` for **both** subdirectories and loose `.html` files.
+
+- **Subdirectories** — each subdirectory is treated as a separate template set (e.g., `templates/navy-gold/`, `templates/modern-tech/`)
+- **Loose HTML files** — `.html` files directly under `references/templates/` are treated as a single template set named "default"
+
+If nothing is found (no subdirectories and no HTML files) → proceed to Phase 1 in **通常モード**.
+
+### 0-2. テンプレート選択
+
+If templates are found, present them to the user and ask which to use.
+
+**When multiple template sets (subdirectories) exist:**
+
+> 「以下のカスタムテンプレートが見つかりました。どのテンプレートを使用しますか？番号で選択してください。」
+>
+> 1. {directory-name-1}/（{N}ファイル）
+> 2. {directory-name-2}/（{N}ファイル）
+> 3. 使用しない（通常モードで作成）
+
+- **1 or 2 (directory number)** → that directory's HTML files become the template set. Proceed to 0-3
+- **3 (使用しない)** → proceed to Phase 1 in **通常モード**
+
+**When a single template set exists (one subdirectory, or loose HTML files only):**
+
+> 「以下のカスタムテンプレートが見つかりました。使用しますか？番号で選択してください。」
+>
+> - {file1.html}, {file2.html}, ...
+>
+> 1. はい — このテンプレートを使用する
+> 2. いいえ — 使用しない（通常モードで作成）
+
+- **1** → proceed to 0-3
+- **2** → proceed to Phase 1 in **通常モード**
+
+### 0-3. テンプレート読み込み
+
+Read the selected template files and extract:
+
+- Color palette (CSS custom properties / Tailwind classes)
+- Font pair (primary JP + accent Latin)
+- Header/footer structure and style
+- Decorative elements and visual motifs
+- Layout patterns used
+
+Proceed to Phase 1 in **テンプレートモード**.
+
+### Cautions
+
+- **Mandatory Constraints still apply.** Even if a custom template uses `<table>` or non-CDN assets, the generated output must follow all rules in the Mandatory Constraints section below. Extract only the visual design (colors, fonts, spacing, decorative style) — not non-compliant implementation details.
+- **Slide size must remain 1280x720px.** Ignore any different dimensions in custom templates.
+- **Do not copy text content.** Custom templates are style references only. All text content comes from Phase 1 hearing.
+- **Maximum 5 template files per set.** If a template set contains more than 5 HTML files, read only the first 5 (sorted alphabetically) to limit context usage. Warn the user that remaining files were skipped.
+- **Supported format: HTML only.** Ignore non-HTML files (images, PDFs, etc.) in the templates directory.
 
 ---
 
 ## Phase 1: ヒアリング
 
-Before generating any files, ask the user the following questions to capture intent. **All questions must be asked in Japanese.** Questions can be grouped into 2-3 messages rather than asking one by one.
+Before generating any files, ask the user questions to capture intent. **All questions must be asked in Japanese.**
+
+**Important rules:**
+
+- **1ターン1質問**: Ask only one question per message. Wait for the user's answer before asking the next question.
+- **番号選択**: All questions with predefined options must be presented as numbered lists. The user answers by entering the number only. Questions requiring free text input (directory path, title, company name, etc.) are the exception.
+
+The hearing questions differ depending on the mode determined in Phase 0.
+
+### テンプレートモード（テンプレートあり）
+
+When custom templates were loaded in Phase 0, **skip all design-related questions** and ask only the following:
+
+1. **出力ディレクトリ** — same as 1-1 below
+2. **スライド内容のソース** — same as 1-4 below
+3. **プレゼンタイトル** — same as 1-5 below
+4. **スライド枚数** — same as 1-6 below
+5. **会社名・ブランド名** — same as 1-7 below
+6. **テンプレートデザインの確認** — present the extracted design (colors, fonts, decorative style) to the user and ask:
+
+> 「テンプレートから以下のデザインを検出しました。」
+>
+> - カラー: {extracted colors}
+> - フォント: {extracted fonts}
+> - ヘッダー/フッター: {extracted structure}
+>
+> 「このデザインをどうしますか？番号で選択してください。」
+>
+> 1. そのまま使用する
+> 2. 一部変更したい
+
+- **1** → Phase 2 でテンプレートのデザインをそのまま確定
+- **2** → 変更したい項目（カラー、フォント等）を聞き、テンプレートのデザインを部分的に上書き
+
+### 通常モード（テンプレートなし）
+
+Ask all of the following questions (1-1 through 1-9).
 
 ### 1-1. 出力ディレクトリ
 
-Ask the user for the target directory name.
+> 「出力先ディレクトリを選択してください。番号で回答するか、パスを直接入力してください。」
+>
+> 1. デフォルト（`output/slide-page{NN}/`）
+> 2. パスを指定する
 
-- Default: `output/slide-page{NN}/` (NN = next sequential number)
-- Custom: any path the user specifies
+- **1** → use `output/slide-page{NN}/` (NN = next sequential number based on existing directories)
+- **2** → follow up by asking for the path (text input)
+- **Direct path input** → if the user directly types a path instead of a number, use that path
 
 ### 1-2. スタイル選択
 
-| Style | Characteristics |
-|-------|----------------|
-| **Creative** | Bold colors, decorative elements, gradients, playful layouts |
-| **Elegant** | Subdued palette (gold tones), serif-leaning type, generous whitespace |
-| **Modern** | Flat design, vivid accent colors, sharp edges, tech-oriented |
-| **Professional** | Navy/gray palette, structured layouts, higher info density |
-| **Minimalist** | Few colors, extreme whitespace, typography-driven, minimal decoration |
+> 「スタイルを選択してください。番号で回答してください。」
+>
+> 1. **Creative** — 大胆な配色、装飾要素、グラデーション、遊び心のあるレイアウト
+> 2. **Elegant** — 落ち着いたパレット（ゴールド系）、セリフ寄りのタイポグラフィ、広めの余白
+> 3. **Modern** — フラットデザイン、鮮やかなアクセントカラー、シャープなエッジ、テック志向
+> 4. **Professional** — ネイビー/グレー系、構造的なレイアウト、情報密度高め
+> 5. **Minimalist** — 少ない色数、極端な余白、タイポグラフィ主導、最小限の装飾
 
 ### 1-3. テーマ選択
 
-| Theme | Use Case |
-|-------|----------|
-| **Marketing** | Product launches, campaign proposals, market analysis |
-| **Portfolio** | Case studies, work showcases, creative collections |
-| **Business** | Business plans, executive reports, strategy proposals, investor pitches |
-| **Technology** | SaaS introductions, tech proposals, DX initiatives, AI/data analysis |
-| **Education** | Training materials, seminars, workshops, internal study sessions |
+> 「テーマを選択してください。番号で回答してください。」
+>
+> 1. **Marketing** — 製品発表、キャンペーン提案、市場分析
+> 2. **Portfolio** — ケーススタディ、実績紹介、作品集
+> 3. **Business** — 事業計画、経営レポート、戦略提案、投資家ピッチ
+> 4. **Technology** — SaaS紹介、技術提案、DX推進、AI/データ分析
+> 5. **Education** — 研修資料、セミナー、ワークショップ、社内勉強会
 
 ### 1-4. スライド内容のソース
 
 Ask the user how they want to provide the content for the slides. This determines what text, data, and structure will appear in the deck.
 
-| Option | Description |
-|--------|-------------|
-| **Reference file** | User provides a file (Markdown, text, Word, etc.) containing the content. Read the file and use its structure and text as the basis for the slides. |
-| **Direct text input** | User types or pastes the content directly in the chat. |
-| **Topic only** | User provides just a topic/title and lets Claude generate the content. Clarify the target audience and key messages before generating. |
+> 「スライドの内容をどのように提供しますか？番号で回答してください。」
+>
+> 1. **参考ファイル** — ファイル（Markdown、テキスト、Wordなど）を指定する
+> 2. **直接入力** — チャットにテキストを入力する
+> 3. **トピックのみ** — テーマだけ指定してClaude に内容を生成させる
 
 **When a reference file is provided:**
 
@@ -95,13 +197,19 @@ Ask for the presentation title. Skip if already clear from the content source in
 
 ### 1-6. スライド枚数
 
-Ask the user to choose: **10 / 15 / 20 (recommended) / 25 / Auto**
+> 「スライド枚数を選択してください。番号で回答してください。」
+>
+> 1. 10枚
+> 2. 15枚
+> 3. 20枚（推奨）
+> 4. 25枚
+> 5. 自動（内容に応じて最適な枚数を決定）
 
-- **Auto**: Determine the optimal slide count based on the content source. Guidelines:
+- **5（自動）** を選択した場合の判断基準:
   - Reference file: count the major sections/headings → each section ≈ 1 divider + 2-3 content slides, plus cover/agenda/summary/closing
   - Direct text: estimate from the volume and structure of the provided text
   - Topic only: default to 15-20 based on topic complexity
-- When Auto is selected, inform the user of the determined count before proceeding (e.g., "内容から判断して18枚で作成します。よろしいですか？")
+- When 5 is selected, inform the user of the determined count before proceeding (e.g., "内容から判断して18枚で作成します。よろしいですか？")
 
 ### 1-7. 会社名・ブランド名
 
@@ -109,51 +217,46 @@ Ask for the company or brand name to display in the header/footer.
 
 ### 1-8. カラーの希望
 
-Ask if the user has color preferences.
+> 「カラーに希望はありますか？番号で回答してください。」
+>
+> 1. おまかせ（スタイル × テーマに基づいて自動提案）
+> 2. 指定したい（次の質問でカラーコードや色名を入力）
 
-- If yes: use the specified colors as the basis for the palette
-- If no: auto-suggest based on the selected style × theme combination
+- **1** → auto-suggest based on the selected style × theme combination
+- **2** → follow up by asking for specific color codes or color names (text input)
 
 ### 1-9. 背景画像の使用
 
-Ask whether to use background images.
+> 「背景画像を使用しますか？番号で回答してください。」
+>
+> 1. 使用しない（CSSグラデーションのみ）
+> 2. 使用する（次の質問で画像を指定）
 
-- Default: none (CSS gradients only)
-- If yes: user must provide or approve specific images
-
----
-
-## Phase 2: カスタムテンプレート読み込み
-
-Check `references/templates/` for user-provided HTML template files.
-
-1. **List** all `.html` files in `references/templates/`
-2. If no files exist, skip to Phase 3
-3. If files exist, **read each file** and extract:
-   - Color palette (CSS custom properties / Tailwind classes)
-   - Font pair (primary JP + accent Latin)
-   - Header/footer structure and style
-   - Decorative elements and visual motifs
-   - Layout patterns used
-4. Use the extracted design language as the **primary style reference** for the new deck
-5. If the user also selected a style/theme in Phase 1, **blend** the custom template's design with the chosen style/theme — custom template takes priority for colors, fonts, and header/footer
-
-### Cautions
-
-- **Mandatory Constraints still apply.** Even if a custom template uses `<table>`, JavaScript, or non-CDN assets, the generated output must follow all rules in the Mandatory Constraints section below. Extract only the visual design (colors, fonts, spacing, decorative style) — not non-compliant implementation details.
-- **Slide size must remain 1280x720px.** Ignore any different dimensions in custom templates.
-- **Do not copy text content.** Custom templates are style references only. All text content comes from Phase 1 hearing.
-- **Maximum 5 template files.** If more than 5 files exist, read only the first 5 (sorted alphabetically) to limit context usage. Warn the user that remaining files were skipped.
-- **Supported format: HTML only.** Ignore non-HTML files (images, PDFs, etc.) in the templates directory.
+- **1** → no background images (CSS gradients only)
+- **2** → follow up by asking the user to provide or approve specific images
 
 ---
 
-## Phase 3: デザイン決定
+## Phase 2: デザイン決定
 
-Based on Phase 1 hearing results and Phase 2 custom templates (if loaded), determine the following **before generating any HTML**:
+Determine the following **before generating any HTML**:
 
-1. **Color palette** (3-4 custom colors — prefer custom template palette if available)
-2. **Font pair** (1 Japanese + 1 Latin — prefer custom template fonts if available)
+### テンプレートモード
+
+If custom templates were loaded in Phase 0:
+
+1. **Color palette** — use the palette extracted from the template (or with user-requested modifications from Phase 1)
+2. **Font pair** — use the fonts extracted from the template (or with user-requested modifications from Phase 1)
+3. **Brand icon** (1 Font Awesome icon)
+
+If the user confirmed the template design as-is in Phase 1, present a brief summary and proceed. If the user requested partial changes, apply those changes and present the updated design for confirmation.
+
+### 通常モード
+
+Based on Phase 1 hearing results, determine:
+
+1. **Color palette** (3-4 custom colors)
+2. **Font pair** (1 Japanese + 1 Latin)
 3. **Brand icon** (1 Font Awesome icon)
 
 Present the design decisions to the user for confirmation before proceeding.
@@ -170,11 +273,11 @@ Present the design decisions to the user for confirmation before proceeding.
 
 ---
 
-## Phase 4: スライド構成の設計
+## Phase 3: スライド構成の設計
 
 Plan the full deck structure before writing any HTML. This phase produces a slide map.
 
-### 4-1. Required Slides (All Decks)
+### 3-1. Required Slides (All Decks)
 
 | Position | Type | Pattern | Category |
 |----------|------|---------|----------|
@@ -183,7 +286,7 @@ Plan the full deck structure before writing any HTML. This phase produces a slid
 | Second to last | Summary | HBF | `conclusion` |
 | Last | Closing | Full-bleed / Center | `conclusion` |
 
-### 4-2. Section Dividers by Slide Count
+### 3-2. Section Dividers by Slide Count
 
 | Slides | Section Dividers | Content Slides |
 |--------|-----------------|----------------|
@@ -192,21 +295,22 @@ Plan the full deck structure before writing any HTML. This phase produces a slid
 | **20** | 4 | 12 |
 | **25** | 5 | 16 |
 
-### 4-3. Build the Slide Map
+### 3-3. Build the Slide Map
 
 For each slide, determine:
 
 1. **File number** (`001.html`, `002.html`, ...)
 2. **Type** (Cover / Agenda / Section Divider / Content / Summary / Closing)
-3. **Layout pattern** (from the 15 patterns — see Phase 5 reference)
+3. **Layout pattern** (from the 15 patterns — see Phase 4 reference)
 4. **Content summary** (what text/data goes on this slide)
 
 Rules:
 - Never use the same layout pattern for 3 or more consecutive slides
-- Match content from Phase 1-4 (reference file / text / topic) to appropriate slide types
+- Match content from Phase 1-3 (reference file / text / topic) to appropriate slide types
 - Use good variety across the 15 layout patterns
+- **Chart.js auto-detection:** For slides with data visualizations, decide whether to use Chart.js or CSS-only based on the "When to Use Chart.js vs CSS-Only" table in [references/patterns.md](references/patterns.md). Mark Chart.js slides in the slide map. CSS-only and Chart.js charts can coexist in the same deck
 
-### 4-4. Standard Composition for 20 Slides (Reference)
+### 3-4. Standard Composition for 20 Slides (Reference)
 
 | File | Type | Pattern | Purpose |
 |------|------|---------|---------|
@@ -233,17 +337,18 @@ Rules:
 
 ---
 
-## Phase 5: HTML生成
+## Phase 4: HTML生成
 
-Generate all slide HTML files based on the slide map from Phase 4.
+Generate all slide HTML files based on the slide map from Phase 3.
 
-### 5-1. For Each Slide
+### 4-1. For Each Slide
 
 1. Use the HTML Boilerplate (below)
-2. Apply the design decisions from Phase 3 (colors, fonts, icon)
-3. Use the layout pattern assigned in Phase 4
-4. Fill in the content from Phase 1-4 (reference file / text / generated)
-5. Save as `{output_dir}/{NNN}.html` (zero-padded: 001.html, 002.html, ...)
+2. Apply the design decisions from Phase 2 (colors, fonts, icon)
+3. Use the layout pattern assigned in Phase 3
+4. Fill in the content from Phase 1-3 (reference file / text / generated)
+5. **If the slide is marked "Chart.js" in the slide map:** use Chart.js `<canvas>` patterns from [references/patterns.md](references/patterns.md) (Chart.js Patterns section). Include the Chart.js CDN `<script>` in `<head>` and initialization `<script>` before `</body>`
+6. Save as `{output_dir}/{NNN}.html` (zero-padded: 001.html, 002.html, ...)
 
 ### HTML Boilerplate
 
@@ -257,6 +362,8 @@ Generate all slide HTML files based on the slide map from Phase 4.
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family={PrimaryFont}:wght@300;400;500;700;900&family={AccentFont}:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Chart.js (only on slides marked "Chart.js" in Phase 3) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <style>
         body { margin: 0; padding: 0; font-family: '{PrimaryFont}', sans-serif; overflow: hidden; }
         .font-accent { font-family: '{AccentFont}', sans-serif; }
@@ -268,9 +375,17 @@ Generate all slide HTML files based on the slide map from Phase 4.
     <div class="slide {layout-classes}">
         <!-- Content -->
     </div>
+    <!-- Chart.js initialization (only on slides that contain charts) -->
+    <!-- <script> new Chart(...) </script> -->
 </body>
 </html>
 ```
+
+**Chart.js CDN inclusion rules:**
+- Only uncomment the `<script src="...chart.js...">` line on slides marked "Chart.js" in the Phase 3 slide map
+- Only add the Chart.js CDN to slides that actually contain a `<canvas>` chart — do not include it on every slide
+- The `<script>` for Chart initialization must be placed just before `</body>`, **after** the slide `<div>`
+- Each chart `<canvas>` must have a unique `id` attribute
 
 ### 15 Layout Patterns
 
@@ -313,7 +428,7 @@ Large digits + small unit span:
 
 ---
 
-## Phase 6: print.html 生成
+## Phase 5: print.html 生成
 
 After all slide HTML files are generated, create `{output_dir}/print.html` for viewing and printing all slides:
 
@@ -356,16 +471,16 @@ Add one `<div class="slide-frame"><iframe src="{NNN}.html"></iframe></div>` per 
 
 ---
 
-## Phase 7: チェックリスト確認
+## Phase 6: チェックリスト確認
 
-After Phase 5 and Phase 6 are complete, verify the following. Fix any issues before delivering to the user.
+After Phase 4 and Phase 5 are complete, verify the following. Fix any issues before delivering to the user.
 
 - [ ] All files use identical CDN links
 - [ ] Custom colors defined identically in every `<style>`
-- [ ] Root is single `<div>` under `<body>` with `overflow: hidden`
+- [ ] Root is single `<div>` under `<body>` with `overflow: hidden` (only sibling allowed: Chart.js `<script>` on chart slides)
 - [ ] Slide size exactly 1280 x 720
 - [ ] No external images (unless user approved)
-- [ ] No JavaScript whatsoever (no `<script>` tags)
+- [ ] No JavaScript except Chart.js on chart slides (no other `<script>` tags allowed)
 - [ ] All files for the chosen slide count are present
 - [ ] Font sizes follow hierarchy
 - [ ] Consistent header/footer on content slides
@@ -381,7 +496,7 @@ After Phase 5 and Phase 6 are complete, verify the following. Fix any issues bef
 
 ---
 
-## Phase 8: PPTX変換（任意）
+## Phase 7: PPTX変換（任意）
 
 After all checks pass, ask the user in Japanese:
 
@@ -407,6 +522,14 @@ Before invoking the pptx skill, verify it is available by checking the list of a
 
 Then end the workflow. Do not attempt conversion without the pptx skill.
 
+### Chart.js Slides and PPTX Conversion
+
+When the deck contains Chart.js `<canvas>` charts (determined in Phase 3):
+
+1. **Chart slides require screenshot-based conversion.** The pptx converter cannot parse `<canvas>` elements rendered by JavaScript. Chart.js charts will be captured as raster images (PNG) and embedded in the PPTX slide
+2. **Non-chart elements remain editable.** Text, icons, and CSS-only elements on the same slide are still extracted as native PPTX objects
+3. **Inform the pptx skill** which slides contain Chart.js so it can apply the screenshot fallback selectively
+
 ### Invocation (pptx skill available)
 
 If the pptx skill is available, invoke `/pptx` using the Skill tool. Pass the following context:
@@ -414,7 +537,7 @@ If the pptx skill is available, invoke `/pptx` using the Skill tool. Pass the fo
 1. **Source directory** — the output path containing all `NNN.html` files
 2. **Slide count** — total number of HTML files
 3. **Presentation title** — from Phase 1 hearing
-4. **Color palette** — the 3-4 brand colors chosen in Phase 3
+4. **Color palette** — the 3-4 brand colors chosen in Phase 2
 5. **Font pair** — primary (JP) and accent (Latin) fonts
 
 Example invocation prompt for the Skill tool:
@@ -425,6 +548,7 @@ Convert the HTML slide deck in {output_dir} to a single PPTX file.
 - Title: {title}
 - Colors: {primary_dark}, {accent}, {secondary}
 - Fonts: {primary_font} + {accent_font}
+- Chart.js slides: {list of slide numbers, e.g., "004, 013" or "none"}
 - Output: {output_dir}/presentation.pptx
 ```
 
@@ -441,10 +565,10 @@ Convert the HTML slide deck in {output_dir} to a single PPTX file.
 | Icons | Font Awesome 6.4.0 via CDN |
 | Fonts | Google Fonts (1 JP primary + 1 Latin accent) |
 | Language | `lang="ja"` |
-| Root DOM | `<body>` -> single wrapper `<div>` (no siblings) |
+| Root DOM | `<body>` -> single wrapper `<div>` (only sibling allowed: Chart.js `<script>` on chart slides) |
 | Overflow | `overflow: hidden` on root wrapper |
 | External images | None by default. Explicit user approval required |
-| JavaScript | **Strictly forbidden.** No Chart.js or any JS library. All data visualization must be CSS-only |
+| JavaScript | **Forbidden by default.** Exception: Chart.js is used automatically when data visualizations require it (see Phase 3 auto-detection). No other JS libraries permitted |
 | Custom CSS | Inline `<style>` in `<head>` only; no external CSS files |
 
 ### PPTX Conversion Rules (Critical)
@@ -459,6 +583,7 @@ These directly affect PPTX conversion accuracy. **Always follow.**
 - Use flex-based tables over `<table>`
 - `linear-gradient(...)` supported; complex multi-stop may fall back to screenshot
 - `box-shadow`, `border-radius`, `opacity` all extractable
+- **Chart.js `<canvas>` elements** are not parseable by DOM tree-walkers → require screenshot fallback for PPTX. Prefer CSS-only charts when PPTX editability is a priority
 
 ### Anti-Patterns (Avoid)
 

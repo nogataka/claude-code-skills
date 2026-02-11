@@ -849,6 +849,374 @@ Badge variations: Use `Q1`/`Q2` for Q&A, `01`/`02` for numbered points, or icons
 
 ---
 
+## Chart.js Patterns (When Enabled)
+
+The following patterns are used automatically when data visualizations require Chart.js (determined in Phase 3 slide map). Include `<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>` in `<head>` only on slides that use these patterns. Place the `<script>` for chart initialization just before `</body>`.
+
+### Chart.js: Doughnut / Pie
+
+```html
+<!-- Inside the slide body -->
+<div class="flex items-center justify-center gap-8">
+    <div class="relative" style="width: 280px; height: 280px;">
+        <canvas id="doughnutChart"></canvas>
+    </div>
+    <!-- Legend (manual for better styling control) -->
+    <div class="space-y-3">
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full" style="background: #2563eb;"></div>
+            <p class="text-sm text-gray-600">セグメントA <span class="font-bold font-accent">40%</span></p>
+        </div>
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full" style="background: #60a5fa;"></div>
+            <p class="text-sm text-gray-600">セグメントB <span class="font-bold font-accent">30%</span></p>
+        </div>
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full" style="background: #93c5fd;"></div>
+            <p class="text-sm text-gray-600">セグメントC <span class="font-bold font-accent">20%</span></p>
+        </div>
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full" style="background: #e5e7eb;"></div>
+            <p class="text-sm text-gray-600">その他 <span class="font-bold font-accent">10%</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Just before </body> -->
+<script>
+new Chart(document.getElementById('doughnutChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['セグメントA', 'セグメントB', 'セグメントC', 'その他'],
+        datasets: [{
+            data: [40, 30, 20, 10],
+            backgroundColor: ['#2563eb', '#60a5fa', '#93c5fd', '#e5e7eb'],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        cutout: '60%',
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                padding: 12,
+                titleFont: { family: "'Noto Sans JP', sans-serif", size: 13 },
+                bodyFont: { family: "'Noto Sans JP', sans-serif", size: 12 },
+                callbacks: {
+                    label: function(ctx) { return ' ' + ctx.label + ': ' + ctx.raw + '%'; }
+                }
+            }
+        }
+    }
+});
+</script>
+```
+
+**Notes:**
+- Set `legend: { display: false }` and build legend manually in HTML for PPTX-convertible labels
+- Use brand palette colors from Phase 2
+- `cutout: '60%'` for doughnut; omit for solid pie
+- For `type: 'pie'`, remove the `cutout` option
+
+### Chart.js: Vertical Bar
+
+```html
+<!-- Inside the slide body -->
+<div style="width: 100%; height: 300px;">
+    <canvas id="barChart"></canvas>
+</div>
+
+<!-- Just before </body> -->
+<script>
+new Chart(document.getElementById('barChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+        datasets: [{
+            label: '売上（億円）',
+            data: [32, 48, 55, 65],
+            backgroundColor: '#2563eb',
+            borderRadius: 6,
+            barPercentage: 0.6
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: { color: '#f3f4f6' },
+                ticks: {
+                    font: { family: "'Noto Sans JP', sans-serif", size: 11 },
+                    callback: function(v) { return '¥' + v + '億'; }
+                }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { family: "'Noto Sans JP', sans-serif", size: 12 } }
+            }
+        },
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                padding: 12,
+                titleFont: { family: "'Noto Sans JP', sans-serif", size: 13 },
+                bodyFont: { family: "'Noto Sans JP', sans-serif", size: 12 }
+            }
+        }
+    }
+});
+</script>
+```
+
+**Notes:**
+- `borderRadius: 6` for rounded bar tops
+- Use `barPercentage: 0.6` to avoid overly wide bars
+- For grouped bars, add multiple datasets with different colors
+- Wrap canvas in a fixed-height container and use `maintainAspectRatio: false`
+
+### Chart.js: Stacked Bar
+
+```html
+<!-- Inside the slide body -->
+<div style="width: 100%; height: 300px;">
+    <canvas id="stackedBarChart"></canvas>
+</div>
+
+<!-- Just before </body> -->
+<script>
+new Chart(document.getElementById('stackedBarChart'), {
+    type: 'bar',
+    data: {
+        labels: ['2023', '2024', '2025', '2026E'],
+        datasets: [
+            { label: 'SaaS', data: [20, 28, 35, 42], backgroundColor: '#2563eb', borderRadius: 4 },
+            { label: 'Consulting', data: [15, 18, 20, 22], backgroundColor: '#60a5fa', borderRadius: 4 },
+            { label: 'Other', data: [5, 6, 7, 8], backgroundColor: '#93c5fd', borderRadius: 4 }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: { stacked: true, grid: { display: false } },
+            y: { stacked: true, beginAtZero: true, grid: { color: '#f3f4f6' } }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    font: { family: "'Noto Sans JP', sans-serif", size: 11 },
+                    usePointStyle: true,
+                    pointStyle: 'circle',
+                    padding: 20
+                }
+            }
+        }
+    }
+});
+</script>
+```
+
+### Chart.js: Line
+
+```html
+<!-- Inside the slide body -->
+<div style="width: 100%; height: 300px;">
+    <canvas id="lineChart"></canvas>
+</div>
+
+<!-- Just before </body> -->
+<script>
+new Chart(document.getElementById('lineChart'), {
+    type: 'line',
+    data: {
+        labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+        datasets: [{
+            label: 'ユーザー数',
+            data: [1200, 1900, 3000, 5000, 4200, 6100],
+            borderColor: '#2563eb',
+            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+            borderWidth: 3,
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: '#2563eb',
+            pointRadius: 5,
+            pointHoverRadius: 7
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: { color: '#f3f4f6' },
+                ticks: { font: { family: "'Noto Sans JP', sans-serif", size: 11 } }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { font: { family: "'Noto Sans JP', sans-serif", size: 12 } }
+            }
+        },
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                padding: 12,
+                titleFont: { family: "'Noto Sans JP', sans-serif", size: 13 },
+                bodyFont: { family: "'Noto Sans JP', sans-serif", size: 12 }
+            }
+        }
+    }
+});
+</script>
+```
+
+**Notes:**
+- `tension: 0.4` for smooth curves; `tension: 0` for straight lines
+- `fill: true` with semi-transparent `backgroundColor` for area chart effect
+- For multi-line, add multiple datasets with distinct `borderColor` values
+
+### Chart.js: Radar
+
+```html
+<!-- Inside the slide body -->
+<div class="flex items-center justify-center" style="width: 400px; height: 350px; margin: 0 auto;">
+    <canvas id="radarChart"></canvas>
+</div>
+
+<!-- Just before </body> -->
+<script>
+new Chart(document.getElementById('radarChart'), {
+    type: 'radar',
+    data: {
+        labels: ['技術力', '価格', 'サポート', 'UI/UX', 'セキュリティ', '拡張性'],
+        datasets: [
+            {
+                label: '自社',
+                data: [90, 70, 85, 80, 95, 75],
+                borderColor: '#2563eb',
+                backgroundColor: 'rgba(37, 99, 235, 0.15)',
+                borderWidth: 2,
+                pointBackgroundColor: '#2563eb',
+                pointRadius: 4
+            },
+            {
+                label: '競合A',
+                data: [70, 85, 60, 75, 70, 80],
+                borderColor: '#f97316',
+                backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                borderWidth: 2,
+                pointBackgroundColor: '#f97316',
+                pointRadius: 4
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+            r: {
+                beginAtZero: true,
+                max: 100,
+                ticks: { stepSize: 20, font: { size: 10 }, backdropColor: 'transparent' },
+                pointLabels: { font: { family: "'Noto Sans JP', sans-serif", size: 12 } },
+                grid: { color: '#e5e7eb' }
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    font: { family: "'Noto Sans JP', sans-serif", size: 11 },
+                    usePointStyle: true,
+                    pointStyle: 'circle',
+                    padding: 20
+                }
+            }
+        }
+    }
+});
+</script>
+```
+
+**Notes:**
+- Best for competitive comparison or capability assessment
+- Max 2-3 datasets to avoid visual clutter on a slide
+- Keep labels concise (2-4 characters ideal for Japanese)
+
+### Chart.js: Horizontal Bar
+
+```html
+<!-- Inside the slide body -->
+<div style="width: 100%; height: 300px;">
+    <canvas id="hBarChart"></canvas>
+</div>
+
+<!-- Just before </body> -->
+<script>
+new Chart(document.getElementById('hBarChart'), {
+    type: 'bar',
+    data: {
+        labels: ['マーケティング自動化', 'CDP', '計測/分析', 'CRM', 'その他'],
+        datasets: [{
+            data: [40, 30, 15, 10, 5],
+            backgroundColor: ['#2563eb', '#60a5fa', '#93c5fd', '#bfdbfe', '#e5e7eb'],
+            borderRadius: 6,
+            barPercentage: 0.7
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: { beginAtZero: true, max: 50, grid: { color: '#f3f4f6' } },
+            y: {
+                grid: { display: false },
+                ticks: { font: { family: "'Noto Sans JP', sans-serif", size: 12 } }
+            }
+        },
+        plugins: { legend: { display: false } }
+    }
+});
+</script>
+```
+
+### Chart.js Style Guidelines
+
+| Setting | Recommended Value | Reason |
+|---------|------------------|--------|
+| Font family | `'Noto Sans JP', sans-serif` | Match slide typography |
+| Tooltip background | `rgba(15, 23, 42, 0.9)` | Consistent dark tooltip |
+| Grid color | `#f3f4f6` (gray-100) | Subtle, non-distracting |
+| Border width | `0` (doughnut/pie), `2-3` (line) | Clean appearance |
+| Border radius | `4-6` (bars) | Match slide card radius |
+| Colors | Use Phase 2 brand palette | Visual consistency |
+| Legend | `display: false` when manual HTML legend is used | Better PPTX convertibility |
+| Canvas container | Fixed height with `maintainAspectRatio: false` | Predictable sizing within slide |
+
+### When to Use Chart.js vs CSS-Only
+
+| Scenario | Recommendation |
+|----------|---------------|
+| Simple donut with 2-4 segments | CSS `conic-gradient` (simpler, PPTX-friendly) |
+| Complex donut with 5+ segments | Chart.js doughnut |
+| Horizontal progress bars | CSS width-based bars (simpler, PPTX-friendly) |
+| Vertical bar chart with axes | Chart.js bar |
+| Line chart / area chart | Chart.js line (no CSS equivalent) |
+| Radar / spider chart | Chart.js radar (no CSS equivalent) |
+| Stacked bar chart | Chart.js stacked bar (CSS alternative is fragile) |
+| Simple percentage indicators | CSS progress bar (simpler, PPTX-friendly) |
+
+---
+
 ## DOM Nesting Depth Guidelines
 
 | Slide type | Max depth (body -> text) |
