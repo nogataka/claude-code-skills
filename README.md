@@ -323,7 +323,7 @@ claude-code-skills/              （リポジトリ名）
 │   ├── slidekit-create/         # /slidekit-create
 │   │   ├── SKILL.md             # スキル定義（ルール・制約・ワークフロー）
 │   │   └── references/
-│   │       ├── patterns.md      # 15レイアウトパターンのDOMツリーとコンポーネント集
+│   │       ├── patterns.md      # 20レイアウトパターンのDOMツリーとコンポーネント集
 │   │       └── templates/       # カスタムテンプレート置き場
 │   │           ├── README.md    # テンプレートの使い方
 │   │           └── {name}/      # サブディレクトリで複数テンプレートセットを管理可能
