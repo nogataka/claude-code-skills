@@ -1,6 +1,6 @@
 ---
 name: slidekit-create
-description: Generate HTML slide presentations (1 slide = 1 HTML file, 1280x720px) using Tailwind CSS, Font Awesome, and Google Fonts. Use when the user asks to create a new presentation deck or slide HTML files. Covers design guidelines, 15 layout patterns, component library, and PPTX conversion compatibility rules. Supports style selection (creative, elegant, modern, professional, minimalist) and theme selection (marketing, portfolio, business, technology, education).
+description: Generate HTML slide presentations (1 slide = 1 HTML file, 1280x720px) using Tailwind CSS, Font Awesome, and Google Fonts. Use when the user asks to create a new presentation deck or slide HTML files. Covers design guidelines, 20 layout patterns, component library, and PPTX conversion compatibility rules. Supports style selection (creative, elegant, modern, professional, minimalist) and theme selection (marketing, portfolio, business, technology, education).
 ---
 
 # SlideKit Create
@@ -301,13 +301,13 @@ For each slide, determine:
 
 1. **File number** (`001.html`, `002.html`, ...)
 2. **Type** (Cover / Agenda / Section Divider / Content / Summary / Closing)
-3. **Layout pattern** (from the 15 patterns — see Phase 4 reference)
+3. **Layout pattern** (from the 20 patterns — see Phase 4 reference)
 4. **Content summary** (what text/data goes on this slide)
 
 Rules:
 - Never use the same layout pattern for 3 or more consecutive slides
 - Match content from Phase 1-3 (reference file / text / topic) to appropriate slide types
-- Use good variety across the 15 layout patterns
+- Use good variety across the 20 layout patterns
 - **Chart.js auto-detection:** For slides with data visualizations, decide whether to use Chart.js or CSS-only based on the "When to Use Chart.js vs CSS-Only" table in [references/patterns.md](references/patterns.md). Mark Chart.js slides in the slide map. CSS-only and Chart.js charts can coexist in the same deck
 
 ### 3-4. Standard Composition for 20 Slides (Reference)
@@ -387,7 +387,7 @@ Generate all slide HTML files based on the slide map from Phase 3.
 - The `<script>` for Chart initialization must be placed just before `</body>`, **after** the slide `<div>`
 - Each chart `<canvas>` must have a unique `id` attribute
 
-### 15 Layout Patterns
+### 20 Layout Patterns
 
 Use one pattern per slide. For full DOM trees and component snippets, see [references/patterns.md](references/patterns.md).
 
@@ -408,6 +408,11 @@ Use one pattern per slide. For full DOM trees and component snippets, see [refer
 | 13 | **HBF + Vertical Stack** | Pattern 3 body with stacked full-width cards + separators | Architecture diagrams, layered systems |
 | 14 | **HBF + 2x2 Grid** | Pattern 3 body with `grid grid-cols-2` (2 rows) | Risk analysis, SWOT, feature overview |
 | 15 | **HBF + Stacked Cards** | Pattern 3 body with vertically stacked full-width cards + numbered badges | FAQ, Q&A, numbered key points, interview summary |
+| 16 | **HBF + TAM/SAM/SOM** | Pattern 3 body with description list + nested circles or horizontal bars | Market size visualization (2 variants) |
+| 17 | **Chapter Divider** | `flex` with `w-1/4` dark + `w-3/4` light (no HBF) | Chapter/section dividers with large number |
+| 18 | **HBF + Contact** | Pattern 3 body with `w-1/2` message + `w-1/2` contact card | Contact info, CTA slides |
+| 19 | **HBF + 5-Column Process** | Pattern 3 body with `grid grid-cols-5` + optional RACI box | 5-step process flows, methodology |
+| 20 | **HBF + VS Comparison** | Pattern 3 body with two cards + central VS badge | Head-to-head competitor comparison |
 
 ### Heading Convention
 

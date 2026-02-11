@@ -725,6 +725,511 @@ Same header/footer as Pattern 3. Body has vertically stacked full-width cards wi
 
 Badge variations: Use `Q1`/`Q2` for Q&A, `01`/`02` for numbered points, or icons (`<i class="fas fa-lightbulb">`) for key insights. Cards 1-2 use `bg-brand-accent`, cards 3-4 use `bg-brand-sub` for visual rhythm. Recommended 4-5 cards max.
 
+### Pattern 16: HBF + TAM/SAM/SOM (Market Size)
+
+**Variant 16a**: Left descriptions + right nested circles.
+
+Same header/footer as Pattern 3. Body:
+
+```html
+<div class="flex-1 px-16 py-8 flex gap-8">
+    <!-- Left: Descriptions -->
+    <div class="w-1/3 flex flex-col justify-between">
+        <div class="space-y-6">
+            <div class="relative pl-6 border-l-4 border-gray-200">
+                <h3 class="text-sm font-bold text-gray-500 uppercase mb-1 font-accent">TAM (Total Addressable Market)</h3>
+                <p class="text-2xl font-bold text-gray-800 font-accent">250 <span class="text-sm font-normal text-gray-500">億円/年</span></p>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">市場全体の理論上の最大規模。</p>
+            </div>
+            <div class="relative pl-6 border-l-4 border-brand-accent">
+                <h3 class="text-sm font-bold text-gray-500 uppercase mb-1 font-accent">SAM (Serviceable Available Market)</h3>
+                <p class="text-2xl font-bold text-gray-800 font-accent">50 <span class="text-sm font-normal text-gray-500">億円/年</span></p>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">ターゲットに提供可能な市場。</p>
+            </div>
+            <div class="relative pl-6 border-l-4 border-brand-warm">
+                <h3 class="text-sm font-bold text-brand-accent uppercase mb-1 font-accent">SOM (Serviceable Obtainable Market)</h3>
+                <p class="text-3xl font-bold text-brand-accent font-accent">2.5 <span class="text-lg font-normal text-brand-warm">億円/年</span></p>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">現実的に獲得可能な市場規模。</p>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm mt-6">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-gray-500 uppercase font-accent">Market Trend</span>
+                <span class="bg-green-100 text-brand-accent text-xs font-bold px-2 py-0.5 rounded-full flex items-center">
+                    <i class="fas fa-arrow-trend-up mr-1"></i> CAGR +5%
+                </span>
+            </div>
+            <p class="text-xs text-gray-600 leading-snug">トレンド説明テキスト。</p>
+        </div>
+    </div>
+    <!-- Right: Nested Circles -->
+    <div class="w-2/3 flex items-center justify-center relative">
+        <div class="relative flex items-center justify-center" style="width: 400px; height: 400px;">
+            <div class="absolute rounded-full flex flex-col items-center justify-center bg-blue-100 border-2 border-blue-200" style="width: 360px; height: 360px; padding-top: 30px;">
+                <p class="text-brand-dark font-bold">TAM</p>
+                <p class="text-2xl font-black text-brand-dark font-accent">¥250億</p>
+            </div>
+            <div class="absolute rounded-full flex flex-col items-center justify-center bg-blue-300 border-2 border-blue-400 shadow-md" style="width: 240px; height: 240px; padding-top: 30px;">
+                <p class="text-brand-dark font-bold text-sm">SAM</p>
+                <p class="text-xl font-black text-brand-dark font-accent">¥50億</p>
+            </div>
+            <div class="absolute rounded-full flex flex-col items-center justify-center bg-brand-accent text-white shadow-lg" style="width: 120px; height: 120px;">
+                <p class="text-xs font-bold opacity-90">SOM</p>
+                <p class="text-lg font-black font-accent">¥2.5億</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+**Variant 16b**: Left descriptions + right horizontal bars.
+
+Same header/footer as Pattern 3. Body:
+
+```html
+<div class="flex-1 px-16 py-8 flex gap-8">
+    <div class="w-1/2 flex flex-col justify-between">
+        <div class="space-y-6">
+            <div class="relative pl-6 border-l-4 border-gray-200">
+                <h3 class="text-sm font-bold text-gray-500 uppercase mb-1 font-accent">TAM</h3>
+                <p class="text-2xl font-bold text-gray-800 font-accent">500 <span class="text-sm font-normal text-gray-500">億円/年</span></p>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">説明テキスト。</p>
+            </div>
+            <div class="relative pl-6 border-l-4 border-brand-accent">
+                <h3 class="text-sm font-bold text-gray-500 uppercase mb-1 font-accent">SAM</h3>
+                <p class="text-2xl font-bold text-gray-800 font-accent">80 <span class="text-sm font-normal text-gray-500">億円/年</span></p>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">説明テキスト。</p>
+            </div>
+            <div class="relative pl-6 border-l-4 border-brand-warm">
+                <h3 class="text-sm font-bold text-brand-accent uppercase mb-1 font-accent">SOM (TARGET)</h3>
+                <p class="text-3xl font-bold text-brand-accent font-accent">5 <span class="text-lg font-normal text-brand-warm">億円/年</span></p>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">説明テキスト。</p>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm mt-6">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-gray-500 uppercase font-accent">Market Trend</span>
+                <span class="bg-green-100 text-brand-accent text-xs font-bold px-2 py-0.5 rounded-full flex items-center">
+                    <i class="fas fa-arrow-trend-up mr-1"></i> CAGR +15%
+                </span>
+            </div>
+            <p class="text-xs text-gray-600 leading-snug">トレンド説明テキスト。</p>
+        </div>
+    </div>
+    <div class="w-1/2 flex flex-col justify-center gap-8">
+        <div>
+            <div class="flex items-end justify-between mb-2">
+                <p class="text-sm font-bold text-gray-800 font-accent">TAM</p>
+                <p class="text-2xl font-black text-gray-800 font-accent">¥500億</p>
+            </div>
+            <div class="w-full h-12 rounded-lg flex items-center justify-center bg-gray-100">
+                <p class="text-sm font-bold text-brand-dark">ラベル</p>
+            </div>
+        </div>
+        <div>
+            <div class="flex items-end justify-between mb-2">
+                <p class="text-sm font-bold text-gray-800 font-accent">SAM</p>
+                <p class="text-2xl font-black text-gray-800 font-accent">¥80億</p>
+            </div>
+            <div class="w-3/5 h-12 rounded-lg flex items-center justify-center bg-brand-accent text-white">
+                <p class="text-sm font-bold">ラベル</p>
+            </div>
+        </div>
+        <div>
+            <div class="flex items-end justify-between mb-2">
+                <p class="text-sm font-bold text-brand-accent font-accent">SOM (TARGET)</p>
+                <p class="text-3xl font-black text-brand-accent font-accent">¥5億</p>
+            </div>
+            <div class="w-1/4 h-12 rounded-lg flex items-center justify-center bg-brand-dark text-white shadow-lg">
+                <p class="text-sm font-bold">ラベル</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+### Pattern 17: Chapter Divider
+
+Full-height split (no HBF). Left = chapter number (25%), right = title + content (75%).
+
+```html
+<div class="slide flex relative overflow-hidden">
+    <div class="w-1/4 h-full bg-brand-dark flex flex-col justify-center items-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)"></rect>
+            </svg>
+        </div>
+        <div class="z-10 flex flex-col items-center">
+            <p class="text-brand-accent text-lg font-accent uppercase mb-2" style="letter-spacing: 0.3em;">Chapter</p>
+            <h2 class="font-accent font-light text-white leading-none" style="font-size: 8rem; line-height: 1;">01</h2>
+            <div class="w-12 h-1 bg-brand-accent mt-6"></div>
+        </div>
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-gray-500 text-xs tracking-widest uppercase opacity-50 font-accent">
+            Section Label
+        </div>
+    </div>
+    <div class="w-3/4 h-full flex flex-col justify-center px-24 relative">
+        <div class="absolute top-12 right-16 flex items-center space-x-2 text-gray-400 text-sm tracking-wide">
+            <span class="uppercase font-accent">Project</span>
+            <i class="fas fa-chevron-right text-xs"></i>
+            <span class="text-brand-accent font-bold uppercase">Section 01</span>
+        </div>
+        <div class="mb-12">
+            <h1 class="text-6xl font-bold text-brand-dark tracking-tight leading-tight mb-6">セクションタイトル</h1>
+            <p class="text-3xl text-brand-dark font-light border-l-4 border-brand-accent pl-6 py-1">サブタイトル</p>
+        </div>
+        <div class="max-w-3xl">
+            <div class="flex items-start">
+                <i class="fas fa-quote-left text-3xl text-gray-200 mr-4 -mt-2"></i>
+                <p class="text-xl text-gray-600 leading-relaxed font-medium">
+                    本文テキスト。セクションの概要やリード文を配置。
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-12 right-16 text-right">
+            <div class="flex items-center justify-end space-x-3 text-brand-dark mb-1">
+                <i class="fas fa-{brand-icon} text-lg text-brand-accent"></i>
+                <p class="text-xs font-bold tracking-widest uppercase font-accent">BRAND</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+### Pattern 18: HBF + Contact
+
+Same header as Pattern 3 (no footer). Body: left = message + CTA, right = contact card.
+
+```html
+<div class="slide flex flex-col">
+    <!-- Header (same as Pattern 3) -->
+    <div class="px-16 pt-10 pb-4 flex justify-between items-end border-b border-gray-200 mx-16">
+        <div class="flex items-center space-x-4">
+            <div class="w-1.5 h-10 bg-brand-accent"></div>
+            <div>
+                <p class="text-xs text-gray-400 font-accent tracking-widest uppercase mb-1">Contact</p>
+                <h1 class="text-3xl font-bold text-brand-dark tracking-tight">お問い合わせ</h1>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2 text-brand-dark opacity-50">
+            <i class="fas fa-{brand-icon} text-lg"></i>
+            <p class="text-xs font-bold tracking-widest uppercase font-accent">BRAND</p>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="flex-1 px-16 py-8 flex gap-12 items-center">
+        <!-- Left: Message + CTA -->
+        <div class="w-1/2 flex flex-col justify-center">
+            <h2 class="text-4xl font-bold text-brand-dark leading-tight mb-6">ご興味をお持ちいただき<br />ありがとうございます</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                ご不明な点やご要望がございましたら、お気軽にお問い合わせください。担当者が丁寧にご対応いたします。
+            </p>
+            <div class="flex gap-4">
+                <div class="bg-brand-accent text-white px-8 py-3 rounded-lg font-bold text-sm flex items-center shadow-md">
+                    <i class="fas fa-envelope mr-2"></i> メールで問い合わせ
+                </div>
+                <div class="border-2 border-brand-dark text-brand-dark px-8 py-3 rounded-lg font-bold text-sm flex items-center">
+                    <i class="fas fa-calendar-alt mr-2"></i> 打ち合わせ予約
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Contact Card -->
+        <div class="w-1/2 flex justify-center">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 w-full max-w-md">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 rounded-full bg-brand-dark flex items-center justify-center text-white text-2xl font-bold mr-4">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <p class="text-lg font-bold text-brand-dark">担当者名</p>
+                        <p class="text-sm text-gray-500">役職・部署名</p>
+                    </div>
+                </div>
+                <div class="space-y-4 border-t border-gray-100 pt-6">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-brand-accent mr-4 flex-shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-accent">Email</p>
+                            <p class="text-sm text-brand-dark font-bold">contact@example.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-brand-accent mr-4 flex-shrink-0">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-accent">Phone</p>
+                            <p class="text-sm text-brand-dark font-bold">03-XXXX-XXXX</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-brand-accent mr-4 flex-shrink-0">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-accent">Website</p>
+                            <p class="text-sm text-brand-dark font-bold">https://example.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-brand-accent mr-4 flex-shrink-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-accent">Address</p>
+                            <p class="text-sm text-brand-dark font-bold">東京都渋谷区XXX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+### Pattern 19: HBF + 5-Column Process Flow
+
+Same header/footer as Pattern 3. Body uses `grid-cols-5`.
+
+```html
+<div class="flex-1 px-16 py-6 flex flex-col justify-center bg-gray-50">
+    <div class="mb-6 mx-4">
+        <p class="text-gray-600 text-sm">導入プロセスの説明テキスト。各フェーズの役割分担など。</p>
+    </div>
+    <div class="grid grid-cols-5 gap-4 relative">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col h-full relative">
+            <div class="flex justify-between items-start mb-3">
+                <span class="text-4xl font-accent font-bold text-gray-100 absolute top-2 right-4 -z-10">01</span>
+                <div class="w-10 h-10 rounded-full bg-{light} flex items-center justify-center text-brand-accent mb-2">
+                    <i class="fas fa-search"></i>
+                </div>
+                <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded">Week 1-2</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark mb-2">現状調査</h3>
+            <p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">現状の業務フロー分析とヒアリングを実施</p>
+            <div class="mt-auto pt-3 border-t border-gray-100">
+                <p class="text-xs text-gray-400"><i class="fas fa-users mr-1"></i>2名体制</p>
+            </div>
+            <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-accent p-5 flex flex-col h-full relative">
+            <div class="flex justify-between items-start mb-3">
+                <span class="text-4xl font-accent font-bold text-gray-100 absolute top-2 right-4 -z-10">02</span>
+                <div class="w-10 h-10 rounded-full bg-{light} flex items-center justify-center text-brand-accent mb-2">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <span class="text-xs font-bold bg-brand-accent text-white px-2 py-0.5 rounded">Week 3-4</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark mb-2">要件定義</h3>
+            <p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">要件の整理と優先順位付けを実施</p>
+            <div class="mt-auto pt-3 border-t border-gray-100">
+                <p class="text-xs text-gray-400"><i class="fas fa-users mr-1"></i>3名体制</p>
+            </div>
+            <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-dark p-5 flex flex-col h-full relative">
+            <div class="flex justify-between items-start mb-3">
+                <span class="text-4xl font-accent font-bold text-gray-100 absolute top-2 right-4 -z-10">03</span>
+                <div class="w-10 h-10 rounded-full bg-{light} flex items-center justify-center text-brand-dark mb-2">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <span class="text-xs font-bold bg-brand-dark text-white px-2 py-0.5 rounded">Week 5-8</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark mb-2">開発・構築</h3>
+            <p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">システム開発と環境構築を実施</p>
+            <div class="mt-auto pt-3 border-t border-gray-100">
+                <p class="text-xs text-gray-400"><i class="fas fa-users mr-1"></i>5名体制</p>
+            </div>
+            <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-dark p-5 flex flex-col h-full relative">
+            <div class="flex justify-between items-start mb-3">
+                <span class="text-4xl font-accent font-bold text-gray-100 absolute top-2 right-4 -z-10">04</span>
+                <div class="w-10 h-10 rounded-full bg-{light} flex items-center justify-center text-brand-dark mb-2">
+                    <i class="fas fa-vial"></i>
+                </div>
+                <span class="text-xs font-bold bg-brand-dark text-white px-2 py-0.5 rounded">Week 9-10</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark mb-2">テスト・検証</h3>
+            <p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">動作検証とユーザー受入テストを実施</p>
+            <div class="mt-auto pt-3 border-t border-gray-100">
+                <p class="text-xs text-gray-400"><i class="fas fa-users mr-1"></i>4名体制</p>
+            </div>
+            <div class="absolute top-1/2 -right-3 transform -translate-y-1/2 z-20 text-gray-300 text-xl">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <!-- Step 5 (last, no arrow) -->
+        <div class="bg-white rounded-lg shadow-sm border-t-4 border-brand-warm p-5 flex flex-col h-full relative ring-2 ring-yellow-50">
+            <div class="flex justify-between items-start mb-3">
+                <span class="text-4xl font-accent font-bold text-gray-100 absolute top-2 right-4 -z-10">05</span>
+                <div class="w-10 h-10 rounded-full bg-{light} flex items-center justify-center text-brand-warm mb-2">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <span class="text-xs font-bold bg-brand-warm text-white px-2 py-0.5 rounded">Week 11-12</span>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark mb-2">本番展開</h3>
+            <p class="text-xs text-gray-500 mb-4 flex-grow leading-relaxed">本番環境へのデプロイと運用開始</p>
+            <div class="mt-auto pt-3 border-t border-gray-100">
+                <p class="text-xs text-gray-400"><i class="fas fa-users mr-1"></i>3名体制</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+**Optional: RACI Box** (attach below process flow for responsibility matrix):
+
+```html
+<div class="mt-6 mx-4 bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+    <div class="flex bg-brand-dark text-white text-xs font-bold">
+        <div class="w-1/5 px-4 py-2">タスク</div>
+        <div class="w-1/5 px-4 py-2 text-center">PM</div>
+        <div class="w-1/5 px-4 py-2 text-center">開発</div>
+        <div class="w-1/5 px-4 py-2 text-center">デザイン</div>
+        <div class="w-1/5 px-4 py-2 text-center">クライアント</div>
+    </div>
+    <div class="flex text-xs border-b border-gray-100">
+        <div class="w-1/5 px-4 py-2 font-bold text-brand-dark bg-gray-50">要件定義</div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-brand-accent text-white font-bold px-2 py-0.5 rounded">R</span></div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-blue-100 text-brand-dark font-bold px-2 py-0.5 rounded">C</span></div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-blue-100 text-brand-dark font-bold px-2 py-0.5 rounded">C</span></div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded">A</span></div>
+    </div>
+    <div class="flex text-xs border-b border-gray-100">
+        <div class="w-1/5 px-4 py-2 font-bold text-brand-dark bg-gray-50">開発</div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded">A</span></div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-brand-accent text-white font-bold px-2 py-0.5 rounded">R</span></div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-yellow-100 text-yellow-700 font-bold px-2 py-0.5 rounded">I</span></div>
+        <div class="w-1/5 px-4 py-2 text-center"><span class="inline-block bg-yellow-100 text-yellow-700 font-bold px-2 py-0.5 rounded">I</span></div>
+    </div>
+</div>
+```
+
+RACI legend: **R** = Responsible (bg-brand-accent), **A** = Accountable (bg-green-100), **C** = Consulted (bg-blue-100), **I** = Informed (bg-yellow-100).
+
+### Pattern 20: HBF + VS Competitor Comparison
+
+Same header/footer as Pattern 3. Body: 2 columns with central VS badge.
+
+```html
+<div class="flex-1 px-16 py-6 flex gap-6 items-stretch relative">
+    <!-- Left: Our Product (highlighted) -->
+    <div class="flex-1 bg-white rounded-2xl border-2 border-brand-accent shadow-lg p-6 flex flex-col relative" style="flex: 1.5; transform: scale(1.02);">
+        <div class="absolute -top-3 left-6">
+            <span class="bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">Recommended</span>
+        </div>
+        <div class="flex items-center mb-4 mt-2">
+            <div class="w-12 h-12 rounded-xl bg-brand-accent flex items-center justify-center text-white mr-3">
+                <i class="fas fa-{brand-icon} text-xl"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-brand-dark">自社サービス</h3>
+                <p class="text-xs text-gray-500">サービスカテゴリ</p>
+            </div>
+        </div>
+        <div class="space-y-3 flex-1">
+            <div class="flex items-start">
+                <i class="fas fa-check-circle text-brand-accent mt-0.5 mr-2 flex-shrink-0"></i>
+                <div>
+                    <p class="text-sm font-bold text-brand-dark">強みポイント1</p>
+                    <p class="text-xs text-gray-500">説明テキスト</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <i class="fas fa-check-circle text-brand-accent mt-0.5 mr-2 flex-shrink-0"></i>
+                <div>
+                    <p class="text-sm font-bold text-brand-dark">強みポイント2</p>
+                    <p class="text-xs text-gray-500">説明テキスト</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <i class="fas fa-check-circle text-brand-accent mt-0.5 mr-2 flex-shrink-0"></i>
+                <div>
+                    <p class="text-sm font-bold text-brand-dark">強みポイント3</p>
+                    <p class="text-xs text-gray-500">説明テキスト</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-gray-100">
+            <div class="flex items-baseline justify-between">
+                <p class="text-xs text-gray-400 uppercase font-accent">Price</p>
+                <p class="text-2xl font-black text-brand-dark font-accent">¥50,000<span class="text-sm font-normal text-gray-500">/月</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- VS Badge (center) -->
+    <div class="flex items-center justify-center z-10" style="margin: 0 -20px;">
+        <div class="w-14 h-14 rounded-full bg-brand-warm flex items-center justify-center text-white font-black text-lg shadow-lg border-4 border-white">
+            VS
+        </div>
+    </div>
+
+    <!-- Right: Competitor -->
+    <div class="flex-1 bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col opacity-80">
+        <div class="flex items-center mb-4 mt-2">
+            <div class="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center text-gray-500 mr-3">
+                <i class="fas fa-building text-xl"></i>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-gray-700">競合サービス</h3>
+                <p class="text-xs text-gray-500">サービスカテゴリ</p>
+            </div>
+        </div>
+        <div class="space-y-3 flex-1">
+            <div class="flex items-start">
+                <i class="fas fa-minus-circle text-gray-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                <div>
+                    <p class="text-sm font-bold text-gray-700">比較ポイント1</p>
+                    <p class="text-xs text-gray-500">説明テキスト</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                <div>
+                    <p class="text-sm font-bold text-gray-700">弱みポイント2</p>
+                    <p class="text-xs text-gray-500">説明テキスト</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <i class="fas fa-minus-circle text-gray-400 mt-0.5 mr-2 flex-shrink-0"></i>
+                <div>
+                    <p class="text-sm font-bold text-gray-700">比較ポイント3</p>
+                    <p class="text-xs text-gray-500">説明テキスト</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-gray-100">
+            <div class="flex items-baseline justify-between">
+                <p class="text-xs text-gray-400 uppercase font-accent">Price</p>
+                <p class="text-2xl font-black text-gray-700 font-accent">¥80,000<span class="text-sm font-normal text-gray-500">/月</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
 ---
 
 ## Additional Component Snippets
@@ -1223,6 +1728,6 @@ new Chart(document.getElementById('hBarChart'), {
 |------------|-------------------------|
 | Cover (Pattern 1) | 3-4 levels |
 | Content (Pattern 3-6) | 4-5 levels |
-| Complex cards (Pattern 8-15) | 5-6 levels max |
+| Complex cards (Pattern 8-20) | 5-6 levels max |
 
 Avoid wrapper divs that serve no layout or styling purpose.
